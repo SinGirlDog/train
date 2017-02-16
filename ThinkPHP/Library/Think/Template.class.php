@@ -226,7 +226,7 @@ class  Template {
         if($extend)
             $content    =   $this->parseExtend($content);
         // 解析布局
-        $content    =   $this->parseLayout($content);
+        $content    =   $this->parseLayout($content);        
         // 读取模板中的include标签
         $find       =   preg_match_all('/'.$this->config['taglib_begin'].'include\s(.+?)\s*?\/'.$this->config['taglib_end'].'/is',$content,$matches);
         if($find) {

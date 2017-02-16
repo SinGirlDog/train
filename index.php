@@ -24,7 +24,7 @@ define('APP_PATH','./Application/');
 define('SHOP_CSS_URL','/train/Application/Shop/Public/css/');
 define('SHOP_IMG_URL','/train/Application/Shop/Public/image/');
 define('SHOP_JS_URL','/train/Application/Shop/Public/js/');
-define('SHOP_LBI_URL','/train/Application/Shop/Public/lbi/');
+// define('SHOP_LBI_URL','/train/Application/Shop/Public/lbi/');
 
 // 引入ThinkPHP入口文件
 require './ThinkPHP/ThinkPHP.php';

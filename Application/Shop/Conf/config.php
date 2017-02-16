@@ -15,5 +15,9 @@ return array(
     'DB_FIELDS_CACHE'       =>  true,        // 启用字段缓存
     'DB_CHARSET'            =>  'utf8',      // 数据库编码默认采用utf8
 
+    'URL_MODEL'             =>  1,       // URL访问模式,可选参数0、1、2、3,代表以下四种模式：
+
     'LAYOUT_ON'             =>  false, // 是否启用布局
+
+    'TAGLIB_PRE_LOAD'       =>  'html',   // 需要额外加载的标签库(须指定标签库名称)，多个以逗号分隔 
 );

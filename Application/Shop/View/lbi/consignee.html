@@ -37,36 +37,36 @@
   <!-- {/if} -->
   <tr>
     <td bgcolor="#ffffff">{$lang.consignee_name}:</td>
-    <td bgcolor="#ffffff"><input name="consignee" type="text" class="inputBg" id="consignee_{$sn}" value="{$consignee.consignee|escape}" />
+    <td bgcolor="#ffffff"><input name="consignee" type="text" class="inputBg" id="consignee_{$sn}" value="{$consignee.consignee}" />
     {$lang.require_field} </td>
     <td bgcolor="#ffffff">{$lang.email_address}:</td>
-    <td bgcolor="#ffffff"><input name="email" type="text" class="inputBg"  id="email_{$sn}" value="{$consignee.email|escape}" />
+    <td bgcolor="#ffffff"><input name="email" type="text" class="inputBg"  id="email_{$sn}" value="{$consignee.email}" />
     {$lang.require_field}</td>
   </tr>
   <!-- {if $real_goods_count gt 0} -->
   <!-- 购物车中存在实体商品显示详细地址以及邮政编码 -->
   <tr>
     <td bgcolor="#ffffff">{$lang.detailed_address}:</td>
-    <td bgcolor="#ffffff"><input name="address" type="text" class="inputBg"  id="address_{$sn}" value="{$consignee.address|escape}" />
+    <td bgcolor="#ffffff"><input name="address" type="text" class="inputBg"  id="address_{$sn}" value="{$consignee.address}" />
     {$lang.require_field}</td>
     <td bgcolor="#ffffff">{$lang.postalcode}:</td>
-    <td bgcolor="#ffffff"><input name="zipcode" type="text" class="inputBg"  id="zipcode_{$sn}" value="{$consignee.zipcode|escape}" /></td>
+    <td bgcolor="#ffffff"><input name="zipcode" type="text" class="inputBg"  id="zipcode_{$sn}" value="{$consignee.zipcode}" /></td>
   </tr>
   <!-- {/if} -->
   <tr>
     <td bgcolor="#ffffff">{$lang.phone}:</td>
-    <td bgcolor="#ffffff"><input name="tel" type="text" class="inputBg"  id="tel_{$sn}" value="{$consignee.tel|escape}" />
+    <td bgcolor="#ffffff"><input name="tel" type="text" class="inputBg"  id="tel_{$sn}" value="{$consignee.tel}" />
     {$lang.require_field}</td>
     <td bgcolor="#ffffff">{$lang.backup_phone}:</td>
-    <td bgcolor="#ffffff"><input name="mobile" type="text" class="inputBg"  id="mobile_{$sn}" value="{$consignee.mobile|escape}" /></td>
+    <td bgcolor="#ffffff"><input name="mobile" type="text" class="inputBg"  id="mobile_{$sn}" value="{$consignee.mobile}" /></td>
   </tr>
   <!-- {if $real_goods_count gt 0} -->
   <!-- 购物车中存在实体商品显示最佳送货时间及标志行建筑 -->
   <tr>
     <td bgcolor="#ffffff">{$lang.sign_building}:</td>
-    <td bgcolor="#ffffff"><input name="sign_building" type="text" class="inputBg"  id="sign_building_{$sn}" value="{$consignee.sign_building|escape}" /></td>
+    <td bgcolor="#ffffff"><input name="sign_building" type="text" class="inputBg"  id="sign_building_{$sn}" value="{$consignee.sign_building}" /></td>
     <td bgcolor="#ffffff">{$lang.deliver_goods_time}:</td>
-    <td bgcolor="#ffffff"><input name="best_time" type="text"  class="inputBg" id="best_time_{$sn}" value="{$consignee.best_time|escape}" /></td>
+    <td bgcolor="#ffffff"><input name="best_time" type="text"  class="inputBg" id="best_time_{$sn}" value="{$consignee.best_time}" /></td>
   </tr>
   <!-- {/if} -->
   <tr>

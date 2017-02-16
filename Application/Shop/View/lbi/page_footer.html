@@ -39,7 +39,7 @@
       <!-- {/foreach} 结束QQ号码 -->
       <!-- 淘宝旺旺 {foreach from=$ww item=im} -->
       <!-- {if $im} -->
-      <a href="http://amos1.taobao.com/msg.ww?v=2&uid={$im|escape:u8_url}&s=2" target="_blank"><img src="http://amos1.taobao.com/online.ww?v=2&uid={$im|escape:u8_url}&s=2" width="16" height="16" border="0" alt="淘宝旺旺" />{$im}</a>
+      <a href="http://amos1.taobao.com/msg.ww?v=2&uid={$im}&s=2" target="_blank"><img src="http://amos1.taobao.com/online.ww?v=2&uid={$im}&s=2" width="16" height="16" border="0" alt="淘宝旺旺" />{$im}</a>
       <!-- {/if} -->
       <!--{/foreach} 结束淘宝旺旺 -->
       <!-- Yahoo Messenger {foreach from=$ym item=im} -->
@@ -54,7 +54,7 @@
       <!-- {/foreach} 结束MSN Messenger -->
       <!-- Skype {foreach from=$skype item=im} -->
       <!-- {if $im} -->
-      <img src="http://mystatus.skype.com/smallclassic/{$im|escape:url}" alt="Skype" /><a href="skype:{$im|escape:url}?call">{$im}</a>
+      <img src="http://mystatus.skype.com/smallclassic/{$im}" alt="Skype" /><a href="skype:{$im}?call">{$im}</a>
       <!-- {/if} -->
   <!-- {/foreach} --><br />
   <!-- ICP 证书{if $icp_number} -->

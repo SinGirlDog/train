@@ -55,7 +55,7 @@ var process_request = "{$lang.process_request}";
     {if $searchkeywords}
    {$lang.hot_search} ：
    {foreach from=$searchkeywords item=val}
-   <a href="search.php?keywords={$val|escape:url}">{$val}</a>
+   <a href="search.php?keywords={$val}">{$val}</a>
    {/foreach}
    {/if}
   </div>
@@ -64,7 +64,7 @@ var process_request = "{$lang.process_request}";
       <option value="0">{$lang.all_category}</option>
       {$category_list}
     </select>
-   <input name="keywords" type="text" id="keyword" value="{$search_keywords|escape}" class="B_input" style="width:110px;"/>
+   <input name="keywords" type="text" id="keyword" value="{$search_keywords}" class="B_input" style="width:110px;"/>
    <input name="imageField" type="submit" value="" class="go" style="cursor:pointer;" />
    <a href="search.php?act=advanced_search">{$lang.advanced_search}</a>
    </form>

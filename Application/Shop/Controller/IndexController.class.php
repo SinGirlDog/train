@@ -18,7 +18,6 @@ class IndexController extends Controller {
     	$top_goods = $goods->get_top10();
     	$this->assign('top_goods',$top_goods);
 
-    	echo file_get_contents('page_header.html');
     	$this->display(':index');
     }
 

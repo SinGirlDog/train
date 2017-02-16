@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- <html xmlns="http://www.w3.org/1999/xhtml"> -->
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -23,12 +22,8 @@
 <body>
     <!-- #BeginLibraryItem "/library/page_header.lbi" -->
     <!-- #EndLibraryItem -->
-    <include file="page_header.html"/>
-    <include file="/train/Application/Shop/Public/lbi/page_header.html"/>
-    <include file="{$Think.const.SHOP_LBI_URL}page_header.html" />
-    <block name="include">    
-    </block>
-    <div class="blank">        
+    <include file="lbi/page_header" />
+    <div class="blank">
     </div>
     <div class="block clearfix">
         <!--left start-->
@@ -48,7 +43,7 @@
             <!-- #BeginLibraryItem "/library/cart.lbi" -->
             <!-- {insert_scripts files='transport.js'} -->
             <script src='{$Think.const.SHOP_JS_URL}transport.js'></script>
-            <include file="{$Think.const.SHOP_LBI_URL}cart.html" />
+            <include file="lbi/cart" />
             <div class="cart" id="ECS_CARTINFO">
                 <!-- {insert name='cart_info'} -->
                 {$cartinfo}
@@ -56,7 +51,7 @@
             <div class="blank5"></div>
             <!-- #EndLibraryItem -->
             <!-- #BeginLibraryItem "/library/category_tree.lbi" -->
-            <include file="{$Think.const.SHOP_LBI_URL}category_tree.html" />
+            <include file="lbi/category_tree" />
             <div class="box">
                 <div class="box_1">
                     <div id="category_tree">
@@ -77,36 +72,35 @@
             <div class="blank5"></div>
             <!-- #EndLibraryItem -->
             <!-- #BeginLibraryItem "/library/top10.lbi" -->
-            <include file="{$Think.const.SHOP_LBI_URL}top10.html" />
+            <include file="lbi/top10" />
             <div class="box">
                 <div class="box_2">
                     <div class="top10Tit"></div>
                     <div class="top10List clearfix">
                         <notempty name="top_goods">
-                        <foreach name="top_goods" item="vo" key="key">
-                            <ul class="clearfix">
-                                <img src="{$Think.const.SHOP_IMG_URL}/top_{$key+1}.gif" class="iteration" />
-                               
-                                <if condition="$key lt 3">
-                                    <li class="topimg">
-                                        <a href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.name}" class="samllimg" /></a>
-                                    </li>
-                                    <li class="iteration1">
-                                        <a href="{$goods.url}" title="{$goods.name}">{$goods.short_name}</a>
-                                        <br /> {$lang.shop_price}
-                                        <font class="f1">{$goods.price}</font>
-                                        <br />
-                                    </li>
-                                    <else/>
-                                    <li>
-                                        <a href="{$goods.url}" title="{$goods.name}">{$goods.short_name}</a>
-                                        <br /> {$lang.shop_price}
-                                        <font class="f1">{$goods.price}</font>
-                                        <br />
-                                    </li>
-                                </if>
-                            </ul>
-                        </foreach>
+                            <foreach name="top_goods" item="vo" key="key">
+                                <ul class="clearfix">
+                                    <img src="{$Think.const.SHOP_IMG_URL}/top_{$key+1}.gif" class="iteration" />
+                                    <if condition="$key lt 3">
+                                        <li class="topimg">
+                                            <a href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.name}" class="samllimg" /></a>
+                                        </li>
+                                        <li class="iteration1">
+                                            <a href="{$goods.url}" title="{$goods.name}">{$goods.short_name}</a>
+                                            <br /> {$lang.shop_price}
+                                            <font class="f1">{$goods.price}</font>
+                                            <br />
+                                        </li>
+                                        <else/>
+                                        <li>
+                                            <a href="{$goods.url}" title="{$goods.name}">{$goods.short_name}</a>
+                                            <br /> {$lang.shop_price}
+                                            <font class="f1">{$goods.price}</font>
+                                            <br />
+                                        </li>
+                                    </if>
+                                </ul>
+                            </foreach>
                         </notempty>
                     </div>
                 </div>
@@ -114,7 +108,7 @@
             <div class="blank5"></div>
             <!-- #EndLibraryItem -->
             <!-- #BeginLibraryItem "/library/promotion_info.lbi" -->
-            <include file="{$Think.const.SHOP_LBI_URL}promotion_info.html" />
+            <include file="lbi/promotion_info" />
             <!-- {if $promotion_info} -->
             <!-- 促销信息 -->
             <div class="box">
@@ -141,7 +135,7 @@
             <!-- {/if} -->
             <!-- #EndLibraryItem -->
             <!-- #BeginLibraryItem "/library/order_query.lbi" -->
-            <include file="{$Think.const.SHOP_LBI_URL}order_query.html" />
+            <include file="lbi/order_query" />
             <!--{if empty($order_query)}-->
             <script>
             var invalid_order_sn = "{$lang.invalid_order_sn}"
@@ -184,7 +178,7 @@
             <div class="blank5"></div>
             <!-- #EndLibraryItem -->
             <!-- #BeginLibraryItem "/library/invoice_query.lbi" -->
-            <include file="{$Think.const.SHOP_LBI_URL}invoice_query.html" />
+            <include file="lbi/invoice_query" />
             <!--{if $invoice_list}-->
             <style type="text/css">
             .boxCenterList form {
@@ -212,10 +206,10 @@
             <!-- {/if} -->
             <!-- #EndLibraryItem -->
             <!-- #BeginLibraryItem "/library/vote_list.lbi" -->
-            <include file="{$Think.const.SHOP_LBI_URL}vote_list.html" /> {insert name='vote'}
+            <include file="lbi/vote_list" /> {insert name='vote'}
             <!-- #EndLibraryItem -->
             <!-- #BeginLibraryItem "/library/email_list.lbi" -->
-            <include file="{$Think.const.SHOP_LBI_URL}email_list.html" />
+            <include file="lbi/email_list" />
             <div class="box">
                 <div class="box_1">
                     <h3><span>{$lang.email_subscribe}</span></h3>
@@ -273,7 +267,7 @@
                     <div class="f_l" id="focus">
                         <!-- #BeginLibraryItem "/library/index_ad.lbi" -->
                         <!-- #EndLibraryItem -->
-                        <include file="{$Think.const.SHOP_LBI_URL}index_ad.html" />
+                        <include file="lbi/index_ad" />
                     </div>
                     <!--news-->
                     <div id="mallNews" class="f_r">
@@ -283,7 +277,7 @@
                             <!-- TemplateEndEditable -->
                             <!-- #BeginLibraryItem "/library/new_articles.lbi" -->
                             <!-- #EndLibraryItem -->
-                            <include file="{$Think.const.SHOP_LBI_URL}new_articles.html" />
+                            <include file="lbi/new_articles" />
                         </div>
                     </div>
                     <!--news end-->
@@ -296,20 +290,20 @@
                 <!--特价-->
                 <!-- #BeginLibraryItem "/library/recommend_promotion.lbi" -->
                 <!-- #EndLibraryItem -->
-                <include file="{$Think.const.SHOP_LBI_URL}recommend_promotion.html" />
+                <include file="lbi/recommend_promotion" />
                 <!--品牌-->
                 <div class="box f_r brandsIe6">
                     <div class="box_1 clearfix" id="brands">
                         <!-- #BeginLibraryItem "/library/brands.lbi" -->
                         <!-- #EndLibraryItem -->
-                        <include file="{$Think.const.SHOP_LBI_URL}brands.html" />
+                        <include file="lbi/brands" />
                     </div>
                 </div>
             </div>
             <div class="blank5"></div>
             <!-- TemplateBeginEditable name="右边主区域" -->
             <!-- #BeginLibraryItem "/library/recommend_best.lbi" -->
-            <include file="{$Think.const.SHOP_LBI_URL}recommend_best.html" />
+            <include file="lbi/recommend_best" />
             <!-- {if $best_goods} -->
             <!-- {if $cat_rec_sign neq 1} -->
             <div class="box">
@@ -348,7 +342,7 @@
             <!-- {/if} -->
             <!-- #EndLibraryItem -->
             <!-- #BeginLibraryItem "/library/recommend_new.lbi" -->
-            <include file="{$Think.const.SHOP_LBI_URL}recommend_new.html" />
+            <include file="lbi/recommend_new" />
             <!-- {if $new_goods} -->
             <!-- {if $cat_rec_sign neq 1} -->
             <div class="box">
@@ -387,7 +381,7 @@
             <!-- {/if} -->
             <!-- #EndLibraryItem -->
             <!-- #BeginLibraryItem "/library/recommend_hot.lbi" -->
-            <include file="{$Think.const.SHOP_LBI_URL}recommend_hot.html" />
+            <include file="lbi/recommend_hot" />
             <!-- {if $hot_goods} -->
             <!-- {if $cat_rec_sign neq 1} -->
             <div class="box">
@@ -426,7 +420,7 @@
             <!-- {/if} -->
             <!-- #EndLibraryItem -->
             <!-- #BeginLibraryItem "/library/auction.lbi" -->
-            <include file="{$Think.const.SHOP_LBI_URL}auction.html" />
+            <include file="lbi/auction" />
             <!-- {if $auction_list} -->
             <div class="box">
                 <div class="box_1">
@@ -449,7 +443,7 @@
             <!-- {/if} -->
             <!-- #EndLibraryItem -->
             <!-- #BeginLibraryItem "/library/group_buy.lbi" -->
-            <include file="{$Think.const.SHOP_LBI_URL}group_buy.html" />
+            <include file="lbi/group_buy" />
             <!-- {if $group_buy_goods} -->
             <div class="box">
                 <div class="box_1">
@@ -482,7 +476,7 @@
             <div class="helpTitBg clearfix">
                 <!-- #BeginLibraryItem "/library/help.lbi" -->
                 <!-- #EndLibraryItem -->
-                <include file="{$Think.const.SHOP_LBI_URL}help.html" />
+                <include file="lbi/help" />
             </div>
         </div>
     </div>
@@ -509,7 +503,7 @@
     <div class="blank"></div>
     <!-- #BeginLibraryItem "/library/page_footer.lbi" -->
     <!-- #EndLibraryItem -->
-    <include file="{$Think.const.SHOP_LBI_URL}page_footer.html" />
+    <include file="lbi/page_footer" />
 </body>
 
 </html>
