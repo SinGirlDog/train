@@ -1,0 +1,1486 @@
+[ 2017-02-06T16:12:57+08:00 ] ::1 /train/index.php?g=visit&a=Ajaxload
+ERR: 非法操作:Ajaxload
+
+[ 2017-02-06T16:35:11+08:00 ] ::1 /train/index.php/visit/ajaxload
+NOTIC: D方法实例化没找到模型类Ajaxload\Model\ProvinceModel
+
+[ 2017-02-06T16:35:29+08:00 ] ::1 /train/index.php/visit/ajaxload
+NOTIC: D方法实例化没找到模型类Ajaxload\Model\ProvinceModel
+ERR: Think\Model:searchProvince方法不存在！
+
+[ 2017-02-06T16:35:56+08:00 ] ::1 /train/index.php/visit/ajaxload
+NOTIC: D方法实例化没找到模型类Ajaxload\Model\ProvinceModel
+ERR: Think\Model:searchProvince方法不存在！
+
+[ 2017-02-06T16:35:58+08:00 ] ::1 /train/index.php/visit/ajaxload
+NOTIC: D方法实例化没找到模型类Ajaxload\Model\ProvinceModel
+ERR: Think\Model:searchProvince方法不存在！
+
+[ 2017-02-06T16:36:22+08:00 ] ::1 /train/index.php/visit/ajaxload
+ERR: Think\Model:searchProvince方法不存在！
+
+[ 2017-02-06T16:36:22+08:00 ] ::1 /train/index.php/visit/ajaxload
+ERR: Think\Model:searchProvince方法不存在！
+
+[ 2017-02-06T16:36:23+08:00 ] ::1 /train/index.php/visit/ajaxload
+ERR: Think\Model:searchProvince方法不存在！
+
+[ 2017-02-06T16:36:41+08:00 ] ::1 /train/index.php/visit/ajaxload
+ERR: 1146:Table 'train_tp.tp_ajaxload\_province' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_ajaxload\_province`
+
+[ 2017-02-06T17:02:54+08:00 ] ::1 /train/index.php/Visit/Ajaxload/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `tp_province`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: cityList E:\wamp\www\train\Application\Runtime\Cache\Visit\d19fece9d11e4a5ea0e24a2add4fe4a9.php 第 44 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T17:02:57+08:00 ] ::1 /train/index.php/Visit/Ajaxload/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `tp_province`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: cityList E:\wamp\www\train\Application\Runtime\Cache\Visit\d19fece9d11e4a5ea0e24a2add4fe4a9.php 第 44 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-06T17:03:34+08:00 ] ::1 /train/index.php/Visit/Ajaxload/ajaxLoadCity.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-06T17:07:02+08:00 ] ::1 /train/index.php/Visit/Ajaxload/ajaxLoadCity.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `tp_city` [ RunTime:0.0180s ]
+SQL: SELECT * FROM `tp_city` WHERE `province_id` = null  [ RunTime:0.0690s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T17:08:23+08:00 ] ::1 /train/index.php/Visit/Ajaxload/ajaxLoadCity.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `tp_city` WHERE `province_id` = null  [ RunTime:0.0010s ]
+NOTIC: [8] Array to string conversion E:\wamp\www\train\Application\Visit\Controller\AjaxloadController.class.php 第 21 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T17:10:12+08:00 ] ::1 /train/index.php/Visit/Ajaxload/ajaxLoadCity.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `tp_city` WHERE `province_id` = null  [ RunTime:0.0000s ]
+
+[ 2017-02-06T17:10:52+08:00 ] ::1 /train/index.php/Visit/Ajaxload/ajaxLoadCity.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SELECT * FROM `tp_city` WHERE `province_id` = null  [ RunTime:0.0000s ]
+
+[ 2017-02-06T17:11:21+08:00 ] ::1 /train/index.php/Visit/Ajaxload/ajaxLoadCity.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SELECT * FROM `tp_city` WHERE `province_id` = null  [ RunTime:0.0000s ]
+
+[ 2017-02-06T17:11:49+08:00 ] ::1 /train/index.php/Visit/Ajaxload/ajaxLoadCity.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SELECT * FROM `tp_city` WHERE `province_id` = null  [ RunTime:0.0020s ]
+NOTIC: [8] Array to string conversion E:\wamp\www\train\Application\Visit\Controller\AjaxloadController.class.php 第 22 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T17:13:00+08:00 ] ::1 /train/index.php/Visit/Ajaxload/ajaxLoadCity.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SELECT * FROM `tp_city` WHERE `province_id` = null  [ RunTime:0.0010s ]
+
+[ 2017-02-06T17:13:53+08:00 ] ::1 /train/index.php/Visit/Ajaxload/ajaxLoadCity.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-02-06T17:14:09+08:00 ] ::1 /train/index.php/Visit/Ajaxload/ajaxLoadCity.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T17:14:20+08:00 ] ::1 /train/index.php/Visit/Ajaxload/ajaxLoadCity.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SELECT * FROM `tp_city` WHERE `province_id` = '8'  [ RunTime:0.0500s ]
+
+[ 2017-02-06T17:19:07+08:00 ] ::1 /train/index.php/Visit/Ajaxload/ajaxLoadCity.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `tp_city` WHERE `province_id` = '5'  [ RunTime:0.0010s ]
+
+[ 2017-02-06T17:19:49+08:00 ] ::1 /train/index.php/Visit/Ajaxload/ajaxLoadCity.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `tp_city` WHERE `province_id` = '3'  [ RunTime:0.0010s ]
+
+[ 2017-02-06T17:23:53+08:00 ] ::1 /train/index.php/Visit/Ajaxload/ajaxLoadCity.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-02-06T17:24:30+08:00 ] ::1 /train/index.php/Visit/Ajaxload/ajaxLoadCity.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T17:25:21+08:00 ] ::1 /train/index.php/Visit/Ajaxload/ajaxLoadCity.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T17:25:56+08:00 ] ::1 /train/index.php/Visit/Ajaxload/ajaxLoadCity.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T17:28:36+08:00 ] ::1 /train/index.php/Visit/Ajaxload/ajaxLoadCity.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SELECT * FROM `tp_city` WHERE `province_id` = '4'  [ RunTime:0.0010s ]
+
+[ 2017-02-06T17:29:39+08:00 ] ::1 /train/index.php/Visit/Ajaxload/ajaxLoadCity.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SELECT * FROM `tp_city` WHERE `province_id` = '8'  [ RunTime:0.0020s ]
+
+[ 2017-02-06T17:31:03+08:00 ] ::1 /train/index.php/Visit/Ajaxload/ajaxLoadCity.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `tp_city` WHERE `province_id` = '5'  [ RunTime:0.0010s ]
+
+[ 2017-02-06T17:31:19+08:00 ] ::1 /train/index.php/Visit/Ajaxload/ajaxLoadCity.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SELECT * FROM `tp_city` WHERE `province_id` = '7'  [ RunTime:0.0000s ]
+
+[ 2017-02-06T17:31:23+08:00 ] ::1 /train/index.php/Visit/Ajaxload/ajaxLoadCity.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `tp_city` WHERE `province_id` = '9'  [ RunTime:0.0010s ]
+
+[ 2017-02-06T17:31:35+08:00 ] ::1 /train/index.php/Visit/Ajaxload/ajaxLoadCity.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T17:32:20+08:00 ] ::1 /train/index.php/Visit/Ajaxload/ajaxLoadCity.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SELECT * FROM `tp_city` WHERE `province_id` = '6'  [ RunTime:0.0010s ]
+
+[ 2017-02-06T17:32:23+08:00 ] ::1 /train/index.php/Visit/Ajaxload/ajaxLoadCity.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T17:35:35+08:00 ] ::1 /train/index.php/Visit/Ajaxload/ajaxLoadCity.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SELECT * FROM `tp_city` WHERE `province_id` = '4'  [ RunTime:0.0000s ]
+
+[ 2017-02-06T17:35:37+08:00 ] ::1 /train/index.php/Visit/Ajaxload/ajaxLoadCity.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SELECT * FROM `tp_city` WHERE `province_id` = '8'  [ RunTime:0.0010s ]
+
+[ 2017-02-06T17:35:39+08:00 ] ::1 /train/index.php/Visit/Ajaxload/ajaxLoadCity.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SELECT * FROM `tp_city` WHERE `province_id` = '16'  [ RunTime:0.0000s ]
+
+[ 2017-02-06T20:02:33+08:00 ] 127.0.0.1 /train/index.php/Visit/Ajaxload/ajaxLoadCity.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SELECT * FROM `tp_city` WHERE `province_id` = '1'  [ RunTime:0.0590s ]
+
+[ 2017-02-06T20:02:35+08:00 ] 127.0.0.1 /train/index.php/Visit/Ajaxload/ajaxLoadCity.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `tp_city` WHERE `province_id` = '9'  [ RunTime:0.0010s ]
+
+[ 2017-02-06T20:02:38+08:00 ] 127.0.0.1 /train/index.php/Visit/Ajaxload/ajaxLoadCity.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `tp_city` WHERE `province_id` = '14'  [ RunTime:0.0010s ]
+
+[ 2017-02-06T20:02:40+08:00 ] 127.0.0.1 /train/index.php/Visit/Ajaxload/ajaxLoadCity.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `tp_city` WHERE `province_id` = '19'  [ RunTime:0.0010s ]
+
+[ 2017-02-06T20:02:42+08:00 ] 127.0.0.1 /train/index.php/Visit/Ajaxload/ajaxLoadCity.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `tp_city` WHERE `province_id` = '29'  [ RunTime:0.0000s ]
+
+[ 2017-02-06T20:04:32+08:00 ] 127.0.0.1 /train/index.php/Visit/Ajaxload/ajaxLoadCity.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SELECT * FROM `tp_city` WHERE `province_id` = '25'  [ RunTime:0.0010s ]
+
+[ 2017-02-06T20:04:35+08:00 ] 127.0.0.1 /train/index.php/Visit/Ajaxload/ajaxLoadCity.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SELECT * FROM `tp_city` WHERE `province_id` = '31'  [ RunTime:0.0360s ]
+
+[ 2017-02-06T20:04:38+08:00 ] 127.0.0.1 /train/index.php/Visit/Ajaxload/ajaxLoadCity.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SELECT * FROM `tp_city` WHERE `province_id` = '28'  [ RunTime:0.0010s ]
+
+[ 2017-02-06T20:04:42+08:00 ] 127.0.0.1 /train/index.php/Visit/Ajaxload/ajaxLoadCity.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SELECT * FROM `tp_city` WHERE `province_id` = '22'  [ RunTime:0.0000s ]
+
+[ 2017-02-06T20:05:04+08:00 ] 127.0.0.1 /train/index.php/Visit/Ajaxload/ajaxLoadCity.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `tp_city` WHERE `province_id` = '15'  [ RunTime:0.0010s ]
+
+[ 2017-02-06T20:28:51+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T20:34:42+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T20:34:48+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-06T20:35:35+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T20:35:44+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T20:35:49+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T20:42:51+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] A non well formed numeric value encountered E:\wamp\www\train\Application\Visit\Controller\DifftimeController.class.php 第 23 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T20:43:47+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A non well formed numeric value encountered E:\wamp\www\train\Application\Visit\Controller\DifftimeController.class.php 第 23 行.
+NOTIC: [8] A non well formed numeric value encountered E:\wamp\www\train\Application\Visit\Controller\DifftimeController.class.php 第 24 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-06T20:44:02+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A non well formed numeric value encountered E:\wamp\www\train\Application\Visit\Controller\DifftimeController.class.php 第 23 行.
+NOTIC: [8] A non well formed numeric value encountered E:\wamp\www\train\Application\Visit\Controller\DifftimeController.class.php 第 24 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T20:44:03+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A non well formed numeric value encountered E:\wamp\www\train\Application\Visit\Controller\DifftimeController.class.php 第 23 行.
+NOTIC: [8] A non well formed numeric value encountered E:\wamp\www\train\Application\Visit\Controller\DifftimeController.class.php 第 24 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-06T20:44:03+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A non well formed numeric value encountered E:\wamp\www\train\Application\Visit\Controller\DifftimeController.class.php 第 23 行.
+NOTIC: [8] A non well formed numeric value encountered E:\wamp\www\train\Application\Visit\Controller\DifftimeController.class.php 第 24 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-06T20:44:03+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A non well formed numeric value encountered E:\wamp\www\train\Application\Visit\Controller\DifftimeController.class.php 第 23 行.
+NOTIC: [8] A non well formed numeric value encountered E:\wamp\www\train\Application\Visit\Controller\DifftimeController.class.php 第 24 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T20:44:30+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] A non well formed numeric value encountered E:\wamp\www\train\Application\Visit\Controller\DifftimeController.class.php 第 23 行.
+NOTIC: [8] A non well formed numeric value encountered E:\wamp\www\train\Application\Visit\Controller\DifftimeController.class.php 第 24 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T20:44:38+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A non well formed numeric value encountered E:\wamp\www\train\Application\Visit\Controller\DifftimeController.class.php 第 23 行.
+NOTIC: [8] Undefined variable: end_week E:\wamp\www\train\Application\Visit\Controller\DifftimeController.class.php 第 26 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T20:44:38+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+NOTIC: [8] A non well formed numeric value encountered E:\wamp\www\train\Application\Visit\Controller\DifftimeController.class.php 第 23 行.
+NOTIC: [8] Undefined variable: end_week E:\wamp\www\train\Application\Visit\Controller\DifftimeController.class.php 第 26 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T20:44:39+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A non well formed numeric value encountered E:\wamp\www\train\Application\Visit\Controller\DifftimeController.class.php 第 23 行.
+NOTIC: [8] Undefined variable: end_week E:\wamp\www\train\Application\Visit\Controller\DifftimeController.class.php 第 26 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T20:44:39+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A non well formed numeric value encountered E:\wamp\www\train\Application\Visit\Controller\DifftimeController.class.php 第 23 行.
+NOTIC: [8] Undefined variable: end_week E:\wamp\www\train\Application\Visit\Controller\DifftimeController.class.php 第 26 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T20:44:48+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: start_week E:\wamp\www\train\Application\Visit\Controller\DifftimeController.class.php 第 26 行.
+NOTIC: [8] Undefined variable: end_week E:\wamp\www\train\Application\Visit\Controller\DifftimeController.class.php 第 26 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T20:44:57+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A non well formed numeric value encountered E:\wamp\www\train\Application\Visit\Controller\DifftimeController.class.php 第 23 行.
+NOTIC: [8] A non well formed numeric value encountered E:\wamp\www\train\Application\Visit\Controller\DifftimeController.class.php 第 24 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-06T20:44:59+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A non well formed numeric value encountered E:\wamp\www\train\Application\Visit\Controller\DifftimeController.class.php 第 23 行.
+NOTIC: [8] A non well formed numeric value encountered E:\wamp\www\train\Application\Visit\Controller\DifftimeController.class.php 第 24 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2017-02-06T20:44:59+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] A non well formed numeric value encountered E:\wamp\www\train\Application\Visit\Controller\DifftimeController.class.php 第 23 行.
+NOTIC: [8] A non well formed numeric value encountered E:\wamp\www\train\Application\Visit\Controller\DifftimeController.class.php 第 24 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2017-02-06T20:44:59+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] A non well formed numeric value encountered E:\wamp\www\train\Application\Visit\Controller\DifftimeController.class.php 第 23 行.
+NOTIC: [8] A non well formed numeric value encountered E:\wamp\www\train\Application\Visit\Controller\DifftimeController.class.php 第 24 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T20:44:59+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+NOTIC: [8] A non well formed numeric value encountered E:\wamp\www\train\Application\Visit\Controller\DifftimeController.class.php 第 23 行.
+NOTIC: [8] A non well formed numeric value encountered E:\wamp\www\train\Application\Visit\Controller\DifftimeController.class.php 第 24 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T20:44:59+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A non well formed numeric value encountered E:\wamp\www\train\Application\Visit\Controller\DifftimeController.class.php 第 23 行.
+NOTIC: [8] A non well formed numeric value encountered E:\wamp\www\train\Application\Visit\Controller\DifftimeController.class.php 第 24 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T20:45:27+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-06T20:45:32+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T20:45:41+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: start_week E:\wamp\www\train\Application\Visit\Controller\DifftimeController.class.php 第 26 行.
+NOTIC: [8] Undefined variable: end_week E:\wamp\www\train\Application\Visit\Controller\DifftimeController.class.php 第 26 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T20:45:42+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: start_week E:\wamp\www\train\Application\Visit\Controller\DifftimeController.class.php 第 26 行.
+NOTIC: [8] Undefined variable: end_week E:\wamp\www\train\Application\Visit\Controller\DifftimeController.class.php 第 26 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T20:46:00+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: start_week E:\wamp\www\train\Application\Visit\Controller\DifftimeController.class.php 第 26 行.
+NOTIC: [8] Undefined variable: end_week E:\wamp\www\train\Application\Visit\Controller\DifftimeController.class.php 第 26 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-06T20:47:06+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-06T20:49:17+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] date() expects at least 1 parameter, 0 given E:\wamp\www\train\Application\Visit\Controller\DifftimeController.class.php 第 18 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T20:49:37+08:00 ] 127.0.0.1 /train/index.php/visit/difftime/diffDate
+ERR: 非法操作:diffDate
+
+[ 2017-02-06T20:54:32+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-06T20:54:38+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T20:55:06+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-02-06T20:59:14+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T21:01:32+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T21:01:51+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T21:01:56+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T21:02:07+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T21:02:24+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T21:04:42+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T21:04:48+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T21:04:52+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-02-06T21:04:56+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-02-06T21:05:04+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T21:07:02+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-02-06T21:07:05+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-02-06T21:07:08+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+
+[ 2017-02-06T21:07:11+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T21:07:14+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T21:07:16+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T21:07:19+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T21:07:30+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T21:07:33+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T21:48:32+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T21:48:36+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T21:48:41+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T21:48:48+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T21:48:53+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+
+[ 2017-02-06T21:48:57+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-02-06T21:48:59+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+
+[ 2017-02-06T21:49:02+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T21:49:27+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T21:49:33+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T21:49:36+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T21:49:39+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T21:50:04+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+
+[ 2017-02-06T21:50:06+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T21:50:08+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-02-06T21:50:10+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T21:50:12+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-02-06T21:50:13+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T21:50:14+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T21:50:51+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-02-06T21:50:53+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T21:50:54+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T21:50:56+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-02-06T21:50:58+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-02-06T21:51:02+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T21:51:05+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-02-06T21:51:07+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-02-06T21:51:10+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-02-06T21:51:12+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-02-06T21:51:15+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-02-06T21:51:17+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T21:51:19+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-02-06T21:51:24+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T21:51:27+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+
+[ 2017-02-06T21:51:28+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+
+[ 2017-02-06T21:51:28+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T21:51:32+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T21:51:54+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T21:51:56+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T21:52:00+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T21:52:04+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T21:52:06+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T21:52:09+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T21:52:10+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T21:52:10+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-02-06T21:52:10+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T21:52:11+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T21:52:17+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T21:52:20+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T21:52:27+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T21:52:30+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T21:52:53+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+
+[ 2017-02-06T21:53:01+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T21:53:03+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+
+[ 2017-02-06T21:53:05+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T21:53:08+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T21:53:10+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T21:53:13+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-02-06T21:53:15+08:00 ] 127.0.0.1 /train/index.php/Visit/Difftime/countDiff.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T22:39:01+08:00 ] 127.0.0.1 /train/index.php/Visit/Ajaxload/linkage.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-02-06T22:39:04+08:00 ] 127.0.0.1 /train/index.php/Visit/Ajaxload/linkage.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-02-06T22:39:09+08:00 ] 127.0.0.1 /train/index.php/Visit/Ajaxload/linkage.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T22:40:10+08:00 ] 127.0.0.1 /train/index.php/Visit/Ajaxload/linkage.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T22:40:12+08:00 ] 127.0.0.1 /train/index.php/Visit/Ajaxload/linkage.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-02-06T22:40:13+08:00 ] 127.0.0.1 /train/index.php/Visit/Ajaxload/linkage.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-02-06T22:40:14+08:00 ] 127.0.0.1 /train/index.php/Visit/Ajaxload/linkage.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T22:40:41+08:00 ] 127.0.0.1 /train/index.php/Visit/Ajaxload/ajaxLoadCity.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `tp_city` WHERE `province_id` = '2'  [ RunTime:0.0010s ]
+
+[ 2017-02-06T22:40:44+08:00 ] 127.0.0.1 /train/index.php/Visit/Ajaxload/ajaxLoadCity.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SELECT * FROM `tp_city` WHERE `province_id` = '10'  [ RunTime:0.0060s ]
+
+[ 2017-02-06T22:40:47+08:00 ] 127.0.0.1 /train/index.php/Visit/Ajaxload/linkage.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-02-06T22:41:08+08:00 ] 127.0.0.1 /train/index.php/Visit/Ajaxload/linkage.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-02-06T22:41:13+08:00 ] 127.0.0.1 /train/index.php/Visit/Ajaxload/linkage.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T22:41:14+08:00 ] 127.0.0.1 /train/index.php/Visit/Ajaxload/ajaxLoadCity.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T22:41:16+08:00 ] 127.0.0.1 /train/index.php/Visit/Ajaxload/linkage.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-02-06T22:41:17+08:00 ] 127.0.0.1 /train/index.php/Visit/Ajaxload/ajaxLoadCity.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `tp_city` WHERE `province_id` = '4'  [ RunTime:0.0010s ]
+
+[ 2017-02-06T22:41:21+08:00 ] 127.0.0.1 /train/index.php/Visit/Ajaxload/ajaxLoadCity.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SELECT * FROM `tp_city` WHERE `province_id` = '13'  [ RunTime:0.0010s ]
+
+[ 2017-02-06T22:41:23+08:00 ] 127.0.0.1 /train/index.php/Visit/Ajaxload/linkage.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T22:41:32+08:00 ] 127.0.0.1 /train/index.php/Visit/Ajaxload/ajaxLoadCity.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SELECT * FROM `tp_city` WHERE `province_id` = '7'  [ RunTime:0.0010s ]
+
+[ 2017-02-06T22:42:08+08:00 ] 127.0.0.1 /train/index.php/Visit/Ajaxload/ajaxLoadCity.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `tp_city` WHERE `province_id` = '9'  [ RunTime:0.0010s ]
+
+[ 2017-02-06T22:42:34+08:00 ] 127.0.0.1 /train/index.php/Visit/Ajaxload/ajaxLoadCity.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T22:42:35+08:00 ] 127.0.0.1 /train/index.php/Visit/Ajaxload/ajaxLoadCity.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `tp_city` WHERE `province_id` = '3'  [ RunTime:0.0010s ]
+
+[ 2017-02-06T22:42:37+08:00 ] 127.0.0.1 /train/index.php/Visit/Ajaxload/ajaxLoadCity.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SELECT * FROM `tp_city` WHERE `province_id` = '8'  [ RunTime:0.0010s ]
+
+[ 2017-02-06T22:43:04+08:00 ] 127.0.0.1 /train/index.php/Visit/Ajaxload/linkage.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T22:43:06+08:00 ] 127.0.0.1 /train/index.php/Visit/Ajaxload/linkage.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-02-06T22:43:07+08:00 ] 127.0.0.1 /train/index.php/Visit/Ajaxload/linkage.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-02-06T22:43:08+08:00 ] 127.0.0.1 /train/index.php/Visit/Ajaxload/linkage.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+
+[ 2017-02-06T22:43:09+08:00 ] 127.0.0.1 /train/index.php/Visit/Ajaxload/linkage.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T22:43:12+08:00 ] 127.0.0.1 /train/index.php/Visit/Ajaxload/linkage.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T22:43:15+08:00 ] 127.0.0.1 /train/index.php/Visit/Ajaxload/linkage.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T22:43:16+08:00 ] 127.0.0.1 /train/index.php/Visit/Ajaxload/linkage.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T22:43:18+08:00 ] 127.0.0.1 /train/index.php/Visit/Ajaxload/linkage.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T22:43:19+08:00 ] 127.0.0.1 /train/index.php/Visit/Ajaxload/linkage.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T22:44:32+08:00 ] 127.0.0.1 /train/index.php/Visit/Ajaxload/linkage.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T22:44:36+08:00 ] 127.0.0.1 /train/index.php/Visit/Ajaxload/linkage.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: provinceID E:\wamp\www\train\Application\Visit\Model\LinkageModel.class.php 第 25 行.
+ERR: Think\Model:searchCity方法不存在！
+
+[ 2017-02-06T22:44:38+08:00 ] 127.0.0.1 /train/index.php/Visit/Ajaxload/linkage.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: provinceID E:\wamp\www\train\Application\Visit\Model\LinkageModel.class.php 第 25 行.
+ERR: Think\Model:searchCity方法不存在！
+
+[ 2017-02-06T22:44:42+08:00 ] 127.0.0.1 /train/index.php/Visit/Ajaxload/linkage.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: provinceID E:\wamp\www\train\Application\Visit\Model\LinkageModel.class.php 第 25 行.
+ERR: Think\Model:searchCity方法不存在！
+
+[ 2017-02-06T22:44:43+08:00 ] 127.0.0.1 /train/index.php/Visit/Ajaxload/linkage.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: provinceID E:\wamp\www\train\Application\Visit\Model\LinkageModel.class.php 第 25 行.
+ERR: Think\Model:searchCity方法不存在！
+
+[ 2017-02-06T22:45:10+08:00 ] 127.0.0.1 /train/index.php/Visit/Ajaxload/linkage.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T22:45:13+08:00 ] 127.0.0.1 /train/index.php/Visit/Ajaxload/linkage.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `tp_linkage` WHERE `parent_id` = 0  [ RunTime:0.0010s ]
+
+[ 2017-02-06T22:45:16+08:00 ] 127.0.0.1 /train/index.php/Visit/Ajaxload/linkage.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `tp_linkage` WHERE `parent_id` = 0  [ RunTime:0.0000s ]
+
+[ 2017-02-06T22:45:18+08:00 ] 127.0.0.1 /train/index.php/Visit/Ajaxload/linkage.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-02-06T22:45:19+08:00 ] 127.0.0.1 /train/index.php/Visit/Ajaxload/linkage.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `tp_linkage` WHERE `parent_id` = 0  [ RunTime:0.0000s ]
+
+[ 2017-02-06T22:45:21+08:00 ] 127.0.0.1 /train/index.php/Visit/Ajaxload/linkage.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `tp_linkage` WHERE `parent_id` = 0  [ RunTime:0.0000s ]
+
+[ 2017-02-06T22:45:31+08:00 ] 127.0.0.1 /train/index.php/Visit/Ajaxload/linkage.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `tp_linkage` WHERE `parent_id` = 0  [ RunTime:0.0000s ]
+
+[ 2017-02-06T22:45:59+08:00 ] 127.0.0.1 /train/index.php/Visit/Ajaxload/linkage.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T22:46:01+08:00 ] 127.0.0.1 /train/index.php/Visit/Ajaxload/linkage.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `tp_linkage` WHERE `parent_id` = '1'  [ RunTime:0.0000s ]
+
+[ 2017-02-06T22:46:03+08:00 ] 127.0.0.1 /train/index.php/Visit/Ajaxload/linkage.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SELECT * FROM `tp_linkage` WHERE `parent_id` = '2'  [ RunTime:0.0010s ]
+
+[ 2017-02-06T22:48:47+08:00 ] 127.0.0.1 /train/index.php/visit/ajaxload
+ERR: Think\Model:searchGuojia方法不存在！
+
+[ 2017-02-06T22:49:11+08:00 ] 127.0.0.1 /train/index.php/visit/ajaxload
+ERR: Think\Model:searchGuojia方法不存在！
+
+[ 2017-02-06T22:50:16+08:00 ] 127.0.0.1 /train/index.php/Visit/Ajaxload/linkage.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `tp_linkage` WHERE `parent_id` = '1'  [ RunTime:0.0000s ]
+
+[ 2017-02-06T22:52:16+08:00 ] 127.0.0.1 /train/index.php/Visit/Ajaxload/linkage.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `tp_linkage` WHERE `parent_id` = '1'  [ RunTime:0.0000s ]
+
+[ 2017-02-06T22:52:20+08:00 ] 127.0.0.1 /train/index.php/Visit/Ajaxload/linkage.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T22:52:22+08:00 ] 127.0.0.1 /train/index.php/Visit/Ajaxload/linkage.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `tp_linkage` WHERE `parent_id` = '1'  [ RunTime:0.0010s ]
+
+[ 2017-02-06T22:59:12+08:00 ] 127.0.0.1 /train/index.php/Visit/Ajaxload/linkage.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T22:59:15+08:00 ] 127.0.0.1 /train/index.php/Visit/Ajaxload/linkage.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `tp_linkage` WHERE `parent_id` = '1'  [ RunTime:0.0000s ]
+
+[ 2017-02-06T22:59:30+08:00 ] 127.0.0.1 /train/index.php/Visit/Ajaxload/linkage.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `tp_linkage` WHERE `parent_id` = '3'  [ RunTime:0.0010s ]
+
+[ 2017-02-06T23:00:12+08:00 ] 127.0.0.1 /train/index.php/Visit/Ajaxload/linkage.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SELECT * FROM `tp_linkage` WHERE `parent_id` = '1'  [ RunTime:0.0010s ]
+
+[ 2017-02-06T23:00:14+08:00 ] 127.0.0.1 /train/index.php/Visit/Ajaxload/linkage.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SELECT * FROM `tp_linkage` WHERE `parent_id` = '4'  [ RunTime:0.0010s ]
+
+[ 2017-02-06T23:00:15+08:00 ] 127.0.0.1 /train/index.php/Visit/Ajaxload/linkage.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `tp_linkage` WHERE `parent_id` = '11'  [ RunTime:0.0010s ]
+
+[ 2017-02-06T23:00:16+08:00 ] 127.0.0.1 /train/index.php/Visit/Ajaxload/linkage.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `tp_linkage` WHERE `parent_id` = '24'  [ RunTime:0.0000s ]
+
+[ 2017-02-06T23:00:36+08:00 ] 127.0.0.1 /train/index.php/Visit/Ajaxload/linkage.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `tp_linkage` WHERE `parent_id` = '1'  [ RunTime:0.0010s ]
+
+[ 2017-02-06T23:00:42+08:00 ] 127.0.0.1 /train/index.php/Visit/Ajaxload/linkage.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T23:00:44+08:00 ] 127.0.0.1 /train/index.php/Visit/Ajaxload/linkage.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `tp_linkage` WHERE `parent_id` = '2'  [ RunTime:0.0010s ]
+
+[ 2017-02-06T23:00:59+08:00 ] 127.0.0.1 /train/index.php/Visit/Ajaxload/linkage.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T23:01:02+08:00 ] 127.0.0.1 /train/index.php/Visit/Ajaxload/linkage.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SELECT * FROM `tp_linkage` WHERE `parent_id` = '1'  [ RunTime:0.0000s ]
+
+[ 2017-02-06T23:01:17+08:00 ] 127.0.0.1 /train/index.php/Visit/Ajaxload/linkage.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+SQL: SELECT * FROM `tp_linkage` WHERE `parent_id` = '2'  [ RunTime:0.0010s ]
+
+[ 2017-02-06T23:03:15+08:00 ] 127.0.0.1 /train/index.php/Visit/Ajaxload/linkage.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T23:03:28+08:00 ] 127.0.0.1 /train/index.php/Visit/Ajaxload/linkage.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `tp_linkage` WHERE `parent_id` = '1'  [ RunTime:0.0010s ]
+
+[ 2017-02-06T23:04:14+08:00 ] ::1 /train/index.php/Visit/Ajaxload/linkage.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SELECT * FROM `tp_linkage` WHERE `parent_id` = '1'  [ RunTime:0.0010s ]
+
+[ 2017-02-06T23:04:42+08:00 ] ::1 /train/index.php/Visit/Ajaxload/linkage.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-06T23:04:44+08:00 ] ::1 /train/index.php/Visit/Ajaxload/linkage.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `tp_linkage` WHERE `parent_id` = '1'  [ RunTime:0.0010s ]
+
+[ 2017-02-06T23:05:39+08:00 ] ::1 /train/index.php/Visit/Ajaxload/linkage.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SELECT * FROM `tp_linkage` WHERE `parent_id` = '1'  [ RunTime:0.0000s ]
+
+[ 2017-02-06T23:06:33+08:00 ] ::1 /train/index.php/Visit/Ajaxload/linkage.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SELECT * FROM `tp_linkage` WHERE `parent_id` = '1'  [ RunTime:0.0000s ]
+
+[ 2017-02-06T23:07:07+08:00 ] ::1 /train/index.php/Visit/Ajaxload/linkage.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SELECT * FROM `tp_linkage` WHERE `parent_id` = '1'  [ RunTime:0.0010s ]
+
+[ 2017-02-06T23:07:11+08:00 ] ::1 /train/index.php/Visit/Ajaxload/linkage.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `tp_linkage` WHERE `parent_id` = '2'  [ RunTime:0.0010s ]
+
+[ 2017-02-06T23:08:16+08:00 ] ::1 /train/index.php/Visit/Ajaxload/linkage.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SELECT * FROM `tp_linkage` WHERE `parent_id` = '1'  [ RunTime:0.0000s ]
+
+[ 2017-02-06T23:10:41+08:00 ] ::1 /train/index.php/Visit/Ajaxload/linkage.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `tp_linkage` WHERE `parent_id` = '1'  [ RunTime:0.0010s ]
+
+[ 2017-02-06T23:10:43+08:00 ] ::1 /train/index.php/Visit/Ajaxload/linkage.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `tp_linkage` WHERE `parent_id` = '3'  [ RunTime:0.0010s ]
+
+[ 2017-02-06T23:10:45+08:00 ] ::1 /train/index.php/Visit/Ajaxload/linkage.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SELECT * FROM `tp_linkage` WHERE `parent_id` = '8'  [ RunTime:0.0010s ]
+
+[ 2017-02-06T23:10:46+08:00 ] ::1 /train/index.php/Visit/Ajaxload/linkage.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `tp_linkage` WHERE `parent_id` = '17'  [ RunTime:0.0010s ]
+
+[ 2017-02-06T23:17:29+08:00 ] ::1 /train/index.php/Visit/Ajaxload/linkage.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `tp_linkage` WHERE `parent_id` = '1'  [ RunTime:0.0010s ]
+
+[ 2017-02-06T23:17:30+08:00 ] ::1 /train/index.php/Visit/Ajaxload/linkage.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `tp_linkage` WHERE `parent_id` = '4'  [ RunTime:0.0000s ]
+
+[ 2017-02-06T23:17:31+08:00 ] ::1 /train/index.php/Visit/Ajaxload/linkage.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `tp_linkage` WHERE `parent_id` = '12'  [ RunTime:0.0010s ]
+
+[ 2017-02-06T23:17:32+08:00 ] ::1 /train/index.php/Visit/Ajaxload/linkage.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SELECT * FROM `tp_linkage` WHERE `parent_id` = '26'  [ RunTime:0.0010s ]
+

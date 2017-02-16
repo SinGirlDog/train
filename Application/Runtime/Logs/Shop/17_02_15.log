@@ -1,0 +1,262 @@
+[ 2017-02-15T14:13:33+08:00 ] ::1 /train/index.php/shop
+ERR: 模板不存在:./Application/Shop/View//index.html.html
+
+[ 2017-02-15T14:33:28+08:00 ] ::1 /train/index.php/Shop/Public/css/style.css
+ERR: 无法加载控制器:Public
+
+[ 2017-02-15T14:44:03+08:00 ] ::1 /train/index.php/Shop/Public/css/.style.css
+ERR: 无法加载控制器:Public
+
+[ 2017-02-15T14:46:43+08:00 ] ::1 /train/index.php/Shop/Public/css/.style.css
+ERR: 无法加载控制器:Public
+
+[ 2017-02-15T14:46:43+08:00 ] ::1 /train/index.php/Shop/Public/css/.common.js
+ERR: 无法加载控制器:Public
+
+[ 2017-02-15T14:46:43+08:00 ] ::1 /train/index.php/Shop/Public/css/.index.js
+ERR: 无法加载控制器:Public
+
+[ 2017-02-15T14:48:14+08:00 ] ::1 /train/index.php/Shop/Public/css/style.css
+ERR: 无法加载控制器:Public
+
+[ 2017-02-15T14:48:14+08:00 ] ::1 /train/index.php/Shop/Public/css/common.js
+ERR: 无法加载控制器:Public
+
+[ 2017-02-15T14:48:14+08:00 ] ::1 /train/index.php/Shop/Public/css/index.js
+ERR: 无法加载控制器:Public
+
+[ 2017-02-15T14:49:52+08:00 ] ::1 /train/index.php/Shop/Public/css/style.css
+ERR: 无法加载控制器:Public
+
+[ 2017-02-15T14:49:52+08:00 ] ::1 /train/index.php/Shop/Public/css/common.js
+ERR: 无法加载控制器:Public
+
+[ 2017-02-15T14:49:53+08:00 ] ::1 /train/index.php/Shop/Public/css/index.js
+ERR: 无法加载控制器:Public
+
+[ 2017-02-15T14:50:31+08:00 ] ::1 /train/index.php/Shop/Public/css/style.css
+ERR: 无法加载控制器:Public
+
+[ 2017-02-15T14:50:31+08:00 ] ::1 /train/index.php/Shop/Public/css/common.js
+ERR: 无法加载控制器:Public
+
+[ 2017-02-15T14:50:31+08:00 ] ::1 /train/index.php/Shop/Public/css/index.js
+ERR: 无法加载控制器:Public
+
+[ 2017-02-15T14:51:40+08:00 ] ::1 /train/index.php/Shop/Public/css/style.css
+ERR: 无法加载控制器:Public
+
+[ 2017-02-15T14:51:40+08:00 ] ::1 /train/index.php/Shop/Public/css/common.js
+ERR: 无法加载控制器:Public
+
+[ 2017-02-15T14:51:40+08:00 ] ::1 /train/index.php/Shop/Public/css/index.js
+ERR: 无法加载控制器:Public
+
+[ 2017-02-15T14:53:14+08:00 ] ::1 /train/index.php/Shop/Public/css/style.css
+ERR: 无法加载控制器:Public
+
+[ 2017-02-15T14:53:14+08:00 ] ::1 /train/index.php/Shop/Public/css/index.js
+ERR: 无法加载控制器:Public
+
+[ 2017-02-15T14:53:14+08:00 ] ::1 /train/index.php/Shop/Public/css/common.js
+ERR: 无法加载控制器:Public
+
+[ 2017-02-15T14:53:14+08:00 ] ::1 /train/index.php/Shop/Public/css/index.js
+ERR: 无法加载控制器:Public
+
+[ 2017-02-15T14:54:08+08:00 ] ::1 /train/index.php/Shop/Public/image/
+ERR: 无法加载控制器:Public
+
+[ 2017-02-15T15:01:46+08:00 ] ::1 /train/index.php/Shop/Public/css/index.js
+ERR: 无法加载控制器:Public
+
+[ 2017-02-15T15:01:46+08:00 ] ::1 /train/index.php/Shop/Public/css/style.css
+ERR: 无法加载控制器:Public
+
+[ 2017-02-15T15:01:46+08:00 ] ::1 /train/index.php/Shop/Public/css/common.js
+ERR: 无法加载控制器:Public
+
+[ 2017-02-15T15:01:46+08:00 ] ::1 /train/index.php/Shop/Public/css/index.js
+ERR: 无法加载控制器:Public
+
+[ 2017-02-15T15:04:43+08:00 ] ::1 /train/index.php/Shop/Public/style.css
+ERR: 无法加载控制器:Public
+
+[ 2017-02-15T15:05:11+08:00 ] ::1 /train/index.php/Shop/Public/style.css
+ERR: 无法加载控制器:Public
+
+[ 2017-02-15T15:05:58+08:00 ] ::1 /train/index.php/Shop/Public/style.css
+ERR: 无法加载控制器:Public
+
+[ 2017-02-15T15:06:08+08:00 ] ::1 /train/index.php/Shop/index.php/Public/style.css
+ERR: 无法加载控制器:Index.php
+
+[ 2017-02-15T15:06:14+08:00 ] ::1 /train/index.php/Shop/Public/style.css
+ERR: 无法加载控制器:Public
+
+[ 2017-02-15T15:12:43+08:00 ] ::1 /train/index.php/shop/index/index.php
+ERR: 非法操作:index.php
+
+[ 2017-02-15T15:12:47+08:00 ] ::1 /train/index.php/shop/Shop/Public/style.css
+ERR: 无法加载控制器:Shop
+
+[ 2017-02-15T15:12:47+08:00 ] ::1 /train/index.php/shop/index/Application/Shop/Public/css/index.js
+ERR: 非法操作:Application
+
+[ 2017-02-15T15:12:47+08:00 ] ::1 /train/index.php/shop/index/Application/Shop/Public/css/common.js
+ERR: 非法操作:Application
+
+[ 2017-02-15T15:12:47+08:00 ] ::1 /train/index.php/shop/index/data/flashdata//cycle_image.js
+ERR: 非法操作:data
+
+[ 2017-02-15T15:12:47+08:00 ] ::1 /train/index.php/shop/index/Application/Shop/Public/css/index.js
+ERR: 非法操作:Application
+
+[ 2017-02-15T15:12:47+08:00 ] ::1 /train/index.php/shop/index/data/flashdata//cycle_image.js
+ERR: 非法操作:data
+
+[ 2017-02-15T15:12:55+08:00 ] ::1 /train/index.php/Shop/Public/style.css
+ERR: 无法加载控制器:Public
+
+[ 2017-02-15T15:12:55+08:00 ] ::1 /train/index.php/shop/Application/Shop/Public/css/common.js
+ERR: 无法加载控制器:Application
+
+[ 2017-02-15T15:12:55+08:00 ] ::1 /train/index.php/shop/Application/Shop/Public/css/index.js
+ERR: 无法加载控制器:Application
+
+[ 2017-02-15T15:12:55+08:00 ] ::1 /train/index.php/shop/data/flashdata//cycle_image.js
+ERR: 无法加载控制器:Data
+
+[ 2017-02-15T15:12:58+08:00 ] ::1 /train/index.php/Shop/Public/style.css
+ERR: 无法加载控制器:Public
+
+[ 2017-02-15T15:12:58+08:00 ] ::1 /train/index.php/shop/Application/Shop/Public/css/index.js
+ERR: 无法加载控制器:Application
+
+[ 2017-02-15T15:12:58+08:00 ] ::1 /train/index.php/shop/Application/Shop/Public/css/common.js
+ERR: 无法加载控制器:Application
+
+[ 2017-02-15T15:12:58+08:00 ] ::1 /train/index.php/shop/data/flashdata//cycle_image.js
+ERR: 无法加载控制器:Data
+
+[ 2017-02-15T15:12:58+08:00 ] ::1 /train/index.php/shop/Application/Shop/Public/css/index.js
+ERR: 无法加载控制器:Application
+
+[ 2017-02-15T15:12:58+08:00 ] ::1 /train/index.php/shop/data/flashdata//cycle_image.js
+ERR: 无法加载控制器:Data
+
+[ 2017-02-15T15:13:18+08:00 ] ::1 /train/index.php/shop/Application/Shop/Public/css/index.js
+ERR: 无法加载控制器:Application
+
+[ 2017-02-15T15:13:18+08:00 ] ::1 /train/index.php/Shop/Public/style.css
+ERR: 无法加载控制器:Public
+
+[ 2017-02-15T15:13:18+08:00 ] ::1 /train/index.php/shop/Application/Shop/Public/css/common.js
+ERR: 无法加载控制器:Application
+
+[ 2017-02-15T15:13:18+08:00 ] ::1 /train/index.php/shop/data/flashdata//cycle_image.js
+ERR: 无法加载控制器:Data
+
+[ 2017-02-15T15:13:18+08:00 ] ::1 /train/index.php/shop/Application/Shop/Public/css/index.js
+ERR: 无法加载控制器:Application
+
+[ 2017-02-15T15:13:18+08:00 ] ::1 /train/index.php/shop/data/flashdata//cycle_image.js
+ERR: 无法加载控制器:Data
+
+[ 2017-02-15T15:13:23+08:00 ] ::1 /train/index.php/Shop/Public/style.css
+ERR: 无法加载控制器:Public
+
+[ 2017-02-15T15:13:23+08:00 ] ::1 /train/index.php/shop/Application/Shop/Public/css/common.js
+ERR: 无法加载控制器:Application
+
+[ 2017-02-15T15:13:23+08:00 ] ::1 /train/index.php/shop/Application/Shop/Public/css/index.js
+ERR: 无法加载控制器:Application
+
+[ 2017-02-15T15:13:23+08:00 ] ::1 /train/index.php/shop/data/flashdata//cycle_image.js
+ERR: 无法加载控制器:Data
+
+[ 2017-02-15T15:13:29+08:00 ] ::1 /train/index.php/shop/index/Application/Shop/Public/css/index.js
+ERR: 非法操作:Application
+
+[ 2017-02-15T15:13:29+08:00 ] ::1 /train/index.php/shop/Shop/Public/style.css
+ERR: 无法加载控制器:Shop
+
+[ 2017-02-15T15:13:29+08:00 ] ::1 /train/index.php/shop/index/Application/Shop/Public/css/common.js
+ERR: 非法操作:Application
+
+[ 2017-02-15T15:13:30+08:00 ] ::1 /train/index.php/shop/index/data/flashdata//cycle_image.js
+ERR: 非法操作:data
+
+[ 2017-02-15T15:13:30+08:00 ] ::1 /train/index.php/shop/index/Application/Shop/Public/css/index.js
+ERR: 非法操作:Application
+
+[ 2017-02-15T15:13:30+08:00 ] ::1 /train/index.php/shop/index/data/flashdata//cycle_image.js
+ERR: 非法操作:data
+
+[ 2017-02-15T15:13:34+08:00 ] ::1 /train/index.php/shop/index/index.php
+ERR: 非法操作:index.php
+
+[ 2017-02-15T15:13:43+08:00 ] ::1 /train/index.php/shop/index/Application/Shop/Public/css/common.js
+ERR: 非法操作:Application
+
+[ 2017-02-15T15:13:43+08:00 ] ::1 /train/index.php/shop/index/Application/Shop/Public/css/index.js
+ERR: 非法操作:Application
+
+[ 2017-02-15T15:13:43+08:00 ] ::1 /train/index.php/shop/Shop/Public/style.css
+ERR: 无法加载控制器:Shop
+
+[ 2017-02-15T15:13:43+08:00 ] ::1 /train/index.php/shop/index/data/flashdata//cycle_image.js
+ERR: 非法操作:data
+
+[ 2017-02-15T15:13:43+08:00 ] ::1 /train/index.php/shop/index/Application/Shop/Public/css/index.js
+ERR: 非法操作:Application
+
+[ 2017-02-15T15:13:43+08:00 ] ::1 /train/index.php/shop/index/data/flashdata//cycle_image.js
+ERR: 非法操作:data
+
+[ 2017-02-15T15:14:10+08:00 ] ::1 /train/index.php/shop/Public
+ERR: 无法加载控制器:Public
+
+[ 2017-02-15T15:16:04+08:00 ] ::1 /train/index.php/Shop/Public/css/index.js
+ERR: 无法加载控制器:Public
+
+[ 2017-02-15T15:16:04+08:00 ] ::1 /train/index.php/Shop/Public/css/common.js
+ERR: 无法加载控制器:Public
+
+[ 2017-02-15T15:16:04+08:00 ] ::1 /train/index.php/Shop/Public/css/index.js
+ERR: 无法加载控制器:Public
+
+[ 2017-02-15T15:16:36+08:00 ] ::1 /train/index.php/Shop/Public/js/common.js
+ERR: 无法加载控制器:Public
+
+[ 2017-02-15T15:16:36+08:00 ] ::1 /train/index.php/Shop/Public/js/index.js
+ERR: 无法加载控制器:Public
+
+[ 2017-02-15T15:16:46+08:00 ] ::1 /train/index.php/Shop/Public/js/common.js
+ERR: 无法加载控制器:Public
+
+[ 2017-02-15T15:17:01+08:00 ] ::1 /train/index.php/Shop/Public/js/common.js
+ERR: 无法加载控制器:Public
+
+[ 2017-02-15T15:17:01+08:00 ] ::1 /train/index.php/Shop/Public/js/index.js
+ERR: 无法加载控制器:Public
+
+[ 2017-02-15T15:17:06+08:00 ] ::1 /train/index.php/Shop/Public/js/common.js
+ERR: 无法加载控制器:Public
+
+[ 2017-02-15T15:17:06+08:00 ] ::1 /train/index.php/Shop/Public/js/index.js
+ERR: 无法加载控制器:Public
+
+[ 2017-02-15T15:19:03+08:00 ] ::1 /train/index.php/Shop/Public/css/style.css
+ERR: 无法加载控制器:Public
+
+[ 2017-02-15T16:27:50+08:00 ] ::1 /train/index.php/shop
+ERR: 1054:Unknown column 'good_number' in 'field list'
+ [ SQL语句 ] : SELECT sum(goods_number) AS `number`,sum(goods_price*good_number) AS `amount` FROM `sp_cart` 
+
+[ 2017-02-15T16:48:09+08:00 ] ::1 /train/index.php/shop
+ERR: XML标签语法错误
+
+[ 2017-02-15T18:09:30+08:00 ] ::1 /train/index.php/shop
+ERR: Think\Controller:_initialize方法不存在！
+

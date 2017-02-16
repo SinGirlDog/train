@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>异步加载级联select么</title>
+
+	<script src="__PUBLIC__/js/jquery-1.8.0.min.js"></script>
+	<!-- <script>
+		var ajaxload_url = "{:U('Ajaxload/ajaxLoadCity')}";
+		$(function(){
+			$('#provinceID').change(function(){
+				
+				 $.ajax({
+		             type: "POST",
+		             url: ajaxload_url,
+		             data: {provinceID:$("#provinceID").val()},
+		             dataType: "json",
+		             success: function(data){
+		                         $('#cityID').empty(); 		                          
+		                         var html = data; 
+		                         $('#cityID').html(html);
+		                      }
+         		});
+			});			
+		});
+	</script> -->
+
+	<script>
+		var linkage_url = "{:U('Ajaxload/linkage')}";
+		
+		$(document).ready(function(){
+			//$('#link_1').change(function(){
+				$('select[id^=link_]').change(function(){
+					
+				var numth = Number($(this).attr('id').split('_')[1]);
+				
+				 $.ajax({
+		             type: "POST",
+		             url: linkage_url,
+		             data: {parent_id:$(this).val()},
+		             dataType: "json",
+		             success: function(data){
+		             	numth += 1;		         
+                         $('#link_'+numth).empty(); 		                          
+                         var html = data; 
+                         $('#link_'+numth).html(html);
+                         $('#link_'+numth).trigger('change');
+                      }
+         		});
+			});			
+		});
+	</script>
+</head>
+	<body>
+		<!-- <select name="provinceID" id="provinceID">
+             <option value="">选择省份</option>
+              <volist name="provinceList" id="vo">
+               <eq name="vo.id" value="0">
+                   <option value="{$vo.id}" selected >{$vo.name}</option>
+                <else />
+                   <option value="{$vo.id}" >{$vo.name}</option>
+               </eq> 
+            </volist> 
+ 		</select>
+
+ 		<select name="cityID" id="cityID">
+             <option value="">选择城市</option>
+              <volist name="cityList" id="vo">
+               <eq name="vo.id" value="0">
+                   <option value="{$vo.id}" selected >{$vo.name}</option>
+                <else />
+                   <option value="{$vo.id}" >{$vo.name}</option>
+               </eq> 
+            </volist> 
+ 		</select> -->
+ 		<br/>
+
+ 		<select name="link_1" id="link_1">
+ 			<option value="">请选择国家</option>
+ 			<volist name="parentList" id="vo">
+ 				<option value="{$vo.id}">{$vo.name}</option>
+ 			</volist>
+ 		</select>
+ 		<select name="link_2" id="link_2">
+ 			<option value="">请选择城市</option>
+ 		</select>
+ 		<select name="link_3" id="link_3">
+ 			<option value="">请选择名字</option>
+ 		</select>
+ 		<select name="link_4" id="link_4">
+ 			<option value="">可以不选</option>
+ 		</select>
+	</body>
+</html>

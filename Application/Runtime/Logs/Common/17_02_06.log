@@ -1,0 +1,6 @@
+[ 2017-02-06T16:12:48+08:00 ] ::1 /train/index.php?g=visit&m=Ajaxload
+ERR: 无法加载模块:Ajaxload
+
+[ 2017-02-06T16:13:22+08:00 ] ::1 /train/index.php/index
+ERR: 无法加载模块:Index
+

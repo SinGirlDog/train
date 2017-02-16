@@ -1,0 +1,6 @@
+[ 2017-02-16T17:10:38+08:00 ] ::1 /train/
+ERR: XML标签语法错误 : condition="$key < 3"
+
+[ 2017-02-16T19:41:37+08:00 ] ::1 /train/
+ERR: 模板不存在:./Application/Shop/View/layout.html
+

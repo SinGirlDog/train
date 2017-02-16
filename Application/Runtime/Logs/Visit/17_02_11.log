@@ -1,0 +1,152 @@
+[ 2017-02-11T11:11:50+08:00 ] ::1 /train/index.php/visit/select
+ERR: 无法加载控制器:Select
+
+[ 2017-02-11T13:22:27+08:00 ] ::1 /train/index.php/visit/mscomment
+ERR: 1052:Column 'id' in field list is ambiguous
+ [ SQL语句 ] : SELECT `id`,`count`,`content`,`click` FROM `tp_message` RIGHT JOIN tp_comment ON tp_comment.ms_id = tp_message.id   GROUP BY ms_id 
+
+[ 2017-02-11T13:23:08+08:00 ] ::1 /train/index.php/visit/mscomment
+ERR: 1054:Unknown column 'message.id' in 'field list'
+ [ SQL语句 ] : SELECT message.id,`count`,`content`,`click` FROM `tp_message` RIGHT JOIN tp_comment ON tp_comment.ms_id = tp_message.id   GROUP BY ms_id 
+
+[ 2017-02-11T13:23:21+08:00 ] ::1 /train/index.php/visit/mscomment
+ERR: 1054:Unknown column '__MESSAGE__.id' in 'field list'
+ [ SQL语句 ] : SELECT __MESSAGE__.id,`count`,`content`,`click` FROM `tp_message` RIGHT JOIN tp_comment ON tp_comment.ms_id = tp_message.id   GROUP BY ms_id 
+
+[ 2017-02-11T13:48:23+08:00 ] ::1 /train/index.php/visit/mscomment
+ERR: Think\Model:filed方法不存在！
+
+[ 2017-02-11T13:48:24+08:00 ] ::1 /train/index.php/visit/mscomment
+ERR: Think\Model:filed方法不存在！
+
+[ 2017-02-11T13:48:24+08:00 ] ::1 /train/index.php/visit/mscomment
+ERR: Think\Model:filed方法不存在！
+
+[ 2017-02-11T13:49:19+08:00 ] ::1 /train/index.php/visit/mscomment
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ [ SQL语句 ] : SELECT * FROM  
+
+[ 2017-02-11T13:52:38+08:00 ] ::1 /train/index.php/visit/mscomment
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ [ SQL语句 ] : SELECT * FROM  
+
+[ 2017-02-11T13:55:10+08:00 ] ::1 /train/index.php/visit/mscomment
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ [ SQL语句 ] : SELECT * FROM  
+
+[ 2017-02-11T13:55:10+08:00 ] ::1 /train/index.php/visit/mscomment
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ [ SQL语句 ] : SELECT * FROM  
+
+[ 2017-02-11T13:55:11+08:00 ] ::1 /train/index.php/visit/mscomment
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ [ SQL语句 ] : SELECT * FROM  
+
+[ 2017-02-11T13:55:11+08:00 ] ::1 /train/index.php/visit/mscomment
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ [ SQL语句 ] : SELECT * FROM  
+
+[ 2017-02-11T13:55:11+08:00 ] ::1 /train/index.php/visit/mscomment
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ [ SQL语句 ] : SELECT * FROM  
+
+[ 2017-02-11T14:00:41+08:00 ] ::1 /train/index.php/visit/mscomment
+ERR: 1052:Column 'id' in field list is ambiguous
+ [ SQL语句 ] : SELECT `id`,`title`,`content`,`click`,count(ms_id) AS `count` FROM `tp_message` RIGHT JOIN tp_comment ON tp_comment.ms_id = tp_message.id   GROUP BY ms_id 
+
+[ 2017-02-11T14:02:17+08:00 ] ::1 /train/index.php/visit/mscomment
+ERR: 1054:Unknown column 'Message' in 'field list'
+ [ SQL语句 ] : SELECT `Message` AS ``,`Comment` AS `` FROM `tp_message` RIGHT JOIN tp_comment ON tp_comment.ms_id = tp_message.id   GROUP BY ms_id 
+
+[ 2017-02-11T20:03:53+08:00 ] ::1 /train/index.php/visit/mscomment
+ERR: 1054:Unknown column 'Message' in 'field list'
+ [ SQL语句 ] : SELECT `Message` AS ``,`Comment` AS `` FROM `tp_message` RIGHT JOIN tp_comment ON tp_comment.ms_id = tp_message.id   GROUP BY ms_id 
+
+[ 2017-02-11T20:04:53+08:00 ] ::1 /train/index.php/visit/mscomment
+ERR: 1052:Column 'id' in field list is ambiguous
+ [ SQL语句 ] : SELECT `id`,`title`,`content`,`click`,count(ms_id) AS `count` FROM `tp_message` RIGHT JOIN tp_comment ON tp_comment.ms_id = tp_message.id   GROUP BY ms_id 
+
+[ 2017-02-11T20:20:49+08:00 ] ::1 /train/index.php/visit/mscomment
+ERR: 1146:Table 'train_tp.tp_relation\_message_view' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_relation\_message_view`
+
+[ 2017-02-11T20:21:02+08:00 ] ::1 /train/index.php/visit/mscomment
+NOTIC: D方法实例化没找到模型类Relation\Model\MessageViewModel
+ERR: 1146:Table 'train_tp.tp_message_view' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_message_view`
+
+[ 2017-02-11T20:21:03+08:00 ] ::1 /train/index.php/visit/mscomment
+NOTIC: D方法实例化没找到模型类Relation\Model\MessageViewModel
+ERR: 1146:Table 'train_tp.tp_message_view' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_message_view`
+
+[ 2017-02-11T20:43:41+08:00 ] ::1 /train/index.php/visit/mscomment
+ERR: Think\Model:MsCmView方法不存在！
+
+[ 2017-02-11T20:44:19+08:00 ] ::1 /train/index.php/visit/mscomment
+ERR: Think\Model:MsCmView方法不存在！
+
+[ 2017-02-11T20:45:25+08:00 ] ::1 /train/index.php/visit/mscomment
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ [ SQL语句 ] : SELECT * FROM  
+
+[ 2017-02-11T20:45:25+08:00 ] ::1 /train/index.php/visit/mscomment
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ [ SQL语句 ] : SELECT * FROM  
+
+[ 2017-02-11T20:45:25+08:00 ] ::1 /train/index.php/visit/mscomment
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ [ SQL语句 ] : SELECT * FROM  
+
+[ 2017-02-11T20:46:04+08:00 ] ::1 /train/index.php/visit/mscomment
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ [ SQL语句 ] : SELECT * FROM  
+
+[ 2017-02-11T20:46:04+08:00 ] ::1 /train/index.php/visit/mscomment
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ [ SQL语句 ] : SELECT * FROM  
+
+[ 2017-02-11T20:46:04+08:00 ] ::1 /train/index.php/visit/mscomment
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ [ SQL语句 ] : SELECT * FROM  
+
+[ 2017-02-11T20:46:04+08:00 ] ::1 /train/index.php/visit/mscomment
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ [ SQL语句 ] : SELECT * FROM  
+
+[ 2017-02-11T20:46:05+08:00 ] ::1 /train/index.php/visit/mscomment
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ [ SQL语句 ] : SELECT * FROM  
+
+[ 2017-02-11T20:46:20+08:00 ] ::1 /train/index.php/visit/mscomment
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ [ SQL语句 ] : SELECT * FROM  
+
+[ 2017-02-11T20:46:20+08:00 ] ::1 /train/index.php/visit/mscomment
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ [ SQL语句 ] : SELECT * FROM  
+
+[ 2017-02-11T20:46:20+08:00 ] ::1 /train/index.php/visit/mscomment
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ [ SQL语句 ] : SELECT * FROM  
+
+[ 2017-02-11T20:46:20+08:00 ] ::1 /train/index.php/visit/mscomment
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ [ SQL语句 ] : SELECT * FROM  
+
+[ 2017-02-11T20:46:21+08:00 ] ::1 /train/index.php/visit/mscomment
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ [ SQL语句 ] : SELECT * FROM  
+
+[ 2017-02-11T20:46:21+08:00 ] ::1 /train/index.php/visit/mscomment
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ [ SQL语句 ] : SELECT * FROM  
+
+[ 2017-02-11T20:46:31+08:00 ] ::1 /train/index.php/visit/mscomment
+ERR: 1146:Table 'train_tp.tp_message_view' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_message_view`
+
+[ 2017-02-11T20:49:21+08:00 ] ::1 /train/index.php/visit/mscomment
+ERR: 1146:Table 'train_tp.tp_commentt' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_commentt`
+

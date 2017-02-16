@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>消息回复联表查询</title>
+	<style>
+		ul{
+			width:100%;
+			float:left;
+		}
+		li{
+			width:15%;
+			float:left;
+			margin-left:10px;
+			list-style:none;			
+			}
+	</style>
+</head>
+<body>
+	<ul>
+		<li>序号</li>
+		<li>消息标题</li>
+		<li>消息内容</li>
+		<li>点击量</li>
+		<li>评论数</li>
+	</ul>
+	<foreach name="msdata" item="vo" key="k" >		
+	<ul>
+		<li>{$k+1}</li>
+		<li>{$vo['title']}</li>
+		<li>{$vo['content']}</li>
+		<li>{$vo['click']}</li>
+		<li>
+			<empty name="vo['comment'][0]['count']">
+				不详
+			<else/>
+				{$vo['comment'][0]['count']}
+			</empty>
+		</li>
+	</ul>
+	</foreach>
+</body>
+</html>

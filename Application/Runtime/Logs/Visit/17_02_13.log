@@ -1,0 +1,24 @@
+[ 2017-02-13T14:56:14+08:00 ] ::1 /train/index.php/visit/bai
+ERR: 模板不存在:./Application/Visit/View//Bai/index.html.html
+
+[ 2017-02-13T14:57:23+08:00 ] ::1 /train/index.php/visit/demo2.css
+ERR: 无法加载控制器:Demo2.css
+
+[ 2017-02-13T14:57:23+08:00 ] ::1 /train/index.php/visit/demo2.css
+ERR: 无法加载控制器:Demo2.css
+
+[ 2017-02-13T14:57:23+08:00 ] ::1 /train/index.php/visit/demo2.css
+ERR: 无法加载控制器:Demo2.css
+
+[ 2017-02-13T14:57:24+08:00 ] ::1 /train/index.php/visit/demo2.css
+ERR: 无法加载控制器:Demo2.css
+
+[ 2017-02-13T14:57:24+08:00 ] ::1 /train/index.php/visit/demo2.css
+ERR: 无法加载控制器:Demo2.css
+
+[ 2017-02-13T14:57:24+08:00 ] ::1 /train/index.php/visit/demo2.css
+ERR: 无法加载控制器:Demo2.css
+
+[ 2017-02-13T14:58:21+08:00 ] ::1 /train/index.php/visit/demo2.css
+ERR: 无法加载控制器:Demo2.css
+
