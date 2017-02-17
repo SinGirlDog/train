@@ -18,6 +18,10 @@ class IndexController extends Controller {
     	$top_goods = $goods->get_top10();
     	$this->assign('top_goods',$top_goods);
 
+        $nav = D('Nav');
+        $navigator_list = $nav->get_navigator();
+        $this->assign('navigator_list',$navigator_list);
+
     	$this->display(':index');
     }
 

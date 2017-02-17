@@ -13,22 +13,26 @@ var process_request = "{$lang.process_request}";
                 <script type="text/javascript" src="{$Think.const.SHOP_JS_URL}utils.js"></script>
                 <script type="text/javascript" src="{$Think.const.SHOP_JS_URL}transport.js"></script>
                 <font id="ECS_MEMBERZONE">
-                <!-- ECSHOP 提醒您：根据用户id来调用member_info.lbi显示不同的界面 -->
-                <!-- {insert name='member_info'}  -->
-                <include file="lbi/member_info" />
+                    <!-- ECSHOP 提醒您：根据用户id来调用member_info.lbi显示不同的界面 -->
+                    <!-- {insert name='member_info'}  -->
+                    <include file="lbi/member_info" />
                 </font>
             </li>
-            <!--{if $navigator_list.top}-->
-            <li id="topNav" class="clearfix">
-                <!-- {foreach name=nav_top_list from=$navigator_list.top item=nav} -->
-                <a href="{$nav.url}" <!-- {if $nav.opennew eq 1} --> target="_blank" <!-- {/if} -->>{$nav.name}</a>
-                <!-- {if !$smarty.foreach.nav_top_list.last} -->
-                |
-                <!-- {/if} -->
-                <!-- {/foreach} -->
-                <div class="topNavR"></div>
-            </li>
-            <!-- {/if} -->
+            <notempty name="navigator_list['top']">
+                <li id="topNav" class="clearfix">
+                    <foreach name="navigator_list['top']" item="vo" key="key">
+                        <if condition="$vo['opennew'] eq 1">
+                            <a href="{$vo.url}" target="_blank">{$vo.name}</a>
+                            <else/>
+                            <a href="{$vo.url}">{$vo.name}</a>
+                        </if>
+                        <if condition="$key lt sizeof($navigator_list['top'])">
+                            |
+                        </if>
+                    </foreach>
+                    <div class="topNavR"></div>
+                </li>
+            </notempty>
         </ul>
     </div>
 </div>

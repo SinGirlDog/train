@@ -37,9 +37,9 @@ var process_request = "<?php echo ($lang["process_request"]); ?>";
                 <script type="text/javascript" src="<?php echo (SHOP_JS_URL); ?>utils.js"></script>
                 <script type="text/javascript" src="<?php echo (SHOP_JS_URL); ?>transport.js"></script>
                 <font id="ECS_MEMBERZONE">
-                <!-- ECSHOP 提醒您：根据用户id来调用member_info.lbi显示不同的界面 -->
-                <!-- {insert name='member_info'}  -->
-                <div id="append_parent"></div>
+                    <!-- ECSHOP 提醒您：根据用户id来调用member_info.lbi显示不同的界面 -->
+                    <!-- {insert name='member_info'}  -->
+                    <div id="append_parent"></div>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <?php if(!empty($user_info)): ?><font style="position:relative; top:10px;">
         <?php echo ($lang["hello"]); ?>，
@@ -53,17 +53,13 @@ var process_request = "<?php echo ($lang["process_request"]); ?>";
 
                 </font>
             </li>
-            <!--{if $navigator_list.top}-->
-            <li id="topNav" class="clearfix">
-                <!-- {foreach name=nav_top_list from=$navigator_list.top item=nav} -->
-                <a href="<?php echo ($nav["url"]); ?>" <!-- {if $nav.opennew eq 1} --> target="_blank" <!-- {/if} -->><?php echo ($nav["name"]); ?></a>
-                <!-- {if !$smarty.foreach.nav_top_list.last} -->
-                |
-                <!-- {/if} -->
-                <!-- {/foreach} -->
-                <div class="topNavR"></div>
-            </li>
-            <!-- {/if} -->
+            <?php if(!empty($navigator_list['top'])): ?><li id="topNav" class="clearfix">
+                    <?php if(is_array($navigator_list['top'])): foreach($navigator_list['top'] as $key=>$vo): if($vo['opennew'] == 1): ?><a href="<?php echo ($vo["url"]); ?>" target="_blank"><?php echo ($vo["name"]); ?></a>
+                            <?php else: ?>
+                            <a href="<?php echo ($vo["url"]); ?>"><?php echo ($vo["name"]); ?></a><?php endif; ?>
+                        <?php if($key < sizeof($navigator_list['top'])): ?>|<?php endif; endforeach; endif; ?>
+                    <div class="topNavR"></div>
+                </li><?php endif; ?>
         </ul>
     </div>
 </div>
