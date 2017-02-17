@@ -4,13 +4,13 @@ use Think\Model;
 
 class GoodsModel extends Model{
 
-	/**
+/**
  * 调用当前分类的销售排行榜
  *
  ** @param   string  $cats   查询的分类
  * @return  array
  */
-function get_top10($cats = '')
+public function get_top10($cats = '')
 {
 	$condition = array(
 		'is_on_sale' => 1,
@@ -82,5 +82,6 @@ function get_top10($cats = '')
     return $arr;*/
    
 }
+
 
 }

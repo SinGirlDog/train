@@ -19,9 +19,7 @@
     <script src='{$Think.const.SHOP_JS_URL}index.js'></script>
 </head>
 
-<body>
-    <!-- #BeginLibraryItem "/library/page_header.lbi" -->
-    <!-- #EndLibraryItem -->
+<body>   
     <include file="lbi/page_header" />
     <div class="blank">
     </div>
@@ -39,19 +37,15 @@
             </div>
             <div class="blank5"></div>
             <!--站内公告 end-->
-            <!-- TemplateBeginEditable name="左边区域" -->
-            <!-- #BeginLibraryItem "/library/cart.lbi" -->
-            <!-- {insert_scripts files='transport.js'} -->
-            <script src='{$Think.const.SHOP_JS_URL}transport.js'></script>
-            <include file="lbi/cart" />
-            <div class="cart" id="ECS_CARTINFO">
-                <!-- {insert name='cart_info'} -->
-                {$cartinfo}
+          
+            <!-- <include file="lbi/cart"/> -->
+            <script src='{$Think.const.SHOP_JS_URL}transport.js'></script>           
+            <div class="cart" id="ECS_CARTINFO">               
+                {$cart_info}
             </div>
             <div class="blank5"></div>
-            <!-- #EndLibraryItem -->
-            <!-- #BeginLibraryItem "/library/category_tree.lbi" -->
-            <include file="lbi/category_tree" />
+           
+            <!-- <include file="lbi/category_tree" /> -->
             <div class="box">
                 <div class="box_1">
                     <div id="category_tree">

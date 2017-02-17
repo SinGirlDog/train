@@ -36,6 +36,11 @@ function get_navigator($ctype = '', $catlist = array())
             'cid'       =>  $data['cid'],
             );
     }
+
+    if ($noindex == false) {
+        $navlist['config']['index'] = 1;
+    }
+
 	return $navlist;
 
     $sql = 'SELECT * FROM '. $GLOBALS['ecs']->table('nav') . '

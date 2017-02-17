@@ -19,9 +19,7 @@
     <script src='<?php echo (SHOP_JS_URL); ?>index.js'></script>
 </head>
 
-<body>
-    <!-- #BeginLibraryItem "/library/page_header.lbi" -->
-    <!-- #EndLibraryItem -->
+<body>   
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <script type="text/javascript">
 var process_request = "<?php echo ($lang["process_request"]); ?>";
@@ -65,33 +63,30 @@ var process_request = "<?php echo ($lang["process_request"]); ?>";
 </div>
 <div class="blank"></div>
 <div id="mainNav" class="clearfix">
-    <a href="../index.php" {if $navigator_list.config.index eq 1} class="cur" {/if}><?php echo ($lang["home"]); ?><span></span></a>
-    <!-- {foreach name=nav_middle_list from=$navigator_list.middle item=nav} -->
-    <a href="<?php echo ($nav["url"]); ?>" {if $nav.opennew eq 1}target="_blank" {/if} {if $nav.active eq 1} class="cur" {/if}><?php echo ($nav["name"]); ?><span></span></a>
-    <!-- {/foreach} -->
+    <?php if($navigator_list['config']['index'] == 1): ?><a href="../index.php" class="cur"><?php echo ($lang["home"]); ?><span></span></a>
+        <?php else: ?>
+        <a href="../index.php"><?php echo ($lang["home"]); ?><span></span></a><?php endif; ?>
+    <?php if(is_array($navigator_list['middle'])): foreach($navigator_list['middle'] as $key=>$vo): if($vo['opennew'] == 1){ $target = 'target="_blank"'; }else{ $target = ''; } ?>
+        <?php if($vo['active'] == 1) $class = 'class = "cur"'; else $class = ''; ?>
+        <a href="<?php echo ($vo['url']); ?>" <?php echo ($target); ?> <?php echo ($class); ?>><?php echo ($vo['name']); ?><span></span></a><?php endforeach; endif; ?>
 </div>
 <!--search start-->
 <div id="search" class="clearfix">
     <div class="keys f_l">
-        <script type="text/javascript">
-        {
-            literal
-        }
-        <!--
-        function checkSearchForm() {
-            if (document.getElementById('keyword').value) {
-                return true;
-            } else {
-                alert("<?php echo ($lang["no_keywords"]); ?>");
-                return false;
+        
+            <script type="text/javascript">
+            function checkSearchForm() {
+                if (document.getElementById('keyword').value) {
+                    return true;
+                } else {
+                    alert("{$lang.no_keywords}");
+                    return false;
+                }
             }
-        }
-        -->
-        {
-            /literal}
-        </script>
-        {if $searchkeywords} <?php echo ($lang["hot_search"]); ?> ： {foreach from=$searchkeywords item=val}
-        <a href="search.php?keywords=<?php echo ($val); ?>"><?php echo ($val); ?></a> {/foreach} {/if}
+            </script>
+        
+        <?php if(!empty($searchkeywords)): echo ($lang["hot_search"]); ?> ：
+            <?php if(is_array($searchkeywords)): foreach($searchkeywords as $key=>$vo): ?><a href="search.php?keywords=<?php echo ($vo); ?>"><?php echo ($vo); ?></a><?php endforeach; endif; endif; ?>
     </div>
     <form id="searchForm" name="searchForm" method="get" action="search.php" onSubmit="return checkSearchForm()" class="f_r" style="_position:relative; top:5px;">
         <select name="category" id="category" class="B_input">
@@ -121,45 +116,34 @@ var process_request = "<?php echo ($lang["process_request"]); ?>";
             </div>
             <div class="blank5"></div>
             <!--站内公告 end-->
-            <!-- TemplateBeginEditable name="左边区域" -->
-            <!-- #BeginLibraryItem "/library/cart.lbi" -->
-            <!-- {insert_scripts files='transport.js'} -->
-            <script src='<?php echo (SHOP_JS_URL); ?>transport.js'></script>
-            <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-{insert_scripts files='transport.js'}
+          
+            <!-- <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script src='<?php echo (SHOP_JS_URL); ?>transport.js'></script>
 <div class="cart" id="ECS_CARTINFO">
- {insert name='cart_info'}
+    <?php echo ($cart_info); ?>
 </div>
 <div class="blank5"></div>
-
-            <div class="cart" id="ECS_CARTINFO">
-                <!-- {insert name='cart_info'} -->
-                <?php echo ($cartinfo); ?>
+ -->
+            <script src='<?php echo (SHOP_JS_URL); ?>transport.js'></script>           
+            <div class="cart" id="ECS_CARTINFO">               
+                <?php echo ($cart_info); ?>
             </div>
             <div class="blank5"></div>
-            <!-- #EndLibraryItem -->
-            <!-- #BeginLibraryItem "/library/category_tree.lbi" -->
-            <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+           
+            <!-- <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <div class="box">
- <div class="box_1">
-  <div id="category_tree">
-    <!--{foreach from=$categories item=cat}-->
-     <dl>
-     <dt><a href="<?php echo ($cat["url"]); ?>"><?php echo ($cat["name"]); ?></a></dt>
-     <!--{foreach from=$cat.cat_id item=child}-->
-     <dd><a href="<?php echo ($child["url"]); ?>"><?php echo ($child["name"]); ?></a></dd>
-       <!--{foreach from=$child.cat_id item=childer}-->
-       <dd>&nbsp;&nbsp;<a href="<?php echo ($childer["url"]); ?>"><?php echo ($childer["name"]); ?></a></dd>
-       <!--{/foreach}-->
-     <!--{/foreach}-->
-       
-       </dl>
-    <!--{/foreach}--> 
-  </div>
- </div>
+    <div class="box_1">
+        <div id="category_tree">
+            <?php if(is_array($categories)): foreach($categories as $key=>$cat): ?><dl>
+                    <dt><a href="<?php echo ($cat["url"]); ?>"><?php echo ($cat["name"]); ?></a></dt>
+                    <?php if(is_array($cat['cat_id'])): foreach($cat['cat_id'] as $cid_key=>$child): ?><dd><a href="<?php echo ($child["url"]); ?>"><?php echo ($child["name"]); ?></a></dd>
+                        <?php if(is_array($child['cat_id'])): foreach($child['cat_id'] as $chi_key=>$childer): ?><dd>&nbsp;&nbsp;<a href="<?php echo ($childer["url"]); ?>"><?php echo ($childer["name"]); ?></a></dd><?php endforeach; endif; endforeach; endif; ?>
+                </dl><?php endforeach; endif; ?>
+        </div>
+    </div>
 </div>
 <div class="blank5"></div>
-
+ -->
             <div class="box">
                 <div class="box_1">
                     <div id="category_tree">

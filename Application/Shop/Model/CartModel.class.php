@@ -31,7 +31,8 @@ public function insert_cart_info()
         $number = 0;
         $amount = 0;
     }	
-	$str = sprintf($GLOBALS['_LANG']['cart_info'], $number, $amount);
+	// $str = sprintf($GLOBALS['_LANG']['cart_info'], $number, $amount);
+    $str="暂时不懂";
 	return '<a href="flow.php" title="' . $GLOBALS['_LANG']['view_cart'] . '">' . $str . '</a>';
 
     /*$sql = 'SELECT SUM(goods_number) AS number, SUM(goods_price * goods_number) AS amount' .
