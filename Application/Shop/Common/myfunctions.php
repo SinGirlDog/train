@@ -353,3 +353,4 @@ function build_uri($app, $params, $append = '', $page = 0, $keywords = '', $size
     }
     return $uri;
 }
+

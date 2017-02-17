@@ -23,10 +23,10 @@ public function get_top10($cats = '')
 		'goods_name',
 		'shop_price',
 		'goods_thumb',
-		'sum(goods_number)' => 'goods_number',		
+		// 'sum(goods_number)' => 'goods_number',		
 		);
 	 
-    $query = $this->field($fields)->where($condition)->order('goods_number DESC')->limit(10)->select();
+    $query = $this->fetchSql(false)->field($fields)->where($condition)->order('goods_number DESC')->limit(10)->select();
 	
 	return $query;
 

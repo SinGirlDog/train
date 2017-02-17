@@ -19,7 +19,7 @@
     <script src='{$Think.const.SHOP_JS_URL}index.js'></script>
 </head>
 
-<body>   
+<body>
     <include file="lbi/page_header" />
     <div class="blank">
     </div>
@@ -37,42 +37,38 @@
             </div>
             <div class="blank5"></div>
             <!--站内公告 end-->
-          
             <!-- <include file="lbi/cart"/> -->
-            <script src='{$Think.const.SHOP_JS_URL}transport.js'></script>           
-            <div class="cart" id="ECS_CARTINFO">               
+            <script src='{$Think.const.SHOP_JS_URL}transport.js'></script>
+            <div class="cart" id="ECS_CARTINFO">
                 {$cart_info}
             </div>
             <div class="blank5"></div>
-           
             <!-- <include file="lbi/category_tree" /> -->
             <div class="box">
                 <div class="box_1">
                     <div id="category_tree">
-                        <!--{foreach from=$categories item=cat}-->
-                        <dl>
-                            <dt><a href="{$cat.url}">{$cat.name}</a></dt>
-                            <!--{foreach from=$cat.cat_id item=child}-->
-                            <dd><a href="{$child.url}">{$child.name}</a></dd>
-                            <!--{foreach from=$child.cat_id item=childer}-->
-                            <dd>&nbsp;&nbsp;<a href="{$childer.url}">{$childer.name}</a></dd>
-                            <!--{/foreach}-->
-                            <!--{/foreach}-->
-                        </dl>
-                        <!--{/foreach}-->
+                        <foreach name="categories" item="cat" key="key">
+                            <dl>
+                                <dt><a href="{$cat.url}">{$cat.name}</a></dt>
+                                <foreach name="cat['cat_id']" item="child" key="cid_key">
+                                    <dd><a href="{$child.url}">{$child.name}</a></dd>
+                                    <foreach name="child['cat_id']" item="childer" key="chi_key">
+                                        <dd>&nbsp;&nbsp;<a href="{$childer.url}">{$childer.name}</a></dd>
+                                    </foreach>
+                                </foreach>
+                            </dl>
+                        </foreach>
                     </div>
                 </div>
             </div>
             <div class="blank5"></div>
-            <!-- #EndLibraryItem -->
-            <!-- #BeginLibraryItem "/library/top10.lbi" -->
-            <include file="lbi/top10" />
+            <!-- <include file="lbi/top10" /> -->
             <div class="box">
                 <div class="box_2">
                     <div class="top10Tit"></div>
                     <div class="top10List clearfix">
                         <notempty name="top_goods">
-                            <foreach name="top_goods" item="vo" key="key">
+                            <foreach name="top_goods" item="goods" key="key">
                                 <ul class="clearfix">
                                     <img src="{$Think.const.SHOP_IMG_URL}/top_{$key+1}.gif" class="iteration" />
                                     <if condition="$key lt 3">
@@ -100,33 +96,39 @@
                 </div>
             </div>
             <div class="blank5"></div>
-            <!-- #EndLibraryItem -->
-            <!-- #BeginLibraryItem "/library/promotion_info.lbi" -->
-            <include file="lbi/promotion_info" />
-            <!-- {if $promotion_info} -->
-            <!-- 促销信息 -->
-            <div class="box">
-                <div class="box_1">
-                    <h3><span>{$lang.promotion_info}</span></h3>
-                    <div class="boxCenterList RelaArticle">
-                        <!-- {foreach from=$promotion_info item=item key=key} -->
-                        <!-- {if $item.type eq "snatch"} -->
-                        <a href="snatch.php" title="{$lang.$item.type}">{$lang.snatch_promotion}</a>
-                        <!-- {elseif $item.type eq "group_buy"} -->
-                        <a href="group_buy.php" title="{$lang.$item.type}">{$lang.group_promotion}</a>
-                        <!-- {elseif $item.type eq "auction"} -->
-                        <a href="auction.php" title="{$lang.$item.type}">{$lang.auction_promotion}</a>
-                        <!-- {elseif $item.type eq "favourable"} -->
-                        <a href="activity.php" title="{$lang.$item.type}">{$lang.favourable_promotion}</a>
-                        <!-- {/if} -->
-                        <a href="{$item.url}" title="{$lang.$item.type} {$item.act_name}{$item.time}" style="background:none; padding-left:0px;">{$item.act_name}</a>
-                        <br />
-                        <!-- {/foreach} -->
+            <!-- <include file="lbi/promotion_info" /> -->
+            <notempty name="promotion_info">
+                <div class="box">
+                    <div class="box_1">
+                        <h3><span>{$lang.promotion_info}</span></h3>
+                        <div class="boxCenterList RelaArticle">
+                            <foreach name="promotion_info" item="item" key="key">
+                                <switch name="item.type">
+                                    <case name="snatch">
+                                        <a href="snatch.php" title="{$lang.$item.type}">{$lang.snatch_promotion}</a>
+                                    </case>
+                                    <case name="group_buy">
+                                        <a href="group_buy.php" title="{$lang.$item.type}">{$lang.group_promotion}</a>
+                                    </case>
+                                    <case name="auction">
+                                        <a href="auction.php" title="{$lang.$item.type}">{$lang.auction_promotion}</a>
+                                    </case>
+                                    <case name="favourable">
+                                        <a href="activity.php" title="{$lang.$item.type}">{$lang.favourable_promotion}</a>
+                                    </case>
+                                    <case name="package">
+                                        <a href="package.php" title="{$lang.$item.type}">{$lang.package_promotion}</a>
+                                    </case>
+                                    <default/>
+                                </switch>
+                                <a href="{$item.url}" title="{$lang.$item.type} {$item.act_name}{$item.time}" style="background:none; padding-left:0px;">{$item.act_name}</a>
+                                <br />
+                            </foreach>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="blank5"></div>
-            <!-- {/if} -->
+                <div class="blank5"></div>
+            </notempty>
             <!-- #EndLibraryItem -->
             <!-- #BeginLibraryItem "/library/order_query.lbi" -->
             <include file="lbi/order_query" />

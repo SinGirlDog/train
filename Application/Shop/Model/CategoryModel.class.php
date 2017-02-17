@@ -32,34 +32,13 @@ public function get_categories_tree($cat_id = 0)
      如果是取出底级分类上级分类，
      如果不是取当前分类及其下的子分类
     */
-     $condi = array(
-     	'parent_id' => $parent_id,
-     	'is_show' => 1,
-     	);
-     $count = $this->where($condi)->count();
-
-     if($count || $parent_id == 0){
-     	$fields = array('cat_id','cat_name','parent_id','is_show');
-
-     	$cats_arr = $this->field($fields)->order('sort_order ASC','cat_id ASC')->select(); 	
-
-     	foreach($cats_arr as $key=>$row) {
-     		if($row['is_show']) {
-
-     			$cat_arr[$row['cat_id']]['id']   = $row['cat_id'];
-                $cat_arr[$row['cat_id']]['name'] = $row['cat_name'];
-                // $cat_arr[$row['cat_id']]['url']  = build_uri('category', array('cid' => $row['cat_id']), $row['cat_name']);
-     		}
-     		if (isset($row['cat_id']) != NULL)
-            {
-                // $cat_arr[$row['cat_id']]['cat_id'] = $this->get_child_tree($row['cat_id']);
-            }
-     	}     	
-     }
+     $cat_arr = array();
+     $cat_arr = $this->get_child_tree($parent_id);
+          
      if(isset($cat_arr))
-	    {
-	        return $cat_arr;
-	    }
+    {
+        return $cat_arr;
+    }
 }
 
 public function get_child_tree($tree_id = 0)
@@ -76,14 +55,13 @@ public function get_child_tree($tree_id = 0)
     if($count || $tree_id == 0){
     	$fields = array('cat_id','cat_name','parent_id','is_show');
 
-    	$cats_arr = $this->field($fields)->order('sort_order ASC','cat_id ASC')->select();
-
+    	$cats_arr = $this->field($fields)->where($cond)->order('sort_order ASC','cat_id ASC')->select();    	
     	foreach($cats_arr as $key=>$row) {
      		if($row['is_show']) {
 
      			$cat_arr[$row['cat_id']]['id']   = $row['cat_id'];
                 $cat_arr[$row['cat_id']]['name'] = $row['cat_name'];
-                // $cat_arr[$row['cat_id']]['url']  = build_uri('category', array('cid' => $row['cat_id']), $row['cat_name']);
+                $cat_arr[$row['cat_id']]['url']  = build_uri('category', array('cid' => $row['cat_id']), $row['cat_name']);
      		}
      		if (isset($row['cat_id']) != NULL)
             {

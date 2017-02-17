@@ -21,5 +21,5 @@ return array(
 
     'TAGLIB_PRE_LOAD'       =>  'html',   // 需要额外加载的标签库(须指定标签库名称)以逗号分隔 
 
-    'LOAD_EXT_FILE'         => 'myfunctions',
+    'LOAD_EXT_FILE'         => 'myfunctions,timefuns',//自定义的共用库函数文件名
 );

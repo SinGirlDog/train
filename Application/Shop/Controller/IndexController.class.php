@@ -23,9 +23,13 @@ class IndexController extends Controller {
         $this->assign('navigator_list',$navigator_list);
 
         $Category = D('Category');
-        $categories = $Category->get_categories_tree();
-        // echo '<pre/>';print_r($categories);die;
+        $categories = $Category->get_categories_tree();  
         $this->assign('categories',$categories);
+
+        $GoodsActivity = D('GoodsActivity');
+        $promotion_info = $GoodsActivity->get_promotion_info();  
+        // echo '<pre/>';print_r($promotion_info);die;        
+        $this->assign('promotion_info',$promotion_info);
 
     	$this->display(':index');
     }
