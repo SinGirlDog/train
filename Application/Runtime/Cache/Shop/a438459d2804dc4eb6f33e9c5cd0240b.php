@@ -27,73 +27,88 @@
 var process_request = "<?php echo ($lang["process_request"]); ?>";
 </script>
 <div class="block clearfix">
- <div class="f_l"><a href="../index.php" name="top"><img src="../image/logo.gif" /></a></div>
- <div class="f_r log">
-   <ul>
-   <li class="userInfo">
-   {insert_scripts files='transport.js,utils.js'}
-   <font id="ECS_MEMBERZONE">{* ECSHOP 提醒您：根据用户id来调用member_info.lbi显示不同的界面  *}{insert name='member_info'} </font>
-   </li>
-   <!--{if $navigator_list.top}-->
-   <li id="topNav" class="clearfix">
-    <!-- {foreach name=nav_top_list from=$navigator_list.top item=nav} -->
-            <a href="<?php echo ($nav["url"]); ?>" <!-- {if $nav.opennew eq 1} --> target="_blank" <!-- {/if} -->><?php echo ($nav["name"]); ?></a>
-            <!-- {if !$smarty.foreach.nav_top_list.last} -->
-             |
+    <div class="f_l">
+        <a href="../index.php" name="top"><img src="<?php echo (SHOP_IMG_URL); ?>logo.gif" /></a>
+    </div>
+    <div class="f_r log">
+        <ul>
+            <li class="userInfo">
+                <!-- {insert_scripts files='transport.js,utils.js'} -->
+                <script type="text/javascript" src="<?php echo (SHOP_JS_URL); ?>utils.js"></script>
+                <script type="text/javascript" src="<?php echo (SHOP_JS_URL); ?>transport.js"></script>
+                <font id="ECS_MEMBERZONE">
+                <!-- ECSHOP 提醒您：根据用户id来调用member_info.lbi显示不同的界面 -->
+                <!-- {insert name='member_info'}  -->
+                <div id="append_parent"></div>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<?php if(!empty($user_info)): ?><font style="position:relative; top:10px;">
+        <?php echo ($lang["hello"]); ?>，
+        <font class="f4_b"><?php echo ($user_info["username"]); ?></font>, <?php echo ($lang["welcome_return"]); ?>！
+        <a href="user.php"><?php echo ($lang["user_center"]); ?></a>|
+        <a href="user.php?act=logout"><?php echo ($lang["user_logout"]); ?></a>
+    </font>
+    <?php else: ?> <?php echo ($lang["welcome"]); ?>&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="user.php"><img src="<?php echo (SHOP_IMG_URL); ?>/bnt_log.gif" /></a>
+    <a href="user.php?act=register"><img src="<?php echo (SHOP_IMG_URL); ?>/bnt_reg.gif" /></a><?php endif; ?>
+
+                </font>
+            </li>
+            <!--{if $navigator_list.top}-->
+            <li id="topNav" class="clearfix">
+                <!-- {foreach name=nav_top_list from=$navigator_list.top item=nav} -->
+                <a href="<?php echo ($nav["url"]); ?>" <!-- {if $nav.opennew eq 1} --> target="_blank" <!-- {/if} -->><?php echo ($nav["name"]); ?></a>
+                <!-- {if !$smarty.foreach.nav_top_list.last} -->
+                |
+                <!-- {/if} -->
+                <!-- {/foreach} -->
+                <div class="topNavR"></div>
+            </li>
             <!-- {/if} -->
-    <!-- {/foreach} -->
-    <div class="topNavR"></div>
-   </li>
-   <!-- {/if} -->
-   </ul>
- </div>
+        </ul>
+    </div>
 </div>
-<div  class="blank"></div>
+<div class="blank"></div>
 <div id="mainNav" class="clearfix">
-  <a href="../index.php"{if $navigator_list.config.index eq 1} class="cur"{/if}><?php echo ($lang["home"]); ?><span></span></a>
-  <!-- {foreach name=nav_middle_list from=$navigator_list.middle item=nav} -->
-  <a href="<?php echo ($nav["url"]); ?>" {if $nav.opennew eq 1}target="_blank" {/if} {if $nav.active eq 1} class="cur"{/if}><?php echo ($nav["name"]); ?><span></span></a>
- <!-- {/foreach} -->
+    <a href="../index.php" {if $navigator_list.config.index eq 1} class="cur" {/if}><?php echo ($lang["home"]); ?><span></span></a>
+    <!-- {foreach name=nav_middle_list from=$navigator_list.middle item=nav} -->
+    <a href="<?php echo ($nav["url"]); ?>" {if $nav.opennew eq 1}target="_blank" {/if} {if $nav.active eq 1} class="cur" {/if}><?php echo ($nav["name"]); ?><span></span></a>
+    <!-- {/foreach} -->
 </div>
 <!--search start-->
-<div id="search"  class="clearfix">
-  <div class="keys f_l">
-   <script type="text/javascript">
-    {literal}
-    <!--
-    function checkSearchForm()
-    {
-        if(document.getElementById('keyword').value)
+<div id="search" class="clearfix">
+    <div class="keys f_l">
+        <script type="text/javascript">
         {
-            return true;
+            literal
         }
-        else
+        <!--
+        function checkSearchForm() {
+            if (document.getElementById('keyword').value) {
+                return true;
+            } else {
+                alert("<?php echo ($lang["no_keywords"]); ?>");
+                return false;
+            }
+        }
+        -->
         {
-            alert("<?php echo ($lang["no_keywords"]); ?>");
-            return false;
-        }
-    }
-    -->
-    {/literal}
-    </script>
-    {if $searchkeywords}
-   <?php echo ($lang["hot_search"]); ?> ：
-   {foreach from=$searchkeywords item=val}
-   <a href="search.php?keywords=<?php echo ($val); ?>"><?php echo ($val); ?></a>
-   {/foreach}
-   {/if}
-  </div>
-  <form id="searchForm" name="searchForm" method="get" action="search.php" onSubmit="return checkSearchForm()" class="f_r"  style="_position:relative; top:5px;">
-   <select name="category" id="category" class="B_input">
-      <option value="0"><?php echo ($lang["all_category"]); ?></option>
-      <?php echo ($category_list); ?>
-    </select>
-   <input name="keywords" type="text" id="keyword" value="<?php echo ($search_keywords); ?>" class="B_input" style="width:110px;"/>
-   <input name="imageField" type="submit" value="" class="go" style="cursor:pointer;" />
-   <a href="search.php?act=advanced_search"><?php echo ($lang["advanced_search"]); ?></a>
-   </form>
+            /literal}
+        </script>
+        {if $searchkeywords} <?php echo ($lang["hot_search"]); ?> ： {foreach from=$searchkeywords item=val}
+        <a href="search.php?keywords=<?php echo ($val); ?>"><?php echo ($val); ?></a> {/foreach} {/if}
+    </div>
+    <form id="searchForm" name="searchForm" method="get" action="search.php" onSubmit="return checkSearchForm()" class="f_r" style="_position:relative; top:5px;">
+        <select name="category" id="category" class="B_input">
+            <option value="0"><?php echo ($lang["all_category"]); ?></option>
+            <?php echo ($category_list); ?>
+        </select>
+        <input name="keywords" type="text" id="keyword" value="<?php echo ($search_keywords); ?>" class="B_input" style="width:110px;" />
+        <input name="imageField" type="submit" value="" class="go" style="cursor:pointer;" />
+        <a href="search.php?act=advanced_search"><?php echo ($lang["advanced_search"]); ?></a>
+    </form>
 </div>
 <!--search end-->
+
     <div class="blank">
     </div>
     <div class="block clearfix">
