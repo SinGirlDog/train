@@ -27,9 +27,13 @@ class IndexController extends Controller {
         $this->assign('categories',$categories);
 
         $GoodsActivity = D('GoodsActivity');
-        $promotion_info = $GoodsActivity->get_promotion_info();  
-        // echo '<pre/>';print_r($promotion_info);die;        
+        $promotion_info = $GoodsActivity->get_promotion_info();            
         $this->assign('promotion_info',$promotion_info);
+
+        $OrderInfo = D('OrderInfo');
+        $invoice_list = $OrderInfo->index_get_invoice_query();  
+        // echo '<pre/>';print_r($invoice_list);die;        
+        $this->assign('invoice_list',$invoice_list);
 
     	$this->display(':index');
     }

@@ -244,128 +244,118 @@ var process_request = "<?php echo ($lang["process_request"]); ?>";
                     </div>
                 </div>
                 <div class="blank5"></div><?php endif; ?>
-            <!-- #EndLibraryItem -->
-            <!-- #BeginLibraryItem "/library/order_query.lbi" -->
-            <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<!--{if empty($order_query)}-->
-<script>var invalid_order_sn = "<?php echo ($lang["invalid_order_sn"]); ?>"</script>
-<div class="box">
- <div class="box_1">
-  <h3><span><?php echo ($lang["order_query"]); ?></span></h3>
-  <div class="boxCenterList">
-    <form name="ecsOrderQuery">
-    <input type="text" name="order_sn" class="inputBg" /><br />
-    <div class="blank5"></div>
-    <input type="button" value="<?php echo ($lang["query_order"]); ?>" class="bnt_blue_2" onclick="orderQuery()" />
-    </form>
-    <div id="ECS_ORDER_QUERY" style="margin-top:8px;">
-      <!--{else}-->
-      <!--{if $order_query.user_id}-->
-<b><?php echo ($lang["order_number"]); ?>：</b><a href="user.php?act=order_detail&order_id=<?php echo ($order_query["order_id"]); ?>" class="f6"><?php echo ($order_query["order_sn"]); ?></a><br>
-  <!--{else}-->
-<b><?php echo ($lang["order_number"]); ?>：</b><?php echo ($order_query["order_sn"]); ?><br>
-  <!--{/if}-->
-<b><?php echo ($lang["order_status"]); ?>：</b><br><font class="f1"><?php echo ($order_query["order_status"]); ?></font><br>
-  <!--{if $order_query.invoice_no }-->
-<b><?php echo ($lang["consignment"]); ?>：</b><?php echo ($order_query["invoice_no"]); ?><br>
-  <!--{/if}-->
-      {if $order_query.shipping_date}：<?php echo ($lang["shipping_date"]); ?> <?php echo ($order_query["shipping_date"]); ?><br>
-  <!--{/if}-->
-  <!--{/if}-->
+            <!-- <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<?php if(empty($order_query)): ?><script>
+    var invalid_order_sn = "<?php echo ($lang["invalid_order_sn"]); ?>"
+    </script>
+    <div class="box">
+        <div class="box_1">
+            <h3><span><?php echo ($lang["order_query"]); ?></span></h3>
+            <div class="boxCenterList">
+                <form name="ecsOrderQuery">
+                    <input type="text" name="order_sn" class="inputBg" />
+                    <br />
+                    <div class="blank5"></div>
+                    <input type="button" value="<?php echo ($lang["query_order"]); ?>" class="bnt_blue_2" onclick="orderQuery()" />
+                </form>
+            </div>
+        </div>
     </div>
-  </div>
- </div>
-</div>
+<?php else: ?>
+    <div id="ECS_ORDER_QUERY" style="margin-top:8px;">
+        <?php if(!empty($order_query['user_id'])): ?><b><?php echo ($lang["order_number"]); ?>：</b><a href="user.php?act=order_detail&order_id=<?php echo ($order_query["order_id"]); ?>" class="f6"><?php echo ($order_query["order_sn"]); ?></a>
+            <br>
+            <?php else: ?>
+            <b><?php echo ($lang["order_number"]); ?>：</b><?php echo ($order_query["order_sn"]); ?>
+            <br><?php endif; ?>
+        <b><?php echo ($lang["order_status"]); ?>：</b>
+        <br>
+        <font class="f1"><?php echo ($order_query["order_status"]); ?></font>
+        <br>
+        <?php if(!empty($order_query['invoice_no'])): ?><b><?php echo ($lang["consignment"]); ?>：</b><?php echo ($order_query["invoice_no"]); ?>
+            <br><?php endif; ?>
+        <?php if(!empty($order_query['shipping_date'])): ?><b><?php echo ($lang["shipping_date"]); ?>: </b><?php echo ($order_query["shipping_date"]); ?>
+            <br><?php endif; ?>
+    </div><?php endif; ?>
 <div class="blank5"></div>
-
-            <!--{if empty($order_query)}-->
-            <script>
-            var invalid_order_sn = "<?php echo ($lang["invalid_order_sn"]); ?>"
-            </script>
-            <div class="box">
-                <div class="box_1">
-                    <h3><span><?php echo ($lang["order_query"]); ?></span></h3>
-                    <div class="boxCenterList">
-                        <form name="ecsOrderQuery">
-                            <input type="text" name="order_sn" class="inputBg" />
-                            <br />
-                            <div class="blank5"></div>
-                            <input type="button" value="<?php echo ($lang["query_order"]); ?>" class="bnt_blue_2" onclick="orderQuery()" />
-                        </form>
-                        <div id="ECS_ORDER_QUERY" style="margin-top:8px;">
-                            <!--{else}-->
-                            <!--{if $order_query.user_id}-->
-                            <b><?php echo ($lang["order_number"]); ?>：</b><a href="user.php?act=order_detail&order_id=<?php echo ($order_query["order_id"]); ?>" class="f6"><?php echo ($order_query["order_sn"]); ?></a>
-                            <br>
-                            <!--{else}-->
-                            <b><?php echo ($lang["order_number"]); ?>：</b><?php echo ($order_query["order_sn"]); ?>
-                            <br>
-                            <!--{/if}-->
-                            <b><?php echo ($lang["order_status"]); ?>：</b>
-                            <br>
-                            <font class="f1"><?php echo ($order_query["order_status"]); ?></font>
-                            <br>
-                            <!--{if $order_query.invoice_no }-->
-                            <b><?php echo ($lang["consignment"]); ?>：</b><?php echo ($order_query["invoice_no"]); ?>
-                            <br>
-                            <!--{/if}-->
-                            {if $order_query.shipping_date}：<?php echo ($lang["shipping_date"]); ?> <?php echo ($order_query["shipping_date"]); ?>
-                            <br>
-                            <!--{/if}-->
-                            <!--{/if}-->
+ -->
+            <?php if(empty($order_query)): ?><script>
+                var invalid_order_sn = "<?php echo ($lang["invalid_order_sn"]); ?>"
+                </script>
+                <div class="box">
+                    <div class="box_1">
+                        <h3><span><?php echo ($lang["order_query"]); ?></span></h3>
+                        <div class="boxCenterList">
+                            <form name="ecsOrderQuery">
+                                <input type="text" name="order_sn" class="inputBg" />
+                                <br />
+                                <div class="blank5"></div>
+                                <input type="button" value="<?php echo ($lang["query_order"]); ?>" class="bnt_blue_2" onclick="orderQuery()" />
+                            </form>
                         </div>
                     </div>
                 </div>
-            </div>
+                <?php else: ?>
+                <div id="ECS_ORDER_QUERY" style="margin-top:8px;">
+                    <?php if(!empty($order_query['user_id'])): ?><b><?php echo ($lang["order_number"]); ?>：</b><a href="user.php?act=order_detail&order_id=<?php echo ($order_query["order_id"]); ?>" class="f6"><?php echo ($order_query["order_sn"]); ?></a>
+                        <br>
+                        <?php else: ?>
+                        <b><?php echo ($lang["order_number"]); ?>：</b><?php echo ($order_query["order_sn"]); ?>
+                        <br><?php endif; ?>
+                    <b><?php echo ($lang["order_status"]); ?>：</b>
+                    <br>
+                    <font class="f1"><?php echo ($order_query["order_status"]); ?></font>
+                    <br>
+                    <?php if(!empty($order_query['invoice_no'])): ?><b><?php echo ($lang["consignment"]); ?>：</b><?php echo ($order_query["invoice_no"]); ?>
+                        <br><?php endif; ?>
+                    <?php if(!empty($order_query['shipping_date'])): ?><b><?php echo ($lang["shipping_date"]); ?>: </b><?php echo ($order_query["shipping_date"]); ?>
+                        <br><?php endif; ?>
+                </div><?php endif; ?>
             <div class="blank5"></div>
-            <!-- #EndLibraryItem -->
-            <!-- #BeginLibraryItem "/library/invoice_query.lbi" -->
-            <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<!--{if $invoice_list}-->
-<style type="text/css">
-.boxCenterList form{display:inline;}
-.boxCenterList form a{color:#404040; text-decoration:underline;}
-</style>
-<div class="box">
- <div class="box_1">
-  <h3><span><?php echo ($lang["shipping_query"]); ?></span></h3>
-  <div class="boxCenterList">
-    <!-- 发货单查询{foreach from=$invoice_list item=invoice} -->
-   <?php echo ($lang["order_number"]); ?> <?php echo ($invoice["order_sn"]); ?><br />
-   <?php echo ($lang["consignment"]); ?> <?php echo ($invoice["invoice_no"]); ?>
-   <div class="blank"></div>
-   <!-- 结束发货单查询{/foreach}-->
-  </div>
- </div>
-</div>
-<div class="blank5"></div>
-<!-- {/if} -->
-            <!--{if $invoice_list}-->
-            <style type="text/css">
-            .boxCenterList form {
-                display: inline;
-            }
-            
-            .boxCenterList form a {
-                color: #404040;
-                text-decoration: underline;
-            }
-            </style>
-            <div class="box">
-                <div class="box_1">
-                    <h3><span><?php echo ($lang["shipping_query"]); ?></span></h3>
-                    <div class="boxCenterList">
-                        <!-- 发货单查询{foreach from=$invoice_list item=invoice} -->
-                        <?php echo ($lang["order_number"]); ?> <?php echo ($invoice["order_sn"]); ?>
-                        <br /> <?php echo ($lang["consignment"]); ?> <?php echo ($invoice["invoice_no"]); ?>
-                        <div class="blank"></div>
-                        <!-- 结束发货单查询{/foreach}-->
+            <!-- <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<?php if(!empty($invoice_list)): ?><style type="text/css">
+    .boxCenterList form {
+        display: inline;
+    }
+    
+    .boxCenterList form a {
+        color: #404040;
+        text-decoration: underline;
+    }
+    </style>
+    <div class="box">
+        <div class="box_1">
+            <h3><span><?php echo ($lang["shipping_query"]); ?></span></h3>
+            <div class="boxCenterList">
+                <?php if(is_array($invoice_list)): foreach($invoice_list as $key=>$invoice): echo ($lang["order_number"]); ?> <?php echo ($invoice["order_sn"]); ?>
+                    <br /> <?php echo ($lang["consignment"]); ?> <?php echo ($invoice["invoice_no"]); ?>
+                    <div class="blank"></div><?php endforeach; endif; ?>
+            </div>
+        </div>
+    </div>
+    <div class="blank5"></div><?php endif; ?>
+ -->
+            <?php if(!empty($invoice_list)): ?><style type="text/css">
+                .boxCenterList form {
+                    display: inline;
+                }
+                
+                .boxCenterList form a {
+                    color: #404040;
+                    text-decoration: underline;
+                }
+                </style>
+                <div class="box">
+                    <div class="box_1">
+                        <h3><span><?php echo ($lang["shipping_query"]); ?></span></h3>
+                        <div class="boxCenterList">
+                            <?php if(is_array($invoice_list)): foreach($invoice_list as $key=>$invoice): echo ($lang["order_number"]); ?> <?php echo ($invoice["order_sn"]); ?>
+                                <br /> <?php echo ($lang["consignment"]); ?> <?php echo ($invoice["invoice_no"]); ?>
+                                <div class="blank"></div><?php endforeach; endif; ?>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="blank5"></div>
-            <!-- {/if} -->
-            <!-- #EndLibraryItem -->
+                <div class="blank5"></div><?php endif; ?>
             <!-- #BeginLibraryItem "/library/vote_list.lbi" -->
             <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 {insert name='vote'} {insert name='vote'}
