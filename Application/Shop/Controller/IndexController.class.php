@@ -32,14 +32,32 @@ class IndexController extends Controller {
 
         $OrderInfo = D('OrderInfo');
         $invoice_list = $OrderInfo->index_get_invoice_query();  
-        // echo '<pre/>';print_r($invoice_list);die;        
         $this->assign('invoice_list',$invoice_list);
+
+        $Vote = D('Vote');
+        $vote = $Vote->get_vote();  
+        $this->assign('vote',$vote);
+
+        $this->assign('index_ad',C('_CFG.index_ad'));
+        $this->assign('flash_theme',C('_CFG.flash_theme'));
+
+        $AdCustom = D('AdCustom');
+        $ad = $AdCustom->get_index_ad_data(C('_CFG.index_ad'));      
+        $this->assign('ad',$ad);
+
+        $Article = D('Article');
+        $new_articles = $Article->index_get_new_articles();  
+        // echo '<pre/>';print_r($new_articles);die;
+        $this->assign('new_articles',$new_articles);
 
     	$this->display(':index');
     }
 
     protected function _mergeConfig() {
 		$_LANG = include ('./Application/Shop/Conf/lang_config.php');
-		$this->assign('lang',$_LANG);
+        // C('_LANG',$_LANG);
+		$this->assign('lang',C('_LANG'));
+
+        D('ShopConfig')->load_shop_config();
 	}
 }

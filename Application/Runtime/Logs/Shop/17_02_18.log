@@ -1,0 +1,9 @@
+[ 2017-02-18T14:52:58+08:00 ] ::1 /train/
+ERR: Think\Model:index_get_invoice_query方法不存在！
+
+[ 2017-02-18T15:26:36+08:00 ] ::1 /train/
+ERR: Think\Model:load_shop_config方法不存在！
+
+[ 2017-02-18T15:42:33+08:00 ] ::1 /train/
+ERR: Think\Model:get_index_ad_data方法不存在！
+

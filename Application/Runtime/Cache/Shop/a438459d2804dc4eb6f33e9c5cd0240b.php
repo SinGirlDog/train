@@ -356,62 +356,55 @@ var process_request = "<?php echo ($lang["process_request"]); ?>";
                     </div>
                 </div>
                 <div class="blank5"></div><?php endif; ?>
-            <!-- #BeginLibraryItem "/library/vote_list.lbi" -->
             <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-{insert name='vote'} {insert name='vote'}
-            <!-- #EndLibraryItem -->
-            <!-- #BeginLibraryItem "/library/email_list.lbi" -->
-            <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<?php echo ($vote); ?>
+            <!-- <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <div class="box">
- <div class="box_1">
-  <h3><span><?php echo ($lang["email_subscribe"]); ?></span></h3>
-  <div class="boxCenterList RelaArticle">
-    <input type="text" id="user_email" class="inputBg" /><br />
-    <div class="blank5"></div>
-    <input type="button" class="bnt_blue" value="<?php echo ($lang["email_list_ok"]); ?>" onclick="add_email_list();" />
-    <input type="button" class="bnt_bonus"  value="<?php echo ($lang["email_list_cancel"]); ?>" onclick="cancel_email_list();" />
-  </div>
- </div>
+    <div class="box_1">
+        <h3><span><?php echo ($lang["email_subscribe"]); ?></span></h3>
+        <div class="boxCenterList RelaArticle">
+            <input type="text" id="user_email" class="inputBg" />
+            <br />
+            <div class="blank5"></div>
+            <input type="button" class="bnt_blue" value="<?php echo ($lang["email_list_ok"]); ?>" onclick="add_email_list();" />
+            <input type="button" class="bnt_bonus" value="<?php echo ($lang["email_list_cancel"]); ?>" onclick="cancel_email_list();" />
+        </div>
+    </div>
 </div>
 <div class="blank5"></div>
 <script type="text/javascript">
 var email = document.getElementById('user_email');
-function add_email_list()
-{
-  if (check_email())
-  {
-    Ajax.call('user.php?act=email_list&job=add&email=' + email.value, '', rep_add_email_list, 'GET', 'TEXT');
-  }
+
+function add_email_list() {
+    if (check_email()) {
+        Ajax.call('user.php?act=email_list&job=add&email=' + email.value, '', rep_add_email_list, 'GET', 'TEXT');
+    }
 }
-function rep_add_email_list(text)
-{
-  alert(text);
+
+function rep_add_email_list(text) {
+    alert(text);
 }
-function cancel_email_list()
-{
-  if (check_email())
-  {
-    Ajax.call('user.php?act=email_list&job=del&email=' + email.value, '', rep_cancel_email_list, 'GET', 'TEXT');
-  }
+
+function cancel_email_list() {
+    if (check_email()) {
+        Ajax.call('user.php?act=email_list&job=del&email=' + email.value, '', rep_cancel_email_list, 'GET', 'TEXT');
+    }
 }
-function rep_cancel_email_list(text)
-{
-  alert(text);
+
+function rep_cancel_email_list(text) {
+    alert(text);
 }
-function check_email()
-{
-  if (Utils.isEmail(email.value))
-  {
-    return true;
-  }
-  else
-  {
-    alert('<?php echo ($lang["email_invalid"]); ?>');
-    return false;
-  }
+
+function check_email() {
+    if (Utils.isEmail(email.value)) {
+        return true;
+    } else {
+        alert('<?php echo ($lang["email_invalid"]); ?>');
+        return false;
+    }
 }
 </script>
-
+ -->
             <div class="box">
                 <div class="box_1">
                     <h3><span><?php echo ($lang["email_subscribe"]); ?></span></h3>
@@ -457,65 +450,48 @@ function check_email()
                 }
             }
             </script>
-            <!-- #EndLibraryItem -->
             <!-- TemplateEndEditable -->
         </div>
         <!--left end-->
         <!--right start-->
-        <div class="AreaR">
-            <!--焦点图和站内快讯 START-->
+        <div class="AreaR">            
             <div class="box clearfix">
                 <div class="box_1 clearfix">
                     <div class="f_l" id="focus">
-                        <!-- #BeginLibraryItem "/library/index_ad.lbi" -->
-                        <!-- #EndLibraryItem -->
                         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<!-- {if $index_ad eq 'sys'} -->
-  <script type="text/javascript">
-  var swf_width=484;
-  var swf_height=200;
-  </script>
-  <script type="text/javascript" src="data/flashdata/<?php echo ($flash_theme); ?>/cycle_image.js"></script>
-<!-- {elseif $index_ad eq 'cus'} -->
-  <!-- {if $ad.ad_type eq 0} -->
-    <a href="<?php echo ($ad["url"]); ?>" target="_blank"><img src="<?php echo ($ad["content"]); ?>" width="484" height="200" border="0"></a>
-  <!-- {elseif $ad.ad_type eq 1} -->
-    <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="484" height="200">
-      <param name="movie" value="<?php echo ($ad["content"]); ?>" />
-      <param name="quality" value="high" />
-      <embed src="<?php echo ($ad["content"]); ?>" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="484" height="200"></embed>
-    </object>
-  <!-- {elseif $ad.ad_type eq 2} -->
-    <?php echo ($ad["content"]); ?>
-  <!-- {elseif $ad.ad_type eq 3} -->
-    <a href="<?php echo ($ad["url"]); ?>" target="_blank"><?php echo ($ad["content"]); ?></a>
-  <!-- {/if} -->
-<!-- {else} -->
-<!-- {/if} -->
+<?php if($index_ad == 'sys' ): ?><script type="text/javascript">
+    var swf_width = 484;
+    var swf_height = 200;
+    var shop_data_url = '<?php echo (SHOP_DATA_URL); ?>';
+    </script>
+    <script type="text/javascript" src="<?php echo (SHOP_DATA_URL); ?>flashdata/<?php echo ($flash_theme); ?>/cycle_image.js"></script>
+<?php elseif($index_ad == 'cus' ): ?>
+        <?php switch($ad['ad_type']): case "0": ?><a href="<?php echo ($ad["url"]); ?>" target="_blank"><img src="<?php echo ($ad["content"]); ?>" width="484" height="200" border="0"></a><?php break;?>
+            <?php case "1": ?><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="484" height="200">
+                    <param name="movie" value="<?php echo ($ad["content"]); ?>" />
+                    <param name="quality" value="high" />
+                    <embed src="<?php echo ($ad["content"]); ?>" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="484" height="200"></embed>
+                </object><?php break;?>
+            <?php case "2": echo ($ad["content"]); break;?>
+            <?php case "3": ?><a href="<?php echo ($ad["url"]); ?>" target="_blank"><?php echo ($ad["content"]); ?></a><?php break;?>
+            <defalut/><?php endswitch; endif; ?>
+
                     </div>
-                    <!--news-->
                     <div id="mallNews" class="f_r">
                         <div class="NewsTit"></div>
                         <div class="NewsList tc">
-                            <!-- TemplateBeginEditable name="站内快讯上广告位（宽：210px）" -->
-                            <!-- TemplateEndEditable -->
-                            <!-- #BeginLibraryItem "/library/new_articles.lbi" -->
-                            <!-- #EndLibraryItem -->
                             <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <ul>
-<!--{foreach from=$new_articles item=article}-->
-  <li>
-	[<a href="<?php echo ($article["cat_url"]); ?>"><?php echo ($article["cat_name"]); ?></a>] <a href="<?php echo ($article["url"]); ?>" title="<?php echo ($article["title"]); ?>"><?php echo (mb_substr($article["short_title"],0,10,'utf-8')); ?>}</a>
-	</li>
-<!--{/foreach}-->
+    <?php if(is_array($new_articles)): foreach($new_articles as $key=>$article): ?><li>
+            [<a href="<?php echo ($article["cat_url"]); ?>"><?php echo ($article["cat_name"]); ?></a>] <a href="<?php echo ($article["url"]); ?>" title="<?php echo ($article["title"]); ?>"><?php echo (mb_substr($article["short_title"],0,10,'utf-8')); ?></a>
+        </li><?php endforeach; endif; ?>
 </ul>
+
                         </div>
                     </div>
-                    <!--news end-->
                 </div>
             </div>
-            <div class="blank5"></div>
-            <!--焦点图和站内快讯 END-->
+            <div class="blank5"></div>           
             <!--今日特价，品牌 start-->
             <div class="clearfix">
                 <!--特价-->
