@@ -10,16 +10,16 @@ class IndexController extends Controller {
 
     public function index(){
     	
-    	$cart = D('Cart');
-    	$cart_info = $cart->insert_cart_info();
+    	$Cart = D('Cart');
+    	$cart_info = $Cart->insert_cart_info();
     	$this->assign('cart_info',$cart_info);
 
-    	$goods = D('Goods');
-    	$top_goods = $goods->get_top10();
+    	$Goods = D('Goods');
+    	$top_goods = $Goods->get_top10();
     	$this->assign('top_goods',$top_goods);
 
-        $nav = D('Nav');
-        $navigator_list = $nav->get_navigator();        
+        $Nav = D('Nav');
+        $navigator_list = $Nav->get_navigator();        
         $this->assign('navigator_list',$navigator_list);
 
         $Category = D('Category');
@@ -47,8 +47,18 @@ class IndexController extends Controller {
 
         $Article = D('Article');
         $new_articles = $Article->index_get_new_articles();  
-        // echo '<pre/>';print_r($new_articles);die;
         $this->assign('new_articles',$new_articles);
+
+        $promotion_goods = $Goods->get_promote_goods();            
+        $this->assign('promotion_goods',$promotion_goods);
+
+        $Brand = D('Brand');
+        $brand_list = $Brand->get_brands(); 
+        $this->assign('brand_list',$brand_list);
+
+        $best_goods = $Goods->get_recommend_goods('best');
+        // echo '<pre/>';print_r($best_goods);die; 
+        $this->assign('best_goods',$best_goods);
 
     	$this->display(':index');
     }
@@ -56,7 +66,7 @@ class IndexController extends Controller {
     protected function _mergeConfig() {
 		$_LANG = include ('./Application/Shop/Conf/lang_config.php');
         // C('_LANG',$_LANG);
-		$this->assign('lang',C('_LANG'));
+		$this->assign('lang',$_LANG);
 
         D('ShopConfig')->load_shop_config();
 	}

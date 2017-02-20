@@ -454,7 +454,7 @@ function check_email() {
         </div>
         <!--left end-->
         <!--right start-->
-        <div class="AreaR">            
+        <div class="AreaR">
             <div class="box clearfix">
                 <div class="box_1 clearfix">
                     <div class="f_l" id="focus">
@@ -491,47 +491,36 @@ function check_email() {
                     </div>
                 </div>
             </div>
-            <div class="blank5"></div>           
+            <div class="blank5"></div>
             <!--今日特价，品牌 start-->
             <div class="clearfix">
                 <!--特价-->
-                <!-- #BeginLibraryItem "/library/recommend_promotion.lbi" -->
-                <!-- #EndLibraryItem -->
                 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<!-- {if $promotion_goods} -->
-<div id="sales" class="f_l clearfix">
-      <h1><a href="../search.php?intro=promotion"><img src="image/more.gif" /></a></h1>
-       <div class="clearfix goodBox">
-         <!--{foreach from=$promotion_goods item=goods name="promotion_foreach"}-->
-         {if $smarty.foreach.promotion_foreach.index <= 3}
-           <div class="goodList">
-           <a href="<?php echo ($goods["url"]); ?>"><img src="<?php echo ($goods["thumb"]); ?>" border="0" alt="<?php echo ($goods["name"]); ?>"/></a><br />
-					 <p><a href="<?php echo ($goods["url"]); ?>" title="<?php echo ($goods["name"]); ?>"><?php echo ($goods["short_name"]); ?></a></p>
-           <?php echo ($lang["promote_price"]); ?><font class="f1"><?php echo ($goods["promote_price"]); ?></font>
-           </div>
-         {/if}
-         <!--{/foreach}-->
-       </div>
-      </div>
-<!-- {/if} -->
+<?php if(!empty($promotion_goods)): ?><div id="sales" class="f_l clearfix">
+        <h1><a href="../search.php?intro=promotion"><img src="image/more.gif" /></a></h1>
+        <div class="clearfix goodBox">
+            <?php if(is_array($promotion_goods)): foreach($promotion_goods as $key=>$goods): if($key <= 3): ?><div class="goodList">
+                        <a href="<?php echo ($goods["url"]); ?>"><img src="<?php echo ($goods["thumb"]); ?>" border="0" alt="<?php echo ($goods["name"]); ?>" /></a>
+                        <br />
+                        <p><a href="<?php echo ($goods["url"]); ?>" title="<?php echo ($goods["name"]); ?>"><?php echo ($goods["short_name"]); ?></a></p>
+                        <?php echo ($lang["promote_price"]); ?>
+                        <font class="f1"><?php echo ($goods["promote_price"]); ?></font>
+                    </div><?php endif; endforeach; endif; ?>
+        </div>
+    </div><?php endif; ?>
                 <!--品牌-->
                 <div class="box f_r brandsIe6">
                     <div class="box_1 clearfix" id="brands">
-                        <!-- #BeginLibraryItem "/library/brands.lbi" -->
-                        <!-- #EndLibraryItem -->
                         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<!-- {if $brand_list} -->
-  <!-- {foreach from=$brand_list item=brand name="brand_foreach"} -->
-    {if $smarty.foreach.brand_foreach.index <= 11}
-      <!-- {if $brand.brand_logo} -->
-        <a href="<?php echo ($brand["url"]); ?>"><img src="data/brandlogo/<?php echo ($brand["brand_logo"]); ?>" alt="<?php echo ($brand["brand_name"]); ?> (<?php echo ($brand["goods_num"]); ?>)" /></a>
-      <!-- {else} -->
-        <a href="<?php echo ($brand["url"]); ?>"><?php echo ($brand["brand_name"]); ?> {if $brand.goods_num}(<?php echo ($brand["goods_num"]); ?>){/if}</a>
-      <!-- {/if} -->
-    {/if}
-  <!-- {/foreach} -->
-<div class="brandsMore"><a href="../brand.php"><img src="image/moreBrands.gif" /></a></div>
-<!-- {/if} -->
+<?php if(!empty($brand_list)): if(is_array($brand_list)): foreach($brand_list as $key=>$brand): if($key < 11): if(!empty($brand['brand_logo'])): ?><a href="<?php echo ($brand["url"]); ?>"><img src="<?php echo (SHOP_DATA_URL); ?>brandlogo/<?php echo ($brand["brand_logo"]); ?>" alt="<?php echo ($brand["brand_name"]); ?> (<?php echo ($brand["goods_num"]); ?>)" /></a>
+                <?php else: ?>
+                <?php if(empty($brand['goods_num'])): ?><a href="<?php echo ($brand["url"]); ?>"><?php echo ($brand["brand_name"]); ?></a>
+                    <?php else: ?>
+                    <a href="<?php echo ($brand["url"]); ?>"><?php echo ($brand["brand_name"]); ?> (<?php echo ($brand['goods_num']); ?>) </a><?php endif; endif; endif; endforeach; endif; ?>
+    <div class="brandsMore">
+        <a href="../brand.php"><img src="<?php echo (SHOP_IMG_URL); ?>moreBrands.gif" /></a>
+    </div><?php endif; ?>
+
                     </div>
                 </div>
             </div>
@@ -539,6 +528,7 @@ function check_email() {
             <!-- TemplateBeginEditable name="右边主区域" -->
             <!-- #BeginLibraryItem "/library/recommend_best.lbi" -->
             <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<?php if(!empty($best_goods)): if($cat_rec_sign == 1): endif; endif; ?>
 <!-- {if $best_goods} -->
 <!-- {if $cat_rec_sign neq 1} -->
 <div class="box">

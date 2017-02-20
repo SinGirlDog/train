@@ -1,0 +1,7 @@
+[ 2017-02-20T17:42:30+08:00 ] ::1 /train/
+ERR: XML标签语法错误 : condition="$key < 11"
+
+[ 2017-02-20T22:31:01+08:00 ] ::1 /train/
+ERR: 1054:Unknown column 'is_promotion' in 'where clause'
+ [ SQL语句 ] : SELECT g.goods_id,g.goods_name,g.goods_name_style,g.market_price,g.shop_price AS `org_price`,g.promote_price,IFNULL(mp.user_price,g.shop_price *0) AS `shop_price`,`promote_start_date`,`promote_end_date`,g.goods_brief,g.goods_thumb,`goods_img`,b.brand_name,g.is_best,g.is_new,g.is_hot,g.is_promote,RAND() AS `rnd` FROM sp_goods g LEFT JOIN sp_brand b on b.brand_id = g.brand_id LEFT JOIN sp_member_price mp on mp.goods_id = g.goods_id  WHERE g.is_on_sale = 1 AND g.is_alone_sale = 1 AND g.is_delete = 0 AND g.is_promote = 1 AND `promote_start_date` <= 1487572260 AND `promote_end_date` >= 1487572260 AND `is_promotion` = 1 
+

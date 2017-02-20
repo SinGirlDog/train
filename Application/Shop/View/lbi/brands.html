@@ -1,13 +1,19 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<!-- {if $brand_list} -->
-  <!-- {foreach from=$brand_list item=brand name="brand_foreach"} -->
-    {if $smarty.foreach.brand_foreach.index <= 11}
-      <!-- {if $brand.brand_logo} -->
-        <a href="{$brand.url}"><img src="data/brandlogo/{$brand.brand_logo}" alt="{$brand.brand_name} ({$brand.goods_num})" /></a>
-      <!-- {else} -->
-        <a href="{$brand.url}">{$brand.brand_name} {if $brand.goods_num}({$brand.goods_num}){/if}</a>
-      <!-- {/if} -->
-    {/if}
-  <!-- {/foreach} -->
-<div class="brandsMore"><a href="../brand.php"><img src="image/moreBrands.gif" /></a></div>
-<!-- {/if} -->
+<notempty name="brand_list">
+    <foreach name="brand_list" item="brand" key="key">
+        <if condition="$key lt 11">
+            <notempty name="brand['brand_logo']">
+                <a href="{$brand.url}"><img src="{$Think.const.SHOP_DATA_URL}brandlogo/{$brand.brand_logo}" alt="{$brand.brand_name} ({$brand.goods_num})" /></a>
+                <else/>
+                <empty name="brand['goods_num']">
+                    <a href="{$brand.url}">{$brand.brand_name}</a>
+                    <else/>
+                    <a href="{$brand.url}">{$brand.brand_name} ({$brand['goods_num']}) </a>
+                </empty>
+            </notempty>
+        </if>
+    </foreach>
+    <div class="brandsMore">
+        <a href="../brand.php"><img src="{$Think.const.SHOP_IMG_URL}moreBrands.gif" /></a>
+    </div>
+</notempty>
