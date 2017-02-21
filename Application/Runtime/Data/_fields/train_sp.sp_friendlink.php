@@ -1,0 +1,1 @@
+a:7:{i:0;s:7:"link_id";i:1;s:9:"link_name";i:2;s:8:"link_url";i:3;s:9:"link_logo";i:4;s:10:"show_order";s:3:"_pk";s:7:"link_id";s:5:"_type";a:5:{s:7:"link_id";s:20:"smallint(5) unsigned";s:9:"link_name";s:12:"varchar(255)";s:8:"link_url";s:12:"varchar(255)";s:9:"link_logo";s:12:"varchar(255)";s:10:"show_order";s:19:"tinyint(3) unsigned";}}

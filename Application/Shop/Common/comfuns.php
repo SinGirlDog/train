@@ -373,7 +373,8 @@ function price_format($price, $change_price = true)
     }
     if ($change_price && defined('ECS_ADMIN') === false)
     {
-        switch ($GLOBALS['_CFG']['price_format'])
+        $price_format = C('_CFG.price_format');
+        switch ($price_format)
         {
             case 0:
                 $price = number_format($price, 2, '.', '');
@@ -426,4 +427,77 @@ function get_image_path($goods_id, $image='', $thumb=false, $call='goods', $del=
     $url = empty($image) ? C('_CFG.no_picture') : $image;
 
     return $url;
+}
+
+/**
+ * 添加商品名样式
+ * @param   string     $goods_name     商品名称
+ * @param   string     $style          样式参数
+ * @return  string
+ */
+function add_style($goods_name, $style)
+{
+    $goods_style_name = $goods_name;
+
+    $arr   = explode('+', $style);
+
+    $font_color     = !empty($arr[0]) ? $arr[0] : '';
+    $font_style = !empty($arr[1]) ? $arr[1] : '';
+
+    if ($font_color!='')
+    {
+        $goods_style_name = '<font color=' . $font_color . '>' . $goods_style_name . '</font>';
+    }
+    if ($font_style != '')
+    {
+        $goods_style_name = '<' . $font_style .'>' . $goods_style_name . '</' . $font_style . '>';
+    }
+    return $goods_style_name;
+}
+
+/**
+ * 授权信息内容
+ *
+ * @return  str
+ */
+function license_info()
+{
+    $cfg_licensed = C('_CFG.licensed');
+    if($cfg_licensed > 0)
+    {
+        /* 获取HOST */
+        if (isset($_SERVER['HTTP_X_FORWARDED_HOST']))
+        {
+            $host = $_SERVER['HTTP_X_FORWARDED_HOST'];
+        }
+        elseif (isset($_SERVER['HTTP_HOST']))
+        {
+            $host = $_SERVER['HTTP_HOST'];
+        }
+        $url_domain=url_domain();
+        $host = 'http://' . $host .$url_domain ;
+        $license = '<a href="http://www.ecshop.com/license.php?product=ecshop_b2c&url=' . urlencode($host) . '" target="_blank"
+>&nbsp;&nbsp;Licensed</a>';
+        return $license;
+    }
+    else
+    {
+        return '';
+    }
+}
+
+function url_domain()
+{
+    $curr = strpos(PHP_SELF, ADMIN_PATH . '/') !== false ?
+            preg_replace('/(.*)(' . ADMIN_PATH . ')(\/?)(.)*/i', '\1', dirname(PHP_SELF)) :
+            dirname(PHP_SELF);
+
+    $root = str_replace('\\', '/', $curr);
+
+    if (substr($root, -1) != '/')
+    {
+        $root .= '/';
+    }
+
+    return $root;
 }

@@ -26,7 +26,7 @@ var process_request = "{$lang.process_request}";
                             <else/>
                             <a href="{$vo.url}">{$vo.name}</a>
                         </if>
-                        <if condition="$key lt sizeof($navigator_list['top'])">
+                        <if condition="($key+1) lt sizeof($navigator_list['top'])">
                             |
                         </if>
                     </foreach>

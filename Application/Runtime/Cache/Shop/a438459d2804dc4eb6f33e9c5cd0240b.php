@@ -55,7 +55,7 @@ var process_request = "<?php echo ($lang["process_request"]); ?>";
                     <?php if(is_array($navigator_list['top'])): foreach($navigator_list['top'] as $key=>$vo): if($vo['opennew'] == 1): ?><a href="<?php echo ($vo["url"]); ?>" target="_blank"><?php echo ($vo["name"]); ?></a>
                             <?php else: ?>
                             <a href="<?php echo ($vo["url"]); ?>"><?php echo ($vo["name"]); ?></a><?php endif; ?>
-                        <?php if($key < sizeof($navigator_list['top'])): ?>|<?php endif; endforeach; endif; ?>
+                        <?php if(($key+1) < sizeof($navigator_list['top'])): ?>|<?php endif; endforeach; endif; ?>
                     <div class="topNavR"></div>
                 </li><?php endif; ?>
         </ul>
@@ -526,319 +526,168 @@ function check_email() {
             </div>
             <div class="blank5"></div>
             <!-- TemplateBeginEditable name="右边主区域" -->
-            <!-- #BeginLibraryItem "/library/recommend_best.lbi" -->
             <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<?php if(!empty($best_goods)): if($cat_rec_sign == 1): endif; endif; ?>
-<!-- {if $best_goods} -->
-<!-- {if $cat_rec_sign neq 1} -->
-<div class="box">
-<div class="box_2 centerPadd">
-  <div class="itemTit" id="itemBest">
-      {if $cat_rec[1]}
-      <h2><a href="javascript:void(0)" onclick="change_tab_style('itemBest', 'h2', this);get_cat_recommend(1, 0);"><?php echo ($lang["all_goods"]); ?></a></h2>
-      {foreach from=$cat_rec[1] item=rec_data}
-      <h2 class="h2bg"><a href="javascript:void(0)" onclick="change_tab_style('itemBest', 'h2', this);get_cat_recommend(1, <?php echo ($rec_data["cat_id"]); ?>)"><?php echo ($rec_data["cat_name"]); ?></a></h2>
-      {/foreach}
-      {/if}
-  </div>
-  <div id="show_best_area" class="clearfix goodsBox">
-  <!-- {/if} -->
-  <!--{foreach from=$best_goods item=goods}-->
-  <div class="goodsItem">
-         <span class="best"></span>
-           <a href="<?php echo ($goods["url"]); ?>"><img src="<?php echo ($goods["thumb"]); ?>" alt="<?php echo ($goods["name"]); ?>" class="goodsimg" /></a><br />
-           <p><a href="<?php echo ($goods["url"]); ?>" title="<?php echo ($goods["name"]); ?>"><?php echo ($goods["short_style_name"]); ?></a></p>
-           <font class="f1">
-           <!-- {if $goods.promote_price neq ""} -->
-          <?php echo ($goods["promote_price"]); ?>
-          <!-- {else}-->
-          <?php echo ($goods["shop_price"]); ?>
-          <!--{/if}-->
-           </font>
-        </div>
-  <!--{/foreach}-->
-  <div class="more"><a href="../search.php?intro=best"><img src="image/more.gif" /></a></div>
-  <!-- {if $cat_rec_sign neq 1} -->
-  </div>
-</div>
-</div>
-<div class="blank5"></div>
-  <!-- {/if} -->
-<!-- {/if} -->
-
-            <!-- {if $best_goods} -->
-            <!-- {if $cat_rec_sign neq 1} -->
-            <div class="box">
-                <div class="box_2 centerPadd">
-                    <div class="itemTit" id="itemBest">
-                        {if $cat_rec[1]}
-                        <h2><a href="javascript:void(0)" onclick="change_tab_style('itemBest', 'h2', this);get_cat_recommend(1, 0);"><?php echo ($lang["all_goods"]); ?></a></h2> {foreach from=$cat_rec[1] item=rec_data}
-                        <h2 class="h2bg"><a href="javascript:void(0)" onclick="change_tab_style('itemBest', 'h2', this);get_cat_recommend(1, <?php echo ($rec_data["cat_id"]); ?>)"><?php echo ($rec_data["cat_name"]); ?></a></h2> {/foreach} {/if}
-                    </div>
-                    <div id="show_best_area" class="clearfix goodsBox">
-                        <!-- {/if} -->
-                        <!--{foreach from=$best_goods item=goods}-->
-                        <div class="goodsItem">
+<?php if(!empty($best_goods)): if($cat_rec_sign != 1): ?><div class="box">
+            <div class="box_2 centerPadd">
+                <div class="itemTit" id="itemBest">
+                    <?php if(!empty($cat_rec[1])): ?><h2><a href="javascript:void(0)" onclick="change_tab_style('itemBest', 'h2', this);get_cat_recommend(1, 0);"><?php echo ($lang["all_goods"]); ?></a></h2>
+                        <?php if(is_array($cat_rec[1])): foreach($cat_rec[1] as $key=>$rec_data): ?><h2 class="h2bg"><a href="javascript:void(0)" onclick="change_tab_style('itemBest', 'h2', this);get_cat_recommend(1, <?php echo ($rec_data["cat_id"]); ?>)"><?php echo ($rec_data["cat_name"]); ?></a></h2><?php endforeach; endif; endif; ?>
+                </div>
+                <div id="show_best_area" class="clearfix goodsBox">
+                    <?php if(is_array($best_goods)): foreach($best_goods as $key=>$goods): ?><div class="goodsItem">
                             <span class="best"></span>
                             <a href="<?php echo ($goods["url"]); ?>"><img src="<?php echo ($goods["thumb"]); ?>" alt="<?php echo ($goods["name"]); ?>" class="goodsimg" /></a>
                             <br />
                             <p><a href="<?php echo ($goods["url"]); ?>" title="<?php echo ($goods["name"]); ?>"><?php echo ($goods["short_style_name"]); ?></a></p>
                             <font class="f1">
-                                <!-- {if $goods.promote_price neq ""} -->
-                                <?php echo ($goods["promote_price"]); ?>
-                                <!-- {else}-->
-                                <?php echo ($goods["shop_price"]); ?>
-                                <!--{/if}-->
+                                <?php if(!empty($goods['promote_price'])): echo ($goods["promote_price"]); ?>
+                                    <?php else: ?> <?php echo ($goods["shop_price"]); endif; ?>
                             </font>
-                        </div>
-                        <!--{/foreach}-->
-                        <div class="more">
-                            <a href="../search.php?intro=best"><img src="<?php echo (SHOP_IMG_URL); ?>/more.gif" /></a>
-                        </div>
-                        <!-- {if $cat_rec_sign neq 1} -->
+                        </div><?php endforeach; endif; ?>
+                    <div class="more">
+                        <a href="../search.php?intro=best">
+                            <img src="<?php echo (SHOP_IMG_URL); ?>more.gif" />
+                        </a>
                     </div>
                 </div>
             </div>
-            <div class="blank5"></div>
-            <!-- {/if} -->
-            <!-- {/if} -->
-            <!-- #EndLibraryItem -->
-            <!-- #BeginLibraryItem "/library/recommend_new.lbi" -->
-            <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<!-- {if $new_goods} -->
-<!-- {if $cat_rec_sign neq 1} -->
-<div class="box">
-<div class="box_2 centerPadd">
-  <div class="itemTit New" id="itemNew">
-      {if $cat_rec[2]}
-      <h2><a href="javascript:void(0)" onclick="change_tab_style('itemNew', 'h2', this);get_cat_recommend(2, 0);"><?php echo ($lang["all_goods"]); ?></a></h2>
-      {foreach from=$cat_rec[2] item=rec_data}
-      <h2 class="h2bg"><a href="javascript:void(0)" onclick="change_tab_style('itemNew', 'h2', this);get_cat_recommend(2, <?php echo ($rec_data["cat_id"]); ?>)"><?php echo ($rec_data["cat_name"]); ?></a></h2>
-      {/foreach}
-      {/if}
-  </div>
-  <div id="show_new_area" class="clearfix goodsBox">
-  <!-- {/if} -->
-  <!--{foreach from=$new_goods item=goods}-->
-  <div class="goodsItem">
-         <span class="news"></span>
-           <a href="<?php echo ($goods["url"]); ?>"><img src="<?php echo ($goods["thumb"]); ?>" alt="<?php echo ($goods["name"]); ?>" class="goodsimg" /></a><br />
-           <p><a href="<?php echo ($goods["url"]); ?>" title="<?php echo ($goods["name"]); ?>"><?php echo ($goods["short_style_name"]); ?></a></p>
-           <font class="f1">
-           <!-- {if $goods.promote_price neq ""} -->
-          <?php echo ($goods["promote_price"]); ?>
-          <!-- {else}-->
-          <?php echo ($goods["shop_price"]); ?>
-          <!--{/if}-->
-           </font>
         </div>
-  <!--{/foreach}-->
-  <div class="more"><a href="../search.php?intro=new"><img src="image/more.gif" /></a></div>
-  <!-- {if $cat_rec_sign neq 1} -->
-  </div>
-</div>
-</div>
-<div class="blank5"></div>
-  <!-- {/if} -->
-<!-- {/if} -->
+        <div class="blank5"></div>
+        <?php else: ?>
+        <?php if(is_array($best_goods)): foreach($best_goods as $key=>$goods): ?><div class="goodsItem">
+                <span class="best"></span>
+                <a href="<?php echo ($goods["url"]); ?>"><img src="<?php echo ($goods["thumb"]); ?>" alt="<?php echo ($goods["name"]); ?>" class="goodsimg" /></a>
+                <br />
+                <p><a href="<?php echo ($goods["url"]); ?>" title="<?php echo ($goods["name"]); ?>"><?php echo ($goods["short_style_name"]); ?></a></p>
+                <font class="f1">
+                    <?php if(!empty($goods['promote_price'])): echo ($goods["promote_price"]); ?>
+                        <?php else: ?> <?php echo ($goods["shop_price"]); endif; ?>
+                </font>
+            </div><?php endforeach; endif; ?>
+        <div class="more">
+            <a href="../search.php?intro=best"><img src="image/more.gif" /></a>
+        </div><?php endif; endif; ?>
 
-            <!-- {if $new_goods} -->
-            <!-- {if $cat_rec_sign neq 1} -->
-            <div class="box">
-                <div class="box_2 centerPadd">
-                    <div class="itemTit New" id="itemNew">
-                        {if $cat_rec[2]}
-                        <h2><a href="javascript:void(0)" onclick="change_tab_style('itemNew', 'h2', this);get_cat_recommend(2, 0);"><?php echo ($lang["all_goods"]); ?></a></h2> {foreach from=$cat_rec[2] item=rec_data}
-                        <h2 class="h2bg"><a href="javascript:void(0)" onclick="change_tab_style('itemNew', 'h2', this);get_cat_recommend(2, <?php echo ($rec_data["cat_id"]); ?>)"><?php echo ($rec_data["cat_name"]); ?></a></h2> {/foreach} {/if}
-                    </div>
-                    <div id="show_new_area" class="clearfix goodsBox">
-                        <!-- {/if} -->
-                        <!--{foreach from=$new_goods item=goods}-->
-                        <div class="goodsItem">
-                            <span class="news"></span>
+            <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<?php if(!empty($new_goods)): if($cat_rec_sign != 1): ?><div class="box">
+            <div class="box_2 centerPadd">
+                <div class="itemTit New" id="itemNew">
+                    <?php if(!empty($cat_rec[2])): ?><h2><a href="javascript:void(0)" onclick="change_tab_style('itemNew', 'h2', this);get_cat_recommend(2, 0);"><?php echo ($lang["all_goods"]); ?></a></h2>
+                        <?php if(is_array($cat_rec[2])): foreach($cat_rec[2] as $key=>$rec_data): ?><h2 class="h2bg"><a href="javascript:void(0)" onclick="change_tab_style('itemNew', 'h2', this);get_cat_recommend(2, <?php echo ($rec_data["cat_id"]); ?>)"><?php echo ($rec_data["cat_name"]); ?></a></h2><?php endforeach; endif; endif; ?>
+                </div>
+                <div id="show_new_area" class="clearfix goodsBox">
+                    <?php if(is_array($new_goods)): foreach($new_goods as $key=>$goods): ?><div class="goodsItem">
+                            <span class="best"></span>
                             <a href="<?php echo ($goods["url"]); ?>"><img src="<?php echo ($goods["thumb"]); ?>" alt="<?php echo ($goods["name"]); ?>" class="goodsimg" /></a>
                             <br />
                             <p><a href="<?php echo ($goods["url"]); ?>" title="<?php echo ($goods["name"]); ?>"><?php echo ($goods["short_style_name"]); ?></a></p>
                             <font class="f1">
-                                <!-- {if $goods.promote_price neq ""} -->
-                                <?php echo ($goods["promote_price"]); ?>
-                                <!-- {else}-->
-                                <?php echo ($goods["shop_price"]); ?>
-                                <!--{/if}-->
+                                <?php if(!empty($goods['promote_price'])): echo ($goods["promote_price"]); ?>
+                                    <?php else: ?> <?php echo ($goods["shop_price"]); endif; ?>
                             </font>
-                        </div>
-                        <!--{/foreach}-->
-                        <div class="more">
-                            <a href="../search.php?intro=new"><img src="<?php echo (SHOP_IMG_URL); ?>/more.gif" /></a>
-                        </div>
-                        <!-- {if $cat_rec_sign neq 1} -->
+                        </div><?php endforeach; endif; ?>
+                    <div class="more">
+                        <a href="../search.php?intro=new">
+                            <img src="<?php echo (SHOP_IMG_URL); ?>more.gif" />
+                        </a>
                     </div>
                 </div>
             </div>
-            <div class="blank5"></div>
-            <!-- {/if} -->
-            <!-- {/if} -->
-            <!-- #EndLibraryItem -->
-            <!-- #BeginLibraryItem "/library/recommend_hot.lbi" -->
-            <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<!-- {if $hot_goods} -->
-<!-- {if $cat_rec_sign neq 1} -->
-<div class="box">
-<div class="box_2 centerPadd">
-  <div class="itemTit Hot" id="itemHot">
-      {if $cat_rec[3]}
-      <h2><a href="javascript:void(0)" onclick="change_tab_style('itemHot', 'h2', this);get_cat_recommend(3, 0);"><?php echo ($lang["all_goods"]); ?></a></h2>
-      {foreach from=$cat_rec[3] item=rec_data}
-      <h2 class="h2bg"><a href="javascript:void(0)" onclick="change_tab_style('itemHot', 'h2', this);get_cat_recommend(3, <?php echo ($rec_data["cat_id"]); ?>)"><?php echo ($rec_data["cat_name"]); ?></a></h2>
-      {/foreach}
-      {/if}
-  </div>
-  <div id="show_hot_area" class="clearfix goodsBox">
-  <!-- {/if} -->
-  <!--{foreach from=$hot_goods item=goods}-->
-  <div class="goodsItem">
-         <span class="hot"></span>
-           <a href="<?php echo ($goods["url"]); ?>"><img src="<?php echo ($goods["thumb"]); ?>" alt="<?php echo ($goods["name"]); ?>" class="goodsimg" /></a><br />
-           <p><a href="<?php echo ($goods["url"]); ?>" title="<?php echo ($goods["name"]); ?>"><?php echo ($goods["short_style_name"]); ?></a></p>
-           <font class="f1">
-           <!-- {if $goods.promote_price neq ""} -->
-          <?php echo ($goods["promote_price"]); ?>
-          <!-- {else}-->
-          <?php echo ($goods["shop_price"]); ?>
-          <!--{/if}-->
-           </font>
         </div>
-  <!--{/foreach}-->
-  <div class="more"><a href="../search.php?intro=hot"><img src="image/more.gif" /></a></div>
-  <!-- {if $cat_rec_sign neq 1} -->
-  </div>
-</div>
-</div>
-<div class="blank5"></div>
-  <!-- {/if} -->
-<!-- {/if} -->
+        <div class="blank5"></div>
+        <?php else: ?>
+        <?php if(is_array($new_goods)): foreach($new_goods as $key=>$goods): ?><div class="goodsItem">
+                <span class="best"></span>
+                <a href="<?php echo ($goods["url"]); ?>"><img src="<?php echo ($goods["thumb"]); ?>" alt="<?php echo ($goods["name"]); ?>" class="goodsimg" /></a>
+                <br />
+                <p><a href="<?php echo ($goods["url"]); ?>" title="<?php echo ($goods["name"]); ?>"><?php echo ($goods["short_style_name"]); ?></a></p>
+                <font class="f1">
+                    <?php if(!empty($goods['promote_price'])): echo ($goods["promote_price"]); ?>
+                        <?php else: ?> <?php echo ($goods["shop_price"]); endif; ?>
+                </font>
+            </div><?php endforeach; endif; ?>
+        <div class="more">
+            <a href="../search.php?intro=new"><img src="image/more.gif" /></a>
+        </div><?php endif; endif; ?>
 
-            <!-- {if $hot_goods} -->
-            <!-- {if $cat_rec_sign neq 1} -->
-            <div class="box">
-                <div class="box_2 centerPadd">
-                    <div class="itemTit Hot" id="itemHot">
-                        {if $cat_rec[3]}
-                        <h2><a href="javascript:void(0)" onclick="change_tab_style('itemHot', 'h2', this);get_cat_recommend(3, 0);"><?php echo ($lang["all_goods"]); ?></a></h2> {foreach from=$cat_rec[3] item=rec_data}
-                        <h2 class="h2bg"><a href="javascript:void(0)" onclick="change_tab_style('itemHot', 'h2', this);get_cat_recommend(3, <?php echo ($rec_data["cat_id"]); ?>)"><?php echo ($rec_data["cat_name"]); ?></a></h2> {/foreach} {/if}
-                    </div>
-                    <div id="show_hot_area" class="clearfix goodsBox">
-                        <!-- {/if} -->
-                        <!--{foreach from=$hot_goods item=goods}-->
-                        <div class="goodsItem">
-                            <span class="hot"></span>
+            <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<?php if(!empty($hot_goods)): if($cat_rec_sign != 1): ?><div class="box">
+            <div class="box_2 centerPadd">
+                <div class="itemTit Hot" id="itemHot">
+                    <?php if(!empty($cat_rec[3])): ?><h2><a href="javascript:void(0)" onclick="change_tab_style('itemHot', 'h2', this);get_cat_recommend(3, 0);"><?php echo ($lang["all_goods"]); ?></a></h2>
+                        <?php if(is_array($cat_rec[3])): foreach($cat_rec[3] as $key=>$rec_data): ?><h2 class="h2bg"><a href="javascript:void(0)" onclick="change_tab_style('itemHot', 'h2', this);get_cat_recommend(3, <?php echo ($rec_data["cat_id"]); ?>)"><?php echo ($rec_data["cat_name"]); ?></a></h2><?php endforeach; endif; endif; ?>
+                </div>
+                <div id="show_hot_area" class="clearfix goodsBox">
+                    <?php if(is_array($hot_goods)): foreach($hot_goods as $key=>$goods): ?><div class="goodsItem">
+                            <span class="best"></span>
                             <a href="<?php echo ($goods["url"]); ?>"><img src="<?php echo ($goods["thumb"]); ?>" alt="<?php echo ($goods["name"]); ?>" class="goodsimg" /></a>
                             <br />
                             <p><a href="<?php echo ($goods["url"]); ?>" title="<?php echo ($goods["name"]); ?>"><?php echo ($goods["short_style_name"]); ?></a></p>
                             <font class="f1">
-                                <!-- {if $goods.promote_price neq ""} -->
-                                <?php echo ($goods["promote_price"]); ?>
-                                <!-- {else}-->
-                                <?php echo ($goods["shop_price"]); ?>
-                                <!--{/if}-->
+                                <?php if(!empty($goods['promote_price'])): echo ($goods["promote_price"]); ?>
+                                    <?php else: ?> <?php echo ($goods["shop_price"]); endif; ?>
                             </font>
-                        </div>
-                        <!--{/foreach}-->
-                        <div class="more">
-                            <a href="../search.php?intro=hot"><img src="<?php echo (SHOP_IMG_URL); ?>/more.gif" /></a>
-                        </div>
-                        <!-- {if $cat_rec_sign neq 1} -->
+                        </div><?php endforeach; endif; ?>
+                    <div class="more">
+                        <a href="../search.php?intro=hot">
+                            <img src="<?php echo (SHOP_IMG_URL); ?>more.gif" />
+                        </a>
                     </div>
                 </div>
             </div>
-            <div class="blank5"></div>
-            <!-- {/if} -->
-            <!-- {/if} -->
-            <!-- #EndLibraryItem -->
-            <!-- #BeginLibraryItem "/library/auction.lbi" -->
-            <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<!-- {if $auction_list} -->
-<div class="box">
- <div class="box_1">
-  <h3><span><?php echo ($lang["auction_goods"]); ?></span><a href="auction.php"><img src="../image/more.gif"></a></h3>
-    <div class="centerPadd">
-    <div class="clearfix goodsBox" style="border:none;">
-      <!--{foreach from=$auction_list item=auction}-->
-      <div class="goodsItem">
-           <a href="<?php echo ($auction["url"]); ?>"><img src="<?php echo ($auction["thumb"]); ?>" alt="<?php echo ($auction["goods_name"]); ?>" class="goodsimg" /></a><br />
-           <p><a href="<?php echo ($auction["url"]); ?>" title="<?php echo ($auction["goods_name"]); ?>"><?php echo ($auction["short_style_name"]); ?></a></p>
-           <font class="shop_s"><?php echo ($auction["formated_start_price"]); ?></font>
         </div>
-      <!--{/foreach}-->
-    </div>
-    </div>
- </div>
-</div>
-<div class="blank5"></div>
-<!-- {/if} -->
-            <!-- {if $auction_list} -->
-            <div class="box">
-                <div class="box_1">
-                    <h3><span><?php echo ($lang["auction_goods"]); ?></span><a href="auction.php"><img src="<?php echo (SHOP_IMG_URL); ?>/more.gif"></a></h3>
-                    <div class="centerPadd">
-                        <div class="clearfix goodsBox" style="border:none;">
-                            <!--{foreach from=$auction_list item=auction}-->
-                            <div class="goodsItem">
-                                <a href="<?php echo ($auction["url"]); ?>"><img src="<?php echo ($auction["thumb"]); ?>" alt="<?php echo ($auction["goods_name"]); ?>" class="goodsimg" /></a>
-                                <br />
-                                <p><a href="<?php echo ($auction["url"]); ?>" title="<?php echo ($auction["goods_name"]); ?>"><?php echo ($auction["short_style_name"]); ?></a></p>
-                                <font class="shop_s"><?php echo ($auction["formated_start_price"]); ?></font>
-                            </div>
-                            <!--{/foreach}-->
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="blank5"></div>
-            <!-- {/if} -->
-            <!-- #EndLibraryItem -->
-            <!-- #BeginLibraryItem "/library/group_buy.lbi" -->
+        <div class="blank5"></div>
+        <?php else: ?>
+        <?php if(is_array($hot_goods)): foreach($hot_goods as $key=>$goods): ?><div class="goodsItem">
+                <span class="best"></span>
+                <a href="<?php echo ($goods["url"]); ?>"><img src="<?php echo ($goods["thumb"]); ?>" alt="<?php echo ($goods["name"]); ?>" class="goodsimg" /></a>
+                <br />
+                <p><a href="<?php echo ($goods["url"]); ?>" title="<?php echo ($goods["name"]); ?>"><?php echo ($goods["short_style_name"]); ?></a></p>
+                <font class="f1">
+                    <?php if(!empty($goods['promote_price'])): echo ($goods["promote_price"]); ?>
+                        <?php else: ?> <?php echo ($goods["shop_price"]); endif; ?>
+                </font>
+            </div><?php endforeach; endif; ?>
+        <div class="more">
+            <a href="../search.php?intro=hot"><img src="image/more.gif" /></a>
+        </div><?php endif; endif; ?>
+
             <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<!-- {if $group_buy_goods} -->
-<div class="box">
- <div class="box_1">
-  <h3><span><?php echo ($lang["group_buy_goods"]); ?></span><a href="group_buy.php"><img src="../image/more.gif"></a></h3>
-    <div class="centerPadd">
-    <div class="clearfix goodsBox" style="border:none;">
-      <!--{foreach from=$group_buy_goods item=goods}-->
-      <div class="goodsItem">
-           <a href="<?php echo ($goods["url"]); ?>"><img src="<?php echo ($goods["thumb"]); ?>" alt="<?php echo ($goods["goods_name"]); ?>" class="goodsimg" /></a><br />
-					 <p><a href="<?php echo ($goods["url"]); ?>" title="<?php echo ($goods["goods_name"]); ?>"><?php echo ($goods["short_style_name"]); ?></a></p>
-           <font class="shop_s"><?php echo ($goods["last_price"]); ?></font>
-        </div>
-      <!--{/foreach}-->
-    </div>
-    </div>
- </div>
-</div>
-<div class="blank5"></div>
-<!-- {/if} -->
-            <!-- {if $group_buy_goods} -->
-            <div class="box">
-                <div class="box_1">
-                    <h3><span><?php echo ($lang["group_buy_goods"]); ?></span><a href="group_buy.php"><img src="<?php echo (SHOP_IMG_URL); ?>/more.gif"></a></h3>
-                    <div class="centerPadd">
-                        <div class="clearfix goodsBox" style="border:none;">
-                            <!--{foreach from=$group_buy_goods item=goods}-->
-                            <div class="goodsItem">
-                                <a href="<?php echo ($goods["url"]); ?>"><img src="<?php echo ($goods["thumb"]); ?>" alt="<?php echo ($goods["goods_name"]); ?>" class="goodsimg" /></a>
-                                <br />
-                                <p><a href="<?php echo ($goods["url"]); ?>" title="<?php echo ($goods["goods_name"]); ?>"><?php echo ($goods["short_style_name"]); ?></a></p>
-                                <font class="shop_s"><?php echo ($goods["last_price"]); ?></font>
-                            </div>
-                            <!--{/foreach}-->
-                        </div>
-                    </div>
+<?php if(!empty($auction_list)): ?><div class="box">
+        <div class="box_1">
+            <h3><span><?php echo ($lang["auction_goods"]); ?></span><a href="auction.php"><img src="<?php echo (SHOP_IMG_URL); ?>more.gif"></a></h3>
+            <div class="centerPadd">
+                <div class="clearfix goodsBox" style="border:none;">
+                    <?php if(is_array($auction_list)): foreach($auction_list as $key=>$auction): ?><div class="goodsItem">
+                            <a href="<?php echo ($auction["url"]); ?>"><img src="<?php echo ($auction["thumb"]); ?>" alt="<?php echo ($auction["goods_name"]); ?>" class="goodsimg" /></a>
+                            <br />
+                            <p><a href="<?php echo ($auction["url"]); ?>" title="<?php echo ($auction["goods_name"]); ?>"><?php echo ($auction["short_style_name"]); ?></a></p>
+                            <font class="shop_s"><?php echo ($auction["formated_start_price"]); ?></font>
+                        </div><?php endforeach; endif; ?>
                 </div>
             </div>
-            <div class="blank5"></div>
-            <!-- {/if} -->
-            <!-- #EndLibraryItem -->
+        </div>
+    </div>
+    <div class="blank5"></div><?php endif; ?>
+
+            <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<?php if(!empty($group_buy_goods)): ?><div class="box">
+        <div class="box_1">
+            <h3><span><?php echo ($lang["group_buy_goods"]); ?></span><a href="group_buy.php"><img src="<?php echo (SHOP_IMG_URL); ?>more.gif" /></a></h3>
+            <div class="centerPadd">
+                <div class="clearfix goodsBox" style="border:none;">
+                    <?php if(is_array($group_buy_goods)): foreach($group_buy_goods as $key=>$goods): ?><div class="goodsItem">
+                            <a href="<?php echo ($goods["url"]); ?>"><img src="<?php echo ($goods["thumb"]); ?>" alt="<?php echo ($goods["goods_name"]); ?>" class="goodsimg" /></a>
+                            <br />
+                            <p><a href="<?php echo ($goods["url"]); ?>" title="<?php echo ($goods["goods_name"]); ?>"><?php echo ($goods["short_style_name"]); ?></a></p>
+                            <font class="shop_s"><?php echo ($goods["last_price"]); ?></font>
+                        </div><?php endforeach; endif; ?>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="blank5"></div><?php endif; ?>
+
             <!-- TemplateEndEditable -->
         </div>
         <!--right end-->
@@ -848,41 +697,26 @@ function check_email() {
     <div class="block">
         <div class="box">
             <div class="helpTitBg clearfix">
-                <!-- #BeginLibraryItem "/library/help.lbi" -->
-                <!-- #EndLibraryItem -->
                 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<!--{if $helps}-->
-<!-- {foreach from=$helps item=help_cat} -->
-<dl>
-  <dt><a href='<?php echo ($help_cat["cat_id"]); ?>' title="<?php echo ($help_cat["cat_name"]); ?>"><?php echo ($help_cat["cat_name"]); ?></a></dt>
-  <!-- {foreach from=$help_cat.article item=item} -->
-  <dd><a href="<?php echo ($item["url"]); ?>" title="<?php echo ($item["title"]); ?>"><?php echo ($item["short_title"]); ?></a></dd>
-  <!-- {/foreach} -->
-</dl>
-<!-- {/foreach} -->
-<!--{/if}-->
+<?php if(!empty($helps)): if(is_array($helps)): foreach($helps as $key=>$help_cat): ?><dl>
+            <dt><a href='<?php echo ($help_cat["cat_id"]); ?>' title="<?php echo ($help_cat["cat_name"]); ?>"><?php echo ($help_cat["cat_name"]); ?></a></dt>
+            <?php if(is_array($help_cat['article'])): foreach($help_cat['article'] as $key=>$item): ?><dd><a href="<?php echo ($item["url"]); ?>" title="<?php echo ($item["title"]); ?>"><?php echo ($item["short_title"]); ?></a></dd><?php endforeach; endif; ?>
+        </dl><?php endforeach; endif; endif; ?>
+
             </div>
         </div>
     </div>
     <div class="blank"></div>
     <!--帮助-->
     <!--友情链接 start-->
-    <!--{if $img_links  or $txt_links }-->
-    <div id="bottomNav" class="box">
-        <div class="box_1">
-            <div class="links clearfix">
-                <!--开始图片类型的友情链接{foreach from=$img_links item=link}-->
-                <a href="<?php echo ($link["url"]); ?>" target="_blank" title="<?php echo ($link["name"]); ?>"><img src="<?php echo ($link["logo"]); ?>" alt="<?php echo ($link["name"]); ?>" border="0" /></a>
-                <!--结束图片类型的友情链接{/foreach}-->
-                <!-- {if $txt_links} -->
-                <!--开始文字类型的友情链接{foreach from=$txt_links item=link}-->
-                [<a href="<?php echo ($link["url"]); ?>" target="_blank" title="<?php echo ($link["name"]); ?>"><?php echo ($link["name"]); ?></a>]
-                <!--结束文字类型的友情链接{/foreach}-->
-                <!-- {/if} -->
+    <?php if(!empty($links)): ?><div id="bottomNav" class="box">
+            <div class="box_1">
+                <div class="links clearfix">
+                    <?php if(is_array($links['img'])): foreach($links['img'] as $key=>$link): ?><a href="<?php echo ($link["url"]); ?>" target="_blank" title="<?php echo ($link["name"]); ?>"><img src="<?php echo ($link["logo"]); ?>" alt="<?php echo ($link["name"]); ?>" border="0" /></a><?php endforeach; endif; ?>
+                    <?php if(is_array($links['txt'])): foreach($links['txt'] as $key=>$link): ?>[<a href="<?php echo ($link["url"]); ?>" target="_blank" title="<?php echo ($link["name"]); ?>"><?php echo ($link["name"]); ?></a>]<?php endforeach; endif; ?>
+                </div>
             </div>
-        </div>
-    </div>
-    <!--{/if}-->
+        </div><?php endif; ?>
     <!--友情链接 end-->
     <div class="blank"></div>
     <!-- #BeginLibraryItem "/library/page_footer.lbi" -->
@@ -890,74 +724,50 @@ function check_email() {
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <!--底部导航 start-->
 <div id="bottomNav" class="box">
- <div class="box_1">
-  <div class="bNavList clearfix">
-   <div class="f_l">
-   <!-- {if $navigator_list.bottom} -->
-   <!-- {foreach name=nav_bottom_list from=$navigator_list.bottom item=nav} -->
-        <a href="<?php echo ($nav["url"]); ?>" <!-- {if $nav.opennew eq 1} --> target="_blank" <!-- {/if} -->><?php echo ($nav["name"]); ?></a>
-        <!-- {if !$smarty.foreach.nav_bottom_list.last} -->
-           -
-        <!-- {/if} -->
-      <!-- {/foreach} -->
-  <!-- {/if} -->
-   </div>
-   <div class="f_r">
-   <a href="#top"><img src="image/bnt_top.gif" /></a> <a href="../index.php"><img src="image/bnt_home.gif" /></a>
-   </div>
-  </div>
- </div>
+    <div class="box_1">
+        <div class="bNavList clearfix">
+            <div class="f_l">
+                <?php if(!empty($navigator_list['bottom'])): if(is_array($navigator_list['bottom'])): foreach($navigator_list['bottom'] as $key=>$nav): if($nav['opennew'] == 1): ?><a href="<?php echo ($nav["url"]); ?>" target="_blank"><?php echo ($nav["name"]); ?></a>
+                            <?php else: ?>
+                            <a href="<?php echo ($nav["url"]); ?>"><?php echo ($nav["name"]); ?></a><?php endif; ?>
+                        <?php if(($key+1) < sizeof($navigator_list['bottom'])): ?>-<?php endif; endforeach; endif; endif; ?>
+            </div>
+            <div class="f_r">
+                <a href="#top"><img src="<?php echo (SHOP_IMG_URL); ?>bnt_top.gif" /></a>
+                <a href="../index.php"><img src="<?php echo (SHOP_IMG_URL); ?>bnt_home.gif" /></a>
+            </div>
+        </div>
+    </div>
 </div>
 <!--底部导航 end-->
 <div class="blank"></div>
 <!--版权 start-->
 <div id="footer">
- <div class="text">
- <?php echo ($copyright); ?><br />
- <?php echo ($shop_address); ?> <?php echo ($shop_postcode); ?>
- <!-- 客服电话{if $service_phone} -->
-      Tel: <?php echo ($service_phone); ?>
- <!-- 结束客服电话{/if} -->
- <!-- 邮件{if $service_email} -->
-      E-mail: <?php echo ($service_email); ?><br />
- <!-- 结束邮件{/if} -->
- <!-- QQ 号码 {foreach from=$qq item=im} -->
-      <!-- {if $im} -->
-      <a href="http://wpa.qq.com/msgrd?V=1&amp;Uin=<?php echo ($im); ?>&amp;Site=<?php echo ($shop_name); ?>&amp;Menu=yes" target="_blank"><img src="http://wpa.qq.com/pa?p=1:<?php echo ($im); ?>:4" height="16" border="0" alt="QQ" /> <?php echo ($im); ?></a>
-      <!-- {/if} -->
-      <!-- {/foreach} 结束QQ号码 -->
-      <!-- 淘宝旺旺 {foreach from=$ww item=im} -->
-      <!-- {if $im} -->
-      <a href="http://amos1.taobao.com/msg.ww?v=2&uid=<?php echo ($im); ?>&s=2" target="_blank"><img src="http://amos1.taobao.com/online.ww?v=2&uid=<?php echo ($im); ?>&s=2" width="16" height="16" border="0" alt="淘宝旺旺" /><?php echo ($im); ?></a>
-      <!-- {/if} -->
-      <!--{/foreach} 结束淘宝旺旺 -->
-      <!-- Yahoo Messenger {foreach from=$ym item=im} -->
-      <!-- {if $im} -->
-      <a href="http://edit.yahoo.com/config/send_webmesg?.target=<?php echo ($im); ?>n&.src=pg" target="_blank"><img src="../image/yahoo.gif" width="18" height="17" border="0" alt="Yahoo Messenger" /> <?php echo ($im); ?></a>
-      <!-- {/if} -->
-      <!-- {/foreach} 结束Yahoo Messenger -->
-      <!-- MSN Messenger {foreach from=$msn item=im} -->
-      <!-- {if $im} -->
-      <img src="../image/msn.gif" width="18" height="17" border="0" alt="MSN" /> <a href="msnim:chat?contact=<?php echo ($im); ?>"><?php echo ($im); ?></a>
-      <!-- {/if} -->
-      <!-- {/foreach} 结束MSN Messenger -->
-      <!-- Skype {foreach from=$skype item=im} -->
-      <!-- {if $im} -->
-      <img src="http://mystatus.skype.com/smallclassic/<?php echo ($im); ?>" alt="Skype" /><a href="skype:<?php echo ($im); ?>?call"><?php echo ($im); ?></a>
-      <!-- {/if} -->
-  <!-- {/foreach} --><br />
-  <!-- ICP 证书{if $icp_number} -->
-  <?php echo ($lang["icp_number"]); ?>:<a href="http://www.miibeian.gov.cn/" target="_blank"><?php echo ($icp_number); ?></a><br />
-  <!-- 结束ICP 证书{/if} -->
-  {insert name='query_info'}<br />
-  {foreach from=$lang.p_y item=pv}<?php echo ($pv); ?>{/foreach}<?php echo ($licensed); ?><br />
-    {if $stats_code}
-    <div align="left"><?php echo ($stats_code); ?></div>
-    {/if}
-    <div align="left"  id="rss"><a href="<?php echo ($feed_url); ?>"><img src="../image/xml_rss2.gif" alt="rss" /></a></div>
- </div>
+    <div class="text">
+        <?php echo ($copyright); ?>
+        <br /> <?php echo ($shop_address); ?> <?php echo ($shop_postcode); ?>
+        <?php if(!empty($service_phone)): ?>Tel: <?php echo ($service_phone); endif; ?>
+        <?php if(!empty($service_email)): ?>E-mail: <?php echo ($service_email); ?>
+            <br /><?php endif; ?>
+        <?php if(is_array($qq)): foreach($qq as $key=>$im): if(!empty($im)): ?><a href="http://wpa.qq.com/msgrd?V=1&amp;Uin=<?php echo ($im); ?>&amp;Site=<?php echo ($shop_name); ?>&amp;Menu=yes" target="_blank"><img src="http://wpa.qq.com/pa?p=1:<?php echo ($im); ?>:4" height="16" border="0" alt="QQ" /> <?php echo ($im); ?></a><?php endif; endforeach; endif; ?>
+        <?php if(is_array($ww)): foreach($ww as $key=>$im): if(!empty($im)): ?><a href="http://amos1.taobao.com/msg.ww?v=2&uid=<?php echo ($im); ?>&s=2" target="_blank"><img src="http://amos1.taobao.com/online.ww?v=2&uid=<?php echo ($im); ?>&s=2" width="16" height="16" border="0" alt="淘宝旺旺" /><?php echo ($im); ?></a><?php endif; endforeach; endif; ?>
+        <?php if(is_array($ym)): foreach($ym as $key=>$im): if(!empty($im)): ?><a href="http://edit.yahoo.com/config/send_webmesg?.target=<?php echo ($im); ?>n&.src=pg" target="_blank"><img src="../image/yahoo.gif" width="18" height="17" border="0" alt="Yahoo Messenger" /> <?php echo ($im); ?></a><?php endif; endforeach; endif; ?>
+        <?php if(is_array($msn)): foreach($msn as $key=>$im): if(!empty($im)): ?><img src="../image/msn.gif" width="18" height="17" border="0" alt="MSN" /> <a href="msnim:chat?contact=<?php echo ($im); ?>"><?php echo ($im); ?></a><?php endif; endforeach; endif; ?>
+        <?php if(is_array($skype)): foreach($skype as $key=>$im): if(!empty($im)): ?><img src="http://mystatus.skype.com/smallclassic/<?php echo ($im); ?>" alt="Skype" /><a href="skype:<?php echo ($im); ?>?call"><?php echo ($im); ?></a><?php endif; endforeach; endif; ?>
+        <br />
+        <?php if(!empty($icp_number)): echo ($lang["icp_number"]); ?>:<a href="http://www.miibeian.gov.cn/" target="_blank"><?php echo ($icp_number); ?></a>
+            <br /><?php endif; ?>
+        <!-- {insert name='query_info'} -->
+        <br />
+        <?php if(is_array($lang['p_y'])): foreach($lang['p_y'] as $key=>$pv): echo ($pv); endforeach; endif; ?>
+        <?php echo ($licensed); ?>
+        <br />
+        <?php if(!empty($stats_code)): ?><div align="left"><?php echo ($stats_code); ?></div><?php endif; ?>
+        <div align="left" id="rss">
+            <a href="<?php echo ($feed_url); ?>"><img src="<?php echo (SHOP_IMG_URL); ?>/xml_rss2.gif" alt="rss" /></a>
+        </div>
+    </div>
 </div>
-
 
 </body>
 

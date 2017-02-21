@@ -57,15 +57,51 @@ class IndexController extends Controller {
         $this->assign('brand_list',$brand_list);
 
         $best_goods = $Goods->get_recommend_goods('best');
-        // echo '<pre/>';print_r($best_goods);die; 
+        $new_goods = $Goods->get_recommend_goods('new');
+        $hot_goods = $Goods->get_recommend_goods('hot');       
         $this->assign('best_goods',$best_goods);
+        $this->assign('new_goods',$new_goods);
+        $this->assign('hot_goods',$hot_goods);
+
+        $cat_rec = $Category->get_cat_rec();
+        $this->assign('cat_rec',$cat_rec);
+
+        $auction_list = $GoodsActivity->index_get_auction();
+        $group_buy_goods = $GoodsActivity->index_get_group_buy();
+        $this->assign('auction_list',$auction_list);
+        $this->assign('group_buy_goods',$group_buy_goods);
+
+        $helps = $Article->get_shop_help();
+        $this->assign('helps',$helps);
+
+        $FriendLink = D('FriendLink');
+        $links = $FriendLink->index_get_links(); 
+        $this->assign('links',$links);
+
+        $this->assign('copyright', 
+            sprintf(C('_LANG.copyright'), date('Y'), C('_CFG.shop_name')));
+        $this->assign('shop_address',  C('_CFG.shop_address'));
+        $this->assign('shop_name',  C('_CFG.shop_name'));
+        $this->assign('service_phone',  C('_CFG.service_phone'));
+        $this->assign('service_email',  C('_CFG.service_email'));
+        $this->assign('stats_code',    C('_CFG.stats_code'));
+        $this->assign('qq',            explode(',', C('_CFG.qq')));
+        $this->assign('ww',            explode(',', C('_CFG.ww')));
+        $this->assign('ym',            explode(',', C('_CFG.ym')));
+        $this->assign('msn',           explode(',', C('_CFG.msn')));
+        $this->assign('skype',         explode(',', C('_CFG.skype')));
+        $this->assign('icp_number',    C('_CFG.icp_number'));
+        $this->assign('licensed',      license_info());
+        $this->assign('feed_url', 
+                (C('rewrite') == 1) ? "feed-typeactivity.xml" : 'feed.php?type=activity');
+        // echo '<pre/>';print_r($links);die; 
 
     	$this->display(':index');
     }
 
     protected function _mergeConfig() {
 		$_LANG = include ('./Application/Shop/Conf/lang_config.php');
-        // C('_LANG',$_LANG);
+        C('_LANG',$_LANG);
 		$this->assign('lang',$_LANG);
 
         D('ShopConfig')->load_shop_config();

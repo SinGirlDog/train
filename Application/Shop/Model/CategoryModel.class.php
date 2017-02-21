@@ -74,4 +74,26 @@ public function get_child_tree($tree_id = 0)
 }
 
 
+public function get_cat_rec(){
+
+    $fields = array('c.cat_id', 'c.cat_name', 'cr.recommend_type');
+
+    $cat_recommend_res = $this->fetchSql(false)->alias('c')->
+    join('__CAT_RECOMMEND__ cr on cr.cat_id = c.cat_id')->field($fields)->select();
+
+    $cat_rec = array();    
+   
+    if (!empty($cat_recommend_res))
+    {
+        $cat_rec_array = array();
+        foreach($cat_recommend_res as $cat_recommend_data)
+        {
+            $cat_rec[$cat_recommend_data['recommend_type']][] = array('cat_id' => $cat_recommend_data['cat_id'], 'cat_name' => $cat_recommend_data['cat_name']);
+        }
+        
+    }
+
+    return $cat_rec;
+}
+
 }

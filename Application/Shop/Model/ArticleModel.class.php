@@ -40,4 +40,47 @@ public function index_get_new_articles()
     return $arr;
 }
 
+
+/**
+ * 分配帮助信息
+ *
+ * @return  array
+ */
+public function get_shop_help()
+{
+    $fields = array(
+        'c.cat_id', 
+        'c.cat_name', 
+        'c.sort_order', 
+        'a.article_id', 
+        'a.title', 
+        'a.file_url', 
+        'a.open_type'
+    );
+    $condition = array(
+        'c.cat_type' => 5,
+        'a.is_open' => 1,
+    );
+    
+    $res = $this->fetchSql(false)->alias('a')->
+    join('LEFT JOIN __ARTICLE_CAT__ c on a.cat_id = c.cat_id')->
+    field($fields)->where($condition)->order('c.sort_order ASC, a.article_id')->select();
+    
+    $arr = array();
+    foreach ($res AS $key => $row)
+    {
+        $arr[$row['cat_id']]['cat_id']                       = build_uri('article_cat', array('acid'=> $row['cat_id']), $row['cat_name']);
+        $arr[$row['cat_id']]['cat_name']                     = $row['cat_name'];
+        $arr[$row['cat_id']]['article'][$key]['article_id']  = $row['article_id'];
+        $arr[$row['cat_id']]['article'][$key]['title']       = $row['title'];
+        $arr[$row['cat_id']]['article'][$key]['short_title'] = $GLOBALS['_CFG']['article_title_length'] > 0 ?
+            sub_str($row['title'], $GLOBALS['_CFG']['article_title_length']) : $row['title'];
+        $arr[$row['cat_id']]['article'][$key]['url']         = $row['open_type'] != 1 ?
+            build_uri('article', array('aid' => $row['article_id']), $row['title']) : trim($row['file_url']);
+    }
+
+    return $arr;
+}
+
+
 }
