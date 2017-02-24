@@ -2,19 +2,43 @@
 namespace Visit\Controller;
 use Think\Controller;
 class IndexController extends Controller {
+
     public function index(){
 
-    	//$admin = M('Admin');
-    	//$admin = D('Admin');
     	$admin = new \Visit\Model\AdminModel();
     	print_r($admin->test_value);
 		
 		$this->assign('admin',$admin->test_value);
 
-		$this->display(':index');
-       
-       // $this->show('<style type="text/css">*{ padding: 0; margin: 0; } div{ padding: 4px 48px;} body{ background: #fff; font-family: "微软雅黑"; color: #333;font-size:24px} h1{ font-size: 100px; font-weight: normal; margin-bottom: 12px; } p{ line-height: 1.8em; font-size: 36px } a,a:hover{color:blue;}</style><div style="padding: 24px 48px;"> <h1>:)</h1><p>欢迎使用 <b>ThinkPHP</b>！diy module Visit</p><br/>版本 V{$Think.version}</div><script type="text/javascript" src="http://ad.topthink.com/Public/static/client.js"></script><thinkad id="ad_55e75dfae343f5a1"></thinkad><script type="text/javascript" src="http://tajs.qq.com/stats?sId=9347272" charset="UTF-8"></script>','utf-8');
+        $this->test_question_a();
 
-    	
+		$this->display(':index');
+          	
+    }
+
+    public function test_question_a(){
+        $obj = new \Visit\Lib\Test\Some('where','here');
+        $obj->name = 'realName';
+        $obj->collr = 'red';
+        var_dump($obj->name);
+        var_dump(isset($obj->name));
+        var_export($obj);
+    }
+
+    public function test_question_b()
+    {
+        echo '<pre/>';
+        $arr = array(1,2,3,4,9,6);  
+        foreach($arr as &$v){}
+        print_r($arr);       
+        foreach($arr as $v){}
+        print_r($arr);
+
+        $a = range(1,5);  
+        foreach($a as &$b){  
+            $b *= $b;  
+        }            
+        foreach($a as $b){}  
+        print_r($a);
     }
 }

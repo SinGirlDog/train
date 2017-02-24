@@ -1,0 +1,6 @@
+[ 2017-02-23T11:00:29+08:00 ] ::1 /train/shop/index.cpn
+ERR: 无法加载控制器:Index.cpn
+
+[ 2017-02-23T11:00:34+08:00 ] ::1 /train/shop/index/index.cpn
+ERR: 非法操作:index.cpn
+

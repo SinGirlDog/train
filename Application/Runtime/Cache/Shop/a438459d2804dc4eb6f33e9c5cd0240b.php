@@ -13,8 +13,6 @@
     <link rel="icon" href="<?php echo (SHOP_IMG_URL); ?>animated_favicon.gif" type="image/gif" />
     <link href="<?php echo (SHOP_CSS_URL); ?>style_pink.css" rel="stylesheet" type="text/css" />
     <link rel="alternate" type="application/rss+xml" title="RSS|<?php echo ($page_title); ?>" href="<?php echo ($feed_url); ?>" />
-    <!-- {* 包含脚本文件 *}
-{insert_scripts files='common.js,index.js'} -->
     <script src='<?php echo (SHOP_JS_URL); ?>common.js'></script>
     <script src='<?php echo (SHOP_JS_URL); ?>index.js'></script>
 </head>
@@ -116,19 +114,14 @@ var process_request = "<?php echo ($lang["process_request"]); ?>";
             </div>
             <div class="blank5"></div>
             <!--站内公告 end-->
-            <!-- <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+            <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <script src='<?php echo (SHOP_JS_URL); ?>transport.js'></script>
 <div class="cart" id="ECS_CARTINFO">
     <?php echo ($cart_info); ?>
 </div>
 <div class="blank5"></div>
- -->
-            <script src='<?php echo (SHOP_JS_URL); ?>transport.js'></script>
-            <div class="cart" id="ECS_CARTINFO">
-                <?php echo ($cart_info); ?>
-            </div>
-            <div class="blank5"></div>
-            <!-- <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+            <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <div class="box">
     <div class="box_1">
         <div id="category_tree">
@@ -141,20 +134,8 @@ var process_request = "<?php echo ($lang["process_request"]); ?>";
     </div>
 </div>
 <div class="blank5"></div>
- -->
-            <div class="box">
-                <div class="box_1">
-                    <div id="category_tree">
-                        <?php if(is_array($categories)): foreach($categories as $key=>$cat): ?><dl>
-                                <dt><a href="<?php echo ($cat["url"]); ?>"><?php echo ($cat["name"]); ?></a></dt>
-                                <?php if(is_array($cat['cat_id'])): foreach($cat['cat_id'] as $cid_key=>$child): ?><dd><a href="<?php echo ($child["url"]); ?>"><?php echo ($child["name"]); ?></a></dd>
-                                    <?php if(is_array($child['cat_id'])): foreach($child['cat_id'] as $chi_key=>$childer): ?><dd>&nbsp;&nbsp;<a href="<?php echo ($childer["url"]); ?>"><?php echo ($childer["name"]); ?></a></dd><?php endforeach; endif; endforeach; endif; ?>
-                            </dl><?php endforeach; endif; ?>
-                    </div>
-                </div>
-            </div>
-            <div class="blank5"></div>
-            <!-- <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+            <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <div class="box">
     <div class="box_2">
         <div class="top10Tit"></div>
@@ -182,35 +163,8 @@ var process_request = "<?php echo ($lang["process_request"]); ?>";
     </div>
 </div>
 <div class="blank5"></div>
- -->
-            <div class="box">
-                <div class="box_2">
-                    <div class="top10Tit"></div>
-                    <div class="top10List clearfix">
-                        <?php if(!empty($top_goods)): if(is_array($top_goods)): foreach($top_goods as $key=>$goods): ?><ul class="clearfix">
-                                    <img src="<?php echo (SHOP_IMG_URL); ?>/top_<?php echo ($key+1); ?>.gif" class="iteration" />
-                                    <?php if($key < 3): ?><li class="topimg">
-                                            <a href="<?php echo ($goods["url"]); ?>"><img src="<?php echo ($goods["thumb"]); ?>" alt="<?php echo ($goods["name"]); ?>" class="samllimg" /></a>
-                                        </li>
-                                        <li class="iteration1">
-                                            <a href="<?php echo ($goods["url"]); ?>" title="<?php echo ($goods["name"]); ?>"><?php echo ($goods["short_name"]); ?></a>
-                                            <br /> <?php echo ($lang["shop_price"]); ?>
-                                            <font class="f1"><?php echo ($goods["price"]); ?></font>
-                                            <br />
-                                        </li>
-                                        <?php else: ?>
-                                        <li>
-                                            <a href="<?php echo ($goods["url"]); ?>" title="<?php echo ($goods["name"]); ?>"><?php echo ($goods["short_name"]); ?></a>
-                                            <br /> <?php echo ($lang["shop_price"]); ?>
-                                            <font class="f1"><?php echo ($goods["price"]); ?></font>
-                                            <br />
-                                        </li><?php endif; ?>
-                                </ul><?php endforeach; endif; endif; ?>
-                    </div>
-                </div>
-            </div>
-            <div class="blank5"></div>
-            <!-- <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+            <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <?php if(!empty($promotion_info)): ?><div class="box">
         <div class="box_1">
             <h3><span><?php echo ($lang["promotion_info"]); ?></span></h3>
@@ -227,24 +181,8 @@ var process_request = "<?php echo ($lang["process_request"]); ?>";
         </div>
     </div>
     <div class="blank5"></div><?php endif; ?>
- -->
-            <?php if(!empty($promotion_info)): ?><div class="box">
-                    <div class="box_1">
-                        <h3><span><?php echo ($lang["promotion_info"]); ?></span></h3>
-                        <div class="boxCenterList RelaArticle">
-                            <?php if(is_array($promotion_info)): foreach($promotion_info as $key=>$item): switch($item["type"]): case "": ?><a href="snatch.php" title="<?php echo ($lang["$item"]["type"]); ?>"><?php echo ($lang["snatch_promotion"]); ?></a><?php break;?>
-                                    <?php case "": ?><a href="group_buy.php" title="<?php echo ($lang["$item"]["type"]); ?>"><?php echo ($lang["group_promotion"]); ?></a><?php break;?>
-                                    <?php case "": ?><a href="auction.php" title="<?php echo ($lang["$item"]["type"]); ?>"><?php echo ($lang["auction_promotion"]); ?></a><?php break;?>
-                                    <?php case "": ?><a href="activity.php" title="<?php echo ($lang["$item"]["type"]); ?>"><?php echo ($lang["favourable_promotion"]); ?></a><?php break;?>
-                                    <?php case "": ?><a href="package.php" title="<?php echo ($lang["$item"]["type"]); ?>"><?php echo ($lang["package_promotion"]); ?></a><?php break;?>
-                                    <?php default: endswitch;?>
-                                <a href="<?php echo ($item["url"]); ?>" title="<?php echo ($lang["$item"]["type"]); ?> <?php echo ($item["act_name"]); echo ($item["time"]); ?>" style="background:none; padding-left:0px;"><?php echo ($item["act_name"]); ?></a>
-                                <br /><?php endforeach; endif; ?>
-                        </div>
-                    </div>
-                </div>
-                <div class="blank5"></div><?php endif; ?>
-            <!-- <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+            <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <?php if(empty($order_query)): ?><script>
     var invalid_order_sn = "<?php echo ($lang["invalid_order_sn"]); ?>"
     </script>
@@ -278,41 +216,8 @@ var process_request = "<?php echo ($lang["process_request"]); ?>";
             <br><?php endif; ?>
     </div><?php endif; ?>
 <div class="blank5"></div>
- -->
-            <?php if(empty($order_query)): ?><script>
-                var invalid_order_sn = "<?php echo ($lang["invalid_order_sn"]); ?>"
-                </script>
-                <div class="box">
-                    <div class="box_1">
-                        <h3><span><?php echo ($lang["order_query"]); ?></span></h3>
-                        <div class="boxCenterList">
-                            <form name="ecsOrderQuery">
-                                <input type="text" name="order_sn" class="inputBg" />
-                                <br />
-                                <div class="blank5"></div>
-                                <input type="button" value="<?php echo ($lang["query_order"]); ?>" class="bnt_blue_2" onclick="orderQuery()" />
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <?php else: ?>
-                <div id="ECS_ORDER_QUERY" style="margin-top:8px;">
-                    <?php if(!empty($order_query['user_id'])): ?><b><?php echo ($lang["order_number"]); ?>：</b><a href="user.php?act=order_detail&order_id=<?php echo ($order_query["order_id"]); ?>" class="f6"><?php echo ($order_query["order_sn"]); ?></a>
-                        <br>
-                        <?php else: ?>
-                        <b><?php echo ($lang["order_number"]); ?>：</b><?php echo ($order_query["order_sn"]); ?>
-                        <br><?php endif; ?>
-                    <b><?php echo ($lang["order_status"]); ?>：</b>
-                    <br>
-                    <font class="f1"><?php echo ($order_query["order_status"]); ?></font>
-                    <br>
-                    <?php if(!empty($order_query['invoice_no'])): ?><b><?php echo ($lang["consignment"]); ?>：</b><?php echo ($order_query["invoice_no"]); ?>
-                        <br><?php endif; ?>
-                    <?php if(!empty($order_query['shipping_date'])): ?><b><?php echo ($lang["shipping_date"]); ?>: </b><?php echo ($order_query["shipping_date"]); ?>
-                        <br><?php endif; ?>
-                </div><?php endif; ?>
-            <div class="blank5"></div>
-            <!-- <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+            <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <?php if(!empty($invoice_list)): ?><style type="text/css">
     .boxCenterList form {
         display: inline;
@@ -334,31 +239,10 @@ var process_request = "<?php echo ($lang["process_request"]); ?>";
         </div>
     </div>
     <div class="blank5"></div><?php endif; ?>
- -->
-            <?php if(!empty($invoice_list)): ?><style type="text/css">
-                .boxCenterList form {
-                    display: inline;
-                }
-                
-                .boxCenterList form a {
-                    color: #404040;
-                    text-decoration: underline;
-                }
-                </style>
-                <div class="box">
-                    <div class="box_1">
-                        <h3><span><?php echo ($lang["shipping_query"]); ?></span></h3>
-                        <div class="boxCenterList">
-                            <?php if(is_array($invoice_list)): foreach($invoice_list as $key=>$invoice): echo ($lang["order_number"]); ?> <?php echo ($invoice["order_sn"]); ?>
-                                <br /> <?php echo ($lang["consignment"]); ?> <?php echo ($invoice["invoice_no"]); ?>
-                                <div class="blank"></div><?php endforeach; endif; ?>
-                        </div>
-                    </div>
-                </div>
-                <div class="blank5"></div><?php endif; ?>
+
             <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <?php echo ($vote); ?>
-            <!-- <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+            <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <div class="box">
     <div class="box_1">
         <h3><span><?php echo ($lang["email_subscribe"]); ?></span></h3>
@@ -404,53 +288,7 @@ function check_email() {
     }
 }
 </script>
- -->
-            <div class="box">
-                <div class="box_1">
-                    <h3><span><?php echo ($lang["email_subscribe"]); ?></span></h3>
-                    <div class="boxCenterList RelaArticle">
-                        <input type="text" id="user_email" class="inputBg" />
-                        <br />
-                        <div class="blank5"></div>
-                        <input type="button" class="bnt_blue" value="<?php echo ($lang["email_list_ok"]); ?>" onclick="add_email_list();" />
-                        <input type="button" class="bnt_bonus" value="<?php echo ($lang["email_list_cancel"]); ?>" onclick="cancel_email_list();" />
-                    </div>
-                </div>
-            </div>
-            <div class="blank5"></div>
-            <script type="text/javascript">
-            var email = document.getElementById('user_email');
 
-            function add_email_list() {
-                if (check_email()) {
-                    Ajax.call('user.php?act=email_list&job=add&email=' + email.value, '', rep_add_email_list, 'GET', 'TEXT');
-                }
-            }
-
-            function rep_add_email_list(text) {
-                alert(text);
-            }
-
-            function cancel_email_list() {
-                if (check_email()) {
-                    Ajax.call('user.php?act=email_list&job=del&email=' + email.value, '', rep_cancel_email_list, 'GET', 'TEXT');
-                }
-            }
-
-            function rep_cancel_email_list(text) {
-                alert(text);
-            }
-
-            function check_email() {
-                if (Utils.isEmail(email.value)) {
-                    return true;
-                } else {
-                    alert('<?php echo ($lang["email_invalid"]); ?>');
-                    return false;
-                }
-            }
-            </script>
-            <!-- TemplateEndEditable -->
         </div>
         <!--left end-->
         <!--right start-->

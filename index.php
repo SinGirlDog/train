@@ -27,6 +27,8 @@ define('SHOP_JS_URL','/train/Application/Shop/Public/js/');
 define('SHOP_DATA_URL','/train/Application/Shop/Public/data/');
 // define('SHOP_LBI_URL','/train/Application/Shop/Public/lbi/');
 
+define('HTML_PATH', './Application/Shop/HTML/');//生成静态页面的文件位置  
+
 // 引入ThinkPHP入口文件
 require './ThinkPHP/ThinkPHP.php';
 
