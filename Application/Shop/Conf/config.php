@@ -25,7 +25,7 @@ return array(
 
     'LOAD_EXT_CONFIG'       => 'const',//自定义常量文件
 
-    'HTML_CACHE_ON'   => true,     // 开启静态缓存  
+    'HTML_CACHE_ON'   => false,     // 开启静态缓存  
     'HTML_CACHE_TIME' => 604800,   // 全局静态缓存有效期（秒）(3600*24*7)  
     'HTML_FILE_SUFFIX'=> '.html',  // 设置静态缓存文件后缀  
     'HTML_CACHE_RULES'=> array(
