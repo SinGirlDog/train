@@ -1,8 +1,0 @@
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<ul>
-    <foreach name="new_articles" item="article">
-        <li>
-            [<a href="{$article.cat_url}">{$article.cat_name}</a>] <a href="{$article.url}" title="{$article.title}">{$article.short_title|mb_substr=0,10,'utf-8'}</a>
-        </li>
-    </foreach>
-</ul>

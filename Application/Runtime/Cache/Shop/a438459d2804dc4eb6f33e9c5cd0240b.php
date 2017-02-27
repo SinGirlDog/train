@@ -121,6 +121,7 @@ var process_request = "<?php echo ($lang["process_request"]); ?>";
 </div>
 <div class="blank5"></div>
 
+            <!--  -->
             <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <div class="box">
     <div class="box_1">

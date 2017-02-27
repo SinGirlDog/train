@@ -1,0 +1,6 @@
+[ 2017-02-27T13:29:35+08:00 ] ::1 /train/VISIT
+ERR: 无法加载控制器:Index
+
+[ 2017-02-27T13:33:08+08:00 ] ::1 /train/Visit/Dir
+ERR: Think\Controller:difFind方法不存在！
+
