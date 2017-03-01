@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>{$lang.cp_home}</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<script type="Text/Javascript" language="JavaScript">
-<!--
+    <title>{$lang.cp_home}</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="Text/Javascript" language="JavaScript">
+        <!--
 // {literal}
 // if (window.top != window)
 // {
@@ -12,9 +13,8 @@
 // }
 // {/literal}
 //-->
-</script>
-
-<!-- <frameset rows="76,*" framespacing="0" border="0">
+    </script>
+    <!-- <frameset rows="76,*" framespacing="0" border="0">
   <frame src="index.php?act=top
 " id="header-frame" name="header-frame" frameborder="no" scrolling="no">
   <frameset cols="180, 10, *" framespacing="0" border="0" id="frame-body">
@@ -26,15 +26,44 @@
   <frameset rows="0, 0" framespacing="0" border="0">
   <frame src="http://api.ecshop.com/record.php?mod=login&url={$shop_url}" id="hidd-frame" name="hidd-frame" frameborder="no" scrolling="no">
   </frameset> -->
+    <style type="text/css">
+    #sa_menu_left {
+        width: 15%;
+    }
+    
+    #sa_drag_mid {
+        margin-left: 14.5%;
+        margin-top: -130%;
+    }
+    
+    #sa_main_right {
+       margin-left: 16%;
+       margin-top:-18.5%;      
+    }
+    </style>
 </head>
+
 <body>
-
-<!-- <block name="top">
-  <include file="adm/top"/>
-</block> -->
-<block name="login">
-  <include file="adm/login"/>
-</block>
-
+    <notempty name="admin">
+        <div id="all">
+            <div id="sa_top">
+                <include file="adm/top" />
+            </div>
+            <div id="sa_content">
+                <div id="sa_menu_left">
+                    <include file="adm:menu" />
+                </div>
+                <div id="sa_drag_mid">
+                    <include file="adm:drag" />
+                </div>
+                <div id="sa_main_right">
+                    <include file="adm:start" />
+                </div>
+            </div>
+        </div>
+        <else/>
+        <include file="adm/login" />
+    </notempty>
 </body>
+
 </html>

@@ -1,0 +1,88 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script type="text/javascript">
+var process_request = "{$lang.process_request}";
+</script>
+<div class="block clearfix">
+    <div class="f_l">
+        <a href="../index.php" name="top"><img src="{$Think.const.SHOP_IMG_URL}logo.gif" /></a>
+    </div>
+    <div class="f_r log">
+        <ul>
+            <li class="userInfo">
+                <!-- {insert_scripts files='transport.js,utils.js'} -->
+                <script type="text/javascript" src="{$Think.const.SHOP_JS_URL}utils.js"></script>
+                <script type="text/javascript" src="{$Think.const.SHOP_JS_URL}transport.js"></script>
+                <font id="ECS_MEMBERZONE">
+                    <!-- ECSHOP 提醒您：根据用户id来调用member_info.lbi显示不同的界面 -->
+                    <!-- {insert name='member_info'}  -->
+                    <include file="lbi/member_info" />
+                </font>
+            </li>
+            <notempty name="navigator_list['top']">
+                <li id="topNav" class="clearfix">
+                    <foreach name="navigator_list['top']" item="vo" key="key">
+                        <if condition="$vo['opennew'] eq 1">
+                            <a href="{$vo.url}" target="_blank">{$vo.name}</a>
+                            <else/>
+                            <a href="{$vo.url}">{$vo.name}</a>
+                        </if>
+                        <if condition="($key+1) lt sizeof($navigator_list['top'])">
+                            |
+                        </if>
+                    </foreach>
+                    <div class="topNavR"></div>
+                </li>
+            </notempty>
+        </ul>
+    </div>
+</div>
+<div class="blank"></div>
+<div id="mainNav" class="clearfix">
+    <if condition="$navigator_list['config']['index'] eq 1">
+        <a href="../index.php" class="cur">{$lang.home}<span></span></a>
+        <else/>
+        <a href="../index.php">{$lang.home}<span></span></a>
+    </if>
+    <foreach name="navigator_list['middle']" item="vo" key="key">
+        <php>
+            if($vo['opennew'] == 1){ $target = 'target="_blank"'; }else{ $target = ''; }
+        </php>
+        <php>
+            if($vo['active'] == 1) $class = 'class = "cur"'; else $class = '';
+        </php>
+        <a href="{$vo['url']}" {$target} {$class}>{$vo['name']}<span></span></a>
+    </foreach>
+</div>
+<!--search start-->
+<div id="search" class="clearfix">
+    <div class="keys f_l">
+        <literal>
+            <script type="text/javascript">
+            function checkSearchForm() {
+                if (document.getElementById('keyword').value) {
+                    return true;
+                } else {
+                    alert("{$lang.no_keywords}");
+                    return false;
+                }
+            }
+            </script>
+        </literal>
+        <notempty name="searchkeywords">
+            {$lang.hot_search} ：
+            <foreach name="searchkeywords" item="vo">
+                <a href="search.php?keywords={$vo}">{$vo}</a>
+            </foreach>
+        </notempty>
+    </div>
+    <form id="searchForm" name="searchForm" method="get" action="search.php" onSubmit="return checkSearchForm()" class="f_r" style="_position:relative; top:5px;">
+        <select name="category" id="category" class="B_input">
+            <option value="0">{$lang.all_category}</option>
+            {$category_list}
+        </select>
+        <input name="keywords" type="text" id="keyword" value="{$search_keywords}" class="B_input" style="width:110px;" />
+        <input name="imageField" type="submit" value="" class="go" style="cursor:pointer;" />
+        <a href="search.php?act=advanced_search">{$lang.advanced_search}</a>
+    </form>
+</div>
+<!--search end-->

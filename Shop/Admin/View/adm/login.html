@@ -15,26 +15,19 @@
         color: white;
     }
     </style>
-    <script src="{$Think.const.SHOP_JS_URL}utils.js" type="text/javascript"></script>
-    <script src="{$Think.const.SHOPADM_JS_URL}validator.js" type="text/javascript"></script>
-    <script language="JavaScript">
+    <script src="{$Think.const.SHOPADM_JS_URL}jquery-2.1.0.min.js" type="text/javascript"></script>
+    <script src="{$Think.const.SHOPADM_JS_URL}easyform.js" type="text/javascript"></script>
+    <link href="{$Think.const.SHOPADM_CSS_URL}easyform.css" rel="stylesheet" type="text/css" />
+    <!-- <script language="JavaScript">
     if (window.parent != window) {
         window.top.location.href = location.href;
     }
-    </script>
-    <script type="text/javascript">
-    var process_request = "{$lang.js_languages.process_request}";
-    var todolist_caption = "{$lang.js_languages.process_request}";
-    var todolist_autosave = "{$lang.js_languages.process_request}";
-    var todolist_save = "{$lang.js_languages.process_request}";
-    var todolist_clear = "{$lang.js_languages.process_request}";
-    var todolist_confirm_save = "{$lang.js_languages.process_request}";
-    var todolist_confirm_clear = "{$lang.js_languages.process_request}";
-    </script>
+    </script> -->
+    <include file="comhtm:js_languages"/>
 </head>
 
 <body style="background: #278296">
-    <form method="post" action="privilege.php" name='theForm' onsubmit="return validate();">
+    <form method="post" action="" id="theForm">
         <table cellspacing="0" cellpadding="0" style="margin-top: 100px" align="center">
             <tr>
                 <td><img src="{$Think.const.SHOPADM_IMG_URL}login.png" width="178" height="256" border="0" alt="ECSHOP" /></td>
@@ -43,13 +36,13 @@
                         <tr>
                             <td>{$lang.label_username}</td>
                             <td>
-                                <input type="text" name="username" />
+                                <input type="text" name="username" id="username" />
                             </td>
                         </tr>
                         <tr>
                             <td>{$lang.label_password}</td>
                             <td>
-                                <input type="password" name="password" />
+                                <input type="password" name="password" id="password" />
                             </td>
                         </tr>
                         <php>$gd_version = gd_version();</php>
@@ -57,25 +50,25 @@
                             <tr>
                                 <td>{$lang.label_captcha}</td>
                                 <td>
-                                    <input type="text" name="captcha" class="capital" />
+                                    <input type="text" name="captcha" id="captcha" class="capital" />
                                 </td>
                             </tr>
                             <tr>
                                 <td colspan="2" align="right">
-                                    <img src="index.php/Admin/Checkcode/index?&height=40&width=145&font_size=20&" width="145" height="40" border="1" onclick='this.src="index.php/Admin/Checkcode/index?&height=40&width=145&font_size=20&time=" +Math.random()' style="cursor: pointer;" title="{$lang.click_for_another}" />
+                                    <img id="check_img" src="/train/Admin/Checkcode/index?&height=40&width=145&font_size=20&" width="145" height="40" border="1" onclick='this.src="train/Admin/Checkcode/index?&height=40&width=145&font_size=20&time=" +Math.random()' style="cursor: pointer;" title="{$lang.click_for_another}" />
                                 </td>
                             </tr>
                         </if>
                         <tr>
                             <td colspan="2">
-                                <input type="checkbox" value="1" name="remember" id="remember" />
+                                <input type="checkbox" value="1" name="remember" id="remember" data-easyform="null;" />
                                 <label for="remember">{$lang.remember}</label>
                             </td>
                         </tr>
                         <tr>
                             <td>&nbsp;</td>
                             <td>
-                                <input type="submit" value="{$lang.signin_now}" class="button" />
+                                <input type="submit" id="submit" value="{$lang.signin_now}" class="button" />
                             </td>
                         </tr>
                         <tr>
@@ -85,24 +78,40 @@
                 </td>
             </tr>
         </table>
-        <input type="hidden" name="act" value="signin" />
     </form>
     <script language="JavaScript">
-    document.forms['theForm'].elements['username'].focus();
-    /**
-     * 检查表单输入的内容
-     */
-    function validate() {
-        // alert(Utils.trim(document.forms['theForm'].elements['username'].value));
-     // return false;
-           var validator = new Validator('theForm');          
-        validator.required('username', user_name_empty);
+    $(document).ready(function() {
 
-        //validator.required('password', password_empty);
-        if (document.forms['theForm'].elements['captcha']) {
-            validator.required('captcha', captcha_empty);
-        }
-        return validator.passed();
-    }
+        var v = $('#theForm').easyform();
+
+        var login_url = '{:U("Login/login")}';
+
+        $('#submit').click(function() {
+            var login_data = $('#theForm').serializeArray();
+            if (v.is_submit) {
+                $.ajax({
+                    type: "POST",
+                    url: login_url,
+                    data: login_data,
+                    // dataType: "json",
+                    success: function(obj) {
+                        if(obj.statu == '1'){
+                            location.href=obj.callback;
+                        }
+                        else{console.log(obj);
+                            alert(obj.info);
+                            $('#check_img').trigger('click');
+                        }
+                    },
+                    error: function(obj) {
+                        console.log(obj);
+                    }
+                });
+            } else {
+                return false;
+            }
+        });
+
+    });
     </script>
 </body>

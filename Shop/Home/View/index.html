@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="Keywords" content="{$keywords}" />
+    <meta name="Description" content="{$description}" />
+    <!-- TemplateBeginEditable name="doctitle" -->
+    <title>{$page_title}首页</title>
+    <!-- TemplateEndEditable -->
+    <!-- TemplateBeginEditable name="head" -->
+    <!-- TemplateEndEditable -->
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="icon" href="{$Think.const.SHOP_IMG_URL}animated_favicon.gif" type="image/gif" />
+    <link href="{$Think.const.SHOP_CSS_URL}style_pink.css" rel="stylesheet" type="text/css" />
+    <link rel="alternate" type="application/rss+xml" title="RSS|{$page_title}" href="{$feed_url}" />
+    <script src='{$Think.const.SHOP_JS_URL}common.js'></script>
+    <script src='{$Think.const.SHOP_JS_URL}index.js'></script>
+</head>
+
+<body>
+    <include file="lbi/page_header" />
+    <div class="blank">
+    </div>
+    <div class="block clearfix">
+        <!--left start-->
+        <div class="AreaL">
+            <!--站内公告 start-->
+            <div class="box">
+                <div class="box_1">
+                    <h3><span>{$lang.shop_notice}</span></h3>
+                    <div class="boxCenterList RelaArticle">
+                        {$lang['shop_notice']} {$shop_notice}
+                    </div>
+                </div>
+            </div>
+            <div class="blank5"></div>
+            <!--站内公告 end-->
+            <include file="lbi/cart" />
+            <!-- <include file="{:U('Cart/index')}" /> -->
+            <include file="lbi/category_tree" />
+            <include file="lbi/top10" />
+            <include file="lbi/promotion_info" />
+            <include file="lbi/order_query" />
+            <include file="lbi/invoice_query" />
+            <include file="lbi/vote_list" />
+            <include file="lbi/email_list" />
+        </div>
+        <!--left end-->
+        <!--right start-->
+        <div class="AreaR">
+            <div class="box clearfix">
+                <div class="box_1 clearfix">
+                    <div class="f_l" id="focus">
+                        <include file="lbi/index_ad" />
+                    </div>
+                    <div id="mallNews" class="f_r">
+                        <div class="NewsTit"></div>
+                        <div class="NewsList tc">
+                            <include file="lbi/new_articles" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="blank5"></div>
+            <!--今日特价，品牌 start-->
+            <div class="clearfix">
+                <!--特价-->
+                <include file="lbi/recommend_promotion" />
+                <!--品牌-->
+                <div class="box f_r brandsIe6">
+                    <div class="box_1 clearfix" id="brands">
+                        <include file="lbi/brands" />
+                    </div>
+                </div>
+            </div>
+            <div class="blank5"></div>
+            <!-- TemplateBeginEditable name="右边主区域" -->
+            <include file="lbi/recommend_best" />
+            <include file="lbi/recommend_new" />
+            <include file="lbi/recommend_hot" />
+            <include file="lbi/auction" />
+            <include file="lbi/group_buy" />
+            <!-- TemplateEndEditable -->
+        </div>
+        <!--right end-->
+    </div>
+    <div class="blank5"></div>
+    <!--帮助-->
+    <div class="block">
+        <div class="box">
+            <div class="helpTitBg clearfix">
+                <include file="lbi/help" />
+            </div>
+        </div>
+    </div>
+    <div class="blank"></div>
+    <!--帮助-->
+    <!--友情链接 start-->
+    <notempty name="links">
+        <div id="bottomNav" class="box">
+            <div class="box_1">
+                <div class="links clearfix">
+                    <foreach name="links['img']" item="link">
+                        <a href="{$link.url}" target="_blank" title="{$link.name}"><img src="{$link.logo}" alt="{$link.name}" border="0" /></a>
+                    </foreach>
+                    <foreach name="links['txt']" item="link">
+                        [<a href="{$link.url}" target="_blank" title="{$link.name}">{$link.name}</a>]
+                    </foreach>
+                </div>
+            </div>
+        </div>
+    </notempty>
+    <!--友情链接 end-->
+    <div class="blank"></div>
+    <!-- #BeginLibraryItem "/library/page_footer.lbi" -->
+    <!-- #EndLibraryItem -->
+    <include file="lbi/page_footer" />
+</body>
+
+</html>

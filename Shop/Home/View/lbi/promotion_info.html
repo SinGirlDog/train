@@ -1,0 +1,33 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<notempty name="promotion_info">
+    <div class="box">
+        <div class="box_1">
+            <h3><span>{$lang.promotion_info}</span></h3>
+            <div class="boxCenterList RelaArticle">
+                <foreach name="promotion_info" item="item" key="key">
+                    <switch name="item.type">
+                        <case name="snatch">
+                            <a href="snatch.php" title="{$lang.$item.type}">{$lang.snatch_promotion}</a>
+                        </case>
+                        <case name="group_buy">
+                            <a href="group_buy.php" title="{$lang.$item.type}">{$lang.group_promotion}</a>
+                        </case>
+                        <case name="auction">
+                            <a href="auction.php" title="{$lang.$item.type}">{$lang.auction_promotion}</a>
+                        </case>
+                        <case name="favourable">
+                            <a href="activity.php" title="{$lang.$item.type}">{$lang.favourable_promotion}</a>
+                        </case>
+                        <case name="package">
+                            <a href="package.php" title="{$lang.$item.type}">{$lang.package_promotion}</a>
+                        </case>
+                        <default/>
+                    </switch>
+                    <a href="{$item.url}" title="{$lang.$item.type} {$item.act_name}{$item.time}" style="background:none; padding-left:0px;">{$item.act_name}</a>
+                    <br />
+                </foreach>
+            </div>
+        </div>
+    </div>
+    <div class="blank5"></div>
+</notempty>

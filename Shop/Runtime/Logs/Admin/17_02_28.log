@@ -1,0 +1,1292 @@
+[ 2017-02-28T11:32:49+08:00 ] ::1 /train/Admin/Login/index.html
+ERR: 非法操作:index
+
+[ 2017-02-28T12:42:28+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-02-28T12:42:28+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T12:43:10+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T12:43:24+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T12:44:19+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T12:45:05+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-02-28T12:45:05+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+
+[ 2017-02-28T12:45:06+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T12:45:07+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+
+[ 2017-02-28T12:47:23+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T12:48:03+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T12:48:17+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T12:48:22+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-02-28T12:48:38+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T12:48:47+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T12:49:23+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T12:49:59+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-02-28T12:50:05+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-02-28T12:50:07+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-02-28T12:50:07+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T12:50:20+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T12:50:21+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-02-28T12:50:21+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-02-28T12:50:22+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T12:50:33+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T12:50:34+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T12:50:35+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T12:50:35+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T12:50:36+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T12:50:44+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T12:50:45+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T12:50:46+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T12:51:33+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T12:51:34+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T12:51:34+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T12:51:35+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T12:51:43+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-02-28T12:51:43+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T12:51:49+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T12:51:49+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T12:51:50+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-02-28T12:53:18+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+
+[ 2017-02-28T12:53:19+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-02-28T12:53:21+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T12:53:24+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T12:53:26+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T12:53:30+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-02-28T12:53:30+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-02-28T12:53:31+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-02-28T12:53:31+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T12:53:31+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T12:53:45+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T12:53:47+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+
+[ 2017-02-28T12:53:49+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-02-28T12:53:51+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T12:53:53+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T12:53:54+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T12:53:55+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-02-28T12:55:01+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T12:55:03+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T12:55:06+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T12:55:07+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T12:55:08+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T12:55:10+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T12:55:10+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+
+[ 2017-02-28T12:55:12+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T12:55:13+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T12:55:13+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+
+[ 2017-02-28T12:55:14+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-02-28T12:55:38+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-02-28T12:55:39+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+
+[ 2017-02-28T12:55:48+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-02-28T12:55:48+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T12:55:49+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T12:55:49+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T12:57:08+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T12:58:45+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T12:58:45+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T12:59:19+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T12:59:40+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T12:59:47+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-02-28T13:00:22+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T13:00:22+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T13:00:23+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+
+[ 2017-02-28T13:00:23+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T13:00:38+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T13:00:38+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T13:00:39+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-02-28T13:01:15+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T13:02:15+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-02-28T13:02:16+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-02-28T13:02:16+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T13:02:17+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T13:02:17+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+
+[ 2017-02-28T13:02:17+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-02-28T13:02:17+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-02-28T13:02:17+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T13:02:44+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T13:04:00+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+NOTIC: [2] json_encode() expects parameter 2 to be long, string given E:\wamp\www\train\ThinkPHP\Library\Think\Controller.class.php 第 216 行.
+
+[ 2017-02-28T13:04:17+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2] json_encode() expects parameter 2 to be long, string given E:\wamp\www\train\ThinkPHP\Library\Think\Controller.class.php 第 216 行.
+
+[ 2017-02-28T13:04:36+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T13:04:37+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T13:04:38+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-02-28T13:04:49+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+
+[ 2017-02-28T13:04:50+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+
+[ 2017-02-28T13:04:50+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-02-28T13:04:50+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T13:05:07+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2] json_encode() expects parameter 2 to be long, string given E:\wamp\www\train\ThinkPHP\Library\Think\Controller.class.php 第 216 行.
+
+[ 2017-02-28T13:05:47+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] json_encode() expects parameter 2 to be long, string given E:\wamp\www\train\ThinkPHP\Library\Think\Controller.class.php 第 216 行.
+
+[ 2017-02-28T13:05:58+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] json_encode() expects parameter 2 to be long, string given E:\wamp\www\train\ThinkPHP\Library\Think\Controller.class.php 第 216 行.
+
+[ 2017-02-28T13:06:19+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2] json_encode() expects parameter 2 to be long, string given E:\wamp\www\train\ThinkPHP\Library\Think\Controller.class.php 第 216 行.
+
+[ 2017-02-28T13:07:44+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] json_encode() expects parameter 2 to be long, string given E:\wamp\www\train\ThinkPHP\Library\Think\Controller.class.php 第 216 行.
+
+[ 2017-02-28T13:08:52+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2] json_encode() expects parameter 2 to be long, string given E:\wamp\www\train\ThinkPHP\Library\Think\Controller.class.php 第 216 行.
+
+[ 2017-02-28T13:09:08+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T13:09:45+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+
+[ 2017-02-28T13:11:17+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T13:11:35+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T13:11:58+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] json_encode() expects parameter 2 to be long, string given E:\wamp\www\train\ThinkPHP\Library\Think\Controller.class.php 第 216 行.
+
+[ 2017-02-28T13:12:42+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T13:12:53+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-02-28T13:14:22+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T13:14:54+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T13:15:58+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T13:15:59+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+
+[ 2017-02-28T13:15:59+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+
+[ 2017-02-28T13:15:59+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T13:15:59+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T13:15:59+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T13:16:00+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-02-28T13:16:00+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T13:16:49+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-02-28T13:16:53+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T13:17:20+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-02-28T13:20:09+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-02-28T13:20:22+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T14:51:04+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-02-28T15:27:29+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T15:28:00+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-02-28T15:28:07+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+
+[ 2017-02-28T15:30:35+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T15:30:42+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-02-28T15:31:07+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-02-28T15:31:18+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T15:32:14+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T15:33:11+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sp_admin_user` [ RunTime:0.0110s ]
+SQL: SELECT `ec_salt` FROM `sp_admin_user` WHERE `user_name` = 'asdf ' LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: sqlt E:\wamp\www\train\Shop\Admin\Model\AdminUserModel.class.php 第 14 行.
+ERR: Think\Model:wehre方法不存在！
+
+[ 2017-02-28T15:33:54+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sp_admin_user` [ RunTime:0.0050s ]
+SQL: SELECT `ec_salt` FROM `sp_admin_user` WHERE `user_name` = 'asdf ' LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: sqlt E:\wamp\www\train\Shop\Admin\Model\AdminUserModel.class.php 第 14 行.
+ERR: Think\Model:wehre方法不存在！
+
+[ 2017-02-28T15:35:36+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sp_admin_user` [ RunTime:0.0050s ]
+SQL: SELECT `ec_salt` FROM `sp_admin_user` WHERE `user_name` = 'asdf ' LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: sqlt E:\wamp\www\train\Shop\Admin\Model\AdminUserModel.class.php 第 14 行.
+SQL: SELECT user_id, user_name,`password`,`last_login`,`action_list`,`last_login`,`suppliers_id`,`ec_salt` FROM `sp_admin_user` WHERE `user_name` = 'asdf ' AND `password` = '45ff795ee284486f5e0ed17c12b447f8' LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-02-28T15:35:54+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-02-28T15:36:32+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sp_admin_user` [ RunTime:0.0060s ]
+SQL: SELECT `ec_salt` FROM `sp_admin_user` WHERE `user_name` = 'ADMIN' LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: sqlt E:\wamp\www\train\Shop\Admin\Model\AdminUserModel.class.php 第 14 行.
+SQL: SELECT user_id, user_name,`password`,`last_login`,`action_list`,`last_login`,`suppliers_id`,`ec_salt` FROM `sp_admin_user` WHERE `user_name` = 'ADMIN' AND `password` = '9f22ceba8d175e807db3b18a8f5b0adf' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-02-28T15:38:10+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T15:38:18+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `sp_admin_user` [ RunTime:0.0060s ]
+SQL: SELECT `ec_salt` FROM `sp_admin_user` WHERE `user_name` = 'asdf ' LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: sqlt E:\wamp\www\train\Shop\Admin\Model\AdminUserModel.class.php 第 14 行.
+SQL: SELECT user_id, user_name,`password`,`last_login`,`action_list`,`last_login`,`suppliers_id`,`ec_salt` FROM `sp_admin_user` WHERE `user_name` = 'asdf ' AND `password` = '16fb0e7457c86c331f3e4dc23569215f' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-02-28T15:38:30+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sp_admin_user` [ RunTime:0.0060s ]
+SQL: SELECT `ec_salt` FROM `sp_admin_user` WHERE `user_name` = 'admin' LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: sqlt E:\wamp\www\train\Shop\Admin\Model\AdminUserModel.class.php 第 14 行.
+SQL: SELECT user_id, user_name,`password`,`last_login`,`action_list`,`last_login`,`suppliers_id`,`ec_salt` FROM `sp_admin_user` WHERE `user_name` = 'admin' AND `password` = 'eff85d38d18a04f3905db1128cd915d6' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-02-28T15:41:24+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+
+[ 2017-02-28T15:41:33+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sp_admin_user` [ RunTime:0.0060s ]
+SQL: SELECT `ec_salt` FROM `sp_admin_user` WHERE `user_name` = 'admin' LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: sqlt E:\wamp\www\train\Shop\Admin\Model\AdminUserModel.class.php 第 14 行.
+SQL: SELECT user_id, user_name,`password`,`last_login`,`action_list`,`last_login`,`suppliers_id`,`ec_salt` FROM `sp_admin_user` WHERE `user_name` = 'admin' AND `password` = 'eff85d38d18a04f3905db1128cd915d6' LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-02-28T15:41:52+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sp_admin_user` [ RunTime:0.0060s ]
+SQL: SELECT `ec_salt` FROM `sp_admin_user` WHERE `user_name` = 'admin' LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: sqlt E:\wamp\www\train\Shop\Admin\Model\AdminUserModel.class.php 第 14 行.
+SQL: SELECT user_id, user_name,`password`,`last_login`,`action_list`,`last_login`,`suppliers_id`,`ec_salt` FROM `sp_admin_user` WHERE `user_name` = 'admin' AND `password` = 'eff85d38d18a04f3905db1128cd915d6' LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-02-28T15:44:23+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sp_admin_user` [ RunTime:0.0050s ]
+SQL: SELECT `ec_salt` FROM `sp_admin_user` WHERE `user_name` = 'admin' LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: sqlt E:\wamp\www\train\Shop\Admin\Model\AdminUserModel.class.php 第 14 行.
+SQL: SELECT user_id, user_name,`password`,`last_login`,`action_list`,`last_login`,`suppliers_id`,`ec_salt` FROM `sp_admin_user` WHERE `user_name` = 'admin' AND `password` = 'eff85d38d18a04f3905db1128cd915d6' LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-02-28T15:45:08+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sp_admin_user` [ RunTime:0.0060s ]
+SQL: SELECT `ec_salt` FROM `sp_admin_user` WHERE `user_name` = 'admin' LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: sqlt E:\wamp\www\train\Shop\Admin\Model\AdminUserModel.class.php 第 14 行.
+SQL: SELECT user_id, user_name,`password`,`last_login`,`action_list`,`last_login`,`suppliers_id`,`ec_salt` FROM `sp_admin_user` WHERE `user_name` = 'admin' AND `password` = 'eff85d38d18a04f3905db1128cd915d6' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-02-28T15:46:13+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-02-28T15:46:19+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sp_admin_user` [ RunTime:0.0060s ]
+SQL: SELECT `ec_salt` FROM `sp_admin_user` WHERE `user_name` = 'admin' LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: sqlt E:\wamp\www\train\Shop\Admin\Model\AdminUserModel.class.php 第 14 行.
+SQL: SELECT user_id, user_name,`password`,`last_login`,`action_list`,`last_login`,`suppliers_id`,`ec_salt` FROM `sp_admin_user` WHERE `user_name` = 'admin' AND `password` = 'eff85d38d18a04f3905db1128cd915d6' LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-02-28T15:48:19+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-02-28T15:48:26+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-02-28T15:48:32+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sp_admin_user` [ RunTime:0.0050s ]
+SQL: SELECT `ec_salt` FROM `sp_admin_user` WHERE `user_name` = 'admin' LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: sqlt E:\wamp\www\train\Shop\Admin\Model\AdminUserModel.class.php 第 14 行.
+SQL: SELECT user_id, user_name,`password`,`last_login`,`action_list`,`last_login`,`suppliers_id`,`ec_salt` FROM `sp_admin_user` WHERE `user_name` = 'admin' AND `password` = 'eff85d38d18a04f3905db1128cd915d6' LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-02-28T15:48:32+08:00 ] ::1 /train/Admin/Index/Shop/Admin/Public/css/general.css
+ERR: 非法操作:Shop
+
+[ 2017-02-28T15:48:32+08:00 ] ::1 /train/Admin/Index/Shop/Admin/Public/css/main.css
+ERR: 非法操作:Shop
+
+[ 2017-02-28T15:48:32+08:00 ] ::1 /train/Admin/Index/Shop/Admin/Public/js/easyform.js
+ERR: 非法操作:Shop
+
+[ 2017-02-28T15:48:32+08:00 ] ::1 /train/Admin/Index/Shop/Admin/Public/js/jquery-2.1.0.min.js
+ERR: 非法操作:Shop
+
+[ 2017-02-28T15:48:32+08:00 ] ::1 /train/Admin/Index/Shop/Admin/Public/css/easyform.css
+ERR: 非法操作:Shop
+
+[ 2017-02-28T15:48:32+08:00 ] ::1 /train/Admin/Index/index.php/Admin/Checkcode/index?&height=40&width=145&font_size=20&
+ERR: 非法操作:index.php
+
+[ 2017-02-28T15:48:32+08:00 ] ::1 /train/Admin/Index/Shop/Admin/Public/js/easyform.js
+ERR: 非法操作:Shop
+
+[ 2017-02-28T15:48:32+08:00 ] ::1 /train/Admin/Index/Shop/Admin/Public/css/easyform.css
+ERR: 非法操作:Shop
+
+[ 2017-02-28T15:48:32+08:00 ] ::1 /train/Admin/Index/index.php/Admin/Checkcode/index?&height=40&width=145&font_size=20&
+ERR: 非法操作:index.php
+
+[ 2017-02-28T15:48:52+08:00 ] ::1 /train/Admin/Index/Shop/Admin/Public/css/easyform.css
+ERR: 非法操作:Shop
+
+[ 2017-02-28T15:48:52+08:00 ] ::1 /train/Admin/Index/Shop/Admin/Public/js/jquery-2.1.0.min.js
+ERR: 非法操作:Shop
+
+[ 2017-02-28T15:48:53+08:00 ] ::1 /train/Admin/Index/Shop/Admin/Public/css/general.css
+ERR: 非法操作:Shop
+
+[ 2017-02-28T15:48:53+08:00 ] ::1 /train/Admin/Index/Shop/Admin/Public/js/easyform.js
+ERR: 非法操作:Shop
+
+[ 2017-02-28T15:48:53+08:00 ] ::1 /train/Admin/Index/Shop/Admin/Public/css/main.css
+ERR: 非法操作:Shop
+
+[ 2017-02-28T15:48:53+08:00 ] ::1 /train/Admin/Index/index.php/Admin/Checkcode/index?&height=40&width=145&font_size=20&
+ERR: 非法操作:index.php
+
+[ 2017-02-28T15:48:53+08:00 ] ::1 /train/Admin/Index/Shop/Admin/Public/js/easyform.js
+ERR: 非法操作:Shop
+
+[ 2017-02-28T15:48:53+08:00 ] ::1 /train/Admin/Index/Shop/Admin/Public/css/easyform.css
+ERR: 非法操作:Shop
+
+[ 2017-02-28T15:48:53+08:00 ] ::1 /train/Admin/Index/index.php/Admin/Checkcode/index?&height=40&width=145&font_size=20&
+ERR: 非法操作:index.php
+
+[ 2017-02-28T15:49:05+08:00 ] ::1 /train/Admin/Shop/Admin/Public/css/easyform.css
+ERR: 无法加载控制器:Shop
+
+[ 2017-02-28T15:49:05+08:00 ] ::1 /train/Admin/Shop/Admin/Public/css/main.css
+ERR: 无法加载控制器:Shop
+
+[ 2017-02-28T15:49:05+08:00 ] ::1 /train/Admin/Shop/Admin/Public/js/easyform.js
+ERR: 无法加载控制器:Shop
+
+[ 2017-02-28T15:49:05+08:00 ] ::1 /train/Admin/Shop/Admin/Public/js/jquery-2.1.0.min.js
+ERR: 无法加载控制器:Shop
+
+[ 2017-02-28T15:49:05+08:00 ] ::1 /train/Admin/Shop/Admin/Public/css/general.css
+ERR: 无法加载控制器:Shop
+
+[ 2017-02-28T15:49:05+08:00 ] ::1 /train/Admin/index.php/Admin/Checkcode/index?&height=40&width=145&font_size=20&
+ERR: 无法加载控制器:Index.php
+
+[ 2017-02-28T15:49:05+08:00 ] ::1 /train/Admin/Shop/Admin/Public/js/easyform.js
+ERR: 无法加载控制器:Shop
+
+[ 2017-02-28T15:49:05+08:00 ] ::1 /train/Admin/Shop/Admin/Public/css/easyform.css
+ERR: 无法加载控制器:Shop
+
+[ 2017-02-28T15:49:05+08:00 ] ::1 /train/Admin/index.php/Admin/Checkcode/index?&height=40&width=145&font_size=20&
+ERR: 无法加载控制器:Index.php
+
+[ 2017-02-28T15:51:56+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-02-28T15:52:57+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-02-28T15:53:12+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sp_admin_user` [ RunTime:0.0060s ]
+SQL: SELECT `ec_salt` FROM `sp_admin_user` WHERE `user_name` = 'admin' LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: sqlt E:\wamp\www\train\Shop\Admin\Model\AdminUserModel.class.php 第 14 行.
+SQL: SELECT user_id, user_name,`password`,`last_login`,`action_list`,`last_login`,`suppliers_id`,`ec_salt` FROM `sp_admin_user` WHERE `user_name` = 'admin' AND `password` = 'eff85d38d18a04f3905db1128cd915d6' LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-02-28T15:53:12+08:00 ] ::1 /train/Admin/Index/Shop/Admin/Public/css/general.css
+ERR: 非法操作:Shop
+
+[ 2017-02-28T15:53:12+08:00 ] ::1 /train/Admin/Index/Shop/Admin/Public/js/jquery-2.1.0.min.js
+ERR: 非法操作:Shop
+
+[ 2017-02-28T15:53:12+08:00 ] ::1 /train/Admin/Index/Shop/Admin/Public/css/main.css
+ERR: 非法操作:Shop
+
+[ 2017-02-28T15:53:12+08:00 ] ::1 /train/Admin/Index/Shop/Admin/Public/css/easyform.css
+ERR: 非法操作:Shop
+
+[ 2017-02-28T15:53:12+08:00 ] ::1 /train/Admin/Index/Shop/Admin/Public/js/easyform.js
+ERR: 非法操作:Shop
+
+[ 2017-02-28T15:53:12+08:00 ] ::1 /train/Admin/Index/index.php/Admin/Checkcode/index?&height=40&width=145&font_size=20&
+ERR: 非法操作:index.php
+
+[ 2017-02-28T15:53:12+08:00 ] ::1 /train/Admin/Index/Shop/Admin/Public/css/easyform.css
+ERR: 非法操作:Shop
+
+[ 2017-02-28T15:53:12+08:00 ] ::1 /train/Admin/Index/index.php/Admin/Checkcode/index?&height=40&width=145&font_size=20&
+ERR: 非法操作:index.php
+
+[ 2017-02-28T15:54:10+08:00 ] ::1 /train/Admin/Index/index.php/Admin/Checkcode/index?&height=40&width=145&font_size=20&
+ERR: 非法操作:index.php
+
+[ 2017-02-28T15:54:11+08:00 ] ::1 /train/Admin/Index/index.php/Admin/Checkcode/index?&height=40&width=145&font_size=20&
+ERR: 非法操作:index.php
+
+[ 2017-02-28T15:54:12+08:00 ] ::1 /train/Admin/Index/index.php/Admin/Checkcode/index?&height=40&width=145&font_size=20&
+ERR: 非法操作:index.php
+
+[ 2017-02-28T15:54:13+08:00 ] ::1 /train/Admin/Index/index.php/Admin/Checkcode/index?&height=40&width=145&font_size=20&
+ERR: 非法操作:index.php
+
+[ 2017-02-28T15:54:13+08:00 ] ::1 /train/Admin/Index/index.php/Admin/Checkcode/index?&height=40&width=145&font_size=20&
+ERR: 非法操作:index.php
+
+[ 2017-02-28T15:54:13+08:00 ] ::1 /train/Admin/Index/index.php/Admin/Checkcode/index?&height=40&width=145&font_size=20&
+ERR: 非法操作:index.php
+
+[ 2017-02-28T15:54:14+08:00 ] ::1 /train/Admin/Index/index.php/Admin/Checkcode/index?&height=40&width=145&font_size=20&
+ERR: 非法操作:index.php
+
+[ 2017-02-28T15:54:14+08:00 ] ::1 /train/Admin/Index/index.php/Admin/Checkcode/index?&height=40&width=145&font_size=20&
+ERR: 非法操作:index.php
+
+[ 2017-02-28T15:54:14+08:00 ] ::1 /train/Admin/Index/index.php/Admin/Checkcode/index?&height=40&width=145&font_size=20&
+ERR: 非法操作:index.php
+
+[ 2017-02-28T15:54:43+08:00 ] ::1 /train/Admin/Index/index.php/Admin/Checkcode/index?&height=40&width=145&font_size=20&
+ERR: 非法操作:index.php
+
+[ 2017-02-28T15:54:46+08:00 ] ::1 /train/Admin/Index/index.php/Admin/Checkcode/index?&height=40&width=145&font_size=20&
+ERR: 非法操作:index.php
+
+[ 2017-02-28T15:57:04+08:00 ] ::1 /train/Admin/Index/Shop/index.php/Admin/Checkcode/index?&height=40&width=145&font_size=20&
+ERR: 非法操作:Shop
+
+[ 2017-02-28T15:57:05+08:00 ] ::1 /train/Admin/Index/Shop/index.php/Admin/Checkcode/index?&height=40&width=145&font_size=20&
+ERR: 非法操作:Shop
+
+[ 2017-02-28T15:57:06+08:00 ] ::1 /train/Admin/Index/Shop/index.php/Admin/Checkcode/index?&height=40&width=145&font_size=20&
+ERR: 非法操作:Shop
+
+[ 2017-02-28T15:57:06+08:00 ] ::1 /train/Admin/Index/Shop/index.php/Admin/Checkcode/index?&height=40&width=145&font_size=20&
+ERR: 非法操作:Shop
+
+[ 2017-02-28T15:57:06+08:00 ] ::1 /train/Admin/Index/Shop/index.php/Admin/Checkcode/index?&height=40&width=145&font_size=20&
+ERR: 非法操作:Shop
+
+[ 2017-02-28T15:57:07+08:00 ] ::1 /train/Admin/Index/Shop/index.php/Admin/Checkcode/index?&height=40&width=145&font_size=20&
+ERR: 非法操作:Shop
+
+[ 2017-02-28T15:58:29+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sp_admin_user` [ RunTime:0.0050s ]
+SQL: SELECT `ec_salt` FROM `sp_admin_user` WHERE `user_name` = 'admin' LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: sqlt E:\wamp\www\train\Shop\Admin\Model\AdminUserModel.class.php 第 14 行.
+SQL: SELECT user_id, user_name,`password`,`last_login`,`action_list`,`last_login`,`suppliers_id`,`ec_salt` FROM `sp_admin_user` WHERE `user_name` = 'admin' AND `password` = 'eff85d38d18a04f3905db1128cd915d6' LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-02-28T15:58:30+08:00 ] ::1 /train/Admin/Index/Admin/Checkcode/index?&height=40&width=145&font_size=20&
+ERR: 非法操作:Admin
+
+[ 2017-02-28T15:58:51+08:00 ] ::1 /train/Admin/Index/Admin/Checkcode/index?&height=40&width=145&font_size=20&
+ERR: 非法操作:Admin
+
+[ 2017-02-28T15:58:58+08:00 ] ::1 /train/Admin/Admin/Checkcode/index?&height=40&width=145&font_size=20&
+ERR: 无法加载控制器:Admin
+
+[ 2017-02-28T15:59:58+08:00 ] ::1 /train/admin/Admin/Checkcode/index?&height=40&width=145&font_size=20&
+ERR: 无法加载控制器:Admin
+
+[ 2017-02-28T16:00:00+08:00 ] ::1 /train/admin/Admin/Checkcode/index?&height=40&width=145&font_size=20&time=0.3247928391200172
+ERR: 无法加载控制器:Admin
+
+[ 2017-02-28T16:00:01+08:00 ] ::1 /train/admin/Admin/Checkcode/index?&height=40&width=145&font_size=20&time=0.10295846567624989
+ERR: 无法加载控制器:Admin
+
+[ 2017-02-28T16:00:01+08:00 ] ::1 /train/admin/Admin/Checkcode/index?&height=40&width=145&font_size=20&time=0.7875248215133885
+ERR: 无法加载控制器:Admin
+
+[ 2017-02-28T16:00:01+08:00 ] ::1 /train/admin/Admin/Checkcode/index?&height=40&width=145&font_size=20&time=0.2186059081618843
+ERR: 无法加载控制器:Admin
+
+[ 2017-02-28T16:00:01+08:00 ] ::1 /train/admin/Admin/Checkcode/index?&height=40&width=145&font_size=20&time=0.499748577514467
+ERR: 无法加载控制器:Admin
+
+[ 2017-02-28T16:00:02+08:00 ] ::1 /train/admin/Admin/Checkcode/index?&height=40&width=145&font_size=20&time=0.6315455024374463
+ERR: 无法加载控制器:Admin
+
+[ 2017-02-28T16:00:02+08:00 ] ::1 /train/admin/Admin/Checkcode/index?&height=40&width=145&font_size=20&time=0.08046735143802874
+ERR: 无法加载控制器:Admin
+
+[ 2017-02-28T16:00:02+08:00 ] ::1 /train/admin/Admin/Checkcode/index?&height=40&width=145&font_size=20&time=0.32764767121531135
+ERR: 无法加载控制器:Admin
+
+[ 2017-02-28T16:00:02+08:00 ] ::1 /train/admin/Admin/Checkcode/index?&height=40&width=145&font_size=20&time=0.5335460134714378
+ERR: 无法加载控制器:Admin
+
+[ 2017-02-28T16:00:03+08:00 ] ::1 /train/admin/Admin/Checkcode/index?&height=40&width=145&font_size=20&time=0.7028563617946735
+ERR: 无法加载控制器:Admin
+
+[ 2017-02-28T16:00:03+08:00 ] ::1 /train/admin/Admin/Checkcode/index?&height=40&width=145&font_size=20&time=0.6705554107744662
+ERR: 无法加载控制器:Admin
+
+[ 2017-02-28T16:00:06+08:00 ] ::1 /train/admin/Admin/Checkcode/index?&height=40&width=145&font_size=20&
+ERR: 无法加载控制器:Admin
+
+[ 2017-02-28T16:02:58+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sp_admin_user` [ RunTime:0.0060s ]
+SQL: SELECT `ec_salt` FROM `sp_admin_user` WHERE `user_name` = 'admin' LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: sqlt E:\wamp\www\train\Shop\Admin\Model\AdminUserModel.class.php 第 14 行.
+SQL: SELECT user_id, user_name,`password`,`last_login`,`action_list`,`last_login`,`suppliers_id`,`ec_salt` FROM `sp_admin_user` WHERE `user_name` = 'admin' AND `password` = 'eff85d38d18a04f3905db1128cd915d6' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-02-28T16:04:56+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-02-28T16:05:56+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-02-28T16:05:56+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-02-28T16:18:28+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-02-28T16:18:28+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-02-28T16:20:09+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-02-28T16:20:09+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-02-28T16:20:10+08:00 ] ::1 /train/Admin/Index/index.php?is_ajax=1&act=license&1488270010139139
+ERR: 非法操作:index.php
+
+[ 2017-02-28T16:22:47+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-02-28T16:22:47+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-02-28T16:22:47+08:00 ] ::1 /train/Admin/Index/index.php?is_ajax=1&act=license&1488270167848848
+ERR: 非法操作:index.php
+
+[ 2017-02-28T16:24:47+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-02-28T16:24:47+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-02-28T16:24:48+08:00 ] ::1 /train/Admin/Index/index.php?is_ajax=1&act=license&148827028801616
+ERR: 非法操作:index.php
+
+[ 2017-02-28T16:24:50+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-02-28T16:24:50+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-02-28T16:24:50+08:00 ] ::1 /train/Admin/Index/index.php?is_ajax=1&act=license&1488270290647647
+ERR: 非法操作:index.php
+
+[ 2017-02-28T16:25:24+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-02-28T16:25:24+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-02-28T16:25:26+08:00 ] ::1 /train/Admin/Index/index.php?is_ajax=1&act=license&1488270326536536
+ERR: 非法操作:index.php
+
+[ 2017-02-28T16:25:55+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-02-28T16:25:55+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-02-28T16:25:55+08:00 ] ::1 /train/Admin/Index/index.php?is_ajax=1&act=license&1488270355653653
+ERR: 非法操作:index.php
+
+[ 2017-02-28T16:26:02+08:00 ] ::1 /train/Admin/Index/index.php?is_ajax=1&act=send_mail&1488270362170170
+ERR: 非法操作:index.php
+
+[ 2017-02-28T16:26:08+08:00 ] ::1 /train/Admin/Index/index.php?is_ajax=1&act=send_mail&1488270368444444
+ERR: 非法操作:index.php
+
+[ 2017-02-28T16:26:19+08:00 ] ::1 /train/Admin/Index/index.php?is_ajax=1&act=send_mail&1488270379169169
+ERR: 非法操作:index.php
+
+[ 2017-02-28T16:26:58+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-02-28T16:26:58+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-02-28T16:27:04+08:00 ] ::1 /train/Admin/Index/index.php?is_ajax=1&act=send_mail&1488270424169169
+ERR: 非法操作:index.php
+
+[ 2017-02-28T16:27:10+08:00 ] ::1 /train/Admin/Index/index.php?is_ajax=1&act=send_mail&1488270430169169
+ERR: 非法操作:index.php
+
+[ 2017-02-28T16:27:22+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-02-28T16:27:22+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-02-28T16:27:23+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-02-28T16:27:23+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-02-28T16:27:23+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-02-28T16:27:23+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-02-28T16:27:24+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-02-28T16:27:24+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-02-28T16:27:24+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-02-28T16:27:29+08:00 ] ::1 /train/Admin/Index/index.php?is_ajax=1&act=send_mail&1488270449352352
+ERR: 非法操作:index.php
+
+[ 2017-02-28T16:29:51+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-02-28T16:29:51+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-02-28T16:29:57+08:00 ] ::1 /train/Admin/Index/index.php?is_ajax=1&act=send_mail&1488270597174174
+ERR: 非法操作:index.php
+
+[ 2017-02-28T16:30:04+08:00 ] ::1 /train/Admin/Index/index.php?is_ajax=1&act=send_mail&1488270604174174
+ERR: 非法操作:index.php
+
+[ 2017-02-28T16:30:31+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-02-28T16:30:31+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-02-28T16:30:37+08:00 ] ::1 /train/Admin/Index/index.php?is_ajax=1&act=send_mail&1488270637179179
+ERR: 非法操作:index.php
+
+[ 2017-02-28T16:30:44+08:00 ] ::1 /train/Admin/Index/index.php?is_ajax=1&act=send_mail&1488270644175175
+ERR: 非法操作:index.php
+
+[ 2017-02-28T16:30:50+08:00 ] ::1 /train/Admin/Index/index.php?is_ajax=1&act=send_mail&1488270650177177
+ERR: 非法操作:index.php
+
+[ 2017-02-28T16:30:59+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-02-28T16:30:59+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-02-28T16:31:00+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-02-28T16:31:05+08:00 ] ::1 /train/Admin/Index/index.php?is_ajax=1&act=send_mail&1488270665177177
+ERR: 非法操作:index.php
+
+[ 2017-02-28T16:31:15+08:00 ] ::1 /train/Admin/Index/index.php?is_ajax=1&act=send_mail&148827067507272
+ERR: 非法操作:index.php
+
+[ 2017-02-28T16:31:20+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-02-28T16:31:21+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-02-28T16:31:21+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-02-28T16:31:26+08:00 ] ::1 /train/Admin/Index/index.php?is_ajax=1&act=send_mail&1488270686641641
+ERR: 非法操作:index.php
+
+[ 2017-02-28T16:36:02+08:00 ] ::1 /train/admin
+ERR: Think\Model:load_shop_config方法不存在！
+
+[ 2017-02-28T16:36:23+08:00 ] ::1 /train/admin
+ERR: 1146:Table 'train_sp.sp_home\_shop_config' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `sp_home\_shop_config`
+

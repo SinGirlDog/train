@@ -1,0 +1,93 @@
+[ 2017-02-27T17:09:30+08:00 ] ::1 /train/Admin
+ERR: 无法加载控制器:Index
+
+[ 2017-02-27T19:35:55+08:00 ] ::1 /train/admin/checkcode
+ERR: 无法加载控制器:Checkcode
+
+[ 2017-02-27T19:43:10+08:00 ] ::1 /train/admin/index.php?g=Admin&m=Checkcode&a=index
+ERR: 无法加载控制器:Index.php
+
+[ 2017-02-27T19:43:14+08:00 ] ::1 /train/admin/index.php?g=Admin&m=Checkcode&
+ERR: 无法加载控制器:Index.php
+
+[ 2017-02-27T19:43:20+08:00 ] ::1 /train/admin/g=Admin&m=Checkcode&
+ERR: 无法加载控制器:G=Admin&m=Checkcode&
+
+[ 2017-02-27T19:44:06+08:00 ] ::1 /train/admin/Shop/Admin/Public/js/validator.js
+ERR: 无法加载控制器:Shop
+
+[ 2017-02-27T19:44:06+08:00 ] ::1 /train/admin/Shop/Home/Public/js/utils.js
+ERR: 无法加载控制器:Shop
+
+[ 2017-02-27T19:44:06+08:00 ] ::1 /train/admin/Shop/Admin/Public/css/general.css
+ERR: 无法加载控制器:Shop
+
+[ 2017-02-27T19:44:06+08:00 ] ::1 /train/admin/Shop/Admin/Public/css/main.css
+ERR: 无法加载控制器:Shop
+
+[ 2017-02-27T19:44:06+08:00 ] ::1 /train/admin/Shop/Admin/Public/js/validator.js
+ERR: 无法加载控制器:Shop
+
+[ 2017-02-27T19:44:06+08:00 ] ::1 /train/admin/index.php?/Admin/Checkcode/index
+ERR: 无法加载控制器:Index.php
+
+[ 2017-02-27T19:44:07+08:00 ] ::1 /train/admin/Shop/Admin/Public/css/general.css
+ERR: 无法加载控制器:Shop
+
+[ 2017-02-27T19:44:07+08:00 ] ::1 /train/admin/Shop/Home/Public/js/utils.js
+ERR: 无法加载控制器:Shop
+
+[ 2017-02-27T19:44:07+08:00 ] ::1 /train/admin/Shop/Admin/Public/js/validator.js
+ERR: 无法加载控制器:Shop
+
+[ 2017-02-27T19:44:07+08:00 ] ::1 /train/admin/Shop/Admin/Public/css/main.css
+ERR: 无法加载控制器:Shop
+
+[ 2017-02-27T19:44:07+08:00 ] ::1 /train/admin/index.php?/Admin/Checkcode/index
+ERR: 无法加载控制器:Index.php
+
+[ 2017-02-27T19:44:07+08:00 ] ::1 /train/admin/Shop/Admin/Public/js/validator.js
+ERR: 无法加载控制器:Shop
+
+[ 2017-02-27T19:44:07+08:00 ] ::1 /train/admin/index.php?/Admin/Checkcode/index
+ERR: 无法加载控制器:Index.php
+
+[ 2017-02-27T19:44:08+08:00 ] ::1 /train/admin/Shop/Home/Public/js/utils.js
+ERR: 无法加载控制器:Shop
+
+[ 2017-02-27T19:44:08+08:00 ] ::1 /train/admin/Shop/Admin/Public/js/validator.js
+ERR: 无法加载控制器:Shop
+
+[ 2017-02-27T19:44:08+08:00 ] ::1 /train/admin/Shop/Admin/Public/css/general.css
+ERR: 无法加载控制器:Shop
+
+[ 2017-02-27T19:44:08+08:00 ] ::1 /train/admin/Shop/Admin/Public/css/main.css
+ERR: 无法加载控制器:Shop
+
+[ 2017-02-27T19:44:08+08:00 ] ::1 /train/admin/index.php?/Admin/Checkcode/index
+ERR: 无法加载控制器:Index.php
+
+[ 2017-02-27T19:44:08+08:00 ] ::1 /train/admin/Shop/Admin/Public/js/validator.js
+ERR: 无法加载控制器:Shop
+
+[ 2017-02-27T19:44:08+08:00 ] ::1 /train/admin/index.php?/Admin/Checkcode/index
+ERR: 无法加载控制器:Index.php
+
+[ 2017-02-27T19:46:01+08:00 ] ::1 /train/index.php/Admin/Checkcode/index&height=20&width=145
+ERR: 非法操作:index&height=20&width=145
+
+[ 2017-02-27T19:46:02+08:00 ] ::1 /train/index.php/Admin/Checkcode/index&height=20&width=145
+ERR: 非法操作:index&height=20&width=145
+
+[ 2017-02-27T19:46:05+08:00 ] ::1 /train/index.php/Admin/Checkcode/index&height=20&width=145&time=0.67047509562447
+ERR: 非法操作:index&height=20&width=145&time=0.67047509562447
+
+[ 2017-02-27T19:46:06+08:00 ] ::1 /train/index.php/Admin/Checkcode/index&height=20&width=145&time=0.5916679865348595
+ERR: 非法操作:index&height=20&width=145&time=0.5916679865348595
+
+[ 2017-02-27T19:46:07+08:00 ] ::1 /train/index.php/Admin/Checkcode/index&height=20&width=145&time=0.515598693992382
+ERR: 非法操作:index&height=20&width=145&time=0.515598693992382
+
+[ 2017-02-27T19:46:08+08:00 ] ::1 /train/index.php/Admin/Checkcode/index&height=20&width=145&time=0.1827349351539962
+ERR: 非法操作:index&height=20&width=145&time=0.1827349351539962
+

@@ -21,14 +21,14 @@ define('APP_DEBUG',true);
 define('APP_PATH','./Shop/');
 
 //定义资源目录
-define('SHOP_CSS_URL','./Shop/Home/Public/css/');
-define('SHOP_IMG_URL','./Shop/Home/Public/image/');
-define('SHOP_JS_URL','./Shop/Home/Public/js/');
-define('SHOP_DATA_URL','./Shop/Home/Public/data/');
+define('SHOP_CSS_URL','/train/Shop/Home/Public/css/');
+define('SHOP_IMG_URL','/train/Shop/Home/Public/image/');
+define('SHOP_JS_URL','/train/Shop/Home/Public/js/');
+define('SHOP_DATA_URL','/train/Shop/Home/Public/data/');
 //定义资源目录
-define('SHOPADM_CSS_URL','./Shop/Admin/Public/css/');
-define('SHOPADM_IMG_URL','./Shop/Admin/Public/image/');
-define('SHOPADM_JS_URL','./Shop/Admin/Public/js/');
+define('SHOPADM_CSS_URL','/train/Shop/Admin/Public/css/');
+define('SHOPADM_IMG_URL','/train/Shop/Admin/Public/image/');
+define('SHOPADM_JS_URL','/train/Shop/Admin/Public/js/');
 
 define('HTML_PATH', './Shop/HTML/');//生成静态页面的文件位置  
 

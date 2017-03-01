@@ -1,0 +1,404 @@
+[ 2017-03-01T17:50:52+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-03-01T17:51:19+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `sp_admin_user` [ RunTime:0.0070s ]
+SQL: SELECT `ec_salt` FROM `sp_admin_user` WHERE `user_name` = 'admin' LIMIT 1   [ RunTime:0.0332s ]
+NOTIC: [8] Undefined variable: sqlt E:\wamp\www\train\Shop\Admin\Model\AdminUserModel.class.php 第 14 行.
+SQL: SELECT user_id, user_name,`password`,`last_login`,`action_list`,`last_login`,`suppliers_id`,`ec_salt` FROM `sp_admin_user` WHERE `user_name` = 'admin' AND `password` = 'eff85d38d18a04f3905db1128cd915d6' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-03-01T17:51:19+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T17:52:34+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T17:52:38+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T17:52:38+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T17:52:39+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T17:52:39+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T17:52:40+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T17:52:41+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T17:52:43+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T17:54:59+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T17:55:01+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T17:55:01+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T17:55:04+08:00 ] ::1 /train/Admin/Index/gen_goods_script.php?act=setup
+ERR: 非法操作:gen_goods_script.php
+
+[ 2017-03-01T17:59:13+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T17:59:14+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T17:59:14+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T18:00:00+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T18:00:15+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T18:00:16+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T18:00:50+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T18:08:34+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T18:08:35+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T18:25:00+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T18:25:29+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T18:25:44+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T18:25:45+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T18:28:24+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T18:28:28+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T18:28:30+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T18:28:40+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T18:30:23+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T18:30:24+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T18:30:47+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T18:33:20+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T18:35:19+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T18:35:51+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T18:38:29+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T18:41:13+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T18:41:52+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T18:42:24+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T18:43:05+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T18:43:48+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T18:44:09+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T18:46:10+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T18:47:10+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T18:47:44+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T18:49:49+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T18:50:07+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T18:52:46+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T18:55:29+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T18:55:55+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T18:56:04+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T18:56:21+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T18:57:55+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T18:57:56+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T18:58:07+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T19:01:39+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T19:01:39+08:00 ] ::1 /train/Admin/Index/styles/main.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T19:01:40+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T19:01:40+08:00 ] ::1 /train/Admin/Index/styles/main.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T19:02:16+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T19:02:16+08:00 ] ::1 /train/Admin/Index/styles/main.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T19:02:16+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T19:02:27+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T19:02:27+08:00 ] ::1 /train/Admin/Index/styles/main.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T19:02:27+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T19:16:27+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T19:19:03+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T19:19:25+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T19:20:35+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T19:20:50+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T19:21:02+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T19:21:03+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T19:21:04+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T19:21:33+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T19:33:19+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T19:33:20+08:00 ] ::1 /train/Admin/Index/cloud.php?is_ajax=1&act=menu_api&1488368000134134
+ERR: 非法操作:cloud.php
+
+[ 2017-03-01T19:33:20+08:00 ] ::1 /train/Admin/Index/index.php?is_ajax=1&act=main_api&1488368000153153
+ERR: 非法操作:index.php
+
+[ 2017-03-01T19:34:28+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T19:34:28+08:00 ] ::1 /train/Admin/Index/cloud.php?is_ajax=1&act=menu_api&1488368068595595
+ERR: 非法操作:cloud.php
+
+[ 2017-03-01T19:36:20+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T19:36:20+08:00 ] ::1 /train/Admin/Index/cloud.php?is_ajax=1&act=menu_api&1488368180748748
+ERR: 非法操作:cloud.php
+
+[ 2017-03-01T19:36:33+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T19:36:33+08:00 ] ::1 /train/Admin/Index/cloud.php?is_ajax=1&act=menu_api&1488368193301301
+ERR: 非法操作:cloud.php
+
+[ 2017-03-01T19:37:02+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T19:37:02+08:00 ] ::1 /train/Admin/Index/cloud.php?is_ajax=1&act=menu_api&1488368222343343
+ERR: 非法操作:cloud.php
+
+[ 2017-03-01T19:38:38+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T19:38:38+08:00 ] ::1 /train/Admin/Index/cloud.php?is_ajax=1&act=menu_api&148836831809999
+ERR: 非法操作:cloud.php
+
+[ 2017-03-01T19:38:47+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T19:38:47+08:00 ] ::1 /train/Admin/Index/cloud.php?is_ajax=1&act=menu_api&1488368327807807
+ERR: 非法操作:cloud.php
+
+[ 2017-03-01T19:39:22+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T19:39:23+08:00 ] ::1 /train/Admin/Index/cloud.php?is_ajax=1&act=menu_api&1488368362902902
+ERR: 非法操作:cloud.php
+
+[ 2017-03-01T19:39:36+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T19:39:36+08:00 ] ::1 /train/Admin/Index/cloud.php?is_ajax=1&act=menu_api&1488368376659659
+ERR: 非法操作:cloud.php
+
+[ 2017-03-01T19:39:49+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T19:39:50+08:00 ] ::1 /train/Admin/Index/cloud.php?is_ajax=1&act=menu_api&1488368389939939
+ERR: 非法操作:cloud.php
+
+[ 2017-03-01T19:39:56+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T19:39:56+08:00 ] ::1 /train/Admin/Index/cloud.php?is_ajax=1&act=menu_api&1488368396769769
+ERR: 非法操作:cloud.php
+
+[ 2017-03-01T19:40:22+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T19:40:23+08:00 ] ::1 /train/Admin/Index/cloud.php?is_ajax=1&act=menu_api&1488368422932932
+ERR: 非法操作:cloud.php
+
+[ 2017-03-01T19:41:27+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T19:41:27+08:00 ] ::1 /train/Admin/Index/cloud.php?is_ajax=1&act=menu_api&1488368487163163
+ERR: 非法操作:cloud.php
+
+[ 2017-03-01T19:42:07+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T19:42:08+08:00 ] ::1 /train/Admin/Index/cloud.php?is_ajax=1&act=menu_api&1488368528187187
+ERR: 非法操作:cloud.php
+
+[ 2017-03-01T19:53:58+08:00 ] ::1 /train/Admin/Index/index.html
+ERR: Think\Model:get_msg方法不存在！
+
+[ 2017-03-01T19:54:26+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T19:54:26+08:00 ] ::1 /train/Admin/Index/cloud.php?is_ajax=1&act=menu_api&1488369266730730
+ERR: 非法操作:cloud.php
+
+[ 2017-03-01T20:03:57+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T20:03:58+08:00 ] ::1 /train/Admin/Index/cloud.php?is_ajax=1&act=menu_api&1488369838455455
+ERR: 非法操作:cloud.php
+
+[ 2017-03-01T20:04:05+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T20:04:05+08:00 ] ::1 /train/Admin/Index/cloud.php?is_ajax=1&act=menu_api&1488369845179179
+ERR: 非法操作:cloud.php
+
+[ 2017-03-01T20:09:43+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T20:09:43+08:00 ] ::1 /train/Admin/Index/cloud.php?is_ajax=1&act=menu_api&1488370183168168
+ERR: 非法操作:cloud.php
+
+[ 2017-03-01T20:10:25+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T20:10:25+08:00 ] ::1 /train/Admin/Index/cloud.php?is_ajax=1&act=menu_api&1488370225417417
+ERR: 非法操作:cloud.php
+
+[ 2017-03-01T20:10:27+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T20:10:27+08:00 ] ::1 /train/Admin/Index/cloud.php?is_ajax=1&act=menu_api&1488370227313313
+ERR: 非法操作:cloud.php
+
+[ 2017-03-01T20:10:35+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T20:10:35+08:00 ] ::1 /train/Admin/Index/cloud.php?is_ajax=1&act=menu_api&1488370235520520
+ERR: 非法操作:cloud.php
+
+[ 2017-03-01T20:10:49+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T20:10:49+08:00 ] ::1 /train/Admin/Index/cloud.php?is_ajax=1&act=menu_api&1488370249337337
+ERR: 非法操作:cloud.php
+
+[ 2017-03-01T20:11:05+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T20:11:05+08:00 ] ::1 /train/Admin/Index/cloud.php?is_ajax=1&act=menu_api&1488370265252252
+ERR: 非法操作:cloud.php
+
+[ 2017-03-01T20:12:11+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T20:12:12+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T20:12:13+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T20:12:29+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T21:26:53+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-01T21:39:01+08:00 ] ::1 /train/Admin/Index/index.html
+ERR: Think\Model:order_count_by_statu方法不存在！
+
+[ 2017-03-01T21:51:36+08:00 ] ::1 /train/Admin/Index/index.html
+ERR: Think\Model:whrere方法不存在！
+
