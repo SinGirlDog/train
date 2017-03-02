@@ -26,7 +26,7 @@ class IndexController extends Controller {
 
     	$OrderInfo = D('Home/OrderInfo');
     	$order = $OrderInfo->order_count_all();
-    	echo '<pre/>';print_r($order);die;
+    	// echo '<pre/>';print_r($order);die;
 
     	$this->fool_assign();
        	$this->display('adm:index');

@@ -1,0 +1,118 @@
+[ 2017-03-02T10:56:12+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-03-02T10:58:27+08:00 ] ::1 /train/admin/index/index.php
+ERR: 非法操作:index.php
+
+[ 2017-03-02T10:58:38+08:00 ] ::1 /train/admin/index/index.html/checkcode
+ERR: 非法操作:index.html
+
+[ 2017-03-02T10:58:45+08:00 ] ::1 /train/admin/index/checkcode
+ERR: 非法操作:checkcode
+
+[ 2017-03-02T11:00:19+08:00 ] ::1 /train/admin/train/Admin/Checkcode/index?&height=40&width=145&font_size=20&time=0.16137105753981018
+ERR: 无法加载控制器:Train
+
+[ 2017-03-02T11:00:20+08:00 ] ::1 /train/admin/train/Admin/Checkcode/index?&height=40&width=145&font_size=20&time=0.48926461859184056
+ERR: 无法加载控制器:Train
+
+[ 2017-03-02T11:00:20+08:00 ] ::1 /train/admin/train/Admin/Checkcode/index?&height=40&width=145&font_size=20&time=0.7166463861743102
+ERR: 无法加载控制器:Train
+
+[ 2017-03-02T11:00:21+08:00 ] ::1 /train/admin/train/Admin/Checkcode/index?&height=40&width=145&font_size=20&time=0.209362386924399
+ERR: 无法加载控制器:Train
+
+[ 2017-03-02T11:00:21+08:00 ] ::1 /train/admin/train/Admin/Checkcode/index?&height=40&width=145&font_size=20&time=0.42147254094361153
+ERR: 无法加载控制器:Train
+
+[ 2017-03-02T11:00:21+08:00 ] ::1 /train/admin/train/Admin/Checkcode/index?&height=40&width=145&font_size=20&time=0.9148986540194881
+ERR: 无法加载控制器:Train
+
+[ 2017-03-02T11:00:27+08:00 ] ::1 /train/admin/train/Admin/Checkcode/index?&height=40&width=145&font_size=20&time=0.1391617423699052
+ERR: 无法加载控制器:Train
+
+[ 2017-03-02T11:07:11+08:00 ] ::1 /train/admin/Admin/Checkcode/index?&height=40&width=145&font_size=20&time=0.6418974129420427
+ERR: 无法加载控制器:Admin
+
+[ 2017-03-02T11:07:15+08:00 ] ::1 /train/admin/Admin/Checkcode/index?&height=40&width=145&font_size=20&time=0.08382045373378832
+ERR: 无法加载控制器:Admin
+
+[ 2017-03-02T11:07:16+08:00 ] ::1 /train/admin/Admin/Checkcode/index?&height=40&width=145&font_size=20&time=0.7235518949371669
+ERR: 无法加载控制器:Admin
+
+[ 2017-03-02T11:07:17+08:00 ] ::1 /train/admin/Admin/Checkcode/index?&height=40&width=145&font_size=20&time=0.49465916899646145
+ERR: 无法加载控制器:Admin
+
+[ 2017-03-02T11:07:18+08:00 ] ::1 /train/admin/Admin/Checkcode/index?&height=40&width=145&font_size=20&time=0.8064807296133178
+ERR: 无法加载控制器:Admin
+
+[ 2017-03-02T11:07:18+08:00 ] ::1 /train/admin/Admin/Checkcode/index?&height=40&width=145&font_size=20&time=0.10861147504752999
+ERR: 无法加载控制器:Admin
+
+[ 2017-03-02T11:14:05+08:00 ] ::1 /train/admin/%7B/train%7D/index.php?g=Admin&m=Checkcode&a=index&
+ERR: 无法加载控制器:{
+
+[ 2017-03-02T11:14:06+08:00 ] ::1 /train/admin/%7B/train%7D/index.php?g=Admin&m=Checkcode&a=index&
+ERR: 无法加载控制器:{
+
+[ 2017-03-02T11:14:06+08:00 ] ::1 /train/admin/%7B/train%7D/index.php?g=Admin&m=Checkcode&a=index&
+ERR: 无法加载控制器:{
+
+[ 2017-03-02T11:16:44+08:00 ] ::1 /train/admin/%7B/train%7D/index.php?g=Admin&m=Checkcode&a=index&
+ERR: 无法加载控制器:{
+
+[ 2017-03-02T11:17:50+08:00 ] ::1 /train/index.php?g=Shop&m=ADMIN&a=index&
+ERR: 无法加载控制器:Index
+
+[ 2017-03-02T11:18:01+08:00 ] ::1 /train/index.php?g=Shop&m=Admin&a=checkcode&
+ERR: 非法操作:checkcode
+
+[ 2017-03-02T11:18:06+08:00 ] ::1 /train/index.php?g=Shop&m=Admin&a=Checkcode&
+ERR: 非法操作:Checkcode
+
+[ 2017-03-02T11:18:50+08:00 ] ::1 /train/index.php?g=Shop&m=Admin&a=checkcode&
+ERR: 非法操作:checkcode
+
+[ 2017-03-02T11:18:55+08:00 ] ::1 /train/index.php?g=Shop&m=Admin&a=Checkcode&
+ERR: 非法操作:Checkcode
+
+[ 2017-03-02T11:19:11+08:00 ] ::1 /train/index.php?g=Shop&m=Admin&a=login&
+ERR: 非法操作:login
+
+[ 2017-03-02T11:19:47+08:00 ] ::1 /train/index.php?g=Shop&m=Admin&a=Checkcode
+ERR: 非法操作:Checkcode
+
+[ 2017-03-02T11:19:48+08:00 ] ::1 /train/index.php?g=Shop&m=Admin&a=Checkcode
+ERR: 非法操作:Checkcode
+
+[ 2017-03-02T11:20:10+08:00 ] ::1 /train/index.php?g=Shop&m=Admin&a=Checkcode
+ERR: 非法操作:Checkcode
+
+[ 2017-03-02T11:20:10+08:00 ] ::1 /train/index.php?g=Shop&m=Admin&a=Checkcode
+ERR: 非法操作:Checkcode
+
+[ 2017-03-02T11:20:16+08:00 ] ::1 /train/index.php?g=Shop&m=Admin&a=Checkcode
+ERR: 非法操作:Checkcode
+
+[ 2017-03-02T11:20:18+08:00 ] ::1 /train/index.php?g=Shop&m=Admin&a=Checkcode
+ERR: 非法操作:Checkcode
+
+[ 2017-03-02T11:20:23+08:00 ] ::1 /train/index.php?g=Shop&m=Admin&a=Checkcode
+ERR: 非法操作:Checkcode
+
+[ 2017-03-02T11:20:23+08:00 ] ::1 /train/index.php?g=Shop&m=Admin&a=Checkcode
+ERR: 非法操作:Checkcode
+
+[ 2017-03-02T11:20:37+08:00 ] ::1 /train/index.php?g=Shop&m=Admin&a=Checkcode
+ERR: 非法操作:Checkcode
+
+[ 2017-03-02T11:20:56+08:00 ] ::1 /train/index.php?g=Shop&m=Admin&a=Checkcode
+ERR: 非法操作:Checkcode
+
+[ 2017-03-02T11:22:19+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+

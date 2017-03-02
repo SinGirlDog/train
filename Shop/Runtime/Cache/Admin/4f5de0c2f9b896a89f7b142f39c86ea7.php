@@ -1275,8 +1275,8 @@ var todolist_confirm_clear = "<?php echo ($lang["js_languages"]["process_request
                                 </td>
                             </tr>
                             <tr>
-                                <td colspan="2" align="right">
-                                    <img id="check_img" src="/train/Admin/Checkcode/index?&height=40&width=145&font_size=20&" width="145" height="40" border="1" onclick='this.src="train/Admin/Checkcode/index?&height=40&width=145&font_size=20&time=" +Math.random()' style="cursor: pointer;" title="<?php echo ($lang["click_for_another"]); ?>" />
+                                <td colspan="2" align="right">                                
+                                    <img id="check_img" src="/train/Admin/Checkcode/index?&height=40&width=145&font_size=20&" width="145" height="40" border="1" onclick='this.src="/train/Admin/Checkcode/index?&height=40&width=145&font_size=20&time=" +Math.random()' style="cursor: pointer;" title="<?php echo ($lang["click_for_another"]); ?>" />
                                 </td>
                             </tr><?php endif; ?>
                         <tr>

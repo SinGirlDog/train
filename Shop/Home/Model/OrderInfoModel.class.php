@@ -49,11 +49,12 @@ class OrderInfoModel extends Model{
         return $this->order_count_by_statu();
     }
 
-    protected function order_count_by_statu($statu = 'await_ship'){
+    protected function order_count_by_statu($statu = 'shipped'){
 
         $os_confirmed = C('OS_CONFIRMED');
+        $os_unconfirmed = C('OS_UNCONFIRMED'); 
         $os_splited = C('OS_SPLITED');
-        $os_spliting_part = C('OS_SPLITING_PART');  
+        $os_spliting_part = C('OS_SPLITING_PART');          
 
         $ss_shipped = C('SS_SHIPPED');
         $ss_received = C('SS_RECEIVED');
@@ -63,6 +64,7 @@ class OrderInfoModel extends Model{
 
         $ps_paying = C('PS_PAYING');
         $ps_payed = C('PS_PAYED');
+        $ps_unpayed = C('PS_UNPAYED');
 
         $condition = array();
         switch($statu){
@@ -71,8 +73,7 @@ class OrderInfoModel extends Model{
                     'order_status' => array('IN',array($os_confirmed,$os_splited)),
                     'shipping_status' => array('IN',array($ss_shipped,$ss_received)),
                     'pay_status' => array('IN',array($ps_paying,$ps_payed)),
-                );
-         
+                );         
             break;
             case 'await_ship':                
                 $cond = array(
@@ -85,25 +86,45 @@ class OrderInfoModel extends Model{
                     'shipping_status' => array('IN',array($ss_unshipped,$ss_preparing,$ss_shipped_ing)),
                     '_complex' => $cond,
                     '_logic' => 'AND',                   
-                );
-                 
-
-             // return " AND   {$alias}order_status " .
-             //     db_create_in(array(OS_CONFIRMED, OS_SPLITED, OS_SPLITING_PART)) .
-             //   " AND   {$alias}shipping_status " .
-             //     db_create_in(array(SS_UNSHIPPED, SS_PREPARING, SS_SHIPPED_ING)) .
-             //   " AND ( {$alias}pay_status " . db_create_in(array(PS_PAYED, PS_PAYING)) . " OR {$alias}pay_id " . db_create_in(payment_id_list(true)) . ") ";
-
+                );  
             break;
             case 'await_pay':
+                $cond = array(
+                    'shipping_status' => array('IN',array($ss_shipped,$ss_received)),
+                    'pay_id' => array('IN',array($l,$m,$n)),
+                    '_logic' => 'OR',
+                );
+                $condition = array(
+                    'order_status' => array('IN',array($os_confirmed,$os_splited)),
+                    'pay_status' => $ps_unpayed,
+                    '_complex' => $cond,
+                    '_logic' => 'and',
+                );
             break;
             case 'unconfirmed':
+                $condition = array(
+                    'order_status' => $os_unconfirmed,
+                );  
             break;
             case 'unprocessed':
+                $condition = array(
+                    'order_status' => array('IN',array($os_confirmed,$os_unconfirmed)),
+                    'shipping_status' => $ss_unshipped,
+                    'pay_status' => $ps_unpayed,
+                );  
             break;
             case 'unpay_unship':
+                $condition = array(
+                    'order_status' => array('IN',array($os_confirmed,$os_unconfirmed)),
+                    'shipping_status' => array('IN',array($ss_unshipped,$ss_preparing)),
+                    'pay_status' => $ps_unpayed,
+                );  
             break;
             case 'shipped':
+                $condition = array(
+                    'order_status' => $os_confirmed,
+                    'shipping_status' => array('IN',array($ss_shipped,$ss_received)),
+                );  
             break;
             default:
             break;
