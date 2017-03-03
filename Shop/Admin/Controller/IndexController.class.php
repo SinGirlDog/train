@@ -24,9 +24,16 @@ class IndexController extends Controller {
     	$admin_msg = $AdminMessage->get_msg();
     	$this->assign('admin_msg',$admin_msg);    	
 
-    	$OrderInfo = D('Home/OrderInfo');
+    	$OrderInfo = D('OrderInfo');
     	$order = $OrderInfo->order_count_all();
-    	// echo '<pre/>';print_r($order);die;
+    	$this->assign('order',$order);   
+
+    	$Goods = D('Goods');
+    	$goods = $Goods->goods_admin_count('goods');
+    	$this->assign('goods',$goods);   
+    	$virtual_card = $Goods->goods_admin_count('virtual_card');
+    	$this->assign('virtual_card',$virtual_card);   	
+    	// echo '<pre/>';print_r($virtual_card);die;
 
     	$this->fool_assign();
        	$this->display('adm:index');

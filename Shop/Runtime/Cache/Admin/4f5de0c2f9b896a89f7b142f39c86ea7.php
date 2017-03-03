@@ -1005,9 +1005,9 @@ var todolist_confirm_clear = "<?php echo ($lang["js_languages"]["process_request
         </tr>
         <tr>
             <td><a href="goods_booking.php?act=list_all"><?php echo ($lang["new_booking"]); ?></a></td>
-            <td><strong><?php echo ($booking_goods); ?></strong></td>
+            <td><strong><?php echo ($order["booking_goods"]); ?></strong></td>
             <td><a href="user_account.php?act=list&process_type=1&is_paid=0"><?php echo ($lang["new_reimburse"]); ?></a></td>
-            <td><strong><?php echo ($new_repay); ?></strong></td>
+            <td><strong><?php echo ($order["new_repay"]); ?></strong></td>
         </tr>
         <tr>
             <td><a href="order.php?act=list&composite_status=<?php echo ($status["shipped_part"]); ?>"><?php echo ($lang["shipped_part"]); ?></a></td>

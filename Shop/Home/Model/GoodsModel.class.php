@@ -246,5 +246,5 @@ protected function bargain_price($price, $start, $end)
         }
     }
 }
-
+    
 }
