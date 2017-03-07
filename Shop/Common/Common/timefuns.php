@@ -149,7 +149,9 @@ function local_gettime($timestamp = NULL)
  */
 function local_getdate($timestamp = NULL)
 {
-    $timezone = isset($_SESSION['timezone']) ? $_SESSION['timezone'] : $GLOBALS['_CFG']['timezone'];
+    $zone = session('timezone');
+    $cfg_zone = C('_CFG.timezong');
+    $timezone = empty($zone) ? $cfg_zone : $zone;
 
     /* 如果时间戳为空，则获得服务器的当前时间 */
     if ($timestamp === NULL)

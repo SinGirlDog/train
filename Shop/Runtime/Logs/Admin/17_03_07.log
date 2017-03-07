@@ -1,0 +1,45 @@
+[ 2017-03-07T11:31:11+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `sp_admin_user` [ RunTime:0.0000s ]
+SQL: SELECT `ec_salt` FROM `sp_admin_user` WHERE `user_name` = 'admin' LIMIT 1   [ RunTime:0.0156s ]
+NOTIC: [8] Undefined variable: sqlt E:\wamp\www\train\Shop\Admin\Model\AdminUserModel.class.php 第 14 行.
+SQL: SELECT user_id, user_name,`password`,`last_login`,`action_list`,`last_login`,`suppliers_id`,`ec_salt` FROM `sp_admin_user` WHERE `user_name` = 'admin' AND `password` = 'eff85d38d18a04f3905db1128cd915d6' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-03-07T11:31:12+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-07T11:59:54+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-07T12:08:33+08:00 ] ::1 /train/Admin/Index/index.html
+ERR: Think\Model:comment_number方法不存在！
+
+[ 2017-03-07T12:11:05+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-07T13:29:37+08:00 ] ::1 /train/Admin/Index/index.html
+ERR: Think\Controller:_model方法不存在！
+
+[ 2017-03-07T13:30:14+08:00 ] ::1 /train/Admin/Index/index.html
+ERR: Think\Controller:model方法不存在！
+
+[ 2017-03-07T14:04:48+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-07T14:05:48+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-07T14:06:17+08:00 ] ::1 /train/Admin/Index/order.php?act=list&composite_status=
+ERR: 非法操作:order.php
+
+[ 2017-03-07T14:06:19+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-07T14:06:22+08:00 ] ::1 /train/Admin/Index/order.php?act=list&composite_status=
+ERR: 非法操作:order.php
+
+[ 2017-03-07T14:06:23+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+

@@ -1138,7 +1138,7 @@ var todolist_confirm_clear = "<?php echo ($lang["js_languages"]["process_request
             <td><?php echo ($lang["max_filesize"]); ?></td>
             <td><?php echo ($sys_info["max_filesize"]); ?></td>
         </tr>
-        <tr>
+       <!--  <tr>
             <td><?php echo ($lang["ecs_version"]); ?></td>
             <td><?php echo ($ecs_version); ?> RELEASE <?php echo ($ecs_release); ?></td>
             <td><?php echo ($lang["install_date"]); ?></td>
@@ -1149,7 +1149,7 @@ var todolist_confirm_clear = "<?php echo ($lang["js_languages"]["process_request
             <td><?php echo ($ecs_charset); ?></td>
             <td></td>
             <td></td>
-        </tr>
+        </tr> -->
     </table>
 </div>
 <script src="<?php echo (SHOP_JS_URL); ?>utils.js" type="text/javascript"></script>

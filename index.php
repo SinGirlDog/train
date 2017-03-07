@@ -29,6 +29,7 @@ define('SHOP_DATA_URL','/train/Shop/Home/Public/data/');
 define('SHOPADM_CSS_URL','/train/Shop/Admin/Public/css/');
 define('SHOPADM_IMG_URL','/train/Shop/Admin/Public/image/');
 define('SHOPADM_JS_URL','/train/Shop/Admin/Public/js/');
+define('SHOPADM_DAT_URL','/train/Shop/Admin/Public/dat/');
 
 define('HTML_PATH', './Shop/HTML/');//生成静态页面的文件位置  
 

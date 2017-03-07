@@ -32,8 +32,24 @@ class IndexController extends Controller {
     	$goods = $Goods->goods_admin_count('goods');
     	$this->assign('goods',$goods);   
     	$virtual_card = $Goods->goods_admin_count('virtual_card');
-    	$this->assign('virtual_card',$virtual_card);   	
-    	// echo '<pre/>';print_r($virtual_card);die;
+    	$this->assign('virtual_card',$virtual_card); 
+
+    	$Stats = D('Stats');
+    	$visit = $Stats->today_visit();  
+    	$this->assign('today_visit',$visit); 
+    	$this->assign('online_users','unknown'); 	
+
+    	$Feedback = D('Feedback');
+    	$feedback_number = $Feedback->feedback_number();    	
+    	$this->assign('feedback_number',$feedback_number); 
+
+    	$Comment = D('Comment');
+    	$comment_number = $Comment->comment_number();    	
+    	$this->assign('comment_number',$comment_number); 
+
+    	$sys_info = $this->sys_info();
+    	$this->assign('sys_info',$sys_info);
+    	// echo '<pre/>';print_r($sys_info);die;
 
     	$this->fool_assign();
        	$this->display('adm:index');
@@ -101,7 +117,6 @@ class IndexController extends Controller {
 	                        {
 	                            continue;
 	                        }
-
 	                    }
 	                    else
 	                    {
@@ -133,4 +148,80 @@ class IndexController extends Controller {
 
 	    return $menus;
 	}
+
+	protected function sys_info(){
+		$sys_info = array();
+
+		$sys_info['os']            = PHP_OS;
+	    $sys_info['ip']            = I('server.SERVER_ADDR');
+	    $sys_info['web_server']    = I('server.SERVER_SOFTWARE');
+	    $sys_info['php_ver']       = PHP_VERSION;
+	    $sys_info['mysql_ver']     = $this->_mysql_version();
+	    $sys_info['zlib']          = function_exists('gzclose') ? C('_LANG.yes'):C('_LANG.no');
+	    $sys_info['safe_mode']     = (boolean) ini_get('safe_mode') ?  C('_LANG.yes'):C('_LANG.no');
+	    $sys_info['safe_mode_gid'] = (boolean) ini_get('safe_mode_gid') ? C('_LANG.yes'):C('_LANG.no');
+	    $sys_info['timezone']      = function_exists("date_default_timezone_get") ? date_default_timezone_get() : C('_LANG.no_timezone');
+	    $sys_info['socket']        = function_exists('fsockopen') ? C('_LANG.yes'):C('_LANG.no');
+
+	    $gd = gd_version();
+
+	    if ($gd == 0)
+	    {
+	        $sys_info['gd'] = 'N/A';
+	    }
+	    else
+	    {
+	        if ($gd == 1)
+	        {
+	            $sys_info['gd'] = 'GD1';
+	        }
+	        else
+	        {
+	            $sys_info['gd'] = 'GD2';
+	        }
+
+	        $sys_info['gd'] .= ' (';
+
+	        if ($gd && (imagetypes() & IMG_JPG) > 0)
+	        {
+	            $sys_info['gd'] .= ' JPEG';
+	        }
+
+	        if ($gd && (imagetypes() & IMG_GIF) > 0)
+	        {
+	            $sys_info['gd'] .= ' GIF';
+	        }
+
+	        if ($gd && (imagetypes() & IMG_PNG) > 0)
+	        {
+	            $sys_info['gd'] .= ' PNG';
+	        }
+
+	        $sys_info['gd'] .= ')';
+	    }
+
+	    
+	    // $sys_info['ip_version'] = ecs_geoip('255.255.255.0');
+	     $sys_info['ip_version'] = $this->ip_location();
+	    
+	    $sys_info['max_filesize'] = ini_get('upload_max_filesize');
+
+	    return $sys_info;
+	}
+
+	protected function ip_location(){
+		//import('ORG.Net.IpLocation');// 导入IpLocation类
+		$Ip = new \Org\Net\IpLocation(); // 实例化类 参数表示IP地址库文件
+		$area = $Ip->getlocation(); // 获取某个IP地址所在的位置
+	}
+
+	protected function _mysql_version(){
+		$Model = self::_model();
+        $version = $Model->query("select version() as ver");
+        return $version[0]['ver'];
+	}
+
+	protected function _model(){
+        return new \Think\Model();
+    }
 }
