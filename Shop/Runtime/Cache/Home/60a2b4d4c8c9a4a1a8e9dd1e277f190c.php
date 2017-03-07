@@ -1,11 +1,12 @@
 <?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<html>
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="Keywords" content="<?php echo ($keywords); ?>" />
     <meta name="Description" content="<?php echo ($description); ?>" />
     <!-- TemplateBeginEditable name="doctitle" -->
-    <title><?php echo ($page_title); ?>首页</title>
+    <title><?php echo ($page_title); ?></title>
     <!-- TemplateEndEditable -->
     <!-- TemplateBeginEditable name="head" -->
     <!-- TemplateEndEditable -->
@@ -24,7 +25,7 @@ var process_request = "<?php echo ($lang["process_request"]); ?>";
 </script>
 <div class="block clearfix">
     <div class="f_l">
-        <a href="../index.php" name="top"><img src="<?php echo (SHOP_IMG_URL); ?>logo.gif" /></a>
+        <a href="<?php echo U('Index/index');?>" name="top"><img src="<?php echo (SHOP_IMG_URL); ?>logo.gif" /></a>
     </div>
     <div class="f_r log">
         <ul>
@@ -44,7 +45,7 @@ var process_request = "<?php echo ($lang["process_request"]); ?>";
         <a href="user.php?act=logout"><?php echo ($lang["user_logout"]); ?></a>
     </font>
     <?php else: ?> <?php echo ($lang["welcome"]); ?>&nbsp;&nbsp;&nbsp;&nbsp;
-    <a href="user.php"><img src="<?php echo (SHOP_IMG_URL); ?>/bnt_log.gif" /></a>
+    <a href="<?php echo U('User/index');?>"><img src="<?php echo (SHOP_IMG_URL); ?>/bnt_log.gif" /></a>
     <a href="user.php?act=register"><img src="<?php echo (SHOP_IMG_URL); ?>/bnt_reg.gif" /></a><?php endif; ?>
 
                 </font>

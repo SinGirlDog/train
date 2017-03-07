@@ -5,18 +5,56 @@ class IndexController extends Controller {
 
 	function _initialize() {
 		
-		$this->_mergeConfig(); 		
+		$this->_mergeConfig();
+
+        $this->data_prepare();	
 	}
 
     public function index(){
-    	
-    	$Cart = D('Cart');
-    	$cart_info = $Cart->insert_cart_info();
-    	$this->assign('cart_info',$cart_info);
 
-    	$Goods = D('Goods');
-    	$top_goods = $Goods->get_top10();
-    	$this->assign('top_goods',$top_goods);
+    	$this->display(':index');
+    }
+
+    protected function _mergeConfig() {
+		$_LANG = include ('./Shop/Common/Conf/lang_config.php');
+        C('_LANG',$_LANG);
+		$this->assign('lang',$_LANG);
+
+        D('ShopConfig')->load_shop_config();
+	}
+
+    protected function footer_assign(){
+         $this->assign('copyright', 
+            sprintf(C('_LANG.copyright'), date('Y'), C('_CFG.shop_name')));
+        $this->assign('shop_address',  C('_CFG.shop_address'));
+        $this->assign('shop_name',  C('_CFG.shop_name'));
+        $this->assign('service_phone',  C('_CFG.service_phone'));
+        $this->assign('service_email',  C('_CFG.service_email'));
+        $this->assign('stats_code',    C('_CFG.stats_code'));
+        $this->assign('qq',            explode(',', C('_CFG.qq')));
+        $this->assign('ww',            explode(',', C('_CFG.ww')));
+        $this->assign('ym',            explode(',', C('_CFG.ym')));
+        $this->assign('msn',           explode(',', C('_CFG.msn')));
+        $this->assign('skype',         explode(',', C('_CFG.skype')));
+        $this->assign('icp_number',    C('_CFG.icp_number'));
+        $this->assign('licensed',      license_info());
+        $this->assign('feed_url', 
+                (C('rewrite') == 1) ? "feed-typeactivity.xml" : 'feed.php?type=activity');
+    }
+
+    protected function data_prepare(){
+        
+        $position = assign_ur_here();
+        $this->assign('page_title',      $position['title']);    // 页面标题
+        $this->assign('ur_here',         $position['ur_here']);  // 当前位置
+
+        $Cart = D('Cart');
+        $cart_info = $Cart->insert_cart_info();
+        $this->assign('cart_info',$cart_info);
+
+        $Goods = D('Goods');
+        $top_goods = $Goods->get_top10();
+        $this->assign('top_goods',$top_goods);
 
         $Nav = D('Nav');
         $navigator_list = $Nav->get_navigator();        
@@ -78,32 +116,6 @@ class IndexController extends Controller {
         $links = $FriendLink->index_get_links(); 
         $this->assign('links',$links);
 
-        $this->assign('copyright', 
-            sprintf(C('_LANG.copyright'), date('Y'), C('_CFG.shop_name')));
-        $this->assign('shop_address',  C('_CFG.shop_address'));
-        $this->assign('shop_name',  C('_CFG.shop_name'));
-        $this->assign('service_phone',  C('_CFG.service_phone'));
-        $this->assign('service_email',  C('_CFG.service_email'));
-        $this->assign('stats_code',    C('_CFG.stats_code'));
-        $this->assign('qq',            explode(',', C('_CFG.qq')));
-        $this->assign('ww',            explode(',', C('_CFG.ww')));
-        $this->assign('ym',            explode(',', C('_CFG.ym')));
-        $this->assign('msn',           explode(',', C('_CFG.msn')));
-        $this->assign('skype',         explode(',', C('_CFG.skype')));
-        $this->assign('icp_number',    C('_CFG.icp_number'));
-        $this->assign('licensed',      license_info());
-        $this->assign('feed_url', 
-                (C('rewrite') == 1) ? "feed-typeactivity.xml" : 'feed.php?type=activity');
-        // echo '<pre/>';print_r($links);die; 
-
-    	$this->display(':index');
+        $this->footer_assign();
     }
-
-    protected function _mergeConfig() {
-		$_LANG = include ('./Shop/Common/Conf/lang_config.php');
-        C('_LANG',$_LANG);
-		$this->assign('lang',$_LANG);
-
-        D('ShopConfig')->load_shop_config();
-	}
 }

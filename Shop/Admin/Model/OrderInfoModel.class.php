@@ -61,6 +61,13 @@ class OrderInfoModel extends Model{
 
     protected function order_count_by_statu($statu = 'await_ship'){
 
+        $condition = $this->count_condition_by_statu($statu);
+
+        $count = $this->fetchSql(false)->where($condition)->count();
+        return $count;
+    }
+
+    public function count_condition_by_statu($statu){
         $os_confirmed = C('OS_CONFIRMED');
         $os_unconfirmed = C('OS_UNCONFIRMED'); 
         $os_splited = C('OS_SPLITED');
@@ -146,10 +153,9 @@ class OrderInfoModel extends Model{
             break;
         }
 
-        $count = $this->fetchSql(false)->where($condition)->count();
-        return $count;
-    }
+        return $condition;
 
+    }
     /**
      * 取得支付方式id列表
      * @param   $is_cod 是否货到付款
@@ -171,5 +177,7 @@ class OrderInfoModel extends Model{
 
         return $pay_arr;
     }
+
+   
     
 }

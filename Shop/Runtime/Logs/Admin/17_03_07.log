@@ -43,3 +43,18 @@ ERR: 非法操作:order.php
 [ 2017-03-07T14:06:23+08:00 ] ::1 /train/Admin/Index/styles/general.css
 ERR: 非法操作:styles
 
+[ 2017-03-07T18:05:14+08:00 ] ::1 /train/Admin/Login/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sp_admin_user` [ RunTime:0.0070s ]
+SQL: SELECT `ec_salt` FROM `sp_admin_user` WHERE `user_name` = 'admin' LIMIT 1   [ RunTime:0.0120s ]
+NOTIC: [8] Undefined variable: sqlt E:\wamp\www\train\Shop\Admin\Model\AdminUserModel.class.php 第 14 行.
+SQL: SELECT user_id, user_name,`password`,`last_login`,`action_list`,`last_login`,`suppliers_id`,`ec_salt` FROM `sp_admin_user` WHERE `user_name` = 'admin' AND `password` = 'eff85d38d18a04f3905db1128cd915d6' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-03-07T18:05:14+08:00 ] ::1 /train/Admin/Index/styles/general.css
+ERR: 非法操作:styles
+
+[ 2017-03-07T18:05:20+08:00 ] ::1 /train/Admin/Index/privilege.php?act=logout
+ERR: 非法操作:privilege.php
+

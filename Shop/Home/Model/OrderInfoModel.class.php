@@ -45,6 +45,14 @@ class OrderInfoModel extends Model{
         return $all;
     }
 
-   
+    public function get_count_by_extensionid($id,$code = 'snatch'){
+        $condition = array(
+            'extension_code' => $code,
+            'extension_id' => $id,
+            'order_status' => array('IN',array(C('OS_CONFIRMED'),C('OS_UNCONFIRMED'))),
+        );
+        $count = $this->fetchSql(false)->where($condition)->count();
+        return $count;       
+    }
 
 }
