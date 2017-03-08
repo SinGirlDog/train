@@ -1,0 +1,54 @@
+<if condition="$action eq 'add_booking'">
+    <script src='{$Think.const.SHOP_JS_URL}utils.js'></script>
+    <include file="js_lang_htm/lang_booking_js" />
+    <h5><span>{$lang.add}{$lang.label_booking}</span></h5>
+    <div class="blank"></div>
+    <form action="user.php" method="post" name="formBooking" onsubmit="return addBooking();">
+        <table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd">
+            <tr>
+                <td align="right" bgcolor="#ffffff">{$lang.booking_goods_name}</td>
+                <td bgcolor="#ffffff">{$info.goods_name}</td>
+            </tr>
+            <tr>
+                <td align="right" bgcolor="#ffffff">{$lang.booking_amount}:</td>
+                <td bgcolor="#ffffff">
+                    <input name="number" type="text" value="{$info.goods_number}" class="inputBg" />
+                </td>
+            </tr>
+            <tr>
+                <td align="right" bgcolor="#ffffff">{$lang.describe}:</td>
+                <td bgcolor="#ffffff">
+                    <textarea name="desc" cols="50" rows="5" wrap="virtual" class="B_blue">{$goods_attr}{$info.goods_desc}</textarea>
+                </td>
+            </tr>
+            <tr>
+                <td align="right" bgcolor="#ffffff">{$lang.contact_username}:</td>
+                <td bgcolor="#ffffff">
+                    <input name="linkman" type="text" value="{$info.consignee}" size="25" class="inputBg" />
+                </td>
+            </tr>
+            <tr>
+                <td align="right" bgcolor="#ffffff">{$lang.email_address}:</td>
+                <td bgcolor="#ffffff">
+                    <input name="email" type="text" value="{$info.email}" size="25" class="inputBg" />
+                </td>
+            </tr>
+            <tr>
+                <td align="right" bgcolor="#ffffff">{$lang.contact_phone}:</td>
+                <td bgcolor="#ffffff">
+                    <input name="tel" type="text" value="{$info.tel}" size="25" class="inputBg" />
+                </td>
+            </tr>
+            <tr>
+                <td align="right" bgcolor="#ffffff">&nbsp;</td>
+                <td bgcolor="#ffffff">
+                    <input name="act" type="hidden" value="act_add_booking" />
+                    <input name="id" type="hidden" value="{$info.id}" />
+                    <input name="rec_id" type="hidden" value="{$info.rec_id}" />
+                    <input type="submit" name="submit" class="submit" value="{$lang.submit_booking_goods}" />
+                    <input type="reset" name="reset" class="reset" value="{$lang.button_reset}" />
+                </td>
+            </tr>
+        </table>
+    </form>
+</if>

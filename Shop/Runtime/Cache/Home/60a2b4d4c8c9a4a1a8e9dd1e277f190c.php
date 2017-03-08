@@ -1,18 +1,15 @@
 <?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html>
 
-<head>
+<head>   
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="Keywords" content="<?php echo ($keywords); ?>" />
-    <meta name="Description" content="<?php echo ($description); ?>" />
-    <!-- TemplateBeginEditable name="doctitle" -->
-    <title><?php echo ($page_title); ?></title>
-    <!-- TemplateEndEditable -->
-    <!-- TemplateBeginEditable name="head" -->
-    <!-- TemplateEndEditable -->
-    <link rel="shortcut icon" href="favicon.ico" />
-    <link rel="icon" href="<?php echo (SHOP_IMG_URL); ?>animated_favicon.gif" type="image/gif" />
-    <link href="<?php echo (SHOP_CSS_URL); ?>style_pink.css" rel="stylesheet" type="text/css" />
+<meta name="Keywords" content="<?php echo ($keywords); ?>" />
+<meta name="Description" content="<?php echo ($description); ?>" />
+<title><?php echo ($page_title); ?></title>
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="<?php echo (SHOP_IMG_URL); ?>animated_favicon.gif" type="image/gif" />
+<link href="<?php echo (SHOP_CSS_URL); ?>style_pink.css" rel="stylesheet" type="text/css" />
+
     <link rel="alternate" type="application/rss+xml" title="RSS|<?php echo ($page_title); ?>" href="<?php echo ($feed_url); ?>" />
     <script src='<?php echo (SHOP_JS_URL); ?>common.js'></script>
     <script src='<?php echo (SHOP_JS_URL); ?>index.js'></script>

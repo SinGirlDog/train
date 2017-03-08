@@ -1,0 +1,12 @@
+<if condition = "$action eq 'tag_list'">
+    <h5><span>{$lang.label_tag}</span></h5>
+    <div class="blank"></div>
+    <notempty name="tags">
+        <foreach name="tags" item="tag">
+            <a href="search.php?keywords={$tag.tag_words}" class="f6">{$tag.tag_words}</a>
+            <a href="user.php?act=act_del_tag&amp;tag_words={$tag.tag_words}" onclick="if (!confirm('{$lang.confirm_drop_tag}')) return false;" title="{$lang.drop}"><img src="images/drop.gif" alt="{$lang.drop}" /></a>&nbsp;&nbsp;
+        </foreach>
+        <else>
+            <span style="margin:2px 10px; font-size:14px; line-height:36px;">{$lang.no_tag}</span>
+    </notempty>
+</if>

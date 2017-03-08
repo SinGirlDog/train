@@ -55,4 +55,17 @@ class OrderInfoModel extends Model{
         return $count;       
     }
 
+    public function get_orderinfo_by_id($user_id,$order_id){
+        $order_info = array();
+        $condition = array(
+            'order_id' => $order_id,
+            'user_id' => $user_id,
+        );
+        $order_info = $this->where($condition)->find();
+        $order_info['url'] = 'user.php?act=order_detail&order_id=' . $order_id;
+        return $order_info;
+        
+         // $order_info = $db->getRow("SELECT * FROM " . $ecs->table('order_info') . " WHERE order_id = '$order_id' AND user_id = '$user_id'");
+    }
+
 }

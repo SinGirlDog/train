@@ -4,7 +4,7 @@ use Think\Controller;
 class IndexController extends Controller {
 
 	function _initialize() {
-		
+
 		$this->_mergeConfig();
 
         $this->data_prepare();	
@@ -44,9 +44,7 @@ class IndexController extends Controller {
 
     protected function data_prepare(){
         
-        $position = assign_ur_here();
-        $this->assign('page_title',      $position['title']);    // 页面标题
-        $this->assign('ur_here',         $position['ur_here']);  // 当前位置
+        $this->bread_crumb();
 
         $Cart = D('Cart');
         $cart_info = $Cart->insert_cart_info();
@@ -56,9 +54,10 @@ class IndexController extends Controller {
         $top_goods = $Goods->get_top10();
         $this->assign('top_goods',$top_goods);
 
-        $Nav = D('Nav');
-        $navigator_list = $Nav->get_navigator();        
-        $this->assign('navigator_list',$navigator_list);
+        // $Nav = D('Nav');
+        // $navigator_list = $Nav->get_navigator();        
+        // $this->assign('navigator_list',$navigator_list);
+        $this->navigator_list_prepare();
 
         $Category = D('Category');
         $categories = $Category->get_categories_tree();  
@@ -117,5 +116,18 @@ class IndexController extends Controller {
         $this->assign('links',$links);
 
         $this->footer_assign();
+    }
+
+    protected function navigator_list_prepare(){
+        $Nav = D('Nav');
+        $navigator_list = $Nav->get_navigator();        
+        $this->assign('navigator_list',$navigator_list);
+    }
+
+    protected function bread_crumb($cat = 0, $str = ''){
+        
+        $position = assign_ur_here($cat,$str);
+        $this->assign('page_title',      $position['title']);    // 页面标题
+        $this->assign('ur_here',         $position['ur_here']);  // 当前位置
     }
 }
