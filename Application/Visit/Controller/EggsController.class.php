@@ -61,7 +61,8 @@ class EggsController extends Controller {
 		// 	}
 		// }
 		//$eggs_sum = array_unique($eggs_sum);
-		print_r($eggs_sum);					
+		print_r($eggs_sum);
+		echo '<br/>',$eggs_sum[0],'+N*',$eggs_sum[1]-$eggs_sum[0],'(N：自然数)<br/>';					
 		$this->display(':Eggs:index');
 	}
 

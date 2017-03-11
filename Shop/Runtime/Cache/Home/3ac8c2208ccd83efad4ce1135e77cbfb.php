@@ -42,8 +42,8 @@ var process_request = "<?php echo ($lang["process_request"]); ?>";
         <a href="user.php?act=logout"><?php echo ($lang["user_logout"]); ?></a>
     </font>
     <?php else: ?> <?php echo ($lang["welcome"]); ?>&nbsp;&nbsp;&nbsp;&nbsp;
-    <a href="<?php echo U('User/index');?>"><img src="<?php echo (SHOP_IMG_URL); ?>/bnt_log.gif" /></a>
-    <a href="user.php?act=register"><img src="<?php echo (SHOP_IMG_URL); ?>/bnt_reg.gif" /></a><?php endif; ?>
+    <a href="<?php echo U('User/index',array('act'=>'login'));?>"><img src="<?php echo (SHOP_IMG_URL); ?>/bnt_log.gif" /></a>
+    <a href="<?php echo U('User/index',array('act'=>'register'));?>"><img src="<?php echo (SHOP_IMG_URL); ?>/bnt_reg.gif" /></a><?php endif; ?>
 
                 </font>
             </li>
@@ -165,7 +165,7 @@ var process_request = "<?php echo ($lang["process_request"]); ?>";
         <br /> 3. <?php echo ($lang['user_reg_info']['6']); ?>
         <br /> 4. <?php echo ($lang['user_reg_info']['7']); ?>
         <br />
-        <a href="user.php?act=register"><img src="images/bnt_ur_reg.gif" /></a>
+        <a href="user.php?act=register"><img src="<?php echo (SHOP_IMG_URL); ?>bnt_ur_reg.gif" /></a>
     </div>
 </div>
 
@@ -175,7 +175,8 @@ var process_request = "<?php echo ($lang["process_request"]); ?>";
             <div class="f1 f5" align="center"><?php echo ($lang["shop_register_closed"]); ?></div>
         </div>
     </div>
-    <?php else: ?> {insert_scripts files='utils.js'}
+    <?php else: ?>
+    <script src='<?php echo (SHOP_JS_URL); ?>utils.js'></script>
     <div class="usBox">
         <div class="usBox_2 clearfix">
             <div class="regtitle"></div>
@@ -232,11 +233,15 @@ var process_request = "<?php echo ($lang["process_request"]); ?>";
                             </tr>
                             <tr>
                                 <?php if(!empty($field["is_need"])): ?><td align="right" id="passwd_quesetion"><?php echo ($lang["passwd_answer"]); ?></td>
-                                    <input name="passwd_answer" type="text" size="25" class="inputBg" maxlengt='20' />
-                                    <span style="color:#FF0000"> *</span>
+                                    <td>
+                                        <input name="passwd_answer" type="text" size="25" class="inputBg" maxlengt='20' />
+                                        <span style="color:#FF0000"> *</span>
+                                    </td>
                                     <?php else: ?>
                                     <td align="right"><?php echo ($lang["passwd_answer"]); ?></td>
-                                    <input name="passwd_answer" type="text" size="25" class="inputBg" maxlengt='20' /><?php endif; ?>
+                                    <td>
+                                        <input name="passwd_answer" type="text" size="25" class="inputBg" maxlengt='20' />
+                                    </td><?php endif; ?>
                             </tr>
                             <?php else: ?>
                             <tr>
@@ -270,9 +275,9 @@ var process_request = "<?php echo ($lang["process_request"]); ?>";
                     <tr>
                         <td>&nbsp;</td>
                         <td align="left">
-                            <input name="act" type="hidden" value="act_register">
+                            <input name="act" type="hidden" value="act_register" />
                             <input type="hidden" name="back_act" value="<?php echo ($back_act); ?>" />
-                            <input name="Submit" type="submit" value="" class="us_Submit_reg">
+                            <input name="Submit" type="submit" value="" class="us_Submit_reg" />
                         </td>
                     </tr>
                     <tr>

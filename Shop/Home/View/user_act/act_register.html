@@ -4,7 +4,8 @@
             <div class="f1 f5" align="center">{$lang.shop_register_closed}</div>
         </div>
     </div>
-    <else/> {insert_scripts files='utils.js'}
+    <else/>
+    <script src='{$Think.const.SHOP_JS_URL}utils.js'></script>
     <div class="usBox">
         <div class="usBox_2 clearfix">
             <div class="regtitle"></div>
@@ -64,11 +65,15 @@
                             <tr>
                                 <notempty name="field.is_need">
                                     <td align="right" id="passwd_quesetion">{$lang.passwd_answer}</td>
-                                    <input name="passwd_answer" type="text" size="25" class="inputBg" maxlengt='20' />
-                                    <span style="color:#FF0000"> *</span>
+                                    <td>
+                                        <input name="passwd_answer" type="text" size="25" class="inputBg" maxlengt='20' />
+                                        <span style="color:#FF0000"> *</span>
+                                    </td>
                                     <else/>
                                     <td align="right">{$lang.passwd_answer}</td>
-                                    <input name="passwd_answer" type="text" size="25" class="inputBg" maxlengt='20' />
+                                    <td>
+                                        <input name="passwd_answer" type="text" size="25" class="inputBg" maxlengt='20' />
+                                    </td>
                                 </notempty>
                             </tr>
                             <else/>
@@ -109,9 +114,9 @@
                     <tr>
                         <td>&nbsp;</td>
                         <td align="left">
-                            <input name="act" type="hidden" value="act_register">
+                            <input name="act" type="hidden" value="act_register" />
                             <input type="hidden" name="back_act" value="{$back_act}" />
-                            <input name="Submit" type="submit" value="" class="us_Submit_reg">
+                            <input name="Submit" type="submit" value="" class="us_Submit_reg" />
                         </td>
                     </tr>
                     <tr>

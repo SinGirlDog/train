@@ -42,8 +42,8 @@ var process_request = "<?php echo ($lang["process_request"]); ?>";
         <a href="user.php?act=logout"><?php echo ($lang["user_logout"]); ?></a>
     </font>
     <?php else: ?> <?php echo ($lang["welcome"]); ?>&nbsp;&nbsp;&nbsp;&nbsp;
-    <a href="<?php echo U('User/index');?>"><img src="<?php echo (SHOP_IMG_URL); ?>/bnt_log.gif" /></a>
-    <a href="user.php?act=register"><img src="<?php echo (SHOP_IMG_URL); ?>/bnt_reg.gif" /></a><?php endif; ?>
+    <a href="<?php echo U('User/index',array('act'=>'login'));?>"><img src="<?php echo (SHOP_IMG_URL); ?>/bnt_log.gif" /></a>
+    <a href="<?php echo U('User/index',array('act'=>'register'));?>"><img src="<?php echo (SHOP_IMG_URL); ?>/bnt_reg.gif" /></a><?php endif; ?>
 
                 </font>
             </li>
@@ -556,8 +556,6 @@ function check_email() {
         </div><?php endif; ?>
     <!--友情链接 end-->
     <div class="blank"></div>
-    <!-- #BeginLibraryItem "/library/page_footer.lbi" -->
-    <!-- #EndLibraryItem -->
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <!--底部导航 start-->
 <div id="bottomNav" class="box">

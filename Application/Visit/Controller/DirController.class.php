@@ -7,7 +7,7 @@ class DirController extends Controller{
 	public function index(){
 		echo 'hello I AM DIR CTRL';
 		//$this->dirFind('E:\wamp\www\ECshop\Upload\admin\templates');
-		$this->dirFind('E:\wamp\www\train\Application\Shopadmin\View\adm');
+		$this->dirFind('E:\KuGou');
 	}
 
 	protected function dirFind($dirorg){

@@ -19,7 +19,6 @@ class RedistestController extends Controller {
         echo $redis->get('dream');    	
         $redis->close();
 
-       
 
 		$this->display(':Redistest:index');       
        

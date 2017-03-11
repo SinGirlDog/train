@@ -8,6 +8,6 @@
         <a href="user.php?act=logout">{$lang.user_logout}</a>
     </font>
     <else/> {$lang.welcome}&nbsp;&nbsp;&nbsp;&nbsp;
-    <a href="{:U('User/index')}"><img src="{$Think.const.SHOP_IMG_URL}/bnt_log.gif" /></a>
-    <a href="user.php?act=register"><img src="{$Think.const.SHOP_IMG_URL}/bnt_reg.gif" /></a>
+    <a href="{:U('User/index',array('act'=>'login'))}"><img src="{$Think.const.SHOP_IMG_URL}/bnt_log.gif" /></a>
+    <a href="{:U('User/index',array('act'=>'register'))}"><img src="{$Think.const.SHOP_IMG_URL}/bnt_reg.gif" /></a>
 </notempty>
