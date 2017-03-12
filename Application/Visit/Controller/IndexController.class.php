@@ -228,57 +228,17 @@ class IndexController extends Controller {
     }
 
     public function test_question_g(){
-        $usual_arr = array();
-        for($i = 0;$i < 9;$i++){
-            $usual_arr[$i] = $i + 1;
-        }
+        
+        $Nine = new \Visit\Lib\Test\Nine();       
+        $Nine->create_usual_arr(25);
+        
+        $Nine->get_rand_solution();
+        $Nine->show_one_solution();
 
-        $all_sum = array_sum($usual_arr);
-        $length = sizeof($usual_arr);
-        $baseWH = sqrt($length);
-        $middle = $all_sum/$length;
-        $magic_sum = $middle*$baseWH;
-        $mid_key = intval($length/2);
+       /* $Nine->get_all_position();
+        $Nine->get_all_solution();
+        $Nine->show_all_solution();*/
 
-        do{
-
-        $another_arr = array();
-        $copy_arr = $usual_arr;
-        $another_arr[$mid_key] = $middle;
-        for($i = 0;$i < $mid_key;$i++){
-
-            do{
-                $rand_key = array_rand($copy_arr);
-                $rand_one = $copy_arr[$rand_key];
-            }while(in_array($rand_one,$another_arr));
-           
-            array_splice($copy_arr, $rand_key,1);
-            $another_arr[$i] = $rand_one;
-            $another_arr[$length-1-$i] = $magic_sum-$middle-$rand_one;
-        }        
-        ksort($another_arr);
-
-         }while(
-            ($magic_sum != array_sum(array_slice($another_arr,0,$baseWH))) ||
-            ($magic_sum != $another_arr[0]+$another_arr[$baseWH]+$another_arr[2*$baseWH])
-            );
-
-        // echo $magic_sum,$another_arr[0],$another_arr[$baseWH],$another_arr[2*$baseWH];
-
-        $magic_table_htm = '<table border="1">';
-        foreach($another_arr as $key=>$val){
-            if($key%$baseWH == 0){
-                $magic_table_htm .= '<tr>';
-            }
-
-            $magic_table_htm .= '<td>'.$val.'</td>';
-
-            if($key%$baseWH == $baseWH-1){
-                $magic_table_htm .= '</tr>';
-            }
-        }
-        $magic_table_htm .= '</table>';
-        echo $magic_table_htm;
     }
 
     public function test_question_h(){
