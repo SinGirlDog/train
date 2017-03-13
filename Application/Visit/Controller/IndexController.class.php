@@ -16,7 +16,10 @@ class IndexController extends Controller {
                 U('Index/test_question_f',array('m'=>3,'n'=>13)),
                 U('Index/test_question_g'),
                 U('Index/test_question_h'),
-                U('Index/test_question_circle'),
+                U('Index/test_question_i',array('a'=>'get_users','uid'=>'10001')),
+                U('Index/test_question_j'),
+                U('Index/test_question_circle'),              
+
 
                 U('Ajaxload/index'),
                 U('Bai/index'),
@@ -41,6 +44,8 @@ class IndexController extends Controller {
                 '我是猴子请来的数组',
                 '九宫格初养成',
                 '十位数计算',
+                '借口：例',
+                '关于九宫格不可不说的往事',
                 '一件坏事',
 
                 '畸恋',
@@ -230,20 +235,47 @@ class IndexController extends Controller {
     public function test_question_g(){
         
         $Nine = new \Visit\Lib\Test\Nine();       
-        $Nine->create_usual_arr(25);
+        $Nine->create_usual_arr(9);
         
-        $Nine->get_rand_solution();
-        $Nine->show_one_solution();
+        // $Nine->get_rand_solution();
+        // $Nine->show_one_solution();
 
-       /* $Nine->get_all_position();
+        $Nine->get_all_position();
         $Nine->get_all_solution();
-        $Nine->show_all_solution();*/
+        $Nine->show_all_solution();
 
     }
 
     public function test_question_h(){
         $num_a = rand(1000000000,9999999999);
         echo $num_a*$num_a;
+    }
+
+    public function test_question_i($a='',$uid=''){
+        $Apidemo = new \Visit\Lib\Test\Apidemo();
+
+        $a_arr = array('get_users','get_games_result','upload_avatars','');
+        $a = $a_arr[array_rand($a_arr,1)];        
+        $uid = rand(10000,10004);
+
+        $res = $Apidemo->hello($a,$uid);
+
+        echo $res;
+    }
+
+    public function test_question_j(){
+        $Matrix = new \Visit\Lib\Test\Matrix();
+
+        $Matrix->create_base_matrix(5);
+        $Matrix->show_matrix('base');
+        $Matrix->twist_base_to_mag();
+        $Matrix->show_matrix('mag');
+        $Matrix->multi_mag_to_several();
+        $Matrix->show_matrix('several');
+        $Matrix->flip_mag_to_angle();
+        $Matrix->show_matrix('angle');
+        $Matrix->get_a_res();
+        $Matrix->show_matrix('res');
     }
   
 }

@@ -3,6 +3,15 @@ namespace Visit\Lib\Test;
 
 class Nine{
 
+	private $an_arr=array(
+		 1,20,18,19, 5,
+		22,24, 3, 9,16,
+		11,12,13,14,15,
+		10,17,23, 2, 4,
+		21, 7, 8, 6,25,
+		
+	);
+
 	public function create_usual_arr($n){
 		$usual_arr = array();
 
@@ -40,16 +49,24 @@ class Nine{
 	                $rand_one = $copy_arr[$rand_key];
 	            }while(in_array($rand_one,$another_arr));
 	           
-	            array_splice($copy_arr, $rand_key,1);
+	            // array_splice($copy_arr, $rand_key,1);
 	            $another_arr[$i] = $rand_one;
-	            $another_arr[$this->length-1-$i] = $this->magic_sum-$this->middle-$rand_one;
+	            $another_arr[$this->length-1-$i] = $copy_arr[$this->length-1-$rand_key];
 	        }        
 	        ksort($another_arr);
 
-        }while(
-            ($this->magic_sum != array_sum(array_slice($another_arr,0,$this->baseWH))) ||
-            ($this->magic_sum != $another_arr[0]+$another_arr[$this->baseWH]+$another_arr[2*$this->baseWH])
-            );
+	        // $cond_h_sum = array_sum(array_slice($another_arr,0,$this->baseWH));
+	        $cond_v_sum = 0;
+	        $cond_h_sum = 0;
+	        for($c = 0;$c < $this->baseWH;$c++){
+	        	 $cond_v_sum += $another_arr[$this->baseWH*$c];
+	        	 $cond_h_sum += $another_arr[$c];
+	        }
+	       // $this->show_one_solution($another_arr);
+	       // print_r($cond_h_sum);die;
+        }while(($this->magic_sum != $cond_h_sum)||
+        	($this->magic_sum != $cond_v_sum)  
+        );
 
         $this->an_arr = $another_arr;
 	}
