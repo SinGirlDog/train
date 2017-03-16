@@ -10,10 +10,40 @@
 <link rel="icon" href="<?php echo (SHOP_IMG_URL); ?>animated_favicon.gif" type="image/gif" />
 <link href="<?php echo (SHOP_CSS_URL); ?>style_pink.css" rel="stylesheet" type="text/css" />
 
+    <script src="<?php echo (SHOPADM_JS_URL); ?>jquery-2.1.0.min.js" type="text/javascript">
+    </script>
+    <script type="text/javascript">
+var username_empty = "<?php echo ($lang["passport_js"]["username_empty"]); ?>";
+var username_shorter = "<?php echo ($lang["passport_js"]["username_shorter"]); ?>";
+var password_empty = "<?php echo ($lang["passport_js"]["password_empty"]); ?>";
+var password_shorter = "<?php echo ($lang["passport_js"]["password_shorter"]); ?>";
+var confirm_password_invalid = "<?php echo ($lang["passport_js"]["confirm_password_invalid"]); ?>";
+var email_empty = "<?php echo ($lang["passport_js"]["email_empty"]); ?>";
+var email_invalid = "<?php echo ($lang["passport_js"]["email_invalid"]); ?>";
+var agreement = "<?php echo ($lang["passport_js"]["agreement"]); ?>";
+var msn_invalid = "<?php echo ($lang["passport_js"]["msn_invalid"]); ?>";
+var qq_invalid = "<?php echo ($lang["passport_js"]["qq_invalid"]); ?>";
+var home_phone_invalid = "<?php echo ($lang["passport_js"]["home_phone_invalid"]); ?>";
+var office_phone_invalid = "<?php echo ($lang["passport_js"]["office_phone_invalid"]); ?>";
+var mobile_phone_invalid = "<?php echo ($lang["passport_js"]["mobile_phone_invalid"]); ?>";
+var msg_un_blank = "<?php echo ($lang["passport_js"]["msg_un_blank"]); ?>";
+var msg_un_length = "<?php echo ($lang["passport_js"]["msg_un_length"]); ?>";
+var msg_un_format = "<?php echo ($lang["passport_js"]["msg_un_format"]); ?>";
+var msg_un_registered = "<?php echo ($lang["passport_js"]["msg_un_registered"]); ?>";
+var msg_can_rg = "<?php echo ($lang["passport_js"]["msg_can_rg"]); ?>";
+var msg_email_blank = "<?php echo ($lang["passport_js"]["msg_email_blank"]); ?>";
+var msg_email_registered = "<?php echo ($lang["passport_js"]["msg_email_registered"]); ?>";
+var msg_email_format = "<?php echo ($lang["passport_js"]["msg_email_format"]); ?>";
+var msg_blank = "<?php echo ($lang["passport_js"]["msg_blank"]); ?>";
+var no_select_question = "<?php echo ($lang["passport_js"]["no_select_question"]); ?>";
+var passwd_balnk = "<?php echo ($lang["passport_js"]["passwd_balnk"]); ?>"; 
+</script>
+
     <link href="<?php echo ($ecs_css_path); ?>" rel="stylesheet" type="text/css" />
     <script src='<?php echo (SHOP_JS_URL); ?>common.js'></script>
     <script src='<?php echo (SHOP_JS_URL); ?>index.js'></script>
     <script src='<?php echo (SHOP_JS_URL); ?>transport.js'></script>
+    <script src='<?php echo (SHOP_JS_URL); ?>user.js'></script>
 
     <body>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -38,8 +68,8 @@ var process_request = "<?php echo ($lang["process_request"]); ?>";
 <?php if(!empty($user_info)): ?><font style="position:relative; top:10px;">
         <?php echo ($lang["hello"]); ?>，
         <font class="f4_b"><?php echo ($user_info["username"]); ?></font>, <?php echo ($lang["welcome_return"]); ?>！
-        <a href="user.php"><?php echo ($lang["user_center"]); ?></a>|
-        <a href="user.php?act=logout"><?php echo ($lang["user_logout"]); ?></a>
+        <a href="<?php echo U('User/index',array('act'=>'default'));?>"><?php echo ($lang["user_center"]); ?></a>|
+        <a href="<?php echo U('User/logout');?>"><?php echo ($lang["user_logout"]); ?></a>
     </font>
     <?php else: ?> <?php echo ($lang["welcome"]); ?>&nbsp;&nbsp;&nbsp;&nbsp;
     <a href="<?php echo U('User/index',array('act'=>'login'));?>"><img src="<?php echo (SHOP_IMG_URL); ?>/bnt_log.gif" /></a>
@@ -69,18 +99,16 @@ var process_request = "<?php echo ($lang["process_request"]); ?>";
 <!--search start-->
 <div id="search" class="clearfix">
     <div class="keys f_l">
-        
-            <script type="text/javascript">
-            function checkSearchForm() {
-                if (document.getElementById('keyword').value) {
-                    return true;
-                } else {
-                    alert("{$lang.no_keywords}");
-                    return false;
-                }
+        <script type="text/javascript">
+        function checkSearchForm() {
+            if (document.getElementById('keyword').value) {
+                return true;
+            } else {
+                alert("<?php echo ($lang["no_keywords"]); ?>");
+                return false;
             }
-            </script>
-        
+        }
+        </script>
         <?php if(!empty($searchkeywords)): echo ($lang["hot_search"]); ?> ：
             <?php if(is_array($searchkeywords)): foreach($searchkeywords as $key=>$vo): ?><a href="search.php?keywords=<?php echo ($vo); ?>"><?php echo ($vo); ?></a><?php endforeach; endif; endif; ?>
     </div>
@@ -109,7 +137,7 @@ var process_request = "<?php echo ($lang["process_request"]); ?>";
         <?php switch($action): case "login": ?><div class="usBox clearfix">
     <div class="usBox_1 f_l">
         <div class="logtitle"></div>
-        <form name="formLogin" action="user.php" method="post" onSubmit="return userLogin()">
+        <form name="formLogin" action="<?php echo U('User/act_login');?>" method="post" onSubmit="return userLogin()">
             <table width="100%" border="0" align="left" cellpadding="3" cellspacing="5">
                 <tr>
                     <td width="15%" align="right"><?php echo ($lang["label_username"]); ?></td>
@@ -138,9 +166,9 @@ var process_request = "<?php echo ($lang["process_request"]); ?>";
                 <tr>
                     <td>&nbsp;</td>
                     <td align="left">
-                        <input type="hidden" name="act" value="act_login" />
-                        <input type="hidden" name="back_act" value="<?php echo ($back_act); ?>" />
-                        <input type="submit" name="submit" value="" class="us_Submit" />
+                        <!-- <input type="hidden" name="act" value="act_login" /> -->
+                        <!-- <input type="hidden" name="back_act" value="<?php echo ($back_act); ?>" /> -->
+                        <input type="submit" name="" value="" class="us_Submit" />
                     </td>
                 </tr>
                 <tr>
@@ -499,9 +527,9 @@ var both_password_error = "<?php echo ($lang["password_js"]["both_password_error
 </div>
 
     </body>
-    
     <script type="text/javascript">
     var process_request = "<?php echo ($lang["process_request"]); ?>";
     var username_exist = "<?php echo ($lang["username_exist"]); ?>";
     </script>
+
 </html>

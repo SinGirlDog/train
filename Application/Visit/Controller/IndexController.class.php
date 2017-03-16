@@ -18,6 +18,10 @@ class IndexController extends Controller {
                 U('Index/test_question_h'),
                 U('Index/test_question_i',array('a'=>'get_users','uid'=>'10001')),
                 U('Index/test_question_j'),
+                U('Index/test_question_k'),  
+                U('Index/test_question_l'), 
+                U('Index/test_question_m'),  
+                U('Index/test_question_n'),  
                 U('Index/test_question_circle'),              
 
 
@@ -46,6 +50,10 @@ class IndexController extends Controller {
                 '十位数计算',
                 '借口：例',
                 '关于九宫格不可不说的往事',
+                'IPv4验证',
+                '数字转身',
+                '秒数可读', 
+                '不太明白',               
                 '一件坏事',
 
                 '畸恋',
@@ -276,6 +284,69 @@ class IndexController extends Controller {
         $Matrix->show_matrix('angle');
         $Matrix->get_a_res();
         $Matrix->show_matrix('res');
+    }
+
+    public function test_question_k($value = '255.255.o.254'){
+        
+        $arr=explode('.',$value);
+
+        foreach($arr as $tem){
+            if($tem >= 0 && $tem < 256){
+                 $res = preg_match('/^[0-9]\d*$/',$tem);
+                 if(!$res){
+                    echo $tem;
+                    echo '<br/>';
+                 }                 
+            }
+            else{
+                echo $tem;
+                echo '<br/>';
+            }            
+        }
+        echo $value;
+        echo '<br/>';
+        
+    }
+
+    public function test_question_l($x = -3824){
+       
+        if($x<0){
+           $res = -1*strrev($x);
+        }
+        else{
+            $res = (int)strrev((string)$x);
+        }
+        var_dump($res);
+        // var_dump((int)strrev((string)$x));\
+        echo '弱类型语言有时候或许不需要强制类型转换';
+        /*弱类型语言有时候或许不需要强制类型转换*/
+    }
+
+    public function test_question_m($val = 10000){
+        echo date('d H:i:s',$val);
+        echo '<br/>';
+
+        $time = explode(' ', gmstrftime('%j %H %M %S', $val));
+        $format_time = ($time[0]-1).'天'.$time[1].'时'.$time[2].'分'.$time[3].'秒';
+
+        echo $format_time;
+        
+    }
+
+    public function test_question_n($var = 'http://127.0.0.1/index?id=number'){
+        $result['info'] = true;
+        var_dump(json_encode($result));
+        echo '<br/>';
+        echo 'php5.6.28版本CURL扩展暂未成功调通';
+        
+        if(version_compare(PHP_VERSION,'5.5.12','=')){
+
+            $http = new \Org\Net\Http();
+            $url = 'http://www.baidu.com/';
+            $path = U();
+            // $path = 'example_homepage.txt';
+            $http->curlDownload($url,$path);
+        }
     }
   
 }

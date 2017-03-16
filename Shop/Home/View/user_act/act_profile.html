@@ -1,0 +1,112 @@
+<script src='{$Think.const.SHOP_JS_URL}utils.js'></script>
+<include file="js_lang_htm/lang_profile_js" />
+<h5><span>{$lang.profile}</span></h5>
+<div class="blank"></div>
+<form name="formEdit" action="user.php" method="post" onSubmit="return userEdit()">
+    <table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd">
+        <tr>
+            <td width="28%" align="right" bgcolor="#FFFFFF">{$lang.birthday}： </td>
+            <td width="72%" align="left" bgcolor="#FFFFFF">
+                {html_select_date field_order=YMD prefix=birthday start_year=-60 end_year=+1 display_days=true month_format=%m day_value_format=%02d time=$profile.birthday}
+            </td>
+        </tr>
+        <tr>
+            <td width="28%" align="right" bgcolor="#FFFFFF">{$lang.sex}： </td>
+            <td width="72%" align="left" bgcolor="#FFFFFF">
+            <php>$sex_type = array($lang.secrecy,$lang.male,$lang.female);</php>
+                <for start="0" end="4" comparison="lt" step="1" name="rad_key">
+                    <if condition="$profile['sex'] eq $rad_key">
+                        <input type="radio" name="sex" value="{$ran_key}" checked="checked" />
+                        <else/>
+                        <input type="radio" name="sex" value="{$ran_key}" />
+                    </if>
+                    {$sex_type[$rand_key]}                    
+                    &nbsp;&nbsp;
+                </for>
+            </td>
+        </tr>
+        <tr>
+            <td width="28%" align="right" bgcolor="#FFFFFF">{$lang.email}： </td>
+            <td width="72%" align="left" bgcolor="#FFFFFF">
+                <input name="email" type="text" value="{$profile.email}" size="25" class="inputBg" /><span style="color:#FF0000"> *</span></td>
+        </tr>
+        <foreach name="extend_info_list" item="field">
+            <if condition="$field.id eq 6">
+                <tr>
+                    <td width="28%" align="right" bgcolor="#FFFFFF">{$lang.passwd_question}：</td>
+                    <td width="72%" align="left" bgcolor="#FFFFFF">
+                        <select name='sel_question'>
+                            <option value='0'>{$lang.sel_question}</option>
+                            {html_options options=$passwd_questions selected=$profile.passwd_question}
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <notempty name="field['is_need']">
+                        <td width="28%" align="right" bgcolor="#FFFFFF" id="passwd_quesetion">{$lang.passwd_answer}：
+                        </td>
+                        <td width="72%" align="left" bgcolor="#FFFFFF">
+                            <input name="passwd_answer" type="text" size="25" class="inputBg" maxlengt='20' value="{$profile.passwd_answer}" />
+                            <span style="color:#FF0000"> *</span>
+                        </td>
+                        <else/>
+                        <td width="28%" align="right" bgcolor="#FFFFFF">{$lang.passwd_answer}：
+                        </td>
+                        <td width="72%" align="left" bgcolor="#FFFFFF">
+                            <input name="passwd_answer" type="text" size="25" class="inputBg" maxlengt='20' value="{$profile.passwd_answer}" />
+                        </td>
+                    </notempty>
+                </tr>
+                <else/>
+                <tr>
+                    <notempty name="field['is_need']">
+                        <td width="28%" align="right" bgcolor="#FFFFFF" id="extend_field{$field.id}i">{$field.reg_field_name}：</td>
+                        <td width="72%" align="left" bgcolor="#FFFFFF">
+                            <input name="extend_field{$field.id}" type="text" class="inputBg" value="{$field.content}" />
+                            <span style="color:#FF0000"> *</span>
+                        </td>
+                        <else/>
+                        <td width="28%" align="right" bgcolor="#FFFFFF">{$field.reg_field_name}：</td>
+                        <td width="72%" align="left" bgcolor="#FFFFFF">
+                            <input name="extend_field{$field.id}" type="text" class="inputBg" value="{$field.content}" />
+                        </td>
+                    </notempty>
+                </tr>
+            </if>
+        </foreach>
+        <tr>
+            <td colspan="2" align="center" bgcolor="#FFFFFF">
+                <input name="act" type="hidden" value="act_edit_profile" />
+                <input name="submit" type="submit" value="{$lang.confirm_edit}" class="bnt_blue_1" style="border:none;" />
+            </td>
+        </tr>
+    </table>
+</form>
+<form name="formPassword" action="user.php" method="post" onSubmit="return editPassword()">
+    <table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd">
+        <tr>
+            <td width="28%" align="right" bgcolor="#FFFFFF">{$lang.old_password}：</td>
+            <td width="76%" align="left" bgcolor="#FFFFFF">
+                <input name="old_password" type="password" size="25" class="inputBg" />
+            </td>
+        </tr>
+        <tr>
+            <td width="28%" align="right" bgcolor="#FFFFFF">{$lang.new_password}：</td>
+            <td align="left" bgcolor="#FFFFFF">
+                <input name="new_password" type="password" size="25" class="inputBg" />
+            </td>
+        </tr>
+        <tr>
+            <td width="28%" align="right" bgcolor="#FFFFFF">{$lang.confirm_password}：</td>
+            <td align="left" bgcolor="#FFFFFF">
+                <input name="comfirm_password" type="password" size="25" class="inputBg" />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center" bgcolor="#FFFFFF">
+                <input name="act" type="hidden" value="act_edit_password" />
+                <input name="submit" type="submit" class="bnt_blue_1" style="border:none;" value="{$lang.confirm_edit}" />
+            </td>
+        </tr>
+    </table>
+</form>

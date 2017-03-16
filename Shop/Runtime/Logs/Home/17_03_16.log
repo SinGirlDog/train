@@ -1,0 +1,32 @@
+[ 2017-03-16T11:01:51+08:00 ] ::1 /train/Home/User/index.html
+ERR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)
+
+[ 2017-03-16T11:01:53+08:00 ] ::1 /train/
+ERR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)
+
+[ 2017-03-16T13:28:30+08:00 ] ::1 /train/Home/User/user.php
+ERR: 非法操作:user.php
+
+[ 2017-03-16T13:28:37+08:00 ] ::1 /train/Home/User/user.php
+ERR: 非法操作:user.php
+
+[ 2017-03-16T20:20:07+08:00 ] ::1 /train/index.php?s=/Home/Message/show_message/content/%E9%80%80%E5%87%BA/links//hrefs//type/info.html
+ERR: 非法操作:show_message
+
+[ 2017-03-16T22:09:30+08:00 ] ::1 /train/index.php?s=/Home/User/index/act/account_log.html
+ERR: 1054:Unknown column 'user_money' in 'field list'
+ [ SQL语句 ] : SELECT SUM(user_money) FROM `sp_user_account` WHERE `user_id` = 6 LIMIT 1  
+
+[ 2017-03-16T22:10:11+08:00 ] ::1 /train/index.php?s=/Home/User/index/act/account_log.html
+ERR: 1054:Unknown column 'user_money' in 'field list'
+ [ SQL语句 ] : SELECT SUM(user_money) AS `sum_money` FROM `sp_user_account` WHERE `user_id` = 6 LIMIT 1  
+
+[ 2017-03-16T22:36:37+08:00 ] ::1 /train/index.php?s=/Home/User/index/act/account_detail.html
+ERR: Think\Model:get_account方法不存在！
+
+[ 2017-03-16T22:37:38+08:00 ] ::1 /train/index.php?s=/Home/User/index/act/account_detail.html
+ERR: Think\Model:get_user_surplus方法不存在！
+
+[ 2017-03-16T22:39:47+08:00 ] ::1 /train/index.php?s=/Home/User/User.html?act=account_detail&page=1
+ERR: 非法操作:User.html?act=account_detail
+

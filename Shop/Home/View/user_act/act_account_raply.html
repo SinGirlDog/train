@@ -1,0 +1,24 @@
+<form name="formSurplus" method="post" action="user.php" onSubmit="return submitSurplus()">
+    <table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd">
+        <tr>
+            <td width="15%" bgcolor="#ffffff">{$lang.repay_money}:</td>
+            <td bgcolor="#ffffff" align="left">
+                <input type="text" name="amount" value="{$order.amount}" class="inputBg" size="30" />
+            </td>
+        </tr>
+        <tr>
+            <td bgcolor="#ffffff">{$lang.process_notic}:</td>
+            <td bgcolor="#ffffff" align="left">
+                <textarea name="user_note" cols="55" rows="6" style="border:1px solid #ccc;">{$order.user_note}</textarea>
+            </td>
+        </tr>
+        <tr>
+            <td bgcolor="#ffffff" colspan="2" align="center">
+                <input type="hidden" name="surplus_type" value="1" />
+                <input type="hidden" name="act" value="act_account" />
+                <input type="submit" name="submit" class="bnt_blue_1" value="{$lang.submit_request}" />
+                <input type="reset" name="reset" class="bnt_blue_1" value="{$lang.button_reset}" />
+            </td>
+        </tr>
+    </table>
+</form>

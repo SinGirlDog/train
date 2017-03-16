@@ -19,17 +19,119 @@ class UserController extends IndexController{
 
 	public function index(){
 
+		switch($this->action){			
+			case 'login':
+				$tpl_name = 'lbi:user_passport';
+			break;			
+			case 'account_log':
+				$this->account_log();
+				$tpl_name = 'lbi:user_transaction';			
+			break;
+			case 'account_detail':
+				$this->account_detail();
+				$tpl_name = 'lbi:user_transaction';			
+			break;
+			default:
+				$tpl_name = 'lbi:user_clips';
+			break;
+		}
+		$this->display($tpl_name);
+	}
 
-		// $this->display('lbi:user_clips');
+	public function act_login(){
+		$username = I('param.username');
+		$password = I('param.password');
+		$Users = D('Users');
+		$res = $Users->check_login($username,$password);
+		if($res){
+			// update_user_info();
+   			// recalculate_price();
+			
+			$show_param = array(
+				'content' => C('_LANG.login_success'),
+				'links' => array(
+					C('_LANG.back_up_page'),
+					C('_LANG.profile_lnk'),
+				),
+				'hrefs' => array(
+					$back_act,
+					U('User/index'),
+				),
+				'type' => 'info'
+			);	
+		}
+		else{
+			$show_param = array(
+				'content' => C('_LANG.login_failure'),
+				'links' => C('_LANG.relogin_lnk'),					
+				'hrefs' => U('User/index'),				
+				'type' => 'error'
+			);	
+		}
+		$this->show_message($show_param);
+	}
 
-		$this->display('lbi:user_passport');
+	public function logout(){
+		$Users = D('Users');
+		$Users->do_logout();
+		// echo '<pre/>';print_r(session());die;
+		$show_param= array(
+			'content' => C('_LANG.logout'),
+			'links' => array(
+				C('_LANG.back_up_page'),
+				C('_LANG.back_home_lnk'),
+			),				
+			'hrefs' => array(
+				U('Index/index'),
+				U('Index/index'),	
+			),			
+			'type' => 'info'
+		);		
+		$this->show_message($show_param);
+
+	}
+
+	protected function account_log(){
+		$UserAccount = D('UserAccount');
+		$record_count = $UserAccount->get_count();
+		$page = I('param.page',1);
+		$pager = get_pager(U('User'), array('act' => $this->$action), $record_count, $page);
+		$this->assign('pager', $pager);
+
+		$this->surplus_amount();
+
+		$account_log = $UserAccount->get_log($user_id, $pager['size'], $pager['start']);
+		$this->assign('account_log', $account_log);
+		// echo '<pre/>'; print_r($account_log);die;
+	}
+
+	protected function account_detail(){
+		$AccountLog = D('AccountLog');
+		$record_count = $AccountLog->get_count();
+		$page = I('param.page',1);
+		$pager = get_pager(U('User'), array('act' => $this->$action), $record_count, $page);
+
+		$this->surplus_amount();
+
+		$account_log = $AccountLog->get_log($user_id, $pager['size'], $pager['start']);
+		$this->assign('account_log', $account_log);
+	}
+
+	protected function surplus_amount(){
+		$UA = D('UserAccount');
+		$surplus_amount = $UA->get_user_surplus();
+		$this->assign('surplus_amount', price_format($surplus_amount,false));
 	}
 
 	protected function data_prepare(){
 
-		$this->action = 'login';
+		// $this->action = 'login';
+		$this->action = I('param.act','default');
+		// $this->assign('action',$this->action);
 
 		$this->navigator_list_prepare();
+
+		$this->assign_user_info();
 
 		$this->bread_crumb(0,C('_LANG.user_center'));
 
@@ -38,6 +140,13 @@ class UserController extends IndexController{
 		$Users = D('Users');
 		$info = $Users->get_user_default();
 		$this->assign('info',$info);
+		
+		$UserRank = D('UserRank');
+		$rank = $UserRank->get_rank_info();
+		if(!empty($rank)){
+			$this->assign('rank_name', sprintf(C('_LANG.your_level'), $rank['rank_name']));
+			$this->assign('next_rank_name', sprintf(C('_LANG.next_level'), $rank['next_rank'] ,$rank['next_rank_name']));
+		}		
 
 		$GoodsActivity = D('GoodsActivity');
 		$prompt = $GoodsActivity->get_user_prompt();
@@ -64,8 +173,6 @@ class UserController extends IndexController{
 		$Reg = D('RegFields');
 		$extend_info_list = $Reg->get_extend_info();
 		$this->assign('extend_info_list',$extend_info_list);
-
-		// echo '<pre/>'; print_r(C(''));die;
 	}
 
 	protected function _mergeConfig() {
@@ -74,9 +181,7 @@ class UserController extends IndexController{
 		$_USER_LANG = include ('./Shop/Home/Conf/lang_user_config.php');
 		$_PRE_LANG = C('_LANG');
 
-		$_MERGE_LANG = array_merge($_USER_LANG,$_PRE_LANG);
-		
-		// echo '<pre/>';			die;		
+		$_MERGE_LANG = array_merge($_USER_LANG,$_PRE_LANG);		
 
 		C('_LANG',$_MERGE_LANG);
 		$this->assign('lang',$_MERGE_LANG);

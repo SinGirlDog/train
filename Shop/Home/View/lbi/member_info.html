@@ -4,8 +4,8 @@
     <font style="position:relative; top:10px;">
         {$lang.hello}，
         <font class="f4_b">{$user_info.username}</font>, {$lang.welcome_return}！
-        <a href="user.php">{$lang.user_center}</a>|
-        <a href="user.php?act=logout">{$lang.user_logout}</a>
+        <a href="{:U('User/index',array('act'=>'default'))}">{$lang.user_center}</a>|
+        <a href="{:U('User/logout')}">{$lang.user_logout}</a>
     </font>
     <else/> {$lang.welcome}&nbsp;&nbsp;&nbsp;&nbsp;
     <a href="{:U('User/index',array('act'=>'login'))}"><img src="{$Think.const.SHOP_IMG_URL}/bnt_log.gif" /></a>

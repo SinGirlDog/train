@@ -17,6 +17,9 @@ class IndexController extends Controller {
 
     protected function _mergeConfig() {
 		$_LANG = include ('./Shop/Common/Conf/lang_config.php');
+        $_FLOW = include ('./Shop/Home/Conf/lang_shopping_flow.php');
+        $_LANG = array_merge($_LANG,$_FLOW);
+
         C('_LANG',$_LANG);
 		$this->assign('lang',$_LANG);
 
@@ -45,6 +48,7 @@ class IndexController extends Controller {
     protected function data_prepare(){
         
         $this->bread_crumb();
+        $this->assign_user_info();
 
         $Cart = D('Cart');
         $cart_info = $Cart->insert_cart_info();
@@ -129,5 +133,67 @@ class IndexController extends Controller {
         $position = assign_ur_here($cat,$str);
         $this->assign('page_title',      $position['title']);    // 页面标题
         $this->assign('ur_here',         $position['ur_here']);  // 当前位置
+    }
+
+    protected function assign_user_info(){        
+        $Users = D('Users');
+        $user_info = $Users->get_user_info();
+        $this->assign('user_info',$user_info);
+    }
+
+    /**
+     * 显示一个提示信息
+     *
+     * @param   string  $content
+     * @param   string  $link
+     * @param   string  $href
+     * @param   string  $type               信息类型：warning, error, info
+     * @param   string  $auto_redirect      是否自动跳转
+     * @return  void $content, $links = '', $hrefs = '', $type = 'info',
+     */
+    protected function show_message($params=array(),$auto_redirect = true){
+        
+        $content = $params['content'];
+        $links = $params['links'];
+        $hrefs = $params['hrefs'];
+        $type = $params['type'];                  
+        
+        // assign_template();
+
+        $msg['content'] = $content;
+        if (is_array($links) && is_array($hrefs))
+        {
+            if (!empty($links) && count($links) == count($hrefs))
+            {
+                foreach($links as $key =>$val)
+                {
+                    $msg['url_info'][$val] = $hrefs[$key];
+                }
+                $msg['back_url'] = $hrefs['0'];
+            }
+        }
+        else
+        {
+            $link   = empty($links) ? C('_LANG.back_up_page') : $links;
+            $href    = empty($hrefs) ? 'javascript:history.back()'       : $hrefs;
+            $msg['url_info'][$link] = $href;
+            $msg['back_url'] = $href;
+        }
+
+        $msg['type']    = $type;
+        $position = assign_ur_here(0, C('_LANG.sys_msg'));
+        $this->assign('page_title', $position['title']);   // 页面标题
+        $this->assign('ur_here',    $position['ur_here']); // 当前位置
+
+        // if (is_null($this->get_template_vars('helps')))
+        // {
+        //     $this->assign('helps', get_shop_help()); // 网店帮助
+        // }
+
+        $this->assign('auto_redirect', $auto_redirect);
+        $this->assign('message', $msg);
+        
+        $this->display('lbi:message'); 
+        // exit;
     }
 }

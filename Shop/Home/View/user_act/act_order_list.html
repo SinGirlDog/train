@@ -1,0 +1,56 @@
+<h5><span>{$lang.label_order}</span></h5>
+<div class="blank"></div>
+<table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd">
+    <tr align="center">
+        <td bgcolor="#ffffff">{$lang.order_number}</td>
+        <td bgcolor="#ffffff">{$lang.order_addtime}</td>
+        <td bgcolor="#ffffff">{$lang.order_money}</td>
+        <td bgcolor="#ffffff">{$lang.order_status}</td>
+        <td bgcolor="#ffffff">{$lang.handle}</td>
+    </tr>
+    <foreach name="orders" item="item">
+        <tr>
+            <td align="center" bgcolor="#ffffff"><a href="user.php?act=order_detail&order_id={$item.order_id}" class="f6">{$item.order_sn}</a></td>
+            <td align="center" bgcolor="#ffffff">{$item.order_time}</td>
+            <td align="right" bgcolor="#ffffff">{$item.total_fee}</td>
+            <td align="center" bgcolor="#ffffff">{$item.order_status}</td>
+            <td align="center" bgcolor="#ffffff">
+                <font class="f6">{$item.handler}</font>
+            </td>
+        </tr>
+    </foreach>
+</table>
+<div class="blank5"></div>
+<include file="lbi/pages" />
+<div class="blank5"></div>
+<h5><span>{$lang.merge_order}</span></h5>
+<div class="blank"></div>
+<include file="js_lang_htm/lang_merge_order_js" />
+<form action="user.php" method="post" name="formOrder" onsubmit="return mergeOrder()">
+    <table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd">
+        <tr>
+            <td width="22%" align="right" bgcolor="#ffffff">{$lang.first_order}:</td>
+            <td width="12%" align="left" bgcolor="#ffffff">
+                <select name="to_order">
+                    <option value="0">{$lang.select}</option>
+                    {html_options options=$merge}
+                </select>
+            </td>
+            <td width="19%" align="right" bgcolor="#ffffff">{$lang.second_order}:</td>
+            <td width="11%" align="left" bgcolor="#ffffff">
+                <select name="from_order">
+                    <option value="0">{$lang.select}</option>
+                    {html_options options=$merge}
+                </select>
+            </td>
+            <td width="36%" bgcolor="#ffffff">&nbsp;
+                <input name="act" value="merge_order" type="hidden" />
+                <input type="submit" name="Submit" class="bnt_blue_1" style="border:none;" value="{$lang.merge_order}" />
+            </td>
+        </tr>
+        <tr>
+            <td bgcolor="#ffffff">&nbsp;</td>
+            <td colspan="4" align="left" bgcolor="#ffffff">{$lang.merge_order_notice}</td>
+        </tr>
+    </table>
+</form>

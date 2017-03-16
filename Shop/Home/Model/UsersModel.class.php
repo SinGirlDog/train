@@ -4,6 +4,16 @@ use Think\Model;
 
 class UsersModel extends Model{
 
+
+	/* 是否需要同步数据到商城 */
+    protected $need_sync = false;
+   
+    protected $cookie_domain = '';
+    protected $cookie_path = '';
+
+    // protected $cookie_domain = C('COOKIE_DOMAIN');
+    // protected $cookie_path = C('COOKIE_PATH');
+
 	/**
 	 * 获取用户中心默认页面所需的数据
 	 *
@@ -12,7 +22,7 @@ class UsersModel extends Model{
 	 *
 	 * @return  array       $info               默认页面所需资料数组
 	 */
-	function get_user_default($user_id)
+	function get_user_default($user_id=0)
 	{
 	    $user_bonus = $this->get_user_bonus();
 
@@ -50,6 +60,34 @@ class UsersModel extends Model{
 	    return $info;
 	}
 
+	/**
+	 *  获取用户信息数组
+	 *
+	 * @param
+	 *
+	 * @return array        $user       用户信息数组
+	 */
+	public function get_user_info($id=0){
+
+		if ($id == 0){
+	        $id = session('user_id');
+	    }
+	    $user = array();
+	    if($id){
+
+		    $fields = array('user_id','email','user_name','user_money','pay_points');
+		    $condition = array('user_id'=>$id);
+
+		   	$user = $this->field($fields)->where($condition)->find();	    
+		    $bonus = $this->get_user_bonus($id);
+
+		    $user['username']    = $user['user_name'];
+		    $user['user_points'] = $user['pay_points'] . C('_CFG.integral_name');
+		    $user['user_money']  = price_format($user['user_money'], false);
+		    $user['user_bonus']  = price_format($bonus['bonus_value'], false);
+		}
+	    return $user;
+	}
 	/**
 	 * 查询会员的红包金额
 	 *
@@ -130,5 +168,153 @@ class UsersModel extends Model{
 		field($fields)->where($condition)->order($order)->find();
 		return $res;
 	}
+
+	public function check_login($username,$password){
+		// $this->set_session($username);		
+
+		if ($this->check_user($username, $password) > 0){
+            if ($this->need_sync){
+                $this->sync($username,$password);
+            }
+            $this->set_session($username);
+            $this->set_cookie($username, $remember);
+
+            return true;
+        }
+        else{
+            return false;
+        }
+	}
+
+	public function do_logout(){
+		$this->set_session();
+	}
+
+	protected function sync($username,$password){
+		return ;
+	}
+
+	protected function set_session($username){
+		
+		if(empty($username)){
+			//需要销毁session么
+			session('user_id',null);
+            session('user_name',null);
+            session('email',null);
+		}
+		else{
+			$fields = array('user_id', 'email');
+			$cond = array('user_name'=>$username);
+
+			$row = $this->fetchSql(false)->field($fields)->where($cond)->find();		
+
+			if ($row){
+	            session('user_id',$row['user_id']);
+	            session('user_name',$username);
+	            session('email',$row['email']);
+	        }
+		}		
+	}
+
+	protected function set_cookie($username='', $remember= null){
+
+		if (empty($username)){
+            /* 摧毁cookie */
+            $time = time() - 3600;
+            $options = array(
+            	'time'=>$time,
+            	'path'=>$this->cookie_path
+            );
+            cookie("ECS[user_id]", '', $options);            
+            cookie("ECS[password]", '', $options);
+        }
+        elseif ($remember)
+        {
+            /* 设置cookie */
+            $time = time() + 3600 * 24 * 15;
+            $options = array(
+            	'time'=>$time,
+            	'path'=>$this->cookie_path,
+            	'domain'=>$this->cookie_domain,
+            );
+
+            cookie("ECS[username]", $username, $options);
+
+            $fields = array('user_id', 'password');
+            $cond = array('user_name'=>$username);
+
+            $row = $this->field($fields)->where($cond)->find();
+            
+            if ($row){
+                cookie("ECS[user_id]", $row['user_id'], $options);
+                cookie("ECS[password]", $row['password'], $options);
+            }
+        }
+	}
+
+	public function check_user($username,$password){
+
+		$fields = array('user_id');
+        $condition = array('user_name'=>$username);
+
+        /* 如果没有定义密码则只检查用户名 */
+	    if (!empty($password)){
+			$condition['password'] = $this->compile_password(array('password'=>$password));
+	    }
+	    
+        $res = $this->fetchSql(false)->field($fields)->where($condition)->getField();
+        return $res;        
+	}
+
+	/**
+     *  编译密码函数
+     *
+     * @param   array   $cfg 包含参数为 $password, $md5password, $salt, $type
+     *
+     * @return void
+     */
+    public function compile_password ($cfg)
+    {
+       if (isset($cfg['password']))
+       {
+            $cfg['md5password'] = md5($cfg['password']);
+       }
+       if (empty($cfg['type']))
+       {
+            $cfg['type'] = C('PWD_MD5');
+       }
+
+       switch ($cfg['type'])
+       {
+           case C('PWD_MD5') :
+              	if(!empty($cfg['ec_salt']))
+		       {
+			       return md5($cfg['md5password'].$cfg['ec_salt']);
+		       }
+			   else
+		       {
+                    return $cfg['md5password'];
+			   }
+
+           case C('PWD_PRE_SALT') :
+               if (empty($cfg['salt']))
+               {
+                    $cfg['salt'] = '';
+               }
+
+               return md5($cfg['salt'] . $cfg['md5password']);
+
+           case C('PWD_SUF_SALT') :
+               if (empty($cfg['salt']))
+               {
+                    $cfg['salt'] = '';
+               }
+
+               return md5($cfg['md5password'] . $cfg['salt']);
+
+           default:
+               return '';
+       }
+    }
 
 }

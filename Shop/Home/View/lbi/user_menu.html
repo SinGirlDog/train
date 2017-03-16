@@ -1,54 +1,54 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <div class="userMenu">
+    <a href="{:U('User/index',array('act'=>$action))}" class="curs"> 
     <switch name="action">
-        <case value="default">
-            <a href="user.php" class="curs">
-                <img src="{$Think.const.SHOP_IMG_URL}u1.gif" /> {$lang.label_welcome}
-            </a>
+        <case value="default">            
+            <img src="{$Think.const.SHOP_IMG_URL}u1.gif" /> {$lang.label_welcome}
         </case>
         <case value="profile">
-            <a href="user.php?act=profile" class="curs"><img src="{$Think.const.SHOP_IMG_URL}u2.gif" /> {$lang.label_profile}</a>
+            <img src="{$Think.const.SHOP_IMG_URL}u2.gif" /> {$lang.label_profile}
         </case>
         <case value="order_list">
-            <a href="user.php?act=order_list" class="curs"><img src="{$Think.const.SHOP_IMG_URL}u3.gif" /> {$lang.label_order}</a>
+            <img src="{$Think.const.SHOP_IMG_URL}u3.gif" /> {$lang.label_order}
         </case>
         <case value="order_detail">
-            <a href="user.php?act=order_list" class="curs"><img src="{$Think.const.SHOP_IMG_URL}u3.gif" /> {$lang.label_order}</a>
+            <img src="{$Think.const.SHOP_IMG_URL}u3.gif" /> {$lang.label_order}
         </case>
         <case value="address_list">
-            <a href="user.php?act=address_list" class="curs"><img src="{$Think.const.SHOP_IMG_URL}u4.gif" /> {$lang.label_address}</a>
+            <img src="{$Think.const.SHOP_IMG_URL}u4.gif" /> {$lang.label_address}
         </case>
         <case value="collection_list">
-            <a href="user.php?act=collection_list" class="curs"><img src="{$Think.const.SHOP_IMG_URL}u5.gif" /> {$lang.label_collection}</a>
+            <img src="{$Think.const.SHOP_IMG_URL}u5.gif" /> {$lang.label_collection}
         </case>
         <case value="message_list">
-            <a href="user.php?Act=message_list" class="curs"><img src="{$Think.const.SHOP_IMG_URL}u6.gif" /> {$lang.label_message}</a>
+            <img src="{$Think.const.SHOP_IMG_URL}u6.gif" /> {$lang.label_message}
         </case>
         <case value="tag_list">
-            <a href="user.php?act=tag_list" class="curs"><img src="{$Think.const.SHOP_IMG_URL}u7.gif" /> {$lang.label_tag}</a>
+            <img src="{$Think.const.SHOP_IMG_URL}u7.gif" /> {$lang.label_tag}
         </case>
         <case value="booking_list">
-            <a href="user.php?act=booking_list" class="curs"><img src="{$Think.const.SHOP_IMG_URL}u8.gif" /> {$lang.label_booking}</a>
+            <img src="{$Think.const.SHOP_IMG_URL}u8.gif" /> {$lang.label_booking}
         </case>
         <case value="bonus">
-            <a href="user.php?act=bonus" class="curs"><img src="{$Think.const.SHOP_IMG_URL}u9.gif" /> {$lang.label_bonus}</a>
+            <img src="{$Think.const.SHOP_IMG_URL}u9.gif" /> {$lang.label_bonus}
         </case>
         <case value="affiliate">
-            <a href="user.php?act=affiliate" class="curs"><img src="{$Think.const.SHOP_IMG_URL}u10.gif" /> {$lang.label_affiliate}</a>
+            <img src="{$Think.const.SHOP_IMG_URL}u10.gif" /> {$lang.label_affiliate}
         </case>
         <case value="comment_list">
-            <a href="user.php?act=comment_list" class="curs"><img src="{$Think.const.SHOP_IMG_URL}u11.gif" /> {$lang.label_comment}</a>
+            <img src="{$Think.const.SHOP_IMG_URL}u11.gif" /> {$lang.label_comment}
         </case>
         <case value="track_packages">
-            <a href="user.php?act=track_packages" class="curs"><img src="{$Think.const.SHOP_IMG_URL}u12.gif" /> {$lang.label_track_packages}</a>
+            <img src="{$Think.const.SHOP_IMG_URL}u12.gif" /> {$lang.label_track_packages}
         </case>
         <case value="account_log">
-            <a href="user.php?act=account_log" class="curs"><img src="{$Think.const.SHOP_IMG_URL}u13.gif" /> {$lang.label_user_surplus}</a>
+            <img src="{$Think.const.SHOP_IMG_URL}u13.gif" /> {$lang.label_user_surplus}
         </case>
         <case value="transform_points">
-            <a href="user.php?act=transform_points" class="curs"><img src="{$Think.const.SHOP_IMG_URL}u14.gif" /> {$lang.label_transform_points}</a>
+            <img src="{$Think.const.SHOP_IMG_URL}u14.gif" /> {$lang.label_transform_points}
         </case>
         <default/>
-    </switch>
-    <a href="user.php?act=logout" style="background:none; text-align:right; margin-right:10px;"><img src="{$Think.const.SHOP_IMG_URL}bnt_sign.gif" /></a>
+        </switch>
+    </a>
+    <a href="{:U('User/index',array('act'=>'logout'))}" style="background:none; text-align:right; margin-right:10px;"><img src="{$Think.const.SHOP_IMG_URL}bnt_sign.gif" /></a>
 </div>

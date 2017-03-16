@@ -923,12 +923,12 @@
     <script src="<?php echo (SHOP_JS_URL); ?>common.js" type="text/javascript"></script>
     <script type="text/javascript">
 var process_request = "<?php echo ($lang["js_languages"]["process_request"]); ?>";
-var todolist_caption = "<?php echo ($lang["js_languages"]["process_request"]); ?>";
-var todolist_autosave = "<?php echo ($lang["js_languages"]["process_request"]); ?>";
-var todolist_save = "<?php echo ($lang["js_languages"]["process_request"]); ?>";
-var todolist_clear = "<?php echo ($lang["js_languages"]["process_request"]); ?>";
-var todolist_confirm_save = "<?php echo ($lang["js_languages"]["process_request"]); ?>";
-var todolist_confirm_clear = "<?php echo ($lang["js_languages"]["process_request"]); ?>";
+var todolist_caption = "<?php echo ($lang["js_languages"]["todolist_caption"]); ?>";
+var todolist_autosave = "<?php echo ($lang["js_languages"]["todolist_autosave"]); ?>";
+var todolist_save = "<?php echo ($lang["js_languages"]["todolist_save"]); ?>";
+var todolist_clear = "<?php echo ($lang["js_languages"]["todolist_clear"]); ?>";
+var todolist_confirm_save = "<?php echo ($lang["js_languages"]["todolist_confirm_save"]); ?>";
+var todolist_confirm_clear = "<?php echo ($lang["js_languages"]["todolist_confirm_clear"]); ?>";
 </script>
 
 </head>
@@ -1228,22 +1228,25 @@ onload = function()
         color: white;
     }
     </style>
-    <script src="<?php echo (SHOPADM_JS_URL); ?>jquery-2.1.0.min.js" type="text/javascript"></script>
-    <script src="<?php echo (SHOPADM_JS_URL); ?>easyform.js" type="text/javascript"></script>
-    <link href="<?php echo (SHOPADM_CSS_URL); ?>easyform.css" rel="stylesheet" type="text/css" />
+    <!-- <script src="<?php echo (SHOPADM_JS_URL); ?>jquery-2.1.0.min.js" type="text/javascript"></script> <script src="<?php echo (SHOPADM_JS_URL); ?>easyform.js" type="text/javascript"></script>
+    <link href="<?php echo (SHOPADM_CSS_URL); ?>easyform.css" rel="stylesheet" type="text/css" /> -->
     <!-- <script language="JavaScript">
     if (window.parent != window) {
         window.top.location.href = location.href;
     }
     </script> -->
+    <script src="<?php echo (SHOPADM_JS_URL); ?>jquery-2.1.0.min.js" type="text/javascript"></script>
+<script src="<?php echo (SHOPADM_JS_URL); ?>easyform.js" type="text/javascript"></script>
+<link href="<?php echo (SHOPADM_CSS_URL); ?>easyform.css" rel="stylesheet" type="text/css" />
+
     <script type="text/javascript">
 var process_request = "<?php echo ($lang["js_languages"]["process_request"]); ?>";
-var todolist_caption = "<?php echo ($lang["js_languages"]["process_request"]); ?>";
-var todolist_autosave = "<?php echo ($lang["js_languages"]["process_request"]); ?>";
-var todolist_save = "<?php echo ($lang["js_languages"]["process_request"]); ?>";
-var todolist_clear = "<?php echo ($lang["js_languages"]["process_request"]); ?>";
-var todolist_confirm_save = "<?php echo ($lang["js_languages"]["process_request"]); ?>";
-var todolist_confirm_clear = "<?php echo ($lang["js_languages"]["process_request"]); ?>";
+var todolist_caption = "<?php echo ($lang["js_languages"]["todolist_caption"]); ?>";
+var todolist_autosave = "<?php echo ($lang["js_languages"]["todolist_autosave"]); ?>";
+var todolist_save = "<?php echo ($lang["js_languages"]["todolist_save"]); ?>";
+var todolist_clear = "<?php echo ($lang["js_languages"]["todolist_clear"]); ?>";
+var todolist_confirm_save = "<?php echo ($lang["js_languages"]["todolist_confirm_save"]); ?>";
+var todolist_confirm_clear = "<?php echo ($lang["js_languages"]["todolist_confirm_clear"]); ?>";
 </script>
 
 </head>

@@ -1,0 +1,22 @@
+<table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd">
+    <tr align="center">
+        <td bgcolor="#ffffff">{$lang.process_time}</td>
+        <td bgcolor="#ffffff">{$lang.surplus_pro_type}</td>
+        <td bgcolor="#ffffff">{$lang.money}</td>
+        <td bgcolor="#ffffff">{$lang.change_desc}</td>
+    </tr>
+    <foreach name="account_log" item="item">
+        <tr>
+            <td align="center" bgcolor="#ffffff">{$item.change_time}</td>
+            <td align="center" bgcolor="#ffffff">{$item.type}</td>
+            <td align="right" bgcolor="#ffffff">{$item.amount}</td>
+            <td bgcolor="#ffffff" title="{$item.change_desc}">&nbsp;&nbsp;{$item.short_change_desc}</td>
+        </tr>
+    </foreach>
+    <tr>
+        <td colspan="4" align="center" bgcolor="#ffffff">
+            <div align="right">{$lang.current_surplus}{$surplus_amount}</div>
+        </td>
+    </tr>
+</table>
+<include file="lbi/pages" />

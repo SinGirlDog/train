@@ -1,0 +1,42 @@
+<include file="js_lang_htm/lang_profile_js" />
+<h5><span>{$lang.label_bonus}</span></h5>
+<div class="blank"></div>
+<table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd">
+    <tr>
+        <th align="center" bgcolor="#FFFFFF">{$lang.bonus_sn}</th>
+        <th align="center" bgcolor="#FFFFFF">{$lang.bonus_name}</th>
+        <th align="center" bgcolor="#FFFFFF">{$lang.bonus_amount}</th>
+        <th align="center" bgcolor="#FFFFFF">{$lang.min_goods_amount}</th>
+        <th align="center" bgcolor="#FFFFFF">{$lang.bonus_end_date}</th>
+        <th align="center" bgcolor="#FFFFFF">{$lang.bonus_status}</th>
+    </tr>
+    <notempty name="bonus">
+        <foreach name="bonus" item="item">
+            <tr>
+                <td align="center" bgcolor="#FFFFFF">{$item.bonus_sn}</td>
+                <td align="center" bgcolor="#FFFFFF">{$item.type_name}</td>
+                <td align="center" bgcolor="#FFFFFF">{$item.type_money}</td>
+                <td align="center" bgcolor="#FFFFFF">{$item.min_goods_amount}</td>
+                <td align="center" bgcolor="#FFFFFF">{$item.use_enddate}</td>
+                <td align="center" bgcolor="#FFFFFF">{$item.status}</td>
+            </tr>
+        </foreach>
+        <else/>
+        <tr>
+            <td colspan="6" bgcolor="#FFFFFF">{$lang.user_bonus_empty}</td>
+        </tr>
+    </notempty>
+</table>
+<div class="blank5"></div>
+<include file="lbi/pages" />
+<div class="blank5"></div>
+<h5><span>{$lang.add_bonus}</span></h5>
+<div class="blank"></div>
+<form name="addBouns" action="user.php" method="post" onSubmit="return addBonus()">
+    <div style="padding: 15px;">
+        {$lang.bonus_number}
+        <input name="bonus_sn" type="text" size="30" class="inputBg" />
+        <input type="hidden" name="act" value="act_add_bonus" class="inputBg" />
+        <input type="submit" class="bnt_blue_1" style="border:none;" value="{$lang.add_bonus}" />
+    </div>
+</form>

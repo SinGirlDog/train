@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 
-<head>   
-    <include file="commonhtml/in_head"/>
+<head>
+    <include file="commonhtml/in_head" />
     <link rel="alternate" type="application/rss+xml" title="RSS|{$page_title}" href="{$feed_url}" />
     <script src='{$Think.const.SHOP_JS_URL}common.js'></script>
     <script src='{$Think.const.SHOP_JS_URL}index.js'></script>
@@ -87,20 +87,7 @@
     <div class="blank"></div>
     <!--帮助-->
     <!--友情链接 start-->
-    <notempty name="links">
-        <div id="bottomNav" class="box">
-            <div class="box_1">
-                <div class="links clearfix">
-                    <foreach name="links['img']" item="link">
-                        <a href="{$link.url}" target="_blank" title="{$link.name}"><img src="{$link.logo}" alt="{$link.name}" border="0" /></a>
-                    </foreach>
-                    <foreach name="links['txt']" item="link">
-                        [<a href="{$link.url}" target="_blank" title="{$link.name}">{$link.name}</a>]
-                    </foreach>
-                </div>
-            </div>
-        </div>
-    </notempty>
+    <include file="commonhtml/friend_links" />
     <!--友情链接 end-->
     <div class="blank"></div>
     <include file="lbi/page_footer" />

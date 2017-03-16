@@ -1,7 +1,7 @@
 <div class="usBox clearfix">
     <div class="usBox_1 f_l">
         <div class="logtitle"></div>
-        <form name="formLogin" action="user.php" method="post" onSubmit="return userLogin()">
+        <form name="formLogin" action="{:U('User/act_login')}" method="post" onSubmit="return userLogin()">
             <table width="100%" border="0" align="left" cellpadding="3" cellspacing="5">
                 <tr>
                     <td width="15%" align="right">{$lang.label_username}</td>
@@ -32,9 +32,9 @@
                 <tr>
                     <td>&nbsp;</td>
                     <td align="left">
-                        <input type="hidden" name="act" value="act_login" />
-                        <input type="hidden" name="back_act" value="{$back_act}" />
-                        <input type="submit" name="submit" value="" class="us_Submit" />
+                        <!-- <input type="hidden" name="act" value="act_login" /> -->
+                        <!-- <input type="hidden" name="back_act" value="{$back_act}" /> -->
+                        <input type="submit" name="" value="" class="us_Submit" />
                     </td>
                 </tr>
                 <tr>

@@ -1,7 +1,7 @@
 <?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html>
 
-<head>   
+<head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="Keywords" content="<?php echo ($keywords); ?>" />
 <meta name="Description" content="<?php echo ($description); ?>" />
@@ -38,8 +38,8 @@ var process_request = "<?php echo ($lang["process_request"]); ?>";
 <?php if(!empty($user_info)): ?><font style="position:relative; top:10px;">
         <?php echo ($lang["hello"]); ?>，
         <font class="f4_b"><?php echo ($user_info["username"]); ?></font>, <?php echo ($lang["welcome_return"]); ?>！
-        <a href="user.php"><?php echo ($lang["user_center"]); ?></a>|
-        <a href="user.php?act=logout"><?php echo ($lang["user_logout"]); ?></a>
+        <a href="<?php echo U('User/index',array('act'=>'default'));?>"><?php echo ($lang["user_center"]); ?></a>|
+        <a href="<?php echo U('User/logout');?>"><?php echo ($lang["user_logout"]); ?></a>
     </font>
     <?php else: ?> <?php echo ($lang["welcome"]); ?>&nbsp;&nbsp;&nbsp;&nbsp;
     <a href="<?php echo U('User/index',array('act'=>'login'));?>"><img src="<?php echo (SHOP_IMG_URL); ?>/bnt_log.gif" /></a>
@@ -69,18 +69,16 @@ var process_request = "<?php echo ($lang["process_request"]); ?>";
 <!--search start-->
 <div id="search" class="clearfix">
     <div class="keys f_l">
-        
-            <script type="text/javascript">
-            function checkSearchForm() {
-                if (document.getElementById('keyword').value) {
-                    return true;
-                } else {
-                    alert("{$lang.no_keywords}");
-                    return false;
-                }
+        <script type="text/javascript">
+        function checkSearchForm() {
+            if (document.getElementById('keyword').value) {
+                return true;
+            } else {
+                alert("<?php echo ($lang["no_keywords"]); ?>");
+                return false;
             }
-            </script>
-        
+        }
+        </script>
         <?php if(!empty($searchkeywords)): echo ($lang["hot_search"]); ?> ：
             <?php if(is_array($searchkeywords)): foreach($searchkeywords as $key=>$vo): ?><a href="search.php?keywords=<?php echo ($vo); ?>"><?php echo ($vo); ?></a><?php endforeach; endif; endif; ?>
     </div>
@@ -547,13 +545,14 @@ function check_email() {
     <!--帮助-->
     <!--友情链接 start-->
     <?php if(!empty($links)): ?><div id="bottomNav" class="box">
-            <div class="box_1">
-                <div class="links clearfix">
-                    <?php if(is_array($links['img'])): foreach($links['img'] as $key=>$link): ?><a href="<?php echo ($link["url"]); ?>" target="_blank" title="<?php echo ($link["name"]); ?>"><img src="<?php echo ($link["logo"]); ?>" alt="<?php echo ($link["name"]); ?>" border="0" /></a><?php endforeach; endif; ?>
-                    <?php if(is_array($links['txt'])): foreach($links['txt'] as $key=>$link): ?>[<a href="<?php echo ($link["url"]); ?>" target="_blank" title="<?php echo ($link["name"]); ?>"><?php echo ($link["name"]); ?></a>]<?php endforeach; endif; ?>
-                </div>
+        <div class="box_1">
+            <div class="links clearfix">
+                <?php if(is_array($links['img'])): foreach($links['img'] as $key=>$link): ?><a href="<?php echo ($link["url"]); ?>" target="_blank" title="<?php echo ($link["name"]); ?>"><img src="<?php echo ($link["logo"]); ?>" alt="<?php echo ($link["name"]); ?>" border="0" /></a><?php endforeach; endif; ?>
+                <?php if(is_array($links['txt'])): foreach($links['txt'] as $key=>$link): ?>[<a href="<?php echo ($link["url"]); ?>" target="_blank" title="<?php echo ($link["name"]); ?>"><?php echo ($link["name"]); ?></a>]<?php endforeach; endif; ?>
             </div>
-        </div><?php endif; ?>
+        </div>
+    </div><?php endif; ?>
+
     <!--友情链接 end-->
     <div class="blank"></div>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">

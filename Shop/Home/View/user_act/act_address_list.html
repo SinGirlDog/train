@@ -1,0 +1,125 @@
+<h5><span>{$lang.consignee_info}</span></h5>
+<div class="blank"></div>
+<script src='{$Think.const.SHOP_JS_URL}utils.js'></script>
+<script src='{$Think.const.SHOP_JS_URL}transport.js'></script>
+<script src='{$Think.const.SHOP_JS_URL}region.js'></script>
+<script src='{$Think.const.SHOP_JS_URL}shopping_flow.js'></script>
+<script type="text/javascript">
+region.isAdmin = false;
+onload = function() {
+    if (!document.all) {
+        document.forms['theForm'].reset();
+    }
+}
+</script>
+<include file="js_lang_htm/lang_flow_js" />
+<foreach name="consignee_list" item="consignee" key="sn">
+    <form action="user.php" method="post" name="theForm" onsubmit="return checkConsignee(this)">
+        <table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd">
+            <tr>
+                <td align="right" bgcolor="#ffffff">{$lang.country_province}：</td>
+                <td colspan="3" align="left" bgcolor="#ffffff">
+                    <select name="country" id="selCountries_{$sn}" onchange="region.changed(this, 1, 'selProvinces_{$sn}')">
+                        <option value="0">{$lang.please_select}{$name_of_region[0]}</option>
+                        <foreach name="country_list" item="country">
+                            <if condition="$consignee.country eq $country.region_id">
+                                <option value="{$country.region_id}" selected>
+                                    {$country.region_name}</option>
+                                <else/>
+                                <option value="{$country.region_id}">
+                                    {$country.region_name}</option>
+                            </if>
+                        </foreach>
+                    </select>
+                    <select name="province" id="selProvinces_{$sn}" onchange="region.changed(this, 2, 'selCities_{$sn}')">
+                        <option value="0">{$lang.please_select}{$name_of_region[1]}</option>
+                        <foreach name="province_list['sn']" item="province ">
+                            <if condition="$consignee.province eq $province.region_id ">
+                                <option value="{$province.region_id}" selected>{$province.region_name}</option>
+                                <else/>
+                                <option value="{$province.region_id}">
+                                    {$province.region_name}</option>
+                            </if>
+                        </foreach>
+                    </select>
+                    <select name="city " id="selCities_{$sn} " onchange="region.changed(this, 3, 'selDistricts_{$sn}') ">
+                        <option value="0 ">{$lang.please_select}{$name_of_region[2]}</option>
+                        <foreach name="city_list.sn " item="city ">
+                            <if condition="$consignee.city eq $city.region_id">
+                                <option value="{$city.region_id} " selected>
+                                    {$city.region_name}</option>
+                                <else/>
+                                <option value="{$city.region_id} " selected>
+                                    {$city.region_name}</option>
+                            </if>
+                        </foreach>
+                    </select>
+                    <notempty name="district_list.sn">
+                        <select name="district " id="selDistricts_{$sn} ">
+                            <option value="0 ">{$lang.please_select}{$name_of_region[3]}</option>
+                            <foreach name="district_list.sn" item="district ">
+                                <if condition="$consignee.district eq $district.region_id">
+                                    <option value="{$district.region_id} " selected>{$district.region_name}</option>
+                                    <else/>
+                                    <option value="{$district.region_id} ">{$district.region_name}</option>
+                                </if>
+                            </foreach>
+                        </select>
+                    </notempty>
+                    {$lang.require_field} </td>
+            </tr>
+            <tr>
+                <td align="right " bgcolor="#ffffff ">{$lang.consignee_name}：</td>
+                <td align="left " bgcolor="#ffffff ">
+                    <input name="consignee " type="text " class="inputBg " id="consignee_{$sn} " value="{$consignee.consignee} " /> {$lang.require_field} </td>
+                <td align="right " bgcolor="#ffffff ">{$lang.email_address}：</td>
+                <td align="left " bgcolor="#ffffff ">
+                    <input name="email " type="text " class="inputBg " id="email_{$sn} " value="{$consignee.email} " /> {$lang.require_field}
+                </td>
+            </tr>
+            <tr>
+                <td align="right " bgcolor="#ffffff ">{$lang.detailed_address}：</td>
+                <td align="left " bgcolor="#ffffff ">
+                    <input name="address " type="text " class="inputBg " id="address_{$sn} " value="{$consignee.address} " /> {$lang.require_field}
+                </td>
+                <td align="right " bgcolor="#ffffff ">{$lang.postalcode}：</td>
+                <td align="left " bgcolor="#ffffff ">
+                    <input name="zipcode " type="text " class="inputBg " id="zipcode_{$sn} " value="{$consignee.zipcode} " />
+                </td>
+            </tr>
+            <tr>
+                <td align="right " bgcolor="#ffffff ">{$lang.phone}：</td>
+                <td align="left " bgcolor="#ffffff ">
+                    <input name="tel " type="text " class="inputBg " id="tel_{$sn} " value="{$consignee.tel} " /> {$lang.require_field}
+                </td>
+                <td align="right " bgcolor="#ffffff ">{$lang.backup_phone}：</td>
+                <td align="left " bgcolor="#ffffff ">
+                    <input name="mobile " type="text " class="inputBg " id="mobile_{$sn} " value="{$consignee.mobile} " />
+                </td>
+            </tr>
+            <tr>
+                <td align="right " bgcolor="#ffffff ">{$lang.sign_building}：</td>
+                <td align="left " bgcolor="#ffffff ">
+                    <input name="sign_building " type="text " class="inputBg " id="sign_building_{$sn} " value="{$consignee.sign_building} " />
+                </td>
+                <td align="right " bgcolor="#ffffff ">{$lang.deliver_goods_time}：</td>
+                <td align="left " bgcolor="#ffffff ">
+                    <input name="best_time " type="text " class="inputBg " id="best_time_{$sn} " value="{$consignee.best_time} " />
+                </td>
+            </tr>
+            <tr>
+                <td align="right " bgcolor="#ffffff ">&nbsp;</td>
+                <td colspan="3 " align="center " bgcolor="#ffffff ">
+                    <if condition="!empty($consignee.consignee) && !empty($consignee.email)">
+                        <input type="submit " name="submit " class="bnt_blue_1 " value="{$lang.confirm_edit} " />
+                        <input name="button " type="button " class="bnt_blue " onclick="if (confirm( '{$lang.confirm_drop_address}'))location.href='user.php?act=drop_consignee&id={$consignee.address_id}' " value="{$lang.drop} " />
+                        <else>
+                            <input type="submit " name="submit " class="bnt_blue_2 " value="{$lang.add_address} " />
+                    </if>
+                    <input type="hidden " name="act " value="act_edit_address " />
+                    <input name="address_id " type="hidden " value="{$consignee.address_id} " />
+                </td>
+            </tr>
+        </table>
+    </form>
+</foreach>

@@ -1,50 +1,50 @@
-<if condition="$action eq 'default'">
-    <font class="f5"><b class="f4">{$info.username}</b> {$lang.welcome_to} {$info.shop_name}！</font>
+<font class="f5">
+    <b class="f4">{$info.username}</b> {$lang.welcome_to} {$info.shop_name}！
+</font>
+<br />
+<div class="blank"></div>
+{$lang.last_time}: {$info.last_time}
+<br />
+<div class="blank5"></div>
+{$rank_name} {$next_rank_name}
+<br />
+<div class="blank5"></div>
+<if condition="$info.is_validate eq 0">
+    {$lang.not_validated} <a href="javascript:sendHashMail()" style="color:#006bd0;">{$lang.resend_hash_mail}</a>
     <br />
+</if>
+<div style="margin:5px 0; border:1px solid #a1675a;padding:10px 20px; background-color:#e8d1c9;">
+    <img src="{$Think.const.SHOP_IMG_URL}note.gif" alt="note" />&nbsp;{$user_notice}
+</div>
+<br />
+<br />
+<div class="f_l" style="width:350px;">
+    <h5><span>{$lang.your_account}</span></h5>
     <div class="blank"></div>
-    {$lang.last_time}: {$info.last_time}
+    {$lang.your_surplus}:<a href="{:U('User/index',array('act'=>'account_log'))}" style="color:#006bd0;">{$info.surplus}</a>
     <br />
-    <div class="blank5"></div>
-    {$rank_name} {$next_rank_name}
-    <br />
-    <div class="blank5"></div>
-    <if condition="$info.is_validate eq 0">
-        {$lang.not_validated} <a href="javascript:sendHashMail()" style="color:#006bd0;">{$lang.resend_hash_mail}</a>
+    <if condition="$info.credit_line gt 0">
+        {$lang.credit_line}:{$info.formated_credit_line}
         <br />
     </if>
-    <div style="margin:5px 0; border:1px solid #a1675a;padding:10px 20px; background-color:#e8d1c9;">
-        <img src="images/note.gif" alt="note" />&nbsp;{$user_notice}
-    </div>
+    {$lang.your_bonus}:<a href="{:U('User/index',array('act'=>'bonus'))}" style="color:#006bd0;">{$info.bonus}</a>
+    <br /> {$lang.your_integral}:{$info.integral}
     <br />
+</div>
+<div class="f_r" style="width:350px;">
+    <h5><span>{$lang.your_notice}</span></h5>
+    <div class="blank"></div>
+    <foreach name="prompt" item="item">
+        {$item.text}
+        <br />
+    </foreach>
+    {$lang.last_month_order}{$info.order_count}{$lang.order_unit}
     <br />
-    <div class="f_l" style="width:350px;">
-        <h5><span>{$lang.your_account}</span></h5>
-        <div class="blank"></div>
-        {$lang.your_surplus}:<a href="user.php?act=account_log" style="color:#006bd0;">{$info.surplus}</a>
+    <notempty name="info['shipped_order']">
+        {$lang.please_received}
         <br />
-        <if condition="$info.credit_line gt 0">
-            {$lang.credit_line}:{$info.formated_credit_line}
-            <br />
-        </if>
-        {$lang.your_bonus}:<a href="user.php?act=bonus" style="color:#006bd0;">{$info.bonus}</a>
-        <br /> {$lang.your_integral}:{$info.integral}
-        <br />
-    </div>
-    <div class="f_r" style="width:350px;">
-        <h5><span>{$lang.your_notice}</span></h5>
-        <div class="blank"></div>
-        <foreach name="prompt" item="item">
-            {$item.text}
-            <br />
+        <foreach name="info['shipped_order']" item="item">
+            <a href="{:U('User/index',array('act'=>'order_detail','order_id'=>$item.order_id))}" style="color:#006bd0;">{$item.order_sn}</a>
         </foreach>
-        {$lang.last_month_order}{$info.order_count}{$lang.order_unit}
-        <br />
-        <notempty name="info['shipped_order']">
-            {$lang.please_received}
-            <br />
-            <foreach name="info['shipped_order']" item="item">
-                <a href="user.php?act=order_detail&order_id={$item.order_id}" style="color:#006bd0;">{$item.order_sn}</a>
-            </foreach>
-        </notempty>
-    </div>
-</if>
+    </notempty>
+</div>

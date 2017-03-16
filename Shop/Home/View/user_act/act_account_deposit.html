@@ -1,0 +1,43 @@
+<form name="formSurplus" method="post" action="user.php" onSubmit="return submitSurplus()">
+    <table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd">
+        <tr>
+            <td width="15%" bgcolor="#ffffff">{$lang.deposit_money}:</td>
+            <td align="left" bgcolor="#ffffff">
+                <input type="text" name="amount" class="inputBg" value="{$order.amount}" size="30" />
+            </td>
+        </tr>
+        <tr>
+            <td bgcolor="#ffffff">{$lang.process_notic}:</td>
+            <td align="left" bgcolor="#ffffff">
+                <textarea name="user_note" cols="55" rows="6" style="border:1px solid #ccc;">{$order.user_note}</textarea>
+            </td>
+        </tr>
+    </table>
+    <table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd">
+        <tr align="center">
+            <td bgcolor="#ffffff" colspan="3" align="left">{$lang.payment}:</td>
+        </tr>
+        <tr align="center">
+            <td bgcolor="#ffffff">{$lang.pay_name}</td>
+            <td bgcolor="#ffffff" width="60%">{$lang.pay_desc}</td>
+            <td bgcolor="#ffffff" width="17%">{$lang.pay_fee}</td>
+        </tr>
+        <foreach name="payment" item="list">
+            <tr>
+                <td bgcolor="#ffffff" align="left">
+                    <input type="radio" name="payment_id" value="{$list.pay_id}" />{$list.pay_name}</td>
+                <td bgcolor="#ffffff" align="left">{$list.pay_desc}</td>
+                <td bgcolor="#ffffff" align="center">{$list.pay_fee}</td>
+            </tr>
+        </foreach>
+        <tr>
+            <td bgcolor="#ffffff" colspan="3" align="center">
+                <input type="hidden" name="surplus_type" value="0" />
+                <input type="hidden" name="rec_id" value="{$order.id}" />
+                <input type="hidden" name="act" value="act_account" />
+                <input type="submit" class="bnt_blue_1" name="submit" value="{$lang.submit_request}" />
+                <input type="reset" class="bnt_blue_1" name="reset" value="{$lang.button_reset}" />
+            </td>
+        </tr>
+    </table>
+</form>

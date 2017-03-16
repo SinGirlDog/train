@@ -3,16 +3,13 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="Keywords" content="<?php echo ($keywords); ?>" />
-    <meta name="Description" content="<?php echo ($description); ?>" />
-    <!-- TemplateBeginEditable name="doctitle" -->
-    <title><?php echo ($page_title); ?></title>
-    <!-- TemplateEndEditable -->
-    <!-- TemplateBeginEditable name="head" -->
-    <!-- TemplateEndEditable -->
-    <link rel="shortcut icon" href="favicon.ico" />
-    <link rel="icon" href="<?php echo (SHOP_IMG_URL); ?>animated_favicon.gif" type="image/gif" />
-    <link href="<?php echo (SHOP_CSS_URL); ?>style_pink.css" rel="stylesheet" type="text/css" />
+<meta name="Keywords" content="<?php echo ($keywords); ?>" />
+<meta name="Description" content="<?php echo ($description); ?>" />
+<title><?php echo ($page_title); ?></title>
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="<?php echo (SHOP_IMG_URL); ?>animated_favicon.gif" type="image/gif" />
+<link href="<?php echo (SHOP_CSS_URL); ?>style_pink.css" rel="stylesheet" type="text/css" />
+
     <link rel="alternate" type="application/rss+xml" title="RSS|<?php echo ($page_title); ?>" href="<?php echo ($feed_url); ?>" />
     <script src='<?php echo (SHOP_JS_URL); ?>common.js'></script>
     <script src='<?php echo (SHOP_JS_URL); ?>user.js'></script>
@@ -41,12 +38,12 @@ var process_request = "<?php echo ($lang["process_request"]); ?>";
 <?php if(!empty($user_info)): ?><font style="position:relative; top:10px;">
         <?php echo ($lang["hello"]); ?>，
         <font class="f4_b"><?php echo ($user_info["username"]); ?></font>, <?php echo ($lang["welcome_return"]); ?>！
-        <a href="user.php"><?php echo ($lang["user_center"]); ?></a>|
-        <a href="user.php?act=logout"><?php echo ($lang["user_logout"]); ?></a>
+        <a href="<?php echo U('User/index',array('act'=>'default'));?>"><?php echo ($lang["user_center"]); ?></a>|
+        <a href="<?php echo U('User/logout');?>"><?php echo ($lang["user_logout"]); ?></a>
     </font>
     <?php else: ?> <?php echo ($lang["welcome"]); ?>&nbsp;&nbsp;&nbsp;&nbsp;
-    <a href="<?php echo U('User/index');?>"><img src="<?php echo (SHOP_IMG_URL); ?>/bnt_log.gif" /></a>
-    <a href="user.php?act=register"><img src="<?php echo (SHOP_IMG_URL); ?>/bnt_reg.gif" /></a><?php endif; ?>
+    <a href="<?php echo U('User/index',array('act'=>'login'));?>"><img src="<?php echo (SHOP_IMG_URL); ?>/bnt_log.gif" /></a>
+    <a href="<?php echo U('User/index',array('act'=>'register'));?>"><img src="<?php echo (SHOP_IMG_URL); ?>/bnt_reg.gif" /></a><?php endif; ?>
 
                 </font>
             </li>
@@ -72,18 +69,16 @@ var process_request = "<?php echo ($lang["process_request"]); ?>";
 <!--search start-->
 <div id="search" class="clearfix">
     <div class="keys f_l">
-        
-            <script type="text/javascript">
-            function checkSearchForm() {
-                if (document.getElementById('keyword').value) {
-                    return true;
-                } else {
-                    alert("{$lang.no_keywords}");
-                    return false;
-                }
+        <script type="text/javascript">
+        function checkSearchForm() {
+            if (document.getElementById('keyword').value) {
+                return true;
+            } else {
+                alert("<?php echo ($lang["no_keywords"]); ?>");
+                return false;
             }
-            </script>
-        
+        }
+        </script>
         <?php if(!empty($searchkeywords)): echo ($lang["hot_search"]); ?> ：
             <?php if(is_array($searchkeywords)): foreach($searchkeywords as $key=>$vo): ?><a href="search.php?keywords=<?php echo ($vo); ?>"><?php echo ($vo); ?></a><?php endforeach; endif; endif; ?>
     </div>
@@ -114,29 +109,29 @@ var process_request = "<?php echo ($lang["process_request"]); ?>";
             <div class="box">
                 <div class="box_1">
                     <div class="userCenterBox">
-                        <!-- <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+                        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <div class="userMenu">
-    <?php switch($action): case "default": ?><a href="user.php" class="curs">
-                <img src="<?php echo (SHOP_IMG_URL); ?>u1.gif" /> <?php echo ($lang["label_welcome"]); ?>
-            </a><?php break;?>
-        <?php case "profile": ?><a href="user.php?act=profile" class="curs"><img src="<?php echo (SHOP_IMG_URL); ?>u2.gif" /> <?php echo ($lang["label_profile"]); ?></a><?php break;?>
-        <?php case "order_list": ?><a href="user.php?act=order_list" class="curs"><img src="<?php echo (SHOP_IMG_URL); ?>u3.gif" /> <?php echo ($lang["label_order"]); ?></a><?php break;?>
-        <?php case "order_detail": ?><a href="user.php?act=order_list" class="curs"><img src="<?php echo (SHOP_IMG_URL); ?>u3.gif" /> <?php echo ($lang["label_order"]); ?></a><?php break;?>
-        <?php case "address_list": ?><a href="user.php?act=address_list" class="curs"><img src="<?php echo (SHOP_IMG_URL); ?>u4.gif" /> <?php echo ($lang["label_address"]); ?></a><?php break;?>
-        <?php case "collection_list": ?><a href="user.php?act=collection_list" class="curs"><img src="<?php echo (SHOP_IMG_URL); ?>u5.gif" /> <?php echo ($lang["label_collection"]); ?></a><?php break;?>
-        <?php case "message_list": ?><a href="user.php?Act=message_list" class="curs"><img src="<?php echo (SHOP_IMG_URL); ?>u6.gif" /> <?php echo ($lang["label_message"]); ?></a><?php break;?>
-        <?php case "tag_list": ?><a href="user.php?act=tag_list" class="curs"><img src="<?php echo (SHOP_IMG_URL); ?>u7.gif" /> <?php echo ($lang["label_tag"]); ?></a><?php break;?>
-        <?php case "booking_list": ?><a href="user.php?act=booking_list" class="curs"><img src="<?php echo (SHOP_IMG_URL); ?>u8.gif" /> <?php echo ($lang["label_booking"]); ?></a><?php break;?>
-        <?php case "bonus": ?><a href="user.php?act=bonus" class="curs"><img src="<?php echo (SHOP_IMG_URL); ?>u9.gif" /> <?php echo ($lang["label_bonus"]); ?></a><?php break;?>
-        <?php case "affiliate": ?><a href="user.php?act=affiliate" class="curs"><img src="<?php echo (SHOP_IMG_URL); ?>u10.gif" /> <?php echo ($lang["label_affiliate"]); ?></a><?php break;?>
-        <?php case "comment_list": ?><a href="user.php?act=comment_list" class="curs"><img src="<?php echo (SHOP_IMG_URL); ?>u11.gif" /> <?php echo ($lang["label_comment"]); ?></a><?php break;?>
-        <?php case "track_packages": ?><a href="user.php?act=track_packages" class="curs"><img src="<?php echo (SHOP_IMG_URL); ?>u12.gif" /> <?php echo ($lang["label_track_packages"]); ?></a><?php break;?>
-        <?php case "account_log": ?><a href="user.php?act=account_log" class="curs"><img src="<?php echo (SHOP_IMG_URL); ?>u13.gif" /> <?php echo ($lang["label_user_surplus"]); ?></a><?php break;?>
-        <?php case "transform_points": ?><a href="user.php?act=transform_points" class="curs"><img src="<?php echo (SHOP_IMG_URL); ?>u14.gif" /> <?php echo ($lang["label_transform_points"]); ?></a><?php break;?>
+    <a href="<?php echo U('User/index',array('act'=>$action));?>" class="curs"> 
+    <?php switch($action): case "default": ?><img src="<?php echo (SHOP_IMG_URL); ?>u1.gif" /> <?php echo ($lang["label_welcome"]); break;?>
+        <?php case "profile": ?><img src="<?php echo (SHOP_IMG_URL); ?>u2.gif" /> <?php echo ($lang["label_profile"]); break;?>
+        <?php case "order_list": ?><img src="<?php echo (SHOP_IMG_URL); ?>u3.gif" /> <?php echo ($lang["label_order"]); break;?>
+        <?php case "order_detail": ?><img src="<?php echo (SHOP_IMG_URL); ?>u3.gif" /> <?php echo ($lang["label_order"]); break;?>
+        <?php case "address_list": ?><img src="<?php echo (SHOP_IMG_URL); ?>u4.gif" /> <?php echo ($lang["label_address"]); break;?>
+        <?php case "collection_list": ?><img src="<?php echo (SHOP_IMG_URL); ?>u5.gif" /> <?php echo ($lang["label_collection"]); break;?>
+        <?php case "message_list": ?><img src="<?php echo (SHOP_IMG_URL); ?>u6.gif" /> <?php echo ($lang["label_message"]); break;?>
+        <?php case "tag_list": ?><img src="<?php echo (SHOP_IMG_URL); ?>u7.gif" /> <?php echo ($lang["label_tag"]); break;?>
+        <?php case "booking_list": ?><img src="<?php echo (SHOP_IMG_URL); ?>u8.gif" /> <?php echo ($lang["label_booking"]); break;?>
+        <?php case "bonus": ?><img src="<?php echo (SHOP_IMG_URL); ?>u9.gif" /> <?php echo ($lang["label_bonus"]); break;?>
+        <?php case "affiliate": ?><img src="<?php echo (SHOP_IMG_URL); ?>u10.gif" /> <?php echo ($lang["label_affiliate"]); break;?>
+        <?php case "comment_list": ?><img src="<?php echo (SHOP_IMG_URL); ?>u11.gif" /> <?php echo ($lang["label_comment"]); break;?>
+        <?php case "track_packages": ?><img src="<?php echo (SHOP_IMG_URL); ?>u12.gif" /> <?php echo ($lang["label_track_packages"]); break;?>
+        <?php case "account_log": ?><img src="<?php echo (SHOP_IMG_URL); ?>u13.gif" /> <?php echo ($lang["label_user_surplus"]); break;?>
+        <?php case "transform_points": ?><img src="<?php echo (SHOP_IMG_URL); ?>u14.gif" /> <?php echo ($lang["label_transform_points"]); break;?>
         <?php default: endswitch;?>
-    <a href="user.php?act=logout" style="background:none; text-align:right; margin-right:10px;"><img src="<?php echo (SHOP_IMG_URL); ?>bnt_sign.gif" /></a>
+    </a>
+    <a href="<?php echo U('User/index',array('act'=>'logout'));?>" style="background:none; text-align:right; margin-right:10px;"><img src="<?php echo (SHOP_IMG_URL); ?>bnt_sign.gif" /></a>
 </div>
- -->
+
                     </div>
                 </div>
             </div>
@@ -148,44 +143,46 @@ var process_request = "<?php echo ($lang["process_request"]); ?>";
                 <div class="box_1">
                     <div class="userCenterBox boxCenterList clearfix" style="_height:1%;">
                         <?php switch($action): case "default": ?><!-- *用户中心默认显示页面 start-->
-                                <?php if($action == 'default'): ?><font class="f5"><b class="f4"><?php echo ($info["username"]); ?></b> <?php echo ($lang["welcome_to"]); ?> <?php echo ($info["shop_name"]); ?>！</font>
-    <br />
+                                <font class="f5">
+    <b class="f4"><?php echo ($info["username"]); ?></b> <?php echo ($lang["welcome_to"]); ?> <?php echo ($info["shop_name"]); ?>！
+</font>
+<br />
+<div class="blank"></div>
+<?php echo ($lang["last_time"]); ?>: <?php echo ($info["last_time"]); ?>
+<br />
+<div class="blank5"></div>
+<?php echo ($rank_name); ?> <?php echo ($next_rank_name); ?>
+<br />
+<div class="blank5"></div>
+<?php if($info["is_validate"] == 0): echo ($lang["not_validated"]); ?> <a href="javascript:sendHashMail()" style="color:#006bd0;"><?php echo ($lang["resend_hash_mail"]); ?></a>
+    <br /><?php endif; ?>
+<div style="margin:5px 0; border:1px solid #a1675a;padding:10px 20px; background-color:#e8d1c9;">
+    <img src="<?php echo (SHOP_IMG_URL); ?>note.gif" alt="note" />&nbsp;<?php echo ($user_notice); ?>
+</div>
+<br />
+<br />
+<div class="f_l" style="width:350px;">
+    <h5><span><?php echo ($lang["your_account"]); ?></span></h5>
     <div class="blank"></div>
-    <?php echo ($lang["last_time"]); ?>: <?php echo ($info["last_time"]); ?>
+    <?php echo ($lang["your_surplus"]); ?>:<a href="<?php echo U('User/index',array('act'=>'account_log'));?>" style="color:#006bd0;"><?php echo ($info["surplus"]); ?></a>
     <br />
-    <div class="blank5"></div>
-    <?php echo ($rank_name); ?> <?php echo ($next_rank_name); ?>
-    <br />
-    <div class="blank5"></div>
-    <?php if($info["is_validate"] == 0): echo ($lang["not_validated"]); ?> <a href="javascript:sendHashMail()" style="color:#006bd0;"><?php echo ($lang["resend_hash_mail"]); ?></a>
+    <?php if($info["credit_line"] > 0): echo ($lang["credit_line"]); ?>:<?php echo ($info["formated_credit_line"]); ?>
         <br /><?php endif; ?>
-    <div style="margin:5px 0; border:1px solid #a1675a;padding:10px 20px; background-color:#e8d1c9;">
-        <img src="images/note.gif" alt="note" />&nbsp;<?php echo ($user_notice); ?>
-    </div>
+    <?php echo ($lang["your_bonus"]); ?>:<a href="<?php echo U('User/index',array('act'=>'bonus'));?>" style="color:#006bd0;"><?php echo ($info["bonus"]); ?></a>
+    <br /> <?php echo ($lang["your_integral"]); ?>:<?php echo ($info["integral"]); ?>
     <br />
+</div>
+<div class="f_r" style="width:350px;">
+    <h5><span><?php echo ($lang["your_notice"]); ?></span></h5>
+    <div class="blank"></div>
+    <?php if(is_array($prompt)): foreach($prompt as $key=>$item): echo ($item["text"]); ?>
+        <br /><?php endforeach; endif; ?>
+    <?php echo ($lang["last_month_order"]); echo ($info["order_count"]); echo ($lang["order_unit"]); ?>
     <br />
-    <div class="f_l" style="width:350px;">
-        <h5><span><?php echo ($lang["your_account"]); ?></span></h5>
-        <div class="blank"></div>
-        <?php echo ($lang["your_surplus"]); ?>:<a href="user.php?act=account_log" style="color:#006bd0;"><?php echo ($info["surplus"]); ?></a>
+    <?php if(!empty($info['shipped_order'])): echo ($lang["please_received"]); ?>
         <br />
-        <?php if($info["credit_line"] > 0): echo ($lang["credit_line"]); ?>:<?php echo ($info["formated_credit_line"]); ?>
-            <br /><?php endif; ?>
-        <?php echo ($lang["your_bonus"]); ?>:<a href="user.php?act=bonus" style="color:#006bd0;"><?php echo ($info["bonus"]); ?></a>
-        <br /> <?php echo ($lang["your_integral"]); ?>:<?php echo ($info["integral"]); ?>
-        <br />
-    </div>
-    <div class="f_r" style="width:350px;">
-        <h5><span><?php echo ($lang["your_notice"]); ?></span></h5>
-        <div class="blank"></div>
-        <?php if(is_array($prompt)): foreach($prompt as $key=>$item): echo ($item["text"]); ?>
-            <br /><?php endforeach; endif; ?>
-        <?php echo ($lang["last_month_order"]); echo ($info["order_count"]); echo ($lang["order_unit"]); ?>
-        <br />
-        <?php if(!empty($info['shipped_order'])): echo ($lang["please_received"]); ?>
-            <br />
-            <?php if(is_array($info['shipped_order'])): foreach($info['shipped_order'] as $key=>$item): ?><a href="user.php?act=order_detail&order_id=<?php echo ($item["order_id"]); ?>" style="color:#006bd0;"><?php echo ($item["order_sn"]); ?></a><?php endforeach; endif; endif; ?>
-    </div><?php endif; break;?>
+        <?php if(is_array($info['shipped_order'])): foreach($info['shipped_order'] as $key=>$item): ?><a href="<?php echo U('User/index',array('act'=>'order_detail','order_id'=>$item.order_id));?>" style="color:#006bd0;"><?php echo ($item["order_sn"]); ?></a><?php endforeach; endif; endif; ?>
+</div><?php break;?>
                             <?php case "message_list": ?><!-- *我的留言 start-->
                                 <?php if($action == 'message_list'): ?><h5><span><?php echo ($lang["label_message"]); ?></span></h5>
     <div class="blank"></div>

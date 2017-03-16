@@ -1,0 +1,25 @@
+<h5><span>{$lang.label_track_packages}</span></h5>
+<div class="blank"></div>
+<table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd" id="order_table">
+    <tr align="center">
+        <td bgcolor="#ffffff">{$lang.order_number}</td>
+        <td bgcolor="#ffffff">{$lang.handle}</td>
+    </tr>
+    <foreach name="orders" item="item">
+        <tr>
+            <td align="center" bgcolor="#ffffff"><a href="user.php?act=order_detail&order_id={$item.order_id}">{$item.order_sn}</a></td>
+            <td align="center" bgcolor="#ffffff">{$item.query_link}</td>
+        </tr>
+    </foreach>
+</table>
+<script>
+var query_status = '{$lang.query_status}';
+var ot = document.getElementById('order_table');
+for (var i = 1; i < ot.rows.length; i++) {
+    var row = ot.rows[i];
+    var cel = row.cells[1];
+    cel.getElementsByTagName('a').item(0).innerHTML = query_status;
+}
+</script>
+<div class="blank5"></div>
+<include file="lbi/pages" />
