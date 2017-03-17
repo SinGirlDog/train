@@ -126,6 +126,8 @@ class IndexController extends Controller {
         $Nav = D('Nav');
         $navigator_list = $Nav->get_navigator();        
         $this->assign('navigator_list',$navigator_list);
+        // echo '<pre/>'; print_r($navigator_list);die;
+        
     }
 
     protected function bread_crumb($cat = 0, $str = ''){

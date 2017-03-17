@@ -1,0 +1,49 @@
+<div class="flowBox" style="margin:30px auto 70px auto;">
+    <h6 style="text-align:center; height:30px; line-height:30px;">{$lang.remember_order_number}: <font style="color:red">{$order.order_sn}</font></h6>
+    <table width="99%" align="center" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff" style="border:1px solid #ddd; margin:20px auto;">
+        <tr>
+            <td align="center" bgcolor="#FFFFFF">
+                <notempty name="order.shipping_name">
+                    {$lang.select_shipping}: <strong>{$order.shipping_name}</strong>，
+                </notempty>
+                {$lang.select_payment}: <strong>{$order.pay_name}</strong>。{$lang.order_amount}: <strong>{$total.amount_formated}</strong>
+            </td>
+        </tr>
+        <tr>
+            <td align="center" bgcolor="#FFFFFF">{$order.pay_desc}</td>
+        </tr>
+        <notempty name="pay_online">
+            <!-- 如果是线上支付则显示支付按钮 -->
+            <tr>
+                <td align="center" bgcolor="#FFFFFF">{$pay_online}</td>
+            </tr>
+        </notempty>
+    </table>
+    <notempty name="virtual_card">
+        <div style="text-align:center;overflow:hidden;border:1px solid #E2C822;background:#FFF9D7;margin:10px;padding:10px 50px 30px;">
+            <foreach name="virtual_card" item="vgoods">
+                <h3 style="color:#2359B1; font-size:12px;">{$vgoods.goods_name}</h3>
+                <foreach name="vgoods.info" item="card">
+                    <ul style="list-style:none;padding:0;margin:0;clear:both">
+                        <notempty name="card.card_sn">
+                            <li style="margin-right:50px;float:left;">
+                                <strong>{$lang.card_sn}:</strong><span style="color:red;">{$card.card_sn}</span>
+                            </li>
+                        </notempty>
+                        <notempty name="card.card_password">
+                            <li style="margin-right:50px;float:left;">
+                                <strong>{$lang.card_password}:</strong><span style="color:red;">{$card.card_password}</span>
+                            </li>
+                        </notempty>
+                        <notempty name="card.end_date">
+                            <li style="float:left;">
+                                <strong>{$lang.end_date}:</strong>{$card.end_date}
+                            </li>
+                        </notempty>
+                    </ul>
+                </foreach>
+            </foreach>
+        </div>
+    </notempty>
+    <p style="text-align:center; margin-bottom:20px;">{$order_submit_back}</p>
+</div>

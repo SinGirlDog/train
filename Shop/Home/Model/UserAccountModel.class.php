@@ -46,7 +46,23 @@ use Think\Model;
 	    return $surplus['sum_money'];
 	}
 
-	
+	/**
+	 * 根据ID获取当前余额操作信息
+	 *
+	 * @access  public
+	 * @param   int     $surplus_id  会员余额的ID
+	 *
+	 * @return  int
+	 */
+	function get_surplus_info($surplus_id)
+	{
+		$surplus_id = $surplus_id ? $surplus_id : I('param.id',0);
+
+		$condition = array('id'=>$surplus_id);
+		$info = $this->where($condition)->find();
+		return $info;	    
+	}
+
 
 	/**
 	 * 查询会员余额的操作记录

@@ -1,0 +1,81 @@
+[ 2017-03-17T12:07:08+08:00 ] ::1 /train/index.php?s=/Home/User/index/act/bonus.html
+ERR: 1146:Table 'train_sp.__bomus_type' doesn't exist
+ [ SQL语句 ] : SELECT u.bonus_sn,u.order_id,b.type_name,b.type_money,b.min_goods_amount,b.use_start_date,b.use_end_date FROM sp_user_bonus u INNER JOIN __BOMUS_TYPE b on u.bonus_type_id = b.type_id  WHERE u.user_id = '6' LIMIT 10  
+
+[ 2017-03-17T12:07:24+08:00 ] ::1 /train/index.php?s=/Home/User/index/act/bonus.html
+ERR: 1146:Table 'train_sp.sp_bomus_type' doesn't exist
+ [ SQL语句 ] : SELECT u.bonus_sn,u.order_id,b.type_name,b.type_money,b.min_goods_amount,b.use_start_date,b.use_end_date FROM sp_user_bonus u INNER JOIN sp_bomus_type b on u.bonus_type_id = b.type_id  WHERE u.user_id = '6' LIMIT 10  
+
+[ 2017-03-17T12:07:26+08:00 ] ::1 /train/index.php?s=/Home/User/index/act/bonus.html
+ERR: 1146:Table 'train_sp.sp_bomus_type' doesn't exist
+ [ SQL语句 ] : SELECT u.bonus_sn,u.order_id,b.type_name,b.type_money,b.min_goods_amount,b.use_start_date,b.use_end_date FROM sp_user_bonus u INNER JOIN sp_bomus_type b on u.bonus_type_id = b.type_id  WHERE u.user_id = '6' LIMIT 10  
+
+[ 2017-03-17T13:47:12+08:00 ] ::1 /train/index.php?s=/Home/User/flow.html
+ERR: 非法操作:flow
+
+[ 2017-03-17T13:47:20+08:00 ] ::1 /train/index.php?s=/Home/User/flow.html
+ERR: 非法操作:flow
+
+[ 2017-03-17T13:55:30+08:00 ] ::1 /train/index.php?s=/Home/User/Flow.html
+ERR: 非法操作:Flow
+
+[ 2017-03-17T13:55:58+08:00 ] ::1 /train/index.php?s=/Home/Flow/index.html
+ERR: 无法加载控制器:Flow
+
+[ 2017-03-17T13:56:10+08:00 ] ::1 /train/index.php?s=/Home/Tag_cloud/index.html
+ERR: 无法加载控制器:Tag_cloud
+
+[ 2017-03-17T14:09:23+08:00 ] ::1 /train/index.php?s=/Home/PickOut/index.html
+ERR: 无法加载控制器:PickOut
+
+[ 2017-03-17T14:23:40+08:00 ] ::1 /train/index.php?s=/Home/Category/index/id/3.html
+ERR: 无法加载控制器:Category
+
+[ 2017-03-17T14:23:47+08:00 ] ::1 /train/index.php?s=/Home/Flow/index.html
+ERR: 无法加载控制器:Flow
+
+[ 2017-03-17T14:29:20+08:00 ] ::1 /train/index.php?s=/Home/Flow/index.html
+ERR: 模板不存在:./Shop/Home/View/lbi/flow.html
+
+[ 2017-03-17T14:37:48+08:00 ] ::1 /train/index.php?s=/Home/Flow/index.html
+ERR: 模板不存在:./Shop/Home/View/lbi/flow.html
+
+[ 2017-03-17T14:39:26+08:00 ] ::1 /train/index.php?s=/Home/User/index/act/default.html
+ERR: 模板不存在:./Shop/Home/View/lbi/user_clips.html
+
+[ 2017-03-17T14:41:11+08:00 ] ::1 /train/index.php?s=/Home/Flow/index.html
+ERR: 模板不存在:./Shop/Home/View/lbi/flow.html
+
+[ 2017-03-17T17:07:05+08:00 ] ::1 /train/index.php?s=/Home/Flow/index.html
+ERR: XML标签语法错误 : from=$district_list.$sn item=district
+
+[ 2017-03-17T17:08:34+08:00 ] ::1 /train/index.php?s=/Home/Flow/index.html
+ERR: XML标签语法错误 : name=$goods.package_goods_list item=package_goods_list
+
+[ 2017-03-17T17:09:36+08:00 ] ::1 /train/index.php?s=/Home/Flow/index.html
+ERR: XML标签语法错误 : from=$district_list.$sn item=district
+
+[ 2017-03-17T17:11:09+08:00 ] ::1 /train/index.php?s=/Home/Flow/index.html
+ERR: XML标签语法错误 : from=$district_list.$sn item=district
+
+[ 2017-03-17T17:12:13+08:00 ] ::1 /train/index.php?s=/Home/Flow/index.html
+ERR: XML标签语法错误 : from=$payment_list item=payment
+
+[ 2017-03-17T17:13:19+08:00 ] ::1 /train/index.php?s=/Home/Flow/index.html
+ERR: XML标签语法错误 : from=$payment_list item=payment
+
+[ 2017-03-17T17:13:53+08:00 ] ::1 /train/index.php?s=/Home/Flow/index.html
+ERR: XML标签语法错误 : $card.end_date
+
+[ 2017-03-17T17:14:27+08:00 ] ::1 /train/index.php?s=/Home/Flow/index.html
+ERR: XML标签语法错误 : name="goods.package_goods_list" item=package_goods_list
+
+[ 2017-03-17T17:15:09+08:00 ] ::1 /train/index.php?s=/Home/Flow/index.html
+ERR: XML标签语法错误 : name="goods['package_goods_list']" item=package_goods_list
+
+[ 2017-03-17T17:15:46+08:00 ] ::1 /train/index.php?s=/Home/Flow/index.html
+ERR: XML标签语法错误 : $show_marketprice
+
+[ 2017-03-17T17:16:43+08:00 ] ::1 /train/index.php?s=/Home/Flow/index.html
+ERR: XML标签语法错误 : $need_rechoose_gift
+

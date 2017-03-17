@@ -1,0 +1,17 @@
+<script src='{$Think.const.SHOP_JS_URL}region.js'></script>
+<script src='{$Think.const.SHOP_JS_URL}v.js'></script>
+<script type="text/javascript">
+region.isAdmin = false;
+onload = function() {
+    if (!document.all) {
+        document.forms['theForm'].reset();
+    }
+}
+</script>
+<include file="js_lang_htm/lang_flow_js" />
+<!-- 如果有收货地址，循环显示用户的收获地址 -->
+<foreach name="consignee_list" item="consignee" key="sn">
+    <form action="flow.php" method="post" name="theForm" id="theForm" onsubmit="return checkConsignee(this)">
+        <include file="lbi/consignee" />
+    </form>
+</foreach>

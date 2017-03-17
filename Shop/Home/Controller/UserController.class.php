@@ -13,7 +13,7 @@ class UserController extends IndexController{
 
 		// echo '<pre/>'; print_r(I('param.'));die;
 
-		$this->action = I('param.act') ? I('param.act') : 'default';
+		// $this->action = I('param.act') ? I('param.act') : 'default';
 
 	}
 
@@ -21,18 +21,29 @@ class UserController extends IndexController{
 
 		switch($this->action){			
 			case 'login':
-				$tpl_name = 'lbi:user_passport';
+				$tpl_name = 'user:user_passport';
 			break;			
 			case 'account_log':
 				$this->account_log();
-				$tpl_name = 'lbi:user_transaction';			
+				$tpl_name = 'user:user_transaction';			
 			break;
 			case 'account_detail':
 				$this->account_detail();
-				$tpl_name = 'lbi:user_transaction';			
+				$tpl_name = 'user:user_transaction';			
 			break;
+			case 'account_deposit':
+				$this->account_deposit();
+				$tpl_name = 'user:user_transaction';			
+			break;
+			case 'account_repay':
+				$tpl_name = 'user:user_transaction';			
+			break;	
+			case 'bonus':
+				$this->bonus();	
+				$tpl_name = 'user:user_transaction';
+			break;		
 			default:
-				$tpl_name = 'lbi:user_clips';
+				$tpl_name = 'user:user_clips';
 			break;
 		}
 		$this->display($tpl_name);
@@ -54,7 +65,7 @@ class UserController extends IndexController{
 					C('_LANG.profile_lnk'),
 				),
 				'hrefs' => array(
-					$back_act,
+					U('User/index'),
 					U('User/index'),
 				),
 				'type' => 'info'
@@ -123,11 +134,30 @@ class UserController extends IndexController{
 		$this->assign('surplus_amount', price_format($surplus_amount,false));
 	}
 
+	protected function account_deposit(){
+		$Payment = D('Payment');
+		$payment = $Payment->get_online_payment_list();
+		$this->assign('payment', $payment);
+
+		$UserAccount = D('UserAccount');
+		$order = $UserAccount->get_surplus_info();
+		$this->assign('order', $order);
+	}
+
+	protected function bonus(){
+		$UserBonus = D('UserBonus');
+		$record_count = $UserBonus->get_count();
+		$page = I('param.page',1);
+		$pager = get_pager(U('User'), array('act' => $this->$action), $record_count, $page);
+		$this->assign('pager', $pager);
+
+		$bonus = $UserBonus->get_user_bouns_list($user_id, $pager['size'], $pager['start']);
+    	$this->assign('bonus', $bonus);
+	}
+
 	protected function data_prepare(){
 
-		// $this->action = 'login';
-		$this->action = I('param.act','default');
-		// $this->assign('action',$this->action);
+		$this->action = I('param.act') ? I('param.act') : 'default';		
 
 		$this->navigator_list_prepare();
 

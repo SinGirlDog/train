@@ -1,0 +1,398 @@
+<form action="flow.php" method="post" name="theForm" id="theForm" onsubmit="return checkOrderForm(this)">
+    <script type="text/javascript">
+    var flow_no_payment = "{$lang.flow_no_payment}";
+    var flow_no_shipping = "{$lang.flow_no_shipping}";
+    </script>
+    <div class="flowBox">
+        <h6><span>{$lang.goods_list}</span>
+        <notempty name="allow_edit_cart">
+        <a href="flow.php" class="f6">{$lang.modify}</a>
+        </notempty>
+        </h6>
+        <table width="99%" align="center" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd">
+            <tr>
+                <th bgcolor="#ffffff">{$lang.goods_name}</th>
+                <th bgcolor="#ffffff">{$lang.goods_attr}</th>
+                <notempty name="show_marketprice">
+                    <th bgcolor="#ffffff">{$lang.market_prices}</th>
+                </notempty>
+                <th bgcolor="#ffffff">
+                    <notempty name="gb_deposit">
+                        {$lang.deposit}
+                        <else/> {$lang.shop_prices}
+                    </notempty>
+                </th>
+                <th bgcolor="#ffffff">{$lang.number}</th>
+                <th bgcolor="#ffffff">{$lang.subtotal}</th>
+            </tr>
+            <foreach name="goods_list" item="goods">
+                <tr>
+                    <td bgcolor="#ffffff">
+                        <if condition="($goods.goods_id gt 0) && ($goods.extension_code eq 'package_buy')">
+                            <a href="javascript:void(0)" onclick="setSuitShow({$goods.goods_id})" class="f6">{$goods.goods_name}<span style="color:#FF0000;">（{$lang.remark_package}）</span></a>
+                            <div id="suit_{$goods.goods_id}" style="display:none">
+                                <foreach name="goods['package_goods_list']" item="package_goods_list">
+                                    <a href="goods.php?id={$package_goods_list.goods_id}" target="_blank" class="f6">{$package_goods_list.goods_name}</a>
+                                    <br />
+                                </foreach>
+                            </div>
+                            <else/>
+                            <a href="goods.php?id={$goods.goods_id}" target="_blank" class="f6">{$goods.goods_name}</a>
+                            <if condition="$goods.parent_id gt 0">
+                                <span style="color:#FF0000">（{$lang.accessories}）</span>
+                                <elseif condition="!empty($goods.is_gift)" />
+                                <span style="color:#FF0000">（{$lang.largess}）</span>
+                            </if>
+                        </if>
+                        <notempty name="goods.is_shipping">(<span style="color:#FF0000">{$lang.free_goods}</span>)
+                        </notempty>
+                    </td>
+                    <td bgcolor="#ffffff">{$goods.goods_attr|nl2br}</td>
+                    <notempty name="show_marketprice">
+                        <td align="right" bgcolor="#ffffff">{$goods.formated_market_price}</td>
+                    </notempty>
+                    <td bgcolor="#ffffff" align="right">{$goods.formated_goods_price}</td>
+                    <td bgcolor="#ffffff" align="right">{$goods.goods_number}</td>
+                    <td bgcolor="#ffffff" align="right">{$goods.formated_subtotal}</td>
+                </tr>
+            </foreach>
+            <empty name="gb_deposit">
+                <tr>
+                    <td bgcolor="#ffffff" colspan="7">
+                        <if condition="$discount gt 0">{$your_discount}
+                            <br />
+                        </if>
+                        {$shopping_money}
+                        <notempty name="show_marketprice">，{$market_price_desc}
+                        </notempty>
+                    </td>
+                </tr>
+            </empty>
+        </table>
+    </div>
+    <div class="blank"></div>
+    <div class="flowBox">
+        <h6><span>{$lang.consignee_info}</span><a href="flow.php?step=consignee" class="f6">{$lang.modify}</a></h6>
+        <table width="99%" align="center" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd">
+            <tr>
+                <td bgcolor="#ffffff">{$lang.consignee_name}:</td>
+                <td bgcolor="#ffffff">{$consignee.consignee}</td>
+                <td bgcolor="#ffffff">{$lang.email_address}:</td>
+                <td bgcolor="#ffffff">{$consignee.email}</td>
+            </tr>
+            <if condition="$total.real_goods_count gt 0">
+                <tr>
+                    <td bgcolor="#ffffff">{$lang.detailed_address}:</td>
+                    <td bgcolor="#ffffff">{$consignee.address} </td>
+                    <td bgcolor="#ffffff">{$lang.postalcode}:</td>
+                    <td bgcolor="#ffffff">{$consignee.zipcode}</td>
+                </tr>
+            </if>
+            <tr>
+                <td bgcolor="#ffffff">{$lang.phone}:</td>
+                <td bgcolor="#ffffff">{$consignee.tel} </td>
+                <td bgcolor="#ffffff">{$lang.backup_phone}:</td>
+                <td bgcolor="#ffffff">{$consignee.mobile}</td>
+            </tr>
+            <if condition="$total.real_goods_count gt 0">
+                <tr>
+                    <td bgcolor="#ffffff">{$lang.sign_building}:</td>
+                    <td bgcolor="#ffffff">{$consignee.sign_building} </td>
+                    <td bgcolor="#ffffff">{$lang.deliver_goods_time}:</td>
+                    <td bgcolor="#ffffff">{$consignee.best_time}</td>
+                </tr>
+            </if>
+        </table>
+    </div>
+    <div class="blank"></div>
+    <if condition="$total.real_goods_count neq 0">
+        <div class="flowBox">
+            <h6><span>{$lang.shipping_method}</span></h6>
+            <table width="99%" align="center" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd" id="shippingTable">
+                <tr>
+                    <th bgcolor="#ffffff" width="5%">&nbsp;</th>
+                    <th bgcolor="#ffffff" width="25%">{$lang.name}</th>
+                    <th bgcolor="#ffffff">{$lang.describe}</th>
+                    <th bgcolor="#ffffff" width="15%">{$lang.fee}</th>
+                    <th bgcolor="#ffffff" width="15%">{$lang.free_money}</th>
+                    <th bgcolor="#ffffff" width="15%">{$lang.insure_fee}</th>
+                </tr>
+                <foreach name="shipping_list" item="shipping">
+                    <tr>
+                        <td bgcolor="#ffffff" valign="top">
+                            <if condition="$order.shipping_id eq $shipping.shipping_id">
+                                <input name="shipping" type="radio" value="{$shipping.shipping_id}" checked="true" supportCod="{$shipping.support_cod}" insure="{$shipping.insure}" onclick="selectShipping(this)" />
+                                <else/>
+                                <input name="shipping" type="radio" value="{$shipping.shipping_id}" supportCod="{$shipping.support_cod}" insure="{$shipping.insure}" onclick="selectShipping(this)" />
+                            </if>
+                        </td>
+                        <td bgcolor="#ffffff" valign="top"><strong>{$shipping.shipping_name}</strong></td>
+                        <td bgcolor="#ffffff" valign="top">{$shipping.shipping_desc}</td>
+                        <td bgcolor="#ffffff" align="right" valign="top">{$shipping.format_shipping_fee}</td>
+                        <td bgcolor="#ffffff" align="right" valign="top">{$shipping.free_money}</td>
+                        <td bgcolor="#ffffff" align="right" valign="top">
+                            <if condition="$shipping.insure neq 0">
+                                {$shipping.insure_formated}
+                                <else/> {$lang.not_support_insure}
+                            </if>
+                        </td>
+                    </tr>
+                </foreach>
+                <tr>
+                    <td colspan="6" bgcolor="#ffffff" align="right">
+                        <php>
+                            if (!empty($order.need_insure)){ $check_near = 'cheched="true"'; } else{ $check_near = ''; }
+                        </php>
+                        <php>
+                            if(!empty($insure_disabled)){ $disable_near = 'disabled="true"'; } else{ $disable_near = ''; }
+                        </php>
+                        <label for="ECS_NEEDINSURE">
+                            <input name="need_insure" id="ECS_NEEDINSURE" type="checkbox" onclick="selectInsure(this.checked)" value="1" {$check_near} {$disable_near} /> {$lang.need_insure} </label>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="blank"></div>
+        <else/>
+        <input name="shipping" type="radio" value="-1" checked="checked" style="display:none" />
+    </if>
+    <if condition="($is_exchange_goods neq 1) || ($total.real_goods_count neq 0)">
+        <div class="flowBox">
+            <h6><span>{$lang.payment_method}</span></h6>
+            <table width="99%" align="center" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd" id="paymentTable">
+                <tr>
+                    <th width="5%" bgcolor="#ffffff">&nbsp;</th>
+                    <th width="20%" bgcolor="#ffffff">{$lang.name}</th>
+                    <th bgcolor="#ffffff">{$lang.describe}</th>
+                    <th bgcolor="#ffffff" width="15%">{$lang.pay_fee}</th>
+                </tr>
+                <foreach name="payment_list" item="payment">
+                    <!-- 循环支付方式 -->
+                    <tr>
+                        <php>
+                            if ($order.pay_id == $payment.pay_id) $check_payment = 'checked'; else $check_payment = '';
+                        </php>
+                        <php>
+                            if ($payment.is_cod == 1 and !empty($cod_disabled)) $disable_payment = 'disabled="true"'; else $disable_payment = '';
+                        </php>
+                        <td valign="top" bgcolor="#ffffff">
+                            <input type="radio" name="payment" value="{$payment.pay_id}" isCod="{$payment.is_cod}" onclick="selectPayment(this)" {#$check_payment} {$disable_payment}/>
+                        </td>
+                        <td valign="top" bgcolor="#ffffff"><strong>{$payment.pay_name}</strong></td>
+                        <td valign="top" bgcolor="#ffffff">{$payment.pay_desc}</td>
+                        <td align="right" bgcolor="#ffffff" valign="top">{$payment.format_pay_fee}</td>
+                    </tr>
+                </foreach>
+            </table>
+        </div>
+        <else/>
+        <input name="payment" type="radio" value="-1" checked="checked" style="display:none" />
+    </if>
+    <div class="blank"></div>
+    <notempty name="pack_list">
+        <div class="flowBox">
+            <h6><span>{$lang.goods_package}</span></h6>
+            <table width="99%" align="center" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd" id="packTable">
+                <tr>
+                    <th width="5%" scope="col" bgcolor="#ffffff">&nbsp;</th>
+                    <th width="35%" scope="col" bgcolor="#ffffff">{$lang.name}</th>
+                    <th width="22%" scope="col" bgcolor="#ffffff">{$lang.price}</th>
+                    <th width="22%" scope="col" bgcolor="#ffffff">{$lang.free_money}</th>
+                    <th scope="col" bgcolor="#ffffff">{$lang.img}</th>
+                </tr>
+                <tr>
+                    <td valign="top" bgcolor="#ffffff">
+                        <if condition="$order.pack_id eq 0">
+                            <input type="radio" name="pack" value="0" checked="true" onclick="selectPack(this)" />
+                            <else/>
+                            <input type="radio" name="pack" value="0" onclick="selectPack(this)" />
+                        </if>
+                    </td>
+                    <td valign="top" bgcolor="#ffffff"><strong>{$lang.no_pack}</strong></td>
+                    <td valign="top" bgcolor="#ffffff">&nbsp;</td>
+                    <td valign="top" bgcolor="#ffffff">&nbsp;</td>
+                    <td valign="top" bgcolor="#ffffff">&nbsp;</td>
+                </tr>
+                <foreach name="pack_list" item="pack">
+                    <tr>
+                        <td valign="top" bgcolor="#ffffff">
+                            <if condition="$order.pack_id eq $pack.pack_id">
+                                <input type="radio" name="pack" value="{$pack.pack_id}" checked="true" onclick="selectPack(this)" />
+                                <else/>
+                                <input type="radio" name="pack" value="{$pack.pack_id}" onclick="selectPack(this)" />
+                            </if>
+                        </td>
+                        <td valign="top" bgcolor="#ffffff"><strong>{$pack.pack_name}</strong></td>
+                        <td valign="top" bgcolor="#ffffff" align="right">{$pack.format_pack_fee}</td>
+                        <td valign="top" bgcolor="#ffffff" align="right">{$pack.format_free_money}</td>
+                        <td valign="top" bgcolor="#ffffff" align="center">
+                            <notempty name="pack.pack_img">
+                                <a href="data/packimg/{$pack.pack_img}" target="_blank" class="f6">{$lang.view}</a>
+                                <else/> {$lang.no}
+                            </notempty>
+                        </td>
+                    </tr>
+                </foreach>
+            </table>
+        </div>
+        <div class="blank"></div>
+    </notempty>
+    <notempty name="card_list">
+        <div class="flowBox">
+            <h6><span>{$lang.goods_card}</span></h6>
+            <table width="99%" align="center" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd" id="cardTable">
+                <tr>
+                    <th bgcolor="#ffffff" width="5%" scope="col">&nbsp;</th>
+                    <th bgcolor="#ffffff" width="35%" scope="col">{$lang.name}</th>
+                    <th bgcolor="#ffffff" width="22%" scope="col">{$lang.price}</th>
+                    <th bgcolor="#ffffff" width="22%" scope="col">{$lang.free_money}</th>
+                    <th bgcolor="#ffffff" scope="col">{$lang.img}</th>
+                </tr>
+                <tr>
+                    <td bgcolor="#ffffff" valign="top">
+                        <if condition="$order.card_id eq 0">
+                            <input type="radio" name="card" value="0" checked="true" onclick="selectCard(this)" />
+                            <else/>
+                            <input type="radio" name="card" value="0" onclick="selectCard(this)" />
+                        </if>
+                    </td>
+                    <td bgcolor="#ffffff" valign="top"><strong>{$lang.no_card}</strong></td>
+                    <td bgcolor="#ffffff" valign="top">&nbsp;</td>
+                    <td bgcolor="#ffffff" valign="top">&nbsp;</td>
+                    <td bgcolor="#ffffff" valign="top">&nbsp;</td>
+                </tr>
+                <foreach name="card_list" item="card">
+                    <tr>
+                        <td valign="top" bgcolor="#ffffff">
+                            <if condition="$order.card_id eq $card.card_id">
+                                <input type="radio" name="card" value="{$card.card_id}" checked="true" onclick="selectCard(this)" />
+                                <else/>
+                                <input type="radio" name="card" value="{$card.card_id}" onclick="selectCard(this)" />
+                            </if>
+                        </td>
+                        <td valign="top" bgcolor="#ffffff"><strong>{$card.card_name}</strong></td>
+                        <td valign="top" align="right" bgcolor="#ffffff">{$card.format_card_fee}</td>
+                        <td valign="top" align="right" bgcolor="#ffffff">{$card.format_free_money}</td>
+                        <td valign="top" align="center" bgcolor="#ffffff">
+                            <notempty name="card.card_img">
+                                <a href="data/cardimg/{$card.card_img}" target="_blank" class="f6">{$lang.view}</a>
+                                <else/> {$lang.no}
+                            </notempty>
+                        </td>
+                    </tr>
+                </foreach>
+                <tr>
+                    <td bgcolor="#ffffff"></td>
+                    <td bgcolor="#ffffff" valign="top"><strong>{$lang.bless_note}:</strong></td>
+                    <td bgcolor="#ffffff" colspan="3">
+                        <textarea name="card_message" cols="60" rows="3" style="width:auto; border:1px solid #ccc;">{$order.card_message}</textarea>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="blank"></div>
+    </notempty>
+    <div class="flowBox">
+        <h6><span>{$lang.other_info}</span></h6>
+        <table width="99%" align="center" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd">
+            <notempty name="allow_use_surplus">
+                <tr>
+                    <td width="20%" bgcolor="#ffffff"><strong>{$lang.use_surplus}: </strong></td>
+                    <td bgcolor="#ffffff">
+                        <php>
+                            if($disable_surplus) $disable_surplus="disabled"; else $disable_surplus = '';
+                        </php>
+                        <input name="surplus" type="text" class="inputBg" id="ECS_SURPLUS" size="10" value="{$order.surplus|default=0}" onblur="changeSurplus(this.value)" {$disable_surplus} /> {$lang.your_surplus}{$your_surplus|default=0} <span id="ECS_SURPLUS_NOTICE" class="notice"></span></td>
+                </tr>
+            </notempty>
+            <notempty name="allow_use_integral">
+                <tr>
+                    <td bgcolor="#ffffff"><strong>{$lang.use_integral}</strong></td>
+                    <td bgcolor="#ffffff">
+                        <input name="integral" type="text" class="input" id="ECS_INTEGRAL" onblur="changeIntegral(this.value)" value="{$order.integral|default=0}" size="10" /> {$lang.can_use_integral}:{$your_integral|default=0} {$points_name}，{$lang.noworder_can_integral}{$order_max_integral} {$points_name}. <span id="ECS_INTEGRAL_NOTICE" class="notice"></span></td>
+                </tr>
+            </notempty>
+            <notempty name="allow_use_bonus">
+                <tr>
+                    <td bgcolor="#ffffff"><strong>{$lang.use_bonus}:</strong></td>
+                    <td bgcolor="#ffffff">
+                        {$lang.select_bonus}
+                        <select name="bonus" onchange="changeBonus(this.value)" id="ECS_BONUS" style="border:1px solid #ccc;">
+                            <option value="0" {if $order.bonus_id eq 0}selected{/if}>{$lang.please_select}</option>
+                            <foreach name="bonus_list" item="bonus">
+                                <if condition="$order.bonus_id eq $bonus.bonus_id">
+                                    <option value="{$bonus.bonus_id}" selected>{$bonus.type_name}[{$bonus.bonus_money_formated}]</option>
+                                    <else/>
+                                    <option value="{$bonus.bonus_id}">{$bonus.type_name}[{$bonus.bonus_money_formated}]</option>
+                                </if>
+                            </foreach>
+                        </select>
+                        {$lang.input_bonus_no}
+                        <input name="bonus_sn" type="text" class="inputBg" size="15" value="{$order.bonus_sn}" />
+                        <input name="validate_bonus" type="button" class="bnt_blue_1" value="{$lang.validate_bonus}" onclick="validateBonus(document.forms['theForm'].elements['bonus_sn'].value)" style="vertical-align:middle;" />
+                    </td>
+                </tr>
+            </notempty>
+            <notempty name="inv_content_list">
+                <tr>
+                    <td bgcolor="#ffffff"><strong>{$lang.invoice}:</strong>
+                        <notempty name="order.need_inv">
+                            <input name="need_inv" type="checkbox" class="input" id="ECS_NEEDINV" onclick="changeNeedInv()" value="1" checked="true" />
+                            <else/>
+                            <input name="need_inv" type="checkbox" class="input" id="ECS_NEEDINV" onclick="changeNeedInv()" value="1" />
+                        </notempty>
+                    </td>
+                    <td bgcolor="#ffffff">
+                        <php>
+                            if($order.need_inv == 1)$disable_needinv='disabled'; else $disable_needinv = '';
+                        </php>
+                        <notempty name="inv_type_list">
+                            {$lang.invoice_type}
+                            <select name="inv_type" id="ECS_INVTYPE" {$disable_needinv} onchange="changeNeedInv()" style="border:1px solid #ccc;">
+                                {html_options options=$inv_type_list selected=$order.inv_type}</select>
+                        </notempty>
+                        {$lang.invoice_title}
+                        <php>
+                            if(empty($order.need_inv))$disable_payee='disabled'; else $disable_payee = '';
+                        </php>
+                        <input name="inv_payee" type="text" class="input" id="ECS_INVPAYEE" size="20" {$disable_payee} value="{$order.inv_payee}" onblur="changeNeedInv()" /> {$lang.invoice_content}
+                        <select name="inv_content" id="ECS_INVCONTENT" {$disable_needinv} onchange="changeNeedInv()" style="border:1px solid #ccc;">
+                            {html_options values=$inv_content_list output=$inv_content_list selected=$order.inv_content}
+                        </select>
+                    </td>
+                </tr>
+            </notempty>
+            <tr>
+                <td valign="top" bgcolor="#ffffff"><strong>{$lang.order_postscript}:</strong></td>
+                <td bgcolor="#ffffff">
+                    <textarea name="postscript" cols="80" rows="3" id="postscript" style="border:1px solid #ccc;">{$order.postscript}</textarea>
+                </td>
+            </tr>
+            <notempty name="how_oos_list">
+                <tr>
+                    <td bgcolor="#ffffff"><strong>{$lang.booking_process}:</strong></td>
+                    <td bgcolor="#ffffff">
+                        <foreach name="how_oos_list" key="how_oos_id" item="how_oos_name">
+                            <label>
+                                <if condition="$order.how_oos eq $how_oos_id">
+                                    <input name="how_oos" type="radio" value="{$how_oos_id}" checked onclick="changeOOS(this)" /> {$how_oos_name}
+                                    <else/>
+                                    <input name="how_oos" type="radio" value="{$how_oos_id}" onclick="changeOOS(this)" /> {$how_oos_name}
+                                </if>
+                            </label>
+                        </foreach>
+                    </td>
+                </tr>
+            </notempty>
+        </table>
+    </div>
+    <div class="blank"></div>
+    <div class="flowBox">
+        <h6><span>{$lang.fee_total}</span></h6>       
+        <include file="lbi/order_total"/>
+        <div align="center" style="margin:8px auto;">
+            <input type="image" src="images/bnt_subOrder.gif" />
+            <input type="hidden" name="step" value="done" />
+        </div>
+    </div>
+</form>

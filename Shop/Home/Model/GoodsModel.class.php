@@ -4,6 +4,12 @@ use Think\Model;
 
 class GoodsModel extends Model{
 
+    public function get_goods_thumb($id=0){
+        $field = array('goods_thumb');
+        $condition = array('goods_id' => $id);
+        $goods_thumb = $this->field($fields)->where($condition)->getField();
+        return $goods_thumb;
+    }
     /**
      * 调用当前分类的销售排行榜
      *
@@ -245,6 +251,53 @@ class GoodsModel extends Model{
                 return 0;
             }
         }
+    }
+
+
+    /* 查询购物车商品 */
+    public function get_gwch_goods(){
+
+        $goods_list = array();
+
+        $fields = array(
+            'c.goods_id',
+            'c.goods_price * c.goods_number' => 'subtotal',
+            'g.cat_id',
+            'g.brand_id'
+        );
+        $condition = array(
+            'c.session_id' => C('SESS_ID'),
+            'c.parent_id' => '0 ',
+            'c.is_gift' => '0',
+            'rec_type' => C('CART_GENERAL_GOODS'),
+        );
+        $goods_list = $this->alias('g')->
+        join('__CART__ c on c.goods_id = g.goods_id ')->
+        field($fields)->where($condition)->select();
+
+        return $goods_list;
+    }
+
+    public function get_cat_count(){
+        $fields = array('cat_id', 'COUNT(*)' => 'goods_num');
+        $condition = array(
+            'is_delete' => 0,
+            'is_on_sale' => 1,
+        );
+        $res = $this->field($fields)->where($condition)->group('cat_id')->select();
+        return $res;
+    }
+
+    public function get_goods_cat_count(){
+        $fields = array('gc.cat_id', 'COUNT(*)' => 'goods_num');
+        $condition = array(
+            'is_delete' => 0,
+            'is_on_sale' => 1,
+        );
+        $res = $this->alias('g')->
+        join('__GOODS_CAT__ gc on gc.goods_id = g.goods_id ')->
+        field($fields)->where($condition)->group('gc.cat_id')->select();
+        return $res;
     }
     
    

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <include file="commonhtml/in_head" />
+    <script src='{$Think.const.SHOP_JS_URL}common.js'></script>
+    <script src='{$Think.const.SHOP_JS_URL}shopping_flow.js'></script>
+</head>
+
+<body>
+    <include file="lbi/page_header" />
+    <!--当前位置 start-->
+    <div class="block box">
+        <div id="ur_here">
+            <include file="lbi/ur_here" />
+        </div>
+    </div>
+    <!--当前位置 end-->
+    <div class="blank"></div>
+    <div class="block">
+        <switch name="step">
+            <case value="cart">
+                <include file="flow_step/step_cart" />
+                <!-- 购物车内容 -->
+            </case>
+            <case value="consignee">
+                <include file="flow_step/step_consignee" />
+                <!-- 开始收货人信息填写界面 -->
+            </case>
+            <case value="checkout">
+                <include file="flow_step/step_checkout" />
+                <!-- 开始订单确认界面 -->
+            </case>
+            <case value="done">
+                <include file="flow_step/step_done" />
+                <!-- 订单提交成功 -->
+            </case>
+            <case value="login">
+                <include file="flow_step/step_login" />
+                <!-- 结束用户登录注册界面 -->
+            </case>
+            <default/>
+        </switch>
+    </div>
+    <div class="blank5"></div>
+    <!--帮助-->
+    <div class="block">
+        <div class="box">
+            <div class="helpTitBg clearfix">
+                <include file="lbi/help" />
+            </div>
+        </div>
+    </div>
+    <div class="blank"></div>
+    <!--帮助-->
+    <!--友情链接 start-->
+    <include file="commonhtml/friend_links" />
+    <!--友情链接 end-->
+    <div class="blank"></div>
+    <include file="lbi/page_footer" />
+</body>
+<include file="js_lang_htm/lang_possport_js" />
+<script type="text/javascript">
+var process_request = "{$lang.process_request}";
+var username_exist = "{$lang.username_exist}";
+var compare_no_goods = "{$lang.compare_no_goods}";
+var btn_buy = "{$lang.btn_buy}";
+var is_cancel = "{$lang.is_cancel}";
+var select_spe = "{$lang.select_spe}";
+</script>
+
+</html>

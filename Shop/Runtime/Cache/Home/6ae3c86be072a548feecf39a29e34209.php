@@ -173,7 +173,7 @@ var no_select_question = "<?php echo ($lang["profile_js"]["no_select_question"])
             <td width="28%" align="right" bgcolor="#FFFFFF"><?php echo ($lang["sex"]); ?>： </td>
             <td width="72%" align="left" bgcolor="#FFFFFF">
             <?php $sex_type = array($lang.secrecy,$lang.male,$lang.female); ?>
-                <?php $__FOR_START_19262__=0;$__FOR_END_19262__=4;for($rad_key=$__FOR_START_19262__;$rad_key < $__FOR_END_19262__;$rad_key+=1){ if($profile['sex'] == $rad_key): ?><input type="radio" name="sex" value="<?php echo ($ran_key); ?>" checked="checked" />
+                <?php $__FOR_START_28620__=0;$__FOR_END_28620__=4;for($rad_key=$__FOR_START_28620__;$rad_key < $__FOR_END_28620__;$rad_key+=1){ if($profile['sex'] == $rad_key): ?><input type="radio" name="sex" value="<?php echo ($ran_key); ?>" checked="checked" />
                         <?php else: ?>
                         <input type="radio" name="sex" value="<?php echo ($ran_key); ?>" /><?php endif; ?>
                     <?php echo ($sex_type[$rand_key]); ?>                    
